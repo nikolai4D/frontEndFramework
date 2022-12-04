@@ -1,6 +1,6 @@
 import {_component} from "../../../core/component.mjs";
 
-export function button(text, onCLick){
+export function a_btn(text, onCLick){
     const btn = Object.assign({}, _component, _button)
     btn.text = text
     btn.onClick = onCLick
@@ -9,16 +9,16 @@ export function button(text, onCLick){
 }
 
 const _button = {
-    getHTML: async function() {
+    getHTML: function() {
         return `
         <button>${this.text}</button>`
     },
 
-    bindScript: async function() {
+    bindScript: function() {
         this.element.addEventListener("click", this.onClick)
     },
 
     onClick: function() {
-        console.log("button click")
+        console.log("a_btn click")
     }
 }

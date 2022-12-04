@@ -1,7 +1,7 @@
 import {slot} from "../../../core/helpers.mjs";
 import {_component} from "../../../core/component.mjs";
 
-export function inputField(label, input){
+export default function(label, input){
     const field = Object.assign({}, _component, _textInputField)
     field.label = label
     field.input = input
@@ -10,7 +10,7 @@ export function inputField(label, input){
 }
 
 const _textInputField = {
-    getHTML: async function() {
+    getHTML: function() {
         return `
         <div>
             <label>${this.label}</label>
@@ -19,7 +19,7 @@ const _textInputField = {
         `
     },
 
-    bindScript: async function() {
-        await this.fillSlot("input", await this.input.getElement())
+    bindScript: function() {
+        this.fillSlot("input", this.input.getElement())
     }
 }

@@ -1,10 +1,10 @@
 import {slot} from "../../../core/helpers.mjs";
-import {button} from "../atoms/button.mjs";
-import {textInput} from "../atoms/textInput.js";
-import {inputField} from "../molecules/textInputField.js";
 import {_component} from "../../../core/component.mjs";
+import {a_btn} from "../atoms/a_btn.mjs";
+import m_inputField from "../molecules/m_inputField.js";
+import {a_textInput} from "../atoms/a_textInput.js";
 
-export function loginForm(onSubmit, idLabel, passwordLabel){
+export function o_loginForm(onSubmit, idLabel, passwordLabel){
     const form = Object.assign({}, _component, _loginForm)
     form.onSubmit = onSubmit
     form.idLabel = idLabel
@@ -15,7 +15,7 @@ export function loginForm(onSubmit, idLabel, passwordLabel){
 
 const _loginForm = {
 
-    getHTML: async function() {
+    getHTML: function() {
         return `
         <div>
             <h1>Login</h1>
@@ -27,28 +27,28 @@ const _loginForm = {
         </div>`
     },
 
-    bindScript: async function() {
-        let username = inputField(
+    bindScript: function() {
+        let username = m_inputField(
                             this.idLabel,
-                            textInput(
+                            a_textInput(
                                 "text",
                                 "username")
         ),
-            password = inputField(
+            password = m_inputField(
                             this.passwordLabel,
-                            textInput(
+                            a_textInput(
                                 "password",
                                 "password")
         ),
-            submitBtn = button(
+            submitBtn = a_btn(
                             "Login",
                             this.onSubmit)
 
 
-        await this.fillSlots(new Map([
-            ["username", await username.getElement()],
-            ["password", await password.getElement()],
-            ["submitBtn", await submitBtn.getElement()]
+        this.fillSlots(new Map([
+            ["username", username.getElement()],
+            ["password", password.getElement()],
+            ["submitBtn", submitBtn.getElement()]
         ]))
     }
 }

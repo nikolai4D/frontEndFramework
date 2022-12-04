@@ -1,11 +1,10 @@
 import {Router} from "../../framework/core/router.mjs";
-import {indexRoute} from "./frontend/views/indexView.js";
-import {viewWithScriptRoute} from "./frontend/views/viewWithComponent.mjs";
+import {r_login} from "./frontend/views/v_login.mjs";
 
 
 const routes = [
-    indexRoute,
-    viewWithScriptRoute
+    r_login
+    
 ]
 
 
