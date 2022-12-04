@@ -1,10 +1,24 @@
+import {_component} from "../../../core/component.mjs";
+
 export function button(text, onCLick){
-    return Object.assign({}, _component, _button, {
-        text: text,
-        onClick: onClick
-    })
+    const btn = Object.assign({}, _component, _button)
+    btn.text = text
+    btn.onClick = onCLick
+
+    return btn
 }
 
-export const _button = {
+const _button = {
+    getTemplate: async function() {
+        return `
+        <button>${this.text}</button>`
+    },
 
+    bindScript: async function() {
+        this.element.addEventListener("click", this.onClick)
+    },
+
+    onClick: function() {
+        console.log("button click")
+    }
 }

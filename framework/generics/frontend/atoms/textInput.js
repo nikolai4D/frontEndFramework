@@ -1,4 +1,4 @@
-import {_component} from "../../../../framework/core/component.mjs";
+import {_component} from "../../../core/component.mjs";
 
 export function textInput(type, placeholder){
     const input = Object.assign({}, _component, _textInput)

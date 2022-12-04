@@ -1,5 +1,5 @@
-import {slot} from "../../../../framework/core/helpers.mjs";
-import {_component} from "../../../../framework/core/component.mjs";
+import {slot} from "../../../core/helpers.mjs";
+import {_component} from "../../../core/component.mjs";
 
 export function inputField(label, input){
     const field = Object.assign({}, _component, _textInputField)

@@ -1,8 +1,8 @@
-import {slot} from "../../../../framework/core/helpers.mjs";
+import {slot} from "../../../core/helpers.mjs";
 import {button} from "../atoms/button.mjs";
 import {textInput} from "../atoms/textInput.js";
 import {inputField} from "../molecules/textInputField.js";
-import {_component} from "../../../../framework/core/component.mjs";
+import {_component} from "../../../core/component.mjs";
 
 export function loginForm(onSubmit, idLabel, passwordLabel){
     const form = Object.assign({}, _component, _loginForm)

@@ -1,6 +1,6 @@
 import {view} from "../../../../framework/core/view.mjs";
 import {slot} from "../../../../framework/core/helpers.mjs";
-import {loginForm} from "../organisms/loginForm.mjs";
+import {loginForm} from "../../../../framework/generics/frontend/organisms/loginForm.mjs";
 
 export const viewWithScriptRoute = {
     name: "viewWithScriptRoute",
