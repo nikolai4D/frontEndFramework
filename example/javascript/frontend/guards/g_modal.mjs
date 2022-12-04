@@ -16,7 +16,6 @@ const _modalGuard = {
         }
         else{
 
-
             const modal = o_modal()
             const loginForm = o_loginForm(
                 login,
