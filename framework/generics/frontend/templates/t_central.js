@@ -8,7 +8,7 @@ import {slot} from "../../../core/helpers.mjs";
 export default function(centralElement){
     const template =  Object.assign({}, _component, _centralTemplate)
     template.centralElement = centralElement
-
+    template.style = "t_central"
     return template
 }
 

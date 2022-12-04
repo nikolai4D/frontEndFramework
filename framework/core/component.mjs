@@ -28,6 +28,12 @@ export const _component = {
 
     },
 
+    /**
+     *  Add style to the element after scripts have been bound. Should be overridden.
+     */
+    setStyle: function(){
+        this.element.className = this.style ?? ""
+    },
 
     /**
      * Get the DOM element of the component. Init the element if it is not already done.
@@ -37,6 +43,7 @@ export const _component = {
         if(!this.element) {
             this.element = stringToHTMLElement(this.getHTML())
             this.bindScript()
+            this.setStyle()
         }
         return this.element
     },

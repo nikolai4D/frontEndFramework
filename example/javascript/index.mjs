@@ -4,7 +4,6 @@ import {r_login} from "./frontend/views/v_login.mjs";
 
 const routes = [
     r_login
-    
 ]
 
 
