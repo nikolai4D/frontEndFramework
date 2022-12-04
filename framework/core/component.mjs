@@ -19,24 +19,26 @@ export const _component = {
         `
      },
 
-
     /**
      * Get the DOM element of the component. Init the element if it is not already done.
      * In most cases, override initElement() instead of this method.
      * @returns {Promise<Element>}
      */
     getElement: async function(){
-        if(!this.element) await this.bindJavascript()
+        if(!this.element) {
+            this.element = stringToHTMLElement(await this.getTemplate())
+            await this.bindScript()
+        }
         return this.element
     },
 
 
     /**
-     * Init the element by converting html to DOM Element. Can be overriden to do other things, like add event listeners.
+     * Init the element by converting html to DOM Element. Can be overridden to do other things, like add event listeners.
      * @returns {Promise<void>}
      */
-    bindJavascript: async function(){
-        this.element = stringToHTMLElement(await this.getTemplate())
+    bindScript: async function(){
+
     },
 
 
@@ -49,11 +51,11 @@ export const _component = {
     },
 
 
-    getState: (state)=> {
+    getState: function(state) {
         return {}
     },
 
-    setState: (state)=> {
+    setState: function(state) {
         // do something
     },
 
