@@ -1,31 +1,21 @@
-import {view} from "../../../../framework/core/view.mjs";
 import {slot} from "../../../../framework/core/helpers.mjs";
 import {loginForm} from "../../../../framework/generics/frontend/organisms/loginForm.mjs";
+import {_view} from "../../../../framework/core/view.mjs";
+import centralTemplate from "../../../../framework/generics/frontend/templates/centralTemplate.js";
 
 export const viewWithScriptRoute = {
     name: "viewWithScriptRoute",
-    view: viewWithComponent,
+    view: loginView,
     guard: null
 }
 
-function viewWithComponent(){
-    return Object.assign({}, view(), _viewWithComponent)
-}
+function loginView(){
+    const view =  Object.assign({}, _view)
+    view.template = centralTemplate(loginForm(
+        ()=> alert(`login function defined from view just got triggered.`),
+        "Username",
+        "Password"
+    ))
 
-const _viewWithComponent = {
-    getTemplate: async function() {
-        return `
-        <div>
-            <h1>View with component</h1>
-            ${slot("myComp")}
-        </div>`
-    },
-
-    bindScript: async function() {
-        const onSubmit = () => { alert(`login function defined from view just got triggered.`) }
-
-        let myComp = loginForm(onSubmit, "Username", "Password")
-
-        await this.fillSlot("myComp", await myComp.getElement())
-    }
+    return view
 }
