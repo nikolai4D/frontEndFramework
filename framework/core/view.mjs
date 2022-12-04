@@ -24,4 +24,12 @@ export const _view = {
         document.title = this.title
     },
 
+    unsetView: async function() {
+        await this.template.removeElement()
+    },
+
+    getState: function(state) {
+        return {}
+    }
+
 }

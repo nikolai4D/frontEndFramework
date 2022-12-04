@@ -41,7 +41,7 @@ export const _router = {
         async function switchView(currentView, viewStates) {
             if(previousView) {
                 viewStates.set(previousView.route, previousView.getState()) // Store the previous view state in the views map
-                await previousView?.removeElement()
+                await previousView?.unsetView()
             }
 
             if(pushState) history.pushState({route: route.name}, route.name, route.name) //History only store the route of the view
@@ -52,7 +52,7 @@ export const _router = {
 
 
         if(route.guard) {
-            let answer = (await route.guard()).awaitAnswer(routeName, params)
+            let answer = await route.guard.awaitAnswer(routeName, params)
             switch (answer) {
                 case "allow":
                     console.log("allow")

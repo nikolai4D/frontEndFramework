@@ -3,7 +3,7 @@
  * @param defense {function}
  * @returns {Promise<string>}
  */
-export const _Guard = {
+export const _guard = {
 
 
     answers: [
@@ -17,7 +17,7 @@ export const _Guard = {
      * The defense function. Must return a boolean or a string from the answers array.
      * @returns {Promise<string>}
      */
-    guard: async(route, params)=>{
+    control: async function(route, params){
         return this.answers[0]
     },
 
@@ -26,7 +26,7 @@ export const _Guard = {
      * Make sure the defense result is a string from the answers array readable by the router.
      * @returns {string}
      */
-    getFormattedDefenseResult: (defenseResult)=>{
+    getFormattedDefenseResult: function(defenseResult){
         // if the result is a boolean, return the corresponding answer
         if(defenseResult ===  true) return this.answers[0]
         else if (defenseResult === false) return this.answers[2]
@@ -41,8 +41,8 @@ export const _Guard = {
      *
      * @returns {Promise<string>}
      */
-    awaitAnswer: async (route, params)=> {
-        let defenseResult = await this.guard(route, params)
+    awaitAnswer: async function(route, params) {
+        let defenseResult = await this.control(route, params)
 
         return this.getFormattedDefenseResult(defenseResult)
     }

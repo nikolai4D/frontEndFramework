@@ -21,5 +21,9 @@ const _textInputField = {
 
     bindScript: function() {
         this.fillSlot("input", this.input.getElement())
+    },
+
+    getValue: function() {
+        return this.input.getElement().value
     }
 }

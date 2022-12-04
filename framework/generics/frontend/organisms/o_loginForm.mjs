@@ -15,6 +15,7 @@ export function o_loginForm(onSubmit, idLabel, passwordLabel){
 
 const _loginForm = {
 
+
     getHTML: function() {
         return `
         <div>
@@ -27,29 +28,39 @@ const _loginForm = {
         </div>`
     },
 
+
     bindScript: function() {
-        let username = m_inputField(
-                            this.idLabel,
-                            a_textInput(
-                                "text",
-                                "username")
-        ),
-            password = m_inputField(
-                            this.passwordLabel,
-                            a_textInput(
-                                "password",
-                                "password")
-        ),
-            submitBtn = a_btn(
+
+        this.id = m_inputField(
+            this.idLabel,
+            a_textInput(
+                "text",
+                "username")
+        )
+
+        this.password = m_inputField(
+            this.passwordLabel,
+            a_textInput(
+                "password",
+                "password")
+        )
+
+        const submitBtn = a_btn(
                             "Login",
-                            this.onSubmit)
+            (e)=>this.onSubmit(e))
 
 
         this.fillSlots(new Map([
-            ["username", username.getElement()],
-            ["password", password.getElement()],
+            ["username", this.id.getElement()],
+            ["password", this.password.getElement()],
             ["submitBtn", submitBtn.getElement()]
         ]))
+    },
+
+
+    getValues: function(){
+
+        return [this.id.getValue(), this.password.getValue()]
     }
 }
 

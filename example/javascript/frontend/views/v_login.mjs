@@ -1,6 +1,7 @@
 import {_view} from "../../../../framework/core/view.mjs";
 import t_central from "../../../../framework/generics/frontend/templates/t_central.js";
 import {o_loginForm} from "../../../../framework/generics/frontend/organisms/o_loginForm.mjs";
+import {router} from "../../index.mjs";
 
 export const r_login = {
     name: "login",
@@ -13,11 +14,14 @@ async function v_login(){
 
     view.title = "Login"
 
+
     view.template = t_central(
         o_loginForm(
-        ()=> alert(`login function defined from view just got triggered.`),
-        "Username",
-        "Password"
+            ()=> {
+                router.goTo("guardedByModal")
+            },
+            "Username",
+            "Password"
     ))
 
 
