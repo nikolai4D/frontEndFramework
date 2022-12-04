@@ -15,7 +15,7 @@ export function loginForm(onSubmit, idLabel, passwordLabel){
 
 const _loginForm = {
 
-    getTemplate: async function() {
+    getHTML: async function() {
         return `
         <div>
             <h1>Login</h1>

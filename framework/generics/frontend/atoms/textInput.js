@@ -10,7 +10,7 @@ export function textInput(type, placeholder){
 
 
 const _textInput = {
-    getTemplate: async function() {
+    getHTML: async function() {
         return `
         <input type="${this.type}" placeholder="${this.placeholder}">
         `

@@ -9,7 +9,7 @@ export function button(text, onCLick){
 }
 
 const _button = {
-    getTemplate: async function() {
+    getHTML: async function() {
         return `
         <button>${this.text}</button>`
     },

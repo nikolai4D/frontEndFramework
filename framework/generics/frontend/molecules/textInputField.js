@@ -10,7 +10,7 @@ export function inputField(label, input){
 }
 
 const _textInputField = {
-    getTemplate: async function() {
+    getHTML: async function() {
         return `
         <div>
             <label>${this.label}</label>

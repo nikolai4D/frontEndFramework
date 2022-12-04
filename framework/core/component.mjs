@@ -12,7 +12,7 @@ export const _component = {
      * Make sure the returned string have only one component at the top level
      * @returns {Promise<string>}
      */
-     getTemplate: async function() { return `
+     getHTML: async function() { return `
         <div>
             <h1>default component content</h1>
         </div>
@@ -26,7 +26,7 @@ export const _component = {
      */
     getElement: async function(){
         if(!this.element) {
-            this.element = stringToHTMLElement(await this.getTemplate())
+            this.element = stringToHTMLElement(await this.getHTML())
             await this.bindScript()
         }
         return this.element

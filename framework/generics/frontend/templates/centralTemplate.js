@@ -13,7 +13,7 @@ export default function(centralElement){
 }
 
 const _centralTemplate = {
-    getTemplate: async function() {
+    getHTML: async function() {
         return `
         <div>
             ${slot("loginForm")}
