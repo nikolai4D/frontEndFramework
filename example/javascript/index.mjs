@@ -1,6 +1,6 @@
-import {Router} from "../../framework/core/router.mjs";
-import {r_login} from "./frontend/views/v_login.mjs";
-import {r_guardedByModal} from "./frontend/views/v_guardedByModal.mjs";
+import {Router} from "../../framework/core/Router.mjs";
+import {GuardedByModal} from "./frontend/views/GuardedByModal.mjs";
+import {Login} from "./frontend/views/Login.mjs";
 
 
 export const credentials = {
@@ -10,11 +10,11 @@ export const credentials = {
 }
 
 
-const routes = [
-    r_login,
-    r_guardedByModal
+const viewConstructors = [
+    Login,
+    GuardedByModal
 ]
 
 
-export const router = Router(routes)
+export const router = new Router(viewConstructors)
 await router.goTo(window.location.pathname.slice(1))

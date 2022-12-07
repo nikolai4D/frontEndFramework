@@ -1,23 +1,20 @@
-import {_guard} from "../../../../framework/core/guard.mjs";
 import {credentials, router} from "../../index.mjs";
-import {o_modal} from "../../../../framework/generics/frontend/organisms/o_modal.mjs";
-import {o_loginForm} from "../../../../framework/generics/frontend/organisms/o_loginForm.mjs";
-import {verify} from "../verify.js";
+import {verify} from "../verify.mjs";
+import LoginForm from "../../../../framework/generics/frontend/organisms/LoginForm.mjs";
+import {Modal} from "../../../../framework/generics/frontend/organisms/Modal.mjs";
+import {Guard} from "../../../../framework/core/Guard.mjs";
 
-export function g_modal(){
-    return Object.assign({}, _guard, _modalGuard)
-}
 
-const _modalGuard = {
+function ModalGuard() {
+    Guard.call(this)
 
-    control: async function() {
+    this.control= async function(route, params) {
         if(credentials.isLoggedIn){
             return true
         }
         else{
-
-            const modal = o_modal()
-            const loginForm = o_loginForm(
+            const modal = new Modal()
+            const loginForm = LoginForm(
                 login,
                 "Username",
                 "Password"

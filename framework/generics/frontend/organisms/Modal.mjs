@@ -1,26 +1,21 @@
 import {slot} from "../../../core/helpers.mjs";
-import {_component} from "../../../core/component.mjs";
+import {Component} from "../../../core/Component.mjs";
 
 
-export function o_modal(content) {
-    const modal = Object.assign({}, _component, _modal)
-    modal.content = content
+export function Modal(content) {
+    Component.call(this)
 
-    return modal
-}
+    this.content = content
 
-
-const _modal = {
-
-    getHTML: function() {
+    this.getHTML= function() {
         return `
         <div class="modal">
                 ${slot("content")}
         </div>
         `
-    },
+    }
 
-    bindScript: function() {
+    this.bindScript= function() {
         this.fillSlot("content", this.content.getElement())
 
         const mStyle = this.getElement().style
@@ -41,9 +36,9 @@ const _modal = {
                 this.getElement().remove()
             }
         })
-    },
+    }
 
-    show: function() {
+    this.show= function() {
         document.body.append(this.getElement())
     }
 
