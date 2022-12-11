@@ -1,6 +1,8 @@
 import {Router} from "../../framework/core/Router.mjs";
 import {GuardedByModal} from "./frontend/views/GuardedByModal.mjs";
 import {Login} from "./frontend/views/Login.mjs";
+import {Hub} from "./frontend/views/Hub.mjs";
+import {UserDetail} from "./frontend/views/UserDetail.mjs";
 
 
 export const credentials = {
@@ -11,8 +13,9 @@ export const credentials = {
 
 
 const viewConstructors = [
+    Hub,
     Login,
-    GuardedByModal
+    UserDetail
 ]
 
 

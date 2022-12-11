@@ -2,7 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
 
-export default function(centralElement) {
+export default function(centralComponent) {
     Component.call(this)
 
     this.getHTML= function() {
@@ -14,7 +14,7 @@ export default function(centralElement) {
     }
 
     this.bindScript= function() {
-        this.fillSlot("central", centralElement.getElement())
+        this.fillSlot("central", centralComponent.getElement())
     }
 
 }

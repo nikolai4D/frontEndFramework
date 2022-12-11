@@ -6,38 +6,40 @@ export function Router(viewConstructors) {  // Named proto instead of using defa
     this.viewStates= new Map()
     this.currentView= null
 
-
-    this.setBrowserHistory= ()=> {
-        window.addEventListener('popstate', async (event) => {
-            if(event.state){
-                await this.goTo(event.state.route, undefined, false,false)
-            }
-        })
-    }
-
     this.setBrowserHistory()
 }
 
+Router.prototype.setBrowserHistory = function() {
+    window.addEventListener('popstate', async (event) => {
+        if(event.state){
+            await this.goTo(event.state.route, undefined, false,false)
+        }
+    })
+}
 
-Router.prototype.goTo = async function(routeName, params = [], forceNewView = false, pushState = true) {
-    console.log("goTo", routeName, params)
+Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = false, pushState = true) {
+    console.log("goTo", fullRoute, params)
+
+    const routeBase = fullRoute.split("/")[0]
+    const routeParams = fullRoute.split("/").filter((e) => e !== "")
+    routeParams.shift()
 
     let previousView = this.currentView;
 
-    let foundState = this.viewStates.get(routeName)
-    if(foundState && !forceNewView){ this.viewStates.delete(routeName)}
+    let foundState = this.viewStates.get(fullRoute)
+    if(foundState && !forceNewView){ this.viewStates.delete(fullRoute)}
 
-    let viewConstructor = this.viewConstructors.find(view => view.route === routeName)
+    let viewConstructor = this.viewConstructors.find(view => view.route === routeBase)
     if (!viewConstructor) {
         viewConstructor = this.viewConstructors[0]
-        console.warn(`View ${routeName} not found, using default view`)
+        console.warn(`View ${fullRoute} not found, using default view`)
     }
 
 
 
     const createView = async (viewConstructor, params = [], state = null)=> {
-        // let view = await new viewConstructor(...params)
-        let view = new Login()
+        let view = await new viewConstructor(routeParams, ...params)
+        view.poum = fullRoute
         if(state) await view.setState(state)
         return view
     }
@@ -49,14 +51,14 @@ Router.prototype.goTo = async function(routeName, params = [], forceNewView = fa
             await previousView?.unsetView()
         }
 
-        if(pushState) history.pushState({route: viewConstructor.route}, viewConstructor.route, viewConstructor.route) //History only store the route of the view
+        if(pushState) history.pushState({route: currentView.poum}, currentView.route, currentView.poum) //History only store the route of the view
         await currentView.setView()
         console.log("view set: " + viewConstructor.name)
     }
 
     
     if(viewConstructor.constructor.guard) {
-        let answer = await viewConstructor.guard.awaitAnswer(routeName, params)
+        let answer = await viewConstructor.guard.awaitAnswer(fullRoute, params)
         switch (answer) {
             case "allow":
                 console.log("allow")

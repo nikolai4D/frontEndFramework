@@ -5,14 +5,17 @@ View.guard= null
 
 export function View() {
 
-    // Guard and route should be defined as a static property as follows:
-    // View.guard = guardConstructor
-    // View.route = "route"
-
     // As it is a constructor, View itself cannot be async, Async functions needed for a view should be wrapped into methods (like the setView method below).
+
+
 
     this.title= "default title"
     this.template= null
+
+    // The params are passed to the constructor when the view is created
+    this.routeParams = null // The rest of the provided route (example: /login/1/2/3 would be [1,2,3])
+    this.params  = null // The params passed to the view constructor. Useful to send non-serializable objects to the view.
+
 
     /**
      * Called by router. In most cases, should not be overridden.
