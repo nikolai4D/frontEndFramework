@@ -1,0 +1,31 @@
+{
+  "name": "nd_frontend",
+  "version": "1.0.0",
+  "description": "A single page application framework.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolai4D/frontEndFramework.git"
+  },
+  "keywords": [
+    "spa",
+    "frontend",
+    "view",
+    "template",
+    "nikdev",
+    "atomic",
+    "design"
+  ],
+  "author": "NikDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikolai4D/frontEndFramework/issues"
+  },
+  "homepage": "https://github.com/nikolai4D/frontEndFramework#readme"
+}
