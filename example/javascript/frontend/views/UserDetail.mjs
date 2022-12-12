@@ -3,7 +3,6 @@ import Central from "../../../../framework/generics/frontend/templates/Central.m
 import {users} from "../../mock_data/mockData.mjs";
 import Button from "../../../../framework/generics/frontend/atoms/Button.mjs";
 
-UserDetail.route = "user"
 
 export function UserDetail(routeParams) {
     View.call(this)

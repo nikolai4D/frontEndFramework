@@ -36,4 +36,8 @@ export function View() {
         return {}
     }
 
+    this.setState= async function(state) {
+        return {}
+    }
+
 }

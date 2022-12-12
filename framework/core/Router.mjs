@@ -1,8 +1,6 @@
-import {Login} from "../../example/javascript/frontend/views/Login.mjs";
+export function Router(viewMap) {  // Named proto instead of using default name because ref to it needed below to add methods to it.
 
-export function Router(viewConstructors) {  // Named proto instead of using default name because ref to it needed below to add methods to it.
-
-    this.viewConstructors = viewConstructors
+    this.viewMap = viewMap
     this.viewStates= new Map()
     this.currentView= null
 
@@ -11,8 +9,8 @@ export function Router(viewConstructors) {  // Named proto instead of using defa
 
 Router.prototype.setBrowserHistory = function() {
     window.addEventListener('popstate', async (event) => {
-        if(event.state){
-            await this.goTo(event.state.route, undefined, false,false)
+        if(event){
+            await this.goTo(window.location.pathname.slice(1), undefined, false,false)
         }
     })
 }
@@ -20,26 +18,29 @@ Router.prototype.setBrowserHistory = function() {
 Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = false, pushState = true) {
     console.log("goTo", fullRoute, params)
 
-    const routeBase = fullRoute.split("/")[0]
-    const routeParams = fullRoute.split("/").filter((e) => e !== "")
-    routeParams.shift()
+    const splitRoute = fullRoute.split("/")
+    const routeBase = splitRoute[0]
+    const routeParams = splitRoute.slice(1).filter((e) => e !== "")
+
 
     let previousView = this.currentView;
 
     let foundState = this.viewStates.get(fullRoute)
     if(foundState && !forceNewView){ this.viewStates.delete(fullRoute)}
 
-    let viewConstructor = this.viewConstructors.find(view => view.route === routeBase)
+    let viewConstructor = this.viewMap.get(routeBase)
     if (!viewConstructor) {
-        viewConstructor = this.viewConstructors[0]
-        console.warn(`View ${fullRoute} not found, using default view`)
+        const [firstView] = this.viewMap.values()
+        viewConstructor = firstView
+        fullRoute = this.viewMap.keys().next().value
+        console.warn(`View ${routeBase} not found, using default view`)
     }
 
 
 
     const createView = async (viewConstructor, params = [], state = null)=> {
         let view = await new viewConstructor(routeParams, ...params)
-        view.poum = fullRoute
+        view.route = fullRoute
         if(state) await view.setState(state)
         return view
     }
@@ -51,9 +52,8 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
             await previousView?.unsetView()
         }
 
-        if(pushState) history.pushState({route: currentView.poum}, currentView.route, currentView.poum) //History only store the route of the view
+        if(pushState) history.pushState({route: routeBase}, null, "../" + fullRoute) //History only store the route of the view
         await currentView.setView()
-        console.log("view set: " + viewConstructor.name)
     }
 
     
@@ -77,8 +77,6 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
         }
     }
     else  {
-
-        console.log("route: " + viewConstructor.route)
 
         this.currentView = await createView(viewConstructor, params, foundState)
         await switchView(this.currentView, this.viewStates)

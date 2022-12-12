@@ -2,7 +2,6 @@ import {View} from "../../../../framework/core/View.mjs";
 import Central from "../../../../framework/generics/frontend/templates/Central.mjs";
 import {NavBar} from "../../../../framework/generics/frontend/organisms/NavBar.mjs";
 
-Hub.route = "hub"
 
 export function Hub(){
     View.call(this)
