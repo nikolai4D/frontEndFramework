@@ -60,7 +60,7 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     async function switchView(currentView, viewStates) {
         if(previousView) {
             viewStates.set(previousView.path, previousView.getState()) // Store the previous view state in the views map
-            await previousView?.unsetView()
+            await previousView.unsetView()
         }
 
         if(pushState) history.pushState({path: routeBase}, null, "../" + fullRoute) //History only store the route of the view
