@@ -7,7 +7,6 @@ export function Component(){
      */
     this.element= null
 
-
     /**
      * Make sure the returned string have only one component at the top level
      * @returns <string>
@@ -28,23 +27,20 @@ export function Component(){
 
     }
 
-    /**
-     *  Add style to the element after scripts have been bound. Should be overridden.
-     */
-    this.setStyle= function(){
-        this.element.className = this.style ?? ""
-    }
 
     /**
      * Get the DOM element of the component. Init the element if it is not already done.
      * @returns <Element>
      */
-    this.getElement= function(){
+    this.getElement = function(){
+
+        console.log("getting element")
+
         if(!this.element) {
             this.element = stringToHTMLElement(this.getHTML())
             this.bindScript()
-            this.setStyle()
         }
+
         return this.element
     }
 
@@ -73,7 +69,10 @@ export function Component(){
      * @param element {HTMLElement}
      */
     this.fillSlot= function(slotName, element) {
-        const slot = this.getElement().querySelector(`[data-slot="${slotName.toString()}"]`)
+
+        if(!this.element) throw new Error("Cannot fill slot before the element is defined.")
+
+        const slot = this.element.querySelector(`[data-slot="${slotName.toString()}"]`)
         if(!slot) throw new Error(`Slot ${slotName} not found`)
         slot.replaceWith(element)
     }
@@ -86,5 +85,7 @@ export function Component(){
     this.fillSlots= function (slotMap) {
         for(let [slotName, element] of slotMap){ this.fillSlot(slotName, element) }
     }
+
+
 }
 
