@@ -4,7 +4,7 @@ import {router} from "../../../../example/javascript/index.mjs";
 export function Link(text, route){
     Component.call(this)
 
-    this.getHTML = function(){
+    this.getHtml = function(){
         return `<a>${text}</a>`
     }
 
