@@ -7,7 +7,7 @@ export function Modal(content) {
 
     this.content = content
 
-    this.getHTML= function() {
+    this.getHtml= function() {
         return `
         <div class="modal">
                 ${slot("content")}

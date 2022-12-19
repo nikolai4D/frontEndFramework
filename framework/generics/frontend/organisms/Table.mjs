@@ -1,14 +1,33 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Table(headersString = [], rowsString = [], clickHandler = () => {
+/**
+ *
+ * @param headersStringArray
+ * @param rowsStringArray
+ * @param clickHandler
+ * @param data
+ * @constructor
+ */
+export function Table(headersStringArray = [], rowsStringArray = [], clickHandler = () => {
 }, data = null) {
     Component.call(this)
 
 
-    this.headers = headersString
-    this.rows = rowsString
+    this.headers = headersStringArray
+    this.rows = rowsStringArray
     this.clickHandler = clickHandler
     this.data = data
+
+    this.customColumns = []
+
+    /**
+     * Add a custom column to the table
+     * @param columnIndex
+     * @param builder
+     */
+    this.setColumnBuilder = function(columnIndex, builder){
+        this.customColumns.push([columnIndex, builder])
+    }
 
 
     this.createHeaders = function(headers){
@@ -17,15 +36,15 @@ export function Table(headersString = [], rowsString = [], clickHandler = () => 
 
     this.createRows = function(rows){
         return rows.map((row, i) => {
-            if(row.length > headersString.length) throw new Error("Row has more columns than headers.")
-            else if(row.length < headersString.length) throw new Error("Row has less columns than headers.")
+            if(row.length > headersStringArray.length) throw new Error("Row has more columns than headers.")
+            else if(row.length < headersStringArray.length) throw new Error("Row has less columns than headers.")
 
-            return `<tr>${row.map(cell=> `<td>${cell}</td>`).join("")}</tr>`
+            return `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`
         })
     }
 
 
-    this.getHTML = function() {
+    this.getHtml = function() {
 
         return `
         <table class="table">

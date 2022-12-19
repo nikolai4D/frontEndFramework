@@ -6,7 +6,7 @@ export function Default() {
 
     this.components = []
 
-    this.getHTML= function() {
+    this.getHtml = function() {
         let slots = ""
         for (let i in this.components){
             slots += slot(i)

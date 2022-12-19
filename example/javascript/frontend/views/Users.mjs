@@ -4,7 +4,7 @@ import {Table} from "../../../../framework/generics/frontend/organisms/Table.mjs
 import {Header} from "../../../../framework/generics/frontend/atoms/Header.mjs";
 import {Paragraph} from "../../../../framework/generics/frontend/atoms/Paragraph.mjs";
 import {users} from "../../mock_data/mockData.mjs";
-import {getCellCoords} from "../../../../framework/generics/helpersm.js";
+import {getCellCoords} from "../../../../framework/generics/helpers.mjs";
 
 export function Users() {
     View.call(this)

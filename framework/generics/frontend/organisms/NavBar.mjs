@@ -13,7 +13,7 @@ export function NavBar(){
         ])
 
 
-    this.getHTML = function(){
+    this.getHtml = function(){
 
         let links = ""
         for (let i of this.linksMap.keys()){

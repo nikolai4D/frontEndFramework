@@ -10,7 +10,7 @@ export function LoginForm(onSubmit, idLabel, passwordLabel){
 
     this.onSubmit = onSubmit
 
-    this.getHTML= function() {
+    this.getHtml= function() {
         return `
         <div>
             <h1>Login</h1>

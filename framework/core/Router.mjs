@@ -49,10 +49,9 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     }
 
 
-    const createView = async (viewConstructor, params = [], state = null)=> {
-        let view = await new viewConstructor(routeParams, ...params)
+    const createView = async (viewConstructor, params = {}, state = null)=> {
+        let view = await new viewConstructor(routeParams, params, state)
         view.path = fullRoute
-        if(state) await view.setState(state)
         return view
     }
     
