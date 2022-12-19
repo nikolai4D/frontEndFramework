@@ -11,7 +11,7 @@ export function NavBar(routesMap, router){
 
         let links = ""
         for (let i of this.routesMap.keys()){
-            links += slot(i)
+            links += "<li>" + slot(i) + "</li>"
         }
 
         return `
