@@ -37,7 +37,6 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     if(foundState && !forceNewView){ this.viewStates.delete(fullRoute)}
 
     let paths = this.routes.map((route) => route.route)
-    console.log("paths", paths)
     console.log("routeBase", routeBase)
 
     let route = this.routes.find( r => r.path === routeBase )
@@ -49,9 +48,10 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     }
 
 
-    const createView = async (viewConstructor, params = {}, state = null)=> {
-        let view = await new viewConstructor(routeParams, params, state)
+    const createView = async (viewConstructor, params = [], state = null)=> {
+        let view = await new viewConstructor(routeParams, ...params)
         view.path = fullRoute
+        if(state) await view.setState(state)
         return view
     }
     
@@ -60,6 +60,7 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
         if(previousView) {
             viewStates.set(previousView.path, previousView.getState()) // Store the previous view state in the views map
             await previousView.unsetView()
+            console.log("removed view")
         }
 
         if(pushState) history.pushState({path: routeBase}, null, "../" + fullRoute) //History only store the route of the view

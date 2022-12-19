@@ -11,7 +11,7 @@ export function Icon(key, onClick = null) {
 
     this.onClick = onClick
 
-    this.getHtml = function() {
+    this.getHTML = function() {
         const iconString = iconsMap.get(key)
         if(!iconString) throw new Error("Icon not found")
         return iconString

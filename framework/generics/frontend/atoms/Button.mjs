@@ -3,7 +3,7 @@ import {Component} from "../../../core/Component.mjs";
 export default function(text, onClick) {
     Component.call(this)
 
-    this.getHtml= function() {
+    this.getHTML= function() {
         return `
         <button type="button"  class="btn btn-primary">${text}</button>`
     }

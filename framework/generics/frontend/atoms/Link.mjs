@@ -1,10 +1,9 @@
 import {Component} from "../../../core/Component.mjs";
-import {router} from "../../../../example/javascript/index.mjs";
 
-export function Link(text, route){
+export function Link(text, route, router){
     Component.call(this)
 
-    this.getHtml = function(){
+    this.getHTML = function(){
         return `<a>${text}</a>`
     }
 

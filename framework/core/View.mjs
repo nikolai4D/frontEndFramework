@@ -1,13 +1,6 @@
-
-//Define static properties above the prototype constructor so they can be accessed before the constructor is called
-View.route= "defaultRoute"
-View.guard= null
-
 export function View() {
 
     // As it is a constructor, View itself cannot be async, Async functions needed for a view should be wrapped into methods (like the setView method below).
-
-
 
     this.title= "default title"
     this.template= null
@@ -18,10 +11,20 @@ export function View() {
 
 
     /**
+     * Called by setView, usefull to load async data. Do nothing by default.
+     * @returns {Promise<void>}
+     */
+    this.loadData = async function() {
+
+    }
+    
+    /**
      * Called by router. In most cases, should not be overridden.
      * @returns {Promise<void>}
      */
     this.setView= async function() {
+        await this.loadData()
+
         if(!this.template) throw new Error("View template is not set")
         document.body.append(this.template.getElement())
 

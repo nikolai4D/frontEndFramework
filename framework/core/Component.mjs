@@ -11,7 +11,7 @@ export function Component(){
      * Make sure the returned string have only one component at the top level
      * @returns <string>
      */
-     this.getHtml= function() { return `
+     this.getHTML= function() { return `
         <div>
             <h1>default component content</h1>
         </div>
@@ -37,7 +37,7 @@ export function Component(){
         console.log("getting element")
 
         if(!this.element) {
-            this.element = stringToHTMLElement(this.getHtml())
+            this.element = stringToHTMLElement(this.getHTML())
             this.bindScript()
         }
 

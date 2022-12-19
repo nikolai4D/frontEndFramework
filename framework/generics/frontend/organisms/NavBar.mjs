@@ -2,21 +2,15 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import {Link} from "../atoms/Link.mjs";
 
-export function NavBar(){
+export function NavBar(routesMap, router){
     Component.call(this)
 
-    this.linksMap = new Map([
-        ["Hub", "hub"],
-        ["Login", "login"],
-        ["Jane", "user/jane"],
-        ["John", "user/john"],
-        ])
+    this.routesMap = routesMap
 
-
-    this.getHtml = function(){
+    this.getHTML = function(){
 
         let links = ""
-        for (let i of this.linksMap.keys()){
+        for (let i of this.routesMap.keys()){
             links += slot(i)
         }
 
@@ -32,8 +26,8 @@ export function NavBar(){
 
     this.bindScript = function(){
 
-        for (let i of this.linksMap){
-            let link = new Link(i[0], i[1])
+        for (let i of this.routesMap){
+            let link = new Link(i[0], i[1], router)
             this.fillSlot(i[0], link.getElement())
         }
     }

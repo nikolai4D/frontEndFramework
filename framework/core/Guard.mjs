@@ -1,9 +1,3 @@
-/**
- * Guard is called before creating a new view to control the access to a view.
- * A new guard should be inherited from this class.
- * Guard are associated to a view in the route object.
- * @constructor
- */
 export function Guard() {
 
 
