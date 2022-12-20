@@ -7,7 +7,7 @@ export function NavBar(routesMap, router){
 
     this.routesMap = routesMap
 
-    this.getHTML = function(){
+    this.getHtml = function(){
 
         let links = ""
         for (let i of this.routesMap.keys()){

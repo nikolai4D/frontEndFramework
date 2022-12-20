@@ -25,7 +25,7 @@ export function Table(headersString = [], rowsString = [], clickHandler = () => 
     }
 
 
-    this.getHTML = function() {
+    this.getHtml = function() {
 
         return `
         <table class="table">

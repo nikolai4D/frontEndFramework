@@ -5,7 +5,7 @@ import {slot} from "../../../core/helpers.mjs";
 export default function(centralComponent) {
     Component.call(this)
 
-    this.getHTML= function() {
+    this.getHtml = function() {
         return `
         <div>
             ${slot("central")}

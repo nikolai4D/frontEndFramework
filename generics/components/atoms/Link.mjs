@@ -3,7 +3,7 @@ import {Component} from "../../../core/Component.mjs";
 export function Link(text, route, router){
     Component.call(this)
 
-    this.getHTML = function(){
+    this.getHtml = function(){
         return `<a>${text}</a>`
     }
 

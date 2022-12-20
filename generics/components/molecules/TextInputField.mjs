@@ -4,7 +4,7 @@ import {Component} from "../../../core/Component.mjs";
 export default function(label, input) {
     Component.call(this)
 
-    this.getHTML= function() {
+    this.getHtml = function() {
         return `
         <div>
             <label>${label}</label>
