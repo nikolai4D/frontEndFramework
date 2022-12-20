@@ -54,7 +54,7 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
         if(state) await view.setState(state)
         return view
     }
-    
+
 
     async function switchView(currentView, viewStates) {
         if(previousView) {
@@ -67,9 +67,10 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
         await currentView.setView()
     }
 
-    
+
     if(route.guard) {
-        let answer = await route.guard.awaitAnswer(fullRoute, params)
+        let guard = new route.guard()
+        let answer = await guard.awaitAnswer(fullRoute, params)
         switch (answer) {
             case "allow":
                 console.log("allow")
