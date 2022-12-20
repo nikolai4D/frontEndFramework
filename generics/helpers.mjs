@@ -1,11 +1,5 @@
 /**
- * Give the clicked coordinates, headers is row 0, and the first column is column 0
- * @param event
- * @returns {{x: number, y: number}}
+ * Give the clicked coordinates, horizontal then vertical. Headers is row 0, and the first column is column 0.
+ * @returns {(number|number)[]}
  */
-export function getCellCoords(event) {
-    return {
-        y: event.target.parentElement.rowIndex - 2,
-        x: event.target.cellIndex
-    }
-}
+export const getCellCoords =(event)=> [event.target.cellIndex, event.target.parentElement.rowIndex - 2]
