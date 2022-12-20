@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export default function(text, onClick) {
+export function Button(text, onClick) {
     Component.call(this)
 
     this.getHtml= function() {
