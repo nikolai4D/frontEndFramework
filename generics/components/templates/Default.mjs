@@ -1,5 +1,5 @@
-import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
+import {slot} from "../../../core/helpers.mjs";
 
 export function Default() {
     Component.call(this)
