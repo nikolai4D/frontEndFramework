@@ -2,7 +2,7 @@ import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
 import TextInputField from "../molecules/TextInputField.mjs";
 import TextInput from "../atoms/TextInput.mjs";
-import Button from "../atoms/Button.mjs";
+import {Button} from "../atoms/Button.mjs";
 
 
 export function LoginForm(onSubmit, idLabel, passwordLabel){
