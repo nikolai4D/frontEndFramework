@@ -1,7 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Table(headersString = [], rowsString = [], clickHandler = () => {
-}, data = null) {
+export function Table(headersString = [], rowsString = [], clickHandler = () => {}, data = null) {
     Component.call(this)
 
 
@@ -11,10 +10,20 @@ export function Table(headersString = [], rowsString = [], clickHandler = () => 
     this.data = data
 
 
+    /**
+     * this function wrap the cell in a td tag. In most cases it should not be overridden.
+     * @param headers
+     * @returns {*}
+     */
     this.createHeaders = function(headers){
         return headers.map(header=> `<td>${header}</td>`)
     }
 
+    /**
+     * this function wrap the cell in a td tag. In most cases it should not be overridden.
+     * @param rows
+     * @returns {*}
+     */
     this.createRows = function(rows){
         return rows.map((row, i) => {
             if(row.length > this.headers.length) throw new Error("Row has more columns than headers.")
@@ -28,7 +37,7 @@ export function Table(headersString = [], rowsString = [], clickHandler = () => 
     this.getHtml = function() {
 
         return `
-        <table class="table">
+        <table>
             <thead>
                 <tr>
                  ${this.createHeaders(this.headers)}

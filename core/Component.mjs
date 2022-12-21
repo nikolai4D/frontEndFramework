@@ -35,8 +35,6 @@ export function Component(){
      */
     this.getElement = function(forceInit = false){
 
-        console.log("getting element")
-
         if(!this.element || forceInit){
             this.element = stringToHTMLElement(this.getHtml())
             this.bindScript()
