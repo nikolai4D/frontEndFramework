@@ -30,13 +30,14 @@ export function Component(){
 
     /**
      * Get the DOM element of the component. Init the element if it is not already done.
+     * param <boolean> forceInit if true, the element will be reinitialized
      * @returns <Element>
      */
-    this.getElement = function(){
+    this.getElement = function(forceInit = false){
 
         console.log("getting element")
 
-        if(!this.element) {
+        if(!this.element || forceInit){
             this.element = stringToHTMLElement(this.getHtml())
             this.bindScript()
         }
