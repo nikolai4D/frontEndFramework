@@ -40,7 +40,9 @@ The creation follow these steps:
 
 In order to be reusable between view and accross projects, components are data-agnostic. So they should never not directly make any call to the store or to an api.
 
-#### 
+#### Atomic design:
+
+A lot of components integrate subcomponents. Atomic design is the rule we adopted to define how components integrate each others.
 
 ### View
 
@@ -50,7 +52,7 @@ Following the atomic design principle, it will call a layout component, namely t
 
 A view is defined in a per-project basis.
 
-You can create a new view by composiiton as follow:
+You can create a new view by composition as follow:
 ```
 function myView(){
     View.call(this)
