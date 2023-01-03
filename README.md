@@ -113,11 +113,11 @@ export default defineConfig({
 })
 ```
 
-At the root of your folder, create a ```src``` and a ```dist``` folders.
+At the root of your project, create a ```src``` and a ```dist``` folders.
 
-In the the src folder, create a file named index.mjs. Vite will consider this file as the entry-poitn of your app, bundle it with all of it's dependancies and output the corresponnding file in the dist folder.
+In the src folder, create a file named index.mjs. Vite will consider this file as the entry-point of your app, bundle it with all of its dependancies and output the corresponding file in the ```dist``` folder.
 
-This dist folder should also be the one that express consider as 'static'.
+This ```dist``` folder should also be the one that express consider as 'static'.
 
 
 
