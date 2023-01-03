@@ -5,7 +5,6 @@ We attempted to write a readable, commented and concise code-base. We recommend 
 
 You will find a functionnal example here: https://github.com/nikolai4D/nikdev_app_example.git
 
-
 # Structure:
 This framework revolves around 4 classes:
 
@@ -76,6 +75,7 @@ A guard control the access to a route.
 Its ```control``` method is called by the router before creating a route. This method is to be overwritten to fit the specific needs of the app (often: calling the authentication service).
 
 If the control function return true the page is created, otherwise the routing function stops and it is up to the guard to define what to do next (for example: redirect to login page).
+
 
 
 # Quick Set up:
