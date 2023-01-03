@@ -9,17 +9,31 @@ This frameworks revolves around 4 classes:
 ### Component:
     As you will find them in others frameworks like react, it associate a logic to an htmlElement.
     
-#### Composition:
+### Composition:
+
 Componenent is not supposed to be used as such but to be used in composition as in the following example:
+
 ```
 function Button(){
     Component.call(this)
 }
-
 ```
 
-#### Creation cycle of a component:
-    COmpoent
+### Life-cycle of a component:
+
+A component have an associated htmlElement. The getter to this element is the method
+
+```
+getElement()
+```
+
+It will build the component if it does not exist and return it.
+
+The creation follow these steps:
+- it calls the getHTML function, which returns a string.
+- it converts this string into one (and only one) htmlElement.
+- it calls the bindScript function, which does nothing by default but can be used to tie logic to the the htmlElement (ex: adding event listeners).
+
 ### View
 - Router
 - Guard
