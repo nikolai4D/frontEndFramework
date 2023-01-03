@@ -44,7 +44,7 @@ The creation follow these steps:
 Create an express project.
 
 Add the nd_frontend package through the command 
-```git i https://github.com/nikolai4D/frontEndFramework.git ```
+```npm i https://github.com/nikolai4D/frontEndFramework.git ```
 
 
 ## Vite:
