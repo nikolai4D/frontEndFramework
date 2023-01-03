@@ -141,7 +141,7 @@ This ```dist``` folder should also be the one that express consider as 'static'.
 In the src folder, create a new file named Home, and paste the following code to it:
 
 ```
-import {router} from "index.mjs";
+import {router} from "./index.mjs";
 import {View} from "nd_frontend/core/View.mjs";
 import {Header} from "nd_frontend/generics/components/atoms/Header.mjs";
 import {Default} from "nd_frontend/generics/components/templates/Default.mjs";
