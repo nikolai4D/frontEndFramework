@@ -97,9 +97,6 @@ At the root of the project, create an html file with the following content:
 <head>
   <meta charset="UTF-8">
   <title>Index</title>
-
-  <link rel="stylesheet" href="src/stylesheets/style.css">
-
   <script src="src/index.mjs" type="module" defer></script>
 </head>
 <body></body>
