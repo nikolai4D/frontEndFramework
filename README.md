@@ -8,8 +8,9 @@ You will find a functionnal example here: https://github.com/nikolai4D/nikdev_ap
 
 ## Express project:
 Create an express project.
-Add the nd_frontend package through the command "git i https://github.com/nikolai4D/frontEndFramework.git"
-Copy paste
+
+Add the nd_frontend package through the command 
+```git i https://github.com/nikolai4D/frontEndFramework.git ```
 
 
 ## Vite:
