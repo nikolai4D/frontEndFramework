@@ -1,7 +1,28 @@
 # frontEndFramework
-An atomic-component based front-end framework
+An atomic-component based front-end framework package.
 
 You will find a functionnal example here: https://github.com/nikolai4D/nikdev_app_example.git
+
+# Structure:
+This frameworks revolves around 4 classes:
+
+### Component:
+    As you will find them in others frameworks like react, it associate a logic to an htmlElement.
+    
+#### Composition:
+Componenent is not supposed to be used as such but to be used in composition as in the following example:
+```
+function Button(){
+    Component.call(this)
+}
+
+```
+
+#### Creation cycle of a component:
+    COmpoent
+### View
+- Router
+- Guard
 
 # Quick Set up:
 
@@ -62,6 +83,8 @@ export function Home() {
 
 }
 ```
+
+## Creating the client router:
 
 In your client js entry point, create  a new router as follows:
 
