@@ -1,13 +1,16 @@
 # frontEndFramework
 An atomic-component based front-end framework package.
 
+We attempted to write a readable, commented and concise code-base. We recommend having a direct look at it.
+
 You will find a functionnal example here: https://github.com/nikolai4D/nikdev_app_example.git
 
+
 # Structure:
-This frameworks revolves around 4 classes:
+This framework revolves around 4 classes:
 
 ### Component:
-    As you will find them in others frameworks like react, it associate a logic to an htmlElement.
+    As you will find them in others frameworks like react, it associates logic to an htmlElement.
     
 #### Composition:
 
@@ -38,19 +41,42 @@ The creation follow these steps:
 
 In order to be reusable between view and accross projects, components are data-agnostic. So they should never not directly make any call to the store or to an api.
 
+#### 
+
 ### View
 
-This class is called by the router.
+A view is called by the router.
 It bind data to components.
-Following the atomic design principle, it will call a layout component, namely the template, and assign subcomponents to it.
-It is defined in a per-project basis.
+Following the atomic design principle, it will call a layout component, namely the template, and assign subcomponents to it. Defining a template i smandatory.
+
+A view is defined in a per-project basis.
+
+You can create a new view by composiiton as follow:
+```
+function myView(){
+    View.call(this)
+    
+    this.title = "my view"
+    
+    ...
+}
+```
 
 ### Router
 
 A client-side view-manager.
-It handle changing  views and manage
+It handle changing views and manage browser navigation.
+
+At creation it should be provided routes.
+The first route is considered the default and non-matching urls will redirect to it.
 
 ### Guard
+
+A guard control the access to a route.
+Its ```control``` method is called by the router before creating a route. This method is to be overwritten to fit the specific needs of the app (often: calling the authentication service).
+
+If the control function return true the page is created, otherwise the routing function stops and it is up to the guard to define what to do next (for example: redirect to login page).
+
 
 # Quick Set up:
 
