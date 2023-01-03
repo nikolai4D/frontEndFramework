@@ -90,7 +90,8 @@ Add the nd_frontend package through the command
 
 
 ## Vite:
-Use a bundler to bundle your dependancies and send them client side. Here we will be using Vite.
+Use a bundler to bundle your dependancies and send them client side.
+Here we will be using Vite.
 Install the Vite npm package.
 
 At the root of your project, create a vite.config.js folder. give it this content:
