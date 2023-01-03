@@ -9,7 +9,7 @@ This frameworks revolves around 4 classes:
 ### Component:
     As you will find them in others frameworks like react, it associate a logic to an htmlElement.
     
-### Composition:
+#### Composition:
 
 Componenent is not supposed to be used as such but to be used in composition as in the following example:
 
@@ -19,7 +19,7 @@ function Button(){
 }
 ```
 
-### Life-cycle of a component:
+#### Life-cycle of a component:
 
 A component have an associated htmlElement. The getter to this element is the method
 
@@ -34,9 +34,23 @@ The creation follow these steps:
 - it converts this string into one (and only one) htmlElement.
 - it calls the bindScript function, which does nothing by default but can be used to tie logic to the the htmlElement (ex: adding event listeners).
 
+#### Data-agnosticism:
+
+In order to be reusable between view and accross projects, components are data-agnostic. It means they will not directly make any call to the store or to an api.
+
 ### View
-- Router
-- Guard
+
+This class is called by the router.
+It bind data to components.
+Following the atomic design principle, it will call a layout component, namely the template, and assign subcomponents to it.
+It is defined in a per-project basis.
+
+### Router
+
+A client-side view-manager.
+It handle changing  views and manage
+
+### Guard
 
 # Quick Set up:
 
