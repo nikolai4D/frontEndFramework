@@ -11,7 +11,7 @@ This frameworks revolves around 4 classes:
     
 #### Composition:
 
-Componenent is not supposed to be used as such but to be used in composition as in the following example:
+Component is not supposed to be used as such but to be used in composition as in the following example:
 
 ```
 function Button(){
@@ -36,7 +36,7 @@ The creation follow these steps:
 
 #### Data-agnosticism:
 
-In order to be reusable between view and accross projects, components are data-agnostic. It means they will not directly make any call to the store or to an api.
+In order to be reusable between view and accross projects, components are data-agnostic. So they should never not directly make any call to the store or to an api.
 
 ### View
 
