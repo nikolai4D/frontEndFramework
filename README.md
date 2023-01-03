@@ -88,6 +88,23 @@ Create an express project.
 Add the nd_frontend package through the command 
 ```npm i https://github.com/nikolai4D/frontEndFramework.git ```
 
+At the root of the project, create an html file with the following content:
+
+```
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+
+  <link rel="stylesheet" href="src/stylesheets/style.css">
+
+  <script src="src/index.mjs" type="module" defer></script>
+</head>
+<body></body>
+</html>
+```
 
 ## Vite:
 Use a bundler to bundle your dependancies and send them client side.
@@ -115,11 +132,9 @@ export default defineConfig({
 
 At the root of your project, create a ```src``` and a ```dist``` folders.
 
-In the src folder, create a file named index.mjs. Vite will consider this file as the entry-point of your app, bundle it with all of its dependancies and output the corresponding file in the ```dist``` folder.
+In the src folder, create a file named index.mjs. Vite will bundle it with all of its dependancies and output the corresponding file in the ```dist``` folder.
 
 This ```dist``` folder should also be the one that express consider as 'static'.
-
-
 
 ## Creating a view:
 
@@ -151,8 +166,8 @@ export function Home() {
 In your client js entry point, create  a new router as follows:
 
 ```
-
-import {Home} from ".Home.mjs";
+import {Home} from "./Home.mjs";
+import {route, Router} from "nd_frontend/core/Router.mjs";
 
 export const router = new Router([
     route("home", Home)
