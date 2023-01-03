@@ -5,19 +5,42 @@ You will find a functionnal example here: https://github.com/nikolai4D/nikdev_ap
 
 # Quick Set up:
 
+
+## Express project:
 Create an express project.
 Add the nd_frontend package through the command "git i https://github.com/nikolai4D/frontEndFramework.git"
+Copy paste
 
-In your client js entry point, create  a new router as follows:
+
+## Vite:
+Use a bundler to bundle your dependancies and send them client side. Here we will be using Vite.
+Install the Vite npm package.
+
+At the root of your project, create a vite.config.js folder. give it this content:
 
 ```
-import {Router} from "nd_frontend"
+import { defineConfig } from 'vite'
 
-const router =  new Router().
-
+export default defineConfig({
+    build: {
+        minify: false,
+        rollupOptions: {
+            output: {
+                dir: 'dist',
+                format: 'module',
+                entryFileNames: 'index.mjs',
+            }
+        }
+    }
+})
 ```
+Your js own js code to be bundle should be in a directory named src.
+Your bundled script will be created in the dist folder.
+This dist folder should also be the one that express consider as 'static'.
 
-Create a new file named Home, and paste the following code to it:
+## Creating a view:
+
+In the src folder, create a new file named Home, and paste the following code to it:
 
 ```
 import {router} from "../../index.mjs";
@@ -25,7 +48,7 @@ import {View} from "nd_frontend/core/View.mjs";
 import {Header} from "nd_frontend/generics/components/atoms/Header.mjs";
 import {Default} from "nd_frontend/generics/components/templates/Default.mjs";
 
-export function Dashboard() {
+export function Home() {
     View.call(this)
 
     // This property is used to set the title of the page
@@ -39,3 +62,21 @@ export function Dashboard() {
 
 }
 ```
+
+In your client js entry point, create  a new router as follows:
+
+```
+
+import {Home} from ".Home.mjs";
+
+export const router = new Router([
+    route("home", Home)
+])
+
+const path = window.location.pathname.slice(1)
+console.log("path: " , path)
+
+router.goTo(path).then() 
+
+```
+
