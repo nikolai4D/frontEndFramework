@@ -109,16 +109,21 @@ export default defineConfig({
     }
 })
 ```
-Your js own js code to be bundle should be in a directory named src.
-Your bundled script will be created in the dist folder.
+
+At the root of your folder, create a ```src``` and a ```dist``` folders.
+
+In the the src folder, create a file named index.mjs. Vite will consider this file as the entry-poitn of your app, bundle it with all of it's dependancies and output the corresponnding file in the dist folder.
+
 This dist folder should also be the one that express consider as 'static'.
+
+
 
 ## Creating a view:
 
 In the src folder, create a new file named Home, and paste the following code to it:
 
 ```
-import {router} from "../../index.mjs";
+import {router} from "index.mjs";
 import {View} from "nd_frontend/core/View.mjs";
 import {Header} from "nd_frontend/generics/components/atoms/Header.mjs";
 import {Default} from "nd_frontend/generics/components/templates/Default.mjs";
