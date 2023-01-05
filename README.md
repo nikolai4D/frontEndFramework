@@ -59,7 +59,6 @@ let myCard = new Card()
 ```
 this.fillSlot('myCard', myCard.getElement())
 ```
-.
 
 ### View
 
