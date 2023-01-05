@@ -44,6 +44,18 @@ In order to be reusable between view and accross projects, components are data-a
 
 A lot of components integrate subcomponents. Atomic design is the rule we adopted to define how components integrate each others.
 
+#### Slots:
+
+Slots are here to ease the insertion of subcomponents element in your htmlElement. Using string literals, you can define a getHtml() such as
+``` <div>
+...
+${myCards}
+</div>```
+
+Then, in the bindScript() method, have something like 
+let myCard = new Card()
+```this.fillSlot('myCard', myCard.getAElement())```.
+
 ### View
 
 A view is called by the router.
