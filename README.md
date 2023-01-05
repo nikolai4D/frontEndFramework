@@ -200,6 +200,8 @@ The Home view should now be the default view of your app (as its the first one o
 ## Component creation:
 
 If you do not find a component matching your needs in the generic library, you can create one.
+
 It should call the component with ```Component.call(this)```.
-If a component similar to the one you want already exists, you directly inherit from it with ```*similarComponent*.call(this)```. Then override the methods you need.
+
+If a component similar to the one you want already exists, you directly inherit from it with ```*similarComponent*.call(this)```, then override the methods you need.
 
