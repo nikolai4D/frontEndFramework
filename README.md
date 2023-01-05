@@ -47,14 +47,19 @@ A lot of components integrate subcomponents. Atomic design is the rule we adopte
 #### Slots:
 
 Slots are here to ease the insertion of subcomponents element in your htmlElement. Using string literals, you can define a getHtml() such as
-``` <div>
-...
-${myCards}
-</div>```
+```
+<div>
+<p> hard coded p </p>
+${slot('myCards')}
+</div>
+```
 
 Then, in the bindScript() method, have something like 
 let myCard = new Card()
-```this.fillSlot('myCard', myCard.getAElement())```.
+```
+this.fillSlot('myCard', myCard.getAElement())
+```
+.
 
 ### View
 
