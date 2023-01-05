@@ -94,6 +94,7 @@ Its ```control``` method is called by the router before creating a route. This m
 
 If the control function return true the page is created, otherwise the routing function stops and it is up to the guard to define what to do next (for example: redirect to login page).
 
+When creating the router, in the provide routes, you can add the guard as the third parameter as follows: ```route("home", Home, myGuard)```
 
 
 # Quick Set up:
@@ -194,10 +195,6 @@ router.goTo(path).then()
 ```
 
 The Home view should now be the default view of your app (as its the first one of the routes list). Typing any url should send you to it, a view with only one h1 saying "Home".
-
-## Adding a guard to a route:
-
-When creating the router, in the provide routes, you can add the guard as the third parameter as follows: ```route("home", Home, myGuard)```
 
 ## Component creation:
 
