@@ -178,3 +178,6 @@ router.goTo(path).then()
 ```
 
 The Home view should now be the default view of your app (as its the first one of the routes list). Typing any url should send you to it, a view with only one h1 saying "Home".
+
+## TO ADD TO THIS README:
+- component inheritance.
