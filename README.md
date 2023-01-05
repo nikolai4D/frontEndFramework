@@ -57,7 +57,7 @@ ${slot('myCards')}
 Then, in the bindScript() method, have something like 
 let myCard = new Card()
 ```
-this.fillSlot('myCard', myCard.getAElement())
+this.fillSlot('myCard', myCard.getElement())
 ```
 .
 
