@@ -2,7 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 
 /**
  *
- * @param key the key corresponding to the icon in the icons map, in icon.mjs
+ * @param key the key corresponding to the icon in the icons map, in Icon.mjs
  * @param onClick
  * @constructor
  */
@@ -18,7 +18,7 @@ export function Icon(key, onClick = null) {
     }
 
     this.bindScript = function() {
-        if(!onClick) this.getElement().addEventListener("click", this.onClick)
+        if(onClick) this.getElement().addEventListener("click", this.onClick)
     }
 }
 
