@@ -1,5 +1,5 @@
 import {styleMockupComponent} from './styleMockupComponent.mjs';
 
-export const style = {
+export const bootstrapStyle = {
     styleMockUpComponent: styleMockupComponent
 }

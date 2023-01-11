@@ -1,6 +1,6 @@
 export default function() {
     let element = this.getElement()
 
-    element.classList.add("btn")
-    element.classList.add("btn-primary")
+    element.classList.add("bg-primary")
+    element.classList.add("mockup-component")
 }

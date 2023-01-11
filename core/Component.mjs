@@ -26,7 +26,7 @@ export function Component(){
     this.bindScript= function(){}
 
     /**
-     * Add styling to the element. Should be overwritten by one matching function in the style folder.
+     * Add styling to the element. Should be overwritten by one matching function in the bootstrapStyle folder.
      */
     this.styleElement = function(){}
 

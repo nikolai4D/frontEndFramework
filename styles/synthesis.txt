@@ -1,0 +1,11 @@
+Usage:
+1. In the index.js of the project, import a style object from nd_frontend.
+2. In the index.html of the project, add the related custom_style.css file.
+
+Benefits:
+- It takes 5 lines of code to change to swap the style of a project to a new css-framework.
+- Force devs to isolate styling functionality from the logic.
+- When coding style, devs do not have to wonder about genericity: they write the style for a specific css framework.
+- When coding logic, devs do not have to wonder about the style: they use the style object provided by the framework -> ticket responsibility made clearer.
+- Styles related to different frameworks are isolated in different files, making it easier to maintain and update.
+- Starting a new style can be quite easy as we can copy/paste the style file of another framework.
