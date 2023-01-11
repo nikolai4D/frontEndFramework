@@ -52,6 +52,16 @@ export function Component(){
         if(this.element) this.element.remove()
     }
 
+    /**
+     * Replace this component s element by a new one.
+     * Also replace it in the dom.
+     * The new element is created in the same way as the old one, if component data
+      */
+    this.updateElement = function(){
+        let oldElement = this.element
+        this.element = this.getElement(true)
+        oldElement.replaceWith(this.element)
+    }
 
     this.getState= function(state) {
         return null
