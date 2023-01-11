@@ -9,7 +9,7 @@ You will find a functionnal example here: https://github.com/nikolai4D/nikdev_ap
 This framework revolves around 4 classes:
 
 ### Component:
-    As you will find them in others frameworks like react, it associates logic to an htmlElement.
+As you will find them in others frameworks like react, it associates logic to an htmlElement.
     
 #### Composition:
 
