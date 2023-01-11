@@ -20,13 +20,15 @@ export function Component(){
 
 
     /**
-     * Add js to the component
+     * Add js logic to the component. Should be overwritten.
      * @returns <void>
      */
-    this.bindScript= function(){
+    this.bindScript= function(){}
 
-    }
-
+    /**
+     * Add styling to the element. Should be overwritten by one matching function in the style folder.
+     */
+    this.styleElement = function(){}
 
     /**
      * Get the DOM element of the component. Init the element if it is not already done.
@@ -38,6 +40,7 @@ export function Component(){
         if(!this.element || forceInit){
             this.element = stringToHTMLElement(this.getHtml())
             this.bindScript()
+            this.styleElement()
         }
 
         return this.element
