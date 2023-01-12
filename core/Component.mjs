@@ -94,7 +94,5 @@ export function Component(){
     this.fillSlots= function (slotMap) {
         for(let [slotName, element] of slotMap){ this.fillSlot(slotName, element) }
     }
-
-
 }
 
