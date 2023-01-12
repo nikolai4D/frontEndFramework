@@ -36,7 +36,7 @@ export const iconsMap = new Map([
     ["org", makeIconhtml("0-square-fill")],
     ["process", makeIconhtml("p-square-fill")],
     ["info", makeIconhtml("info-square-fill")],
-    ["cloud-upload", makeIconhtml("cloud-arrow-up-fill")],
+    ["cloud-plus", makeIconhtml("cloud-plus-fill")],
     ["account", makeIconhtml("person-fill")],
     ["logout", makeIconhtml("box-arrow-right")],
 ])
