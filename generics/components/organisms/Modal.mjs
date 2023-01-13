@@ -1,11 +1,11 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
 
-
 export function Modal(content) {
     Component.call(this)
 
     this.content = content
+    this.content.modal = this;
 
     this.getHtml = function() {
         return `
@@ -41,5 +41,4 @@ export function Modal(content) {
     this.show= function() {
         document.body.append(this.getElement())
     }
-
 }
