@@ -7,10 +7,9 @@ export function Router(routes) {  // Named proto instead of using default name b
     this.setBrowserHistory()
 }
 
-export function route(path, view, guard = null) {
+export function route(path, view) {
     return {
         path,
-        guard,
         view
     };
 }
@@ -36,7 +35,6 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     let foundState = this.viewStates.get(fullRoute)
     if(foundState && !forceNewView){ this.viewStates.delete(fullRoute)}
 
-    let paths = this.routes.map((route) => route.route)
     console.log("routeBase", routeBase)
 
     let route = this.routes.find( r => r.path === routeBase )
@@ -60,7 +58,6 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
         if(previousView) {
             viewStates.set(previousView.path, previousView.getState()) // Store the previous view state in the views map
             await previousView.unsetView()
-            console.log("removed view")
         }
 
         if(pushState) history.pushState({path: routeBase}, null, "../" + fullRoute) //History only store the route of the view
@@ -68,30 +65,8 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     }
 
 
-    if(route.guard) {
-        let guard = new route.guard()
-        let answer = await guard.awaitAnswer(fullRoute, params)
-        switch (answer) {
-            case "allow":
-                console.log("allow")
-                this.currentView = await createView(route.view, params, foundState)
-                await switchView(this.currentView, this.viewStates)
-                break;
-            case "redirect":
-                console.log("redirecting to " + route.redirect)
-                await this.goTo(this.currentView.redirect ?? this.routes[0].path, params, forceNewView, pushState)
-                break;
-            case "stop":
-                console.log("guard stopped")
-                break;
-            default:
-                console.error("guard answer not recognized: " + answer)
-        }
-    }
-    else  {
+    this.currentView = await createView(route.view, params, foundState)
+    await switchView(this.currentView, this.viewStates)
 
-        this.currentView = await createView(route.view, params, foundState)
-        await switchView(this.currentView, this.viewStates)
-    }
 }
 
