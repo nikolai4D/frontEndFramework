@@ -1,13 +1,13 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Link(text, route, router){
+export function Link(data){
     Component.call(this)
 
     this.getHtml = function(){
-        return `<a>${text}</a>`
+        return `<a  class="${data.class}">${data.text}</a>`
     }
 
     this.bindScript = function(){
-        this.element.addEventListener("click", ()=> router.goTo(route))
+        this.element.addEventListener("click", ()=> data.router.goTo(data.route))
     }
 }

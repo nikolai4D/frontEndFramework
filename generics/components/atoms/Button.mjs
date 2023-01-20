@@ -1,7 +1,8 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Button(text, onClick) {
+export function Button(data) {
     Component.call(this)
+    const {text, onClick} = data
 
     this.getHtml= function() {
         return `
