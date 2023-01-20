@@ -1,7 +1,6 @@
 export function Router(routes) {  // Named proto instead of using default name because ref to it needed below to add methods to it.
 
     this.routes = routes
-    this.viewStates= new Map()
     this.currentView= null
 
     this.setBrowserHistory()
@@ -29,11 +28,7 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     const routeBase = splitRoute[0]
     const routeParams = splitRoute.slice(1).filter((e) => e !== "")
 
-
     let previousView = this.currentView;
-
-    let foundState = this.viewStates.get(fullRoute)
-    if(foundState && !forceNewView){ this.viewStates.delete(fullRoute)}
 
     console.log("routeBase", routeBase)
 
@@ -46,27 +41,22 @@ Router.prototype.goTo = async function(fullRoute, params = [], forceNewView = fa
     }
 
 
-    const createView = async (viewConstructor, params = [], state = null)=> {
+    const createView = async (viewConstructor, params = [])=> {
         let view = await new viewConstructor(routeParams, ...params)
         view.path = fullRoute
-        if(state) await view.setState(state)
         return view
     }
 
 
-    async function switchView(currentView, viewStates) {
-        if(previousView) {
-            viewStates.set(previousView.path, previousView.getState()) // Store the previous view state in the views map
-            await previousView.unsetView()
-        }
+    async function switchView(currentView) {
+        if(previousView) await previousView.template.removeElement()
 
         if(pushState) history.pushState({path: routeBase}, null, "../" + fullRoute) //History only store the route of the view
         await currentView.setView()
     }
 
-
-    this.currentView = await createView(route.view, params, foundState)
-    await switchView(this.currentView, this.viewStates)
+    this.currentView = await createView(route.view, params)
+    await switchView(this.currentView)
 
 }
 
