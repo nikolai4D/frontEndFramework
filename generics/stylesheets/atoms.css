@@ -14,14 +14,17 @@
 }
 
 .atom_button-neutral{
-    color: var(--custom-color-1);
+    background-color: var(--custom-color-1);
     padding: 1em;
+    border-radius: 6px;
+    border: 0;
 }
 
 .atom_button-positive{
-    color: var(--custom-color-2);
     padding: 1em;
-
+    background-color: var(--custom-color-2);
+    border-radius: 6px;
+    border: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

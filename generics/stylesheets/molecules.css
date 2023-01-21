@@ -8,5 +8,7 @@
 }
 
 .molecule_login-or-signup {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
