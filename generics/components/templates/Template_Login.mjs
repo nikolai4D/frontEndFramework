@@ -1,14 +1,14 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
-export function TemplateLoggedin() {
+export function Template_Login() {
     Component.call(this)
 
     this.getHtml = function() {
 
         return `
             <div>
-                TemplateLoggedin
+                TemplateLogin
             </div>
         `
     }
