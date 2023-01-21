@@ -1,52 +1,7 @@
-.grid {
-    display:grid;
-    height: 100vh;
-    margin: -8px;
-}
-
-.grid__c3r3 {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-}
-
-.grid-placement__c1r1-3{
-    grid-column: 1;
-    grid-row: 1 / 4;
-}
-
-.grid-placement__c2-3r2 {
-    grid-column: 2 / 4;
-    grid-row: 2;
-}
-
-.grid__c1r7 {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-}
-
-.grid-placement__c1r1 {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.grid-placement__c1r3 {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.grid__c4r1 {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 1rem;
-}
-
-.grid-placement__c2-3r1 {
-    grid-column: 2 / 4;
-    grid-row: 1;
-}
+@import "grids.css";
+@import "grid-placements.css";
+@import "placements.css";
+@import "templates.css";
+@import "organisms.css";
+@import "molecules.css";
+@import "atoms.css";

@@ -9,7 +9,7 @@ export function Template_Start() {
     this.getHtml = function() {
 
         return `
-            <div class="grid grid__c3r3">
+            <div class="grid grid__c3r3 template_start">
                 <div class="grid-placement__c1r1-3">
                     ${slot("organismStartInfo")}
                 </div>
