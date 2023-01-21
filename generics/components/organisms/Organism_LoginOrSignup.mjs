@@ -7,7 +7,7 @@ export function Organism_LoginOrSignup() {
     this.getHtml = function() {
 
         return `
-            <div class="grid__c4r1">
+            <div class="grid__c4r1 organism_login-or-signup">
                 <div class="grid-placement__c2-3r1 center">
                     Molecule_LoginOrSignup
                 </div>

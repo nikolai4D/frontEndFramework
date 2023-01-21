@@ -7,7 +7,7 @@ export function Organism_StartInfo() {
     this.getHtml = function() {
 
         return `
-            <div class="grid__c1r7">
+            <div class="grid__c1r7 organism_start-info">
                 <div class="grid-placement__c1r1">
                     Molecule_Logo
                 </div>
@@ -19,7 +19,7 @@ export function Organism_StartInfo() {
     }
 
     this.bindScript= function() {
-
+  
     }
 
 }
