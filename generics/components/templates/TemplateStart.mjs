@@ -7,7 +7,7 @@ export function TemplateStart() {
     this.getHtml = function() {
 
         return `
-            <div class="grid__c3r3">
+            <div class="grid grid__c3r3">
                 <div class="grid-placement__c1r1-3">
                     org_startInfo
                 </div>
