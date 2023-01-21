@@ -1,5 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
+import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs";
+import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 
 export function Template_Start() {
     Component.call(this)
@@ -9,17 +11,20 @@ export function Template_Start() {
         return `
             <div class="grid grid__c3r3">
                 <div class="grid-placement__c1r1-3">
-                    org_startInfo
+                    ${slot("organismStartInfo")}
                 </div>
                 <div class="grid-placement__c2-3r2">
-                    org_loginOrSignup
+                    ${slot("organismLoginOrSignup")}
                 </div>
             </div>
         `
     }
 
     this.bindScript= function() {
+        let organismStartInfo = new Organism_StartInfo();
+        let organismLoginOrSignup = new Organism_LoginOrSignup();
 
-    }
-
+        this.fillSlot("organismStartInfo", organismStartInfo.getElement());
+        this.fillSlot("organismLoginOrSignup", organismLoginOrSignup.getElement());
+    };
 }
