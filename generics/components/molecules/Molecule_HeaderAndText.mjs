@@ -22,7 +22,7 @@ export function Molecule_HeaderAndText() {
         let heading4 = new Atom_Heading4()
         let text1 = new Atom_Text1()
         this.fillSlot("heading4", heading4.getElement());
-        this.fillSlot("text1", text.getElement());
+        this.fillSlot("text1", text1.getElement());
     }
 
 }
