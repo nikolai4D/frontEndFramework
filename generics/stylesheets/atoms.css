@@ -1,10 +1,27 @@
+
+@import "colors.css";
+
 .atom_icon{
+    padding: 1em;
 }
 
 .atom_heading1{
+    padding: 1em;
 }
 
 .atom_text1{
+    padding: 1em;
+}
+
+.atom_button-neutral{
+    color: var(--custom-color-1);
+    padding: 1em;
+}
+
+.atom_button-positive{
+    color: var(--custom-color-2);
+    padding: 1em;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
