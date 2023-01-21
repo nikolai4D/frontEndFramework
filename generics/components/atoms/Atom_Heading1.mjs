@@ -1,18 +1,14 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
-
-export function Molecule_Logo() {
+export function Atom_Heading1() {
     Component.call(this)
 
     this.getHtml = function() {
 
         return `
-            <div class="molecule_logo">
-                <div class="">
-                    ${slot("icon")}
-                    ${slot("heading1")}
-                </div>
+            <div class="atom_heading1">
+                <h1>Atom_Heading1</h1>
             </div>
         `
     }
