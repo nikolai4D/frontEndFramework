@@ -1,5 +1,7 @@
+@import "colors.css";
+
 .organism_start-info {
-    background-color: #85C8DE;
+    background-color: var(--custom-color-1);
 }
 
 .organism_login-or-signup{
