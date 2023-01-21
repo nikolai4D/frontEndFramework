@@ -9,11 +9,9 @@ export function Molecule_HeaderAndText() {
     this.getHtml = function() {
 
         return `
-            <div class="grid__c1r7 molecule_header-and-text">
-                <div class="grid-placement__c1r1">
+            <div class="molecule_header-and-text">
                     ${slot("heading4")}
-                    ${slot("text")}
-                </div>
+                    ${slot("text1")}
             </div>
         `
     }
