@@ -7,7 +7,7 @@ export function Atom_Icon() {
     this.getHtml = function() {
 
         return `
-                <i class="atom_icon"#</i>
+                <# class="atom_icon">#</i>
             `
     }
 
