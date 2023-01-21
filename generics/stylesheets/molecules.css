@@ -1,9 +1,12 @@
 .molecule_logo{
+    display: flex;
+    padding:1em;
+}
+
+.molecule_header-and-text{
 
 }
 
-.molecule_header-and-text{}
-
 .molecule_login-or-signup {
-    
+
 }
