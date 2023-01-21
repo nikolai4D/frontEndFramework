@@ -1,3 +1,8 @@
+body {
+    height: 100vh;
+    margin: -8px;
+}
+
 .grid__c3r3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
