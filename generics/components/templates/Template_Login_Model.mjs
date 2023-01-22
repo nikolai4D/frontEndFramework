@@ -22,19 +22,16 @@ export function Template_Login_Model(model) {
                         }
                     }
                 },
-                organism_loginOrSignup: {
-                    molecule_loginOrSignup : {
+                organism_loginFrom: {
+                    molecule_loginFrom : {
+                        atom_input: {
+                            type: model.type,
+                            placeholder: model.placeholder,
+                        },
                         atom_buttonPositive : {
                             text : model.buttonPositive.text,
                             onClick : model.buttonPositive.onClick
                         },
-                        atom_text1: {
-                            text : model.text1
-                        },
-                        atom_buttonNeutral : {
-                            text : model.buttonNeutral.text,
-                            onClick : model.buttonNeutral.onClick
-                        }
                     }
                 }
             }
