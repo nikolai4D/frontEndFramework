@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs";
+import { Organism_LoginForm } from "../organisms/Organism_LoginForm.mjs";
 import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
@@ -15,7 +15,7 @@ export function Template_Login_View(view) {
                     ${slot("organismStartInfo")}
                 </div>
                 <div class="grid-placement__c2-3r2">
-                    ${slot("organismLoginOrSignup")}
+                    ${slot("organismLoginForm")}
                 </div>
             </div>
         `
@@ -24,10 +24,10 @@ export function Template_Login_View(view) {
     this.bindScript= function() {
         let model = State.views[view].components
         let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
-        let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
+        let organismLoginForm = new Organism_LoginFrom(model.organism_loginForm);
 
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());
-        this.fillSlot("organismLoginOrSignup", organismLoginOrSignup.getElement());
+        this.fillSlot("organismLoginForm", organismLoginForm.getElement());
     };
 
 }

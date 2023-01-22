@@ -1,0 +1,23 @@
+import {Component} from "../../../core/Component.mjs";
+import {slot} from "../../../core/helpers.mjs";
+import {Molecule_LoginForm} from "../molecules/Molecule_LoginForm.mjs";
+
+export function Organism_LoginForm(model) {
+    Component.call(this)
+
+    this.getHtml = function() {
+
+        return `
+            <div class="grid__c4r1 organism_login">
+                <div class="grid-placement__c2-3r1 center">
+                    ${slot("loginForm")}
+                </div>
+            </div>
+        `
+    }
+
+    this.bindScript= function() {
+        let loginForm = new Molecule_LoginForm(model.molecule_LoginForm)
+        this.fillSlot("loginForm", loginForm.getElement());
+    }
+}
