@@ -1,7 +1,6 @@
 import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_state.mjs";
 
 export function Template_Start_Model(model) { 
-    console.log(model, "model")
     const template_model = {
             view: model.view,
             components: {
@@ -26,13 +25,15 @@ export function Template_Start_Model(model) {
                 organism_loginOrSignup: {
                     molecule_loginOrSignup : {
                         atom_buttonPositive : {
-                            text : model.buttonPositive
+                            text : model.buttonPositive.text,
+                            onClick : model.buttonPositive.onClick
                         },
                         atom_text1: {
                             text : model.text1
                         },
                         atom_buttonNeutral : {
-                            text : model.buttonNeutral
+                            text : model.buttonNeutral.text,
+                            onClick : model.buttonNeutral.onClick
                         }
                     }
                 }

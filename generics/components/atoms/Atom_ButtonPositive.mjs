@@ -1,5 +1,4 @@
 import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
 
 export function Atom_ButtonPositive(model) {
     Component.call(this)
@@ -12,7 +11,7 @@ export function Atom_ButtonPositive(model) {
     }
 
     this.bindScript= function() {
-
+        this.element.addEventListener("click", model.onClick)
     }
 
 }
