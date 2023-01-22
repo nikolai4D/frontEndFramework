@@ -22,7 +22,7 @@ export function Template_Login_Model(model) {
                         }
                     }
                 },
-                organism_loginFrom: {
+                organism_loginForm: {
                     molecule_loginForm : {
                         atom_input: {
                             type: model.inputType,
