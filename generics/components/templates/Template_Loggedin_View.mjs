@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
-export function Template_Loggedin() {
+export function Template_Loggedin_View() {
     Component.call(this)
 
     this.getHtml = function() {
