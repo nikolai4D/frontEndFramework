@@ -25,8 +25,8 @@ export function Template_Login_Model(model) {
                 organism_loginFrom: {
                     molecule_loginForm : {
                         atom_input: {
-                            type: model.type,
-                            placeholder: model.placeholder,
+                            type: model.inputType,
+                            placeholder: model.inputPlaceholder,
                         },
                         atom_buttonPositive : {
                             text : model.buttonPositive.text,
