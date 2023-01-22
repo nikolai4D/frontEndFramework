@@ -6,7 +6,7 @@ export function Atom_Input(model) {
 
     this.getHtml = function() {
         return `
-        <input type="${type}" placeholder="${placeholder}">
+        <input class="atom_input" type="${type}" placeholder="${placeholder}">
         `
     }
 

@@ -8,7 +8,7 @@ export function Organism_LoginForm(model) {
     this.getHtml = function() {
 
         return `
-            <div class="grid__c4r1 organism_login">
+            <div class="grid__c4r1 organism_loginForm">
                 <div class="grid-placement__c2-3r1 center">
                     ${slot("loginForm")}
                 </div>

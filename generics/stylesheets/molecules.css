@@ -12,3 +12,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+.molecule_loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
+}
