@@ -3,7 +3,7 @@ import {slot} from "../../../core/helpers.mjs";
 import {Atom_Heading4} from "../atoms/Atom_Heading4.mjs";
 import {Atom_Icon} from "../atoms/Atom_Icon.mjs";
 
-export function Molecule_Logo() {
+export function Molecule_Logo(model) {
     Component.call(this)
 
     this.getHtml = function() {
@@ -17,8 +17,8 @@ export function Molecule_Logo() {
     }
 
     this.bindScript= function() {
-        let icon = new Atom_Icon()
-        let heading4 = new Atom_Heading4()
+        let icon = new Atom_Icon(model.atom_icon)
+        let heading4 = new Atom_Heading4(model.atom_heading4)
         this.fillSlot("icon", icon.getElement());
         this.fillSlot("heading4", heading4.getElement());
 

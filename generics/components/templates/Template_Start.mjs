@@ -3,7 +3,7 @@ import {slot} from "../../../core/helpers.mjs";
 import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs";
 import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 
-export function Template_Start() {
+export function Template_Start(model) {
     Component.call(this)
 
     this.getHtml = function() {
@@ -21,8 +21,8 @@ export function Template_Start() {
     }
 
     this.bindScript= function() {
-        let organismStartInfo = new Organism_StartInfo();
-        let organismLoginOrSignup = new Organism_LoginOrSignup();
+        let organismStartInfo = new Organism_StartInfo(model.organism_start_info);
+        let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
 
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());
         this.fillSlot("organismLoginOrSignup", organismLoginOrSignup.getElement());
