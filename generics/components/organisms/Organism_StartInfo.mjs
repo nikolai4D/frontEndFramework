@@ -22,7 +22,7 @@ export function Organism_StartInfo(model) {
 
     this.bindScript= function() {
         let logo = new Molecule_Logo(model.molecule_logo)
-        let headerAndText = new Molecule_HeaderAndText(model.molecule_header_and_text)
+        let headerAndText = new Molecule_HeaderAndText(model.molecule_headerAndText)
         this.fillSlot("logo", logo.getElement());
         this.fillSlot("headerAndText", headerAndText.getElement());
     }
