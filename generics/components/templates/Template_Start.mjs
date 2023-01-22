@@ -4,6 +4,7 @@ import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs"
 import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 
 export function Template_Start(model) {
+    console.log(model, "model")
     Component.call(this)
 
     this.getHtml = function() {
