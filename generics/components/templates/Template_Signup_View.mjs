@@ -1,5 +1,8 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
+import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs";
+import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
+import { State } from "../../../core/actions/State.mjs";
 
 export function Template_Signup_View() {
     Component.call(this)
