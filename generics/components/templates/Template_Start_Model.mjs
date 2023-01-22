@@ -18,20 +18,20 @@ export function Template_Start_Model(model) {
                             text : model.startHeading
                         },
                         atom_text1 : {
-                            text1 : model.startText
+                            text : model.startText
                         }
                     }
                 },
                 organism_loginOrSignup: {
                     molecule_loginOrSignup : {
                         atom_buttonPositive : {
-                            text : "Login"
+                            text : model.buttonPositive
                         },
                         atom_text1: {
-                            text : "or"
+                            text : model.text1
                         },
                         atom_buttonNeutral : {
-                            text : "Signup"
+                            text : model.buttonNeutral
                         }
                     }
                 }
