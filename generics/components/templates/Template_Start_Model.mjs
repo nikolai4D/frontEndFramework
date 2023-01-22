@@ -1,6 +1,7 @@
 import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_state.mjs";
 
 export function Template_Start_Model(model) { 
+    console.log(model, "model")
     const template_model = {
             view: model.view,
             components: {

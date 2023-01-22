@@ -18,7 +18,7 @@ export function Molecule_HeaderAndText(model) {
 
     this.bindScript= function() {  
         let heading4 = new Atom_Heading4(model.atom_heading4)
-        let text1 = new Atom_Text1()
+        let text1 = new Atom_Text1(model.atom_text1)
         this.fillSlot("heading4", heading4.getElement());
         this.fillSlot("text1", text1.getElement());
     }
