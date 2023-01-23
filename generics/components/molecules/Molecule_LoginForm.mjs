@@ -11,8 +11,6 @@ export function Molecule_LoginForm(model) {
         atom_buttonPositive: new Atom_ButtonPositive().props
     }
 
-    console.log( this.props, "Molecule_LoginForm")
-
     this.getHtml = function() {
 
         return `
@@ -30,6 +28,4 @@ export function Molecule_LoginForm(model) {
         this.fillSlot("button-positive", buttonPositive.getElement());
     }
 
-
-  
 }
