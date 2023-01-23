@@ -3,7 +3,7 @@ import { modelView } from "./Template_Login_View.mjs";
 
 export function Template_Login_Model(model) {
   const test = JSON.parse(modelView);
-  console.log(JSON.parse(test), "TEST");
+  console.log(test, "TEST");
 
   const template_model = {
     view: model.view,
