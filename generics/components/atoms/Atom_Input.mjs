@@ -13,10 +13,10 @@ export function Atom_Input(model = {}) {
         `
     }
 
-    // this.props = {
-    //     type,
-    //     placeholder
-    // }
+    this.props = {
+        type,
+        placeholder
+    }
 
 }
 
