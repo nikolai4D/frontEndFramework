@@ -2,6 +2,9 @@ import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_
 import { Template_Login_View } from "./Template_Login_View.mjs";
 
 export function Template_Login_Model(model) {
+  const test = JSON.parse(Template_Login_View().props);
+  console.log(test, "TEST");
+
   const template_model = {
     view: model.view,
     components: {
