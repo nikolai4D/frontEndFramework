@@ -8,12 +8,12 @@ export function Atom_ButtonPositive(model) {
     this.getHtml = function() {
 
         return `
-                <button class="atom_button-positive">${this.props.text}</button>
+                <button class="atom_button-positive">${model.text}</button>
                 `
     }
 
     this.bindScript= function() {
-        this.element.addEventListener("click", this.props.onClick)
+        this.element.addEventListener("click", model.onClick)
     }
     // this.props = {
     //     text: text,
