@@ -13,5 +13,5 @@ export function Button(data) {
         this.element.addEventListener("click", this.onClick)
     }
 
-    this.onClick = onClick
+    this.onClick = onClick ?? function(){}
 }
