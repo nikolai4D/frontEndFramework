@@ -6,7 +6,7 @@ import { Atom_Input } from "../atoms/Atom_Input.mjs";
 export function Molecule_LoginForm(model) {
     Component.call(this)
 
-    // console.log(Atom_Input().props)
+    console.log(new Atom_Input(), "atom input")
 
     this.getHtml = function() {
 

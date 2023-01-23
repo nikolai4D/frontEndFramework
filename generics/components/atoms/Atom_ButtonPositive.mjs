@@ -15,10 +15,9 @@ export function Atom_ButtonPositive(model) {
     this.bindScript= function() {
         this.element.addEventListener("click", this.props.onClick)
     }
-    this.props = {
-        text: text,
-        onClick: onClick
-    }
+    // this.props = {
+    //     text: text,
+    //     onClick: onClick
+    // }
 
 }
-
