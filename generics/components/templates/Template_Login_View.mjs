@@ -7,6 +7,8 @@ import { State } from "../../../core/actions/State.mjs";
 
 export function Template_Login_View(view) {
     Component.call(this)
+    let model = State.views[view].components
+
     this.props = {
         organism_loginForm: new Organism_LoginForm(model.organism_loginForm).props
     }
