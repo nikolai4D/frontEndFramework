@@ -3,7 +3,7 @@ import {Icon} from "../atoms/Icon.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
 
-export function Brand( data ){
+export function Molecule_Brand(data ){
     Component.call(this)
 
     let icon = new Icon(data.icon)

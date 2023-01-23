@@ -21,3 +21,11 @@
     padding: 30px;
     gap: 20px;
 }
+
+.molecule_brand {
+    font-weight: 700;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-gap: 0.5rem;
+}
