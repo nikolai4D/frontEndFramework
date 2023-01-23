@@ -16,8 +16,17 @@
 }
 
 .template_split {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
 }
 
 .template_split div:nth-child(1) {
-    bakcground-color: var(--custom-color-1);
+    background-color: var(--custom-color-1);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto 1fr;
 }
