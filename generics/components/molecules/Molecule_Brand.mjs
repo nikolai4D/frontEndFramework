@@ -10,7 +10,7 @@ export function Molecule_Brand(data ){
 
     this.getHtml = function() {
         return `
-            <div class="brand">
+            <div class="molecule_brand">
                 ${slot("icon")}
                 <span>${data.name}</span>
             </div>
