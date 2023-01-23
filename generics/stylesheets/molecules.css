@@ -28,4 +28,5 @@
     align-items: center;
     grid-auto-flow: column;
     grid-gap: 0.5rem;
+    grid-template-columns: min-content;
 }
