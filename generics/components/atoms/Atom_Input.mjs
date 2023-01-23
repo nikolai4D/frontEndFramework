@@ -5,15 +5,17 @@ export function Atom_Input(model = {}) {
 
     Component.call(this)
     
-    this.props = {
-        type,
-        placeholder
-    }
+
 
     this.getHtml = function() {
         return `
         <input class="atom_input" type="${type}" placeholder="${placeholder}">
         `
+    }
+
+    this.props = {
+        type,
+        placeholder
     }
 
 }
