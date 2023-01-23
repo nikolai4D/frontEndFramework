@@ -16,5 +16,8 @@
 }
 
 .template_split {
-    background-color: var(--custom-color-1);
+}
+
+.template_split div:nth-child(1) {
+    bakcground-color: var(--custom-color-1);
 }
