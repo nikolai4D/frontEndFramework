@@ -14,3 +14,7 @@
 .template_loggedin {
 
 }
+
+template-split {
+    background-color: var(--custom-color-1);
+}
