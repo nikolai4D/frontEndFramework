@@ -21,10 +21,6 @@ export function Molecule_Logo(model) {
         let heading4 = new Atom_Heading4(model.atom_heading4)
         this.fillSlot("icon", icon.getElement());
         this.fillSlot("heading4", heading4.getElement());
-
-
-
-
     }
 
 }

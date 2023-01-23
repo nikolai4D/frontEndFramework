@@ -7,8 +7,8 @@ export function Molecule_LoginForm(model) {
     Component.call(this)
 
     this.props = {
-        atom_input: new Atom_Input().props,
-        atom_buttonPositive: new Atom_ButtonPositive().props
+        atom_input: new Atom_Input(model.atom_input).props,
+        atom_buttonPositive: new Atom_ButtonPositive(model.atom_buttonPositive).props
     }
 
     this.getHtml = function() {
