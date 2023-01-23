@@ -10,7 +10,7 @@ export function Template_Login_View(view) {
     let model = State.views[view].components
 
     this.props = {
-        organism_loginForm: new Organism_LoginForm(model.organism_loginForm).props
+        organism_loginForm: new Organism_LoginForm().props
     }
 
     console.log(this.props, "props!!!!!!")

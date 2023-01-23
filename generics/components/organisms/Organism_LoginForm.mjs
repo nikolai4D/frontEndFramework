@@ -6,7 +6,7 @@ export function Organism_LoginForm(model) {
     Component.call(this)
 
     this.props = {
-        molecule_loginForm: new Molecule_LoginForm(model.molecule_loginForm).props
+        molecule_loginForm: new Molecule_LoginForm().props
     }
 
     this.getHtml = function() {
@@ -21,7 +21,7 @@ export function Organism_LoginForm(model) {
     }
 
     this.bindScript= function() {
-        let loginForm = new Molecule_LoginForm(model.molecule_loginForm)
+        let loginForm = new Molecule_LoginForm()
         this.fillSlot("loginForm", loginForm.getElement());
     }
 
