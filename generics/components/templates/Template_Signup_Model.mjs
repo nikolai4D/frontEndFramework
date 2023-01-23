@@ -22,8 +22,8 @@ export function Template_Signup_Model(model) {
                         }
                     }
                 },
-                organism_loginOrSignup: {
-                    molecule_loginOrSignup : {
+                organism_signupForm: {
+                    molecule_signupForm : {
                         atom_input: {
                             type: model.inputType,
                             placeholder: model.inputPlaceholder,

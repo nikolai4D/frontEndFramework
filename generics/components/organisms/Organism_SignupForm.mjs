@@ -17,7 +17,7 @@ export function Organism_SignupForm(model) {
     }
 
     this.bindScript= function() {
-        let signupForm = new Molecule_SignupForm(model.molecule_SignupForm)
+        let signupForm = new Molecule_SignupForm(model.molecule_signupForm)
         this.fillSlot("signupForm", signupForm.getElement());
     }
 }
