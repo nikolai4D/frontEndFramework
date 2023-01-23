@@ -8,7 +8,6 @@ import { State } from "../../../core/actions/State.mjs";
 export function Template_Login_View(view = {}) {
   Component.call(this);
 
-  this.props = JSON.stringify("model.view");
   // this.props = {
   //     organism_loginForm: new Organism_LoginForm().props
   // }
@@ -36,3 +35,5 @@ export function Template_Login_View(view = {}) {
     this.fillSlot("organismLoginForm", organismLoginForm.getElement());
   };
 }
+
+export const modelView = JSON.stringify("model.view");
