@@ -24,12 +24,9 @@ export function Template_Signup_Model(model) {
                 },
                 organism_loginOrSignup: {
                     molecule_loginOrSignup : {
-                        atom_buttonPositive : {
-                            text : model.buttonPositive.text,
-                            onClick : model.buttonPositive.onClick
-                        },
-                        atom_text1: {
-                            text : model.text1
+                        atom_input: {
+                            type: model.inputType,
+                            placeholder: model.inputPlaceholder,
                         },
                         atom_buttonNeutral : {
                             text : model.buttonNeutral.text,
