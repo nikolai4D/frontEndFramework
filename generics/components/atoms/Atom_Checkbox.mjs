@@ -6,7 +6,7 @@ export function Atom_Checkbox(model) {
     this.getHtml = function() {
 
         return `
-                <input class="atom_checkbox" checked="true"/>
+                <input type="checkbox" class="atom_checkbox" checked/>
                 `
     }
 
