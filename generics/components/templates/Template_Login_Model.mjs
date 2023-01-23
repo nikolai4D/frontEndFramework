@@ -4,7 +4,7 @@ import { Template_Login_View } from "./Template_Login_View.mjs";
 
 
 export function Template_Login_Model(model) { 
-    const template_model1 = Template_Login_View(model.view).props;
+    const template_model1 = new Template_Login_View(model.view).props;
     console.log(template_model1, "template_model1")
     
     const template_model = {
