@@ -2,7 +2,13 @@ import {Component} from "nd_frontend/core/Component.mjs";
 
 export function Atom_Input(model) {
     const {type="text", placeholder="..."} = model
+
     Component.call(this)
+    
+    this.props = {
+        type,
+        placeholder
+    }
 
     this.getHtml = function() {
         return `
@@ -11,3 +17,4 @@ export function Atom_Input(model) {
     }
 
 }
+
