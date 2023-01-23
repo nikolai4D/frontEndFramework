@@ -22,8 +22,8 @@ export function Molecule_LoginForm(model) {
     }
 
     this.bindScript= function() {
-        let input = new Atom_Input()
-        let buttonPositive = new Atom_ButtonPositive()
+        let input = new Atom_Input(model.atom_input)
+        let buttonPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
         this.fillSlot("input", input.getElement());
         this.fillSlot("button-positive", buttonPositive.getElement());
     }

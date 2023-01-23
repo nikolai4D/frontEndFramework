@@ -21,7 +21,7 @@ export function Organism_LoginForm(model) {
     }
 
     this.bindScript= function() {
-        let loginForm = new Molecule_LoginForm()
+        let loginForm = new Molecule_LoginForm(model.molecule_loginForm)
         this.fillSlot("loginForm", loginForm.getElement());
     }
 
