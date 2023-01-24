@@ -23,10 +23,10 @@ export function Molecule_Card(model) {
     }
 
     this.bindScript= function() {  
-        let heading1 = new Atom_Heading4(model.atom_heading4)
+        let heading4 = new Atom_Heading4(model.atom_heading4)
         let paragraph = new Paragraph(model.atom_paragraph)
         let button = new Button(model.atom_button)
-        this.fillSlot("heading1", heading1.getElement())
+        this.fillSlot("heading1", heading4.getElement())
         this.fillSlot("paragraph", paragraph.getElement())
         this.fillSlot("button", button.getElement())
     }
