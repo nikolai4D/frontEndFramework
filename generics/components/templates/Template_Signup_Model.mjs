@@ -25,12 +25,15 @@ export function Template_Signup_Model(model) {
                 organism_signupForm: {
                     molecule_signupForm : {
                         atom_input: {
-                            type: model.inputType,
+                            type: model.inputType.email,
                             placeholder: model.inputPlaceholder,
                         },
-                        atom_checkbox: {
-                            type: model.inputCheckbox
+                        atom_input: {
+                            type: model.inputType.checkbox
                         },
+                        // atom_checkbox: {
+                        //     type: model.inputCheckbox
+                        // },
                         atom_buttonNeutral : {
                             text : model.buttonNeutral.text,
                             onClick : model.buttonNeutral.onClick
