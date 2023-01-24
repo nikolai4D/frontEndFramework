@@ -33,9 +33,12 @@ export function Component(){
      * Create child components
      * @returns <void>
      */
-     this.treeCreateComponents= function(){
-
-     }
+     this.treeCreateComponents= function() {
+        for(const [key, value] of Object.entries(this.model)){
+            const newSubCompInstance = new value.component(value)
+            this.subComponents[key] = newSubCompInstance
+        }
+    }
 
 
     /**

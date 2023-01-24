@@ -22,13 +22,6 @@ export function Template_Start_View(view) {
         `
     }
 
-    this.treeCreateComponents= function() {
-        for(const [key, value] of Object.entries(this.model)){
-            const newSubCompInstance = new value.component(value)
-            this.subComponents[key] = newSubCompInstance
-        }
-    }
-
     this.bindScript= function() {
         this.treeCreateComponents()
         //let model = State.views[view].components
