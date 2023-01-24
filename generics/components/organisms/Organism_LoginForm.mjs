@@ -5,9 +5,9 @@ import { Molecule_LoginForm } from "../molecules/Molecule_LoginForm.mjs";
 export function Organism_LoginForm(model) {
   Component.call(this);
 
-  // this.props = {
-  //     molecule_loginForm: new Molecule_LoginForm().props
-  // }
+  this.props = {
+    molecule_loginForm: new Molecule_LoginForm().props,
+  };
 
   this.getHtml = function () {
     return `
