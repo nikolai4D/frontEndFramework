@@ -1,13 +1,13 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
-export function Atom_Heading1() {
+export function Atom_Heading1(model) {
     Component.call(this)
 
     this.getHtml = function() {
 
         return `
-                <h1 class="atom_heading1">Atom_Heading1</h1>
+                <h1 class="atom_heading1">${model.heading}</h1>
                 `
     }
 

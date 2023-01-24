@@ -35,6 +35,18 @@ export function Template_Loggedin_Model(model) {
                             text : model.buttonNeutral.text,
                             onClick : model.buttonNeutral.onClick
                         }
+                    },
+                    molecule_card : {
+                        atom_heading1 : {
+                            heading : model.cardHeading,
+                        },
+                        atom_paragraph : {
+                            text : model.paragraph
+                        },
+                        atom_button : {
+                            text : model.cardButton.text,
+                            onClick : model.cardButton.onClick
+                        } 
                     }
                 }
             }
