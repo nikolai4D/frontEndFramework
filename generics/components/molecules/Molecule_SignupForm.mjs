@@ -2,6 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
+import { Atom_Heading6 } from "../atoms/Atom_Heading6.mjs";
 import { Atom_ButtonNeutral } from "../atoms/Atom_ButtonNeutral.mjs";
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
 import { Atom_Checkbox } from "../atoms/Atom_CheckBox.mjs";
@@ -27,7 +28,7 @@ export function Molecule_SignupForm(model) {
         let input = new Atom_Input(model.atom_input)
         let checkbox = new Atom_Checkbox(model.atom_checkbox)
         // let checkbox = new Atom_Input(model.atom_checkbox)
-        let checkboxLabel = new Atom_Text1(model.atom_text1)
+        let checkboxLabel = new Atom_Heading6()
         let buttonNeutral = new Atom_ButtonNeutral(model.atom_buttonNeutral)
         this.fillSlot("input", input.getElement())
         this.fillSlot("button-neutral", buttonNeutral.getElement())
