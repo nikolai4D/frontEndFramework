@@ -35,7 +35,9 @@ export function Template_Signup_Model(model) {
                         atom_checkbox : {
                             type: model.inputCheckbox
                         },
-                        atom_text1 : model.labelCheckbox,
+                        atom_text1 : {
+                            text: model.labelCheckbox
+                        },
                         atom_buttonNeutral : {
                             text : model.buttonNeutral.text,
                             onClick : model.buttonNeutral.onClick
