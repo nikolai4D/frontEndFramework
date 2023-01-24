@@ -4,39 +4,29 @@ export function Template_Loggedin_Model(model) {
     const template_model = {
             view: model.view,
             components: {
-                organism_startInfo : {
-                    molecule_logo : {
-                        atom_icon : {
-                            icon : model.logoIcon
-                        },
-                        atom_heading4 : {
-                            text : model.logoText
-                        }
-                    },
-                    molecule_headerAndText : {
-                        atom_heading4 : {
-                            text : model.startHeading
-                        },
-                        atom_text1 : {
-                            text : model.startText
-                        }
+                molecule_headerAndText : {
+                    atom_heading4 : {
+                        text : model.startHeading
+                    }, 
+                    atom_text1 : {
+                        text : model.startText
                     }
                 },
-                organism_loginOrSignup: {
-                    molecule_loginOrSignup : {
-                        atom_buttonPositive : {
-                            text : model.buttonPositive.text,
-                            onClick : model.buttonPositive.onClick
-                        },
-                        atom_text1: {
-                            text : model.text1
-                        },
-                        atom_buttonNeutral : {
-                            text : model.buttonNeutral.text,
-                            onClick : model.buttonNeutral.onClick
-                        }
+                organism_navbar : {
+                    logo : {
+                        icon : model.logo
+                    },
+                    atom_ucText : {
+                        text: model.ucText
+                    },
+                    atom_userText : {
+                        text : model.userText
+                    },
+                    atom_btn : {
+                        text : model.logoutBtn
                     }
                 }
+               
             }
         }
 

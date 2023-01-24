@@ -1,8 +1,8 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs";
-import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
+import { Molecule_HeaderAndText } from "../molecules/Molecule_HeaderAndText.mjs" 
+import { NavBar } from "nd_frontend/generics/components/organisms/NavBar.mjs";
 
 export function Template_Loggedin_View(view) {
     Component.call(this)
@@ -11,11 +11,9 @@ export function Template_Loggedin_View(view) {
 
         return `
             <div class="grid grid__c3r3 template_start">
-                <div class="grid-placement__c1r1-3">
-                    ${slot("organismStartInfo")}
-                </div>
+            ${slot("navbar")}
                 <div class="grid-placement__c2-3r2">
-                    ${slot("organismLoginOrSignup")}
+                    ${slot("loggedInHeaderAndText")}
                 </div>
             </div>
         `
@@ -23,10 +21,10 @@ export function Template_Loggedin_View(view) {
 
     this.bindScript= function() {
         let model = State.views[view].components
-        let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
-        let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
+        let molecule_headerAndText= new Molecule_HeaderAndText(model.molecule_headerAndText)
+        let organism_navbar = new NavBar(model.organism_navbar)
 
-        this.fillSlot("organismStartInfo", organismStartInfo.getElement());
-        this.fillSlot("organismLoginOrSignup", organismLoginOrSignup.getElement());
+        this.fillSlot("loggedInHeaderAndText", molecule_headerAndText.getElement());
+        this.fillSlot("navbar", organism_navbar.getElement());
     };
 }

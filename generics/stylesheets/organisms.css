@@ -7,3 +7,35 @@
 .organism_login-or-signup{
 
 }
+
+.organism_navbar {
+    display: grid;
+    width: 100vw;
+    height: 5rem;
+    grid-template-columns: 1fr auto;
+    position: absolute;
+}
+
+.logo_and_name {
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 2fr auto;
+}
+
+.logout_user_btn {
+    cursor: pointer;
+    align-content: end;
+    justify-content: end;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 2fr auto;
+    padding-right: 10px;
+}
+
+.logout_user_btn button {
+    height: 45px;
+    margin-top: 1em;
+}
