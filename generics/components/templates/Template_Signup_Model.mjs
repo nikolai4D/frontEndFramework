@@ -28,7 +28,7 @@ export function Template_Signup_Model(model) {
                             type: model.inputType.email,
                             placeholder: model.inputPlaceholder,
                         },
-                        atom_input: {
+                        atom_checkbox: {
                             type: model.inputType.checkbox
                         },
                         // atom_checkbox: {
