@@ -11,10 +11,11 @@ export function Molecule_LoginForm(model) {
       type: model?.inputType ?? "",
       placeholder: model?.inputPlaceholder ?? "",
     },
-    atom_buttonPositive: {
-      text: model?.buttonPositive.text ?? "",
-      onClick: model?.buttonPositive.onClick ?? "",
-    },
+    // ,
+    // atom_buttonPositive: {
+    //   text: model?.buttonPositive.text ?? "",
+    //   onClick: model?.buttonPositive.onClick ?? "",
+    // },
   };
 
   this.getHtml = function () {
