@@ -12,8 +12,8 @@ export function Organism_LoginOrSignup(model) {
             <div class="grid__c4r1 organism_login-or-signup">
                 <div class="grid-placement__c2-3r1 center">
                     ${slot("loginOrSignup")}
-                    ${slot("card")}
                 </div>
+                ${slot("card")}
             </div>
         `
     }
