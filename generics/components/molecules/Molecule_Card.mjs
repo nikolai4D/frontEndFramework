@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Button } from "../atoms/Button.mjs";
-import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs"
+import { Atom_Heading3 } from "../atoms/Atom_Heading3.mjs"
 import { Paragraph } from "../atoms/Paragraph.mjs"
 
 
@@ -23,10 +23,10 @@ export function Molecule_Card(model) {
     }
 
     this.bindScript= function() {  
-        let heading4 = new Atom_Heading4(model.atom_heading4)
+        let heading3 = new Atom_Heading3(model.atom_heading3)
         let paragraph = new Paragraph(model.atom_paragraph)
         let button = new Button(model.atom_button)
-        this.fillSlot("heading1", heading4.getElement())
+        this.fillSlot("heading1", heading3.getElement())
         this.fillSlot("paragraph", paragraph.getElement())
         this.fillSlot("button", button.getElement())
     }

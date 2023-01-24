@@ -7,7 +7,7 @@ export function Atom_Heading4(model) {
     this.getHtml = function() {
 
         return `
-                <h4 class="atom_heading4 card_heading4">${model.heading}</h4>
+                <h4 class="atom_heading4">${model.text}</h4>
                 `
     }
 

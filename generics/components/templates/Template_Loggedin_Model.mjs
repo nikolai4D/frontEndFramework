@@ -37,7 +37,7 @@ export function Template_Loggedin_Model(model) {
                         }
                     },
                     molecule_card : {
-                        atom_heading4 : {
+                        atom_heading3 : {
                             heading : model.cardHeading
                         },
                         atom_paragraph : {
