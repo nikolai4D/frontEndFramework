@@ -16,7 +16,7 @@ export function Molecule_SignupForm(model) {
             ${slot("input")}
             <div class="molecule_checkbox_label">
             ${slot("checkbox")}
-            ${slot("checkbox-text")}
+            ${slot("checkbox-label")}
             </div>
             ${slot("button-neutral")}
             </div>
