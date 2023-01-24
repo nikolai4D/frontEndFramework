@@ -16,6 +16,6 @@ export function Atom_ButtonPositive(model) {
   };
 
   this.bindScript = function () {
-    this.element.addEventListener("click", onClick);
+    this.element.addEventListener("click", model.onClick);
   };
 }
