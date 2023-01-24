@@ -30,7 +30,7 @@ export function Template_Signup_Model(model) {
                         },
                         atom_checkbox: {
                             type: model.inputType.checkbox,
-                            onClick: model.isChecked.onClick
+                            onClick: model.toggleCheckbox.onClick
                         },
                         // atom_checkbox: {
                         //     type: model.inputCheckbox
