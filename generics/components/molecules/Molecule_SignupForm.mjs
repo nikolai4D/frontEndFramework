@@ -14,8 +14,10 @@ export function Molecule_SignupForm(model) {
         return `
             <div class="molecule_signup-form">
             ${slot("input")}
+            <div class="molecule_checkbox_label">
             ${slot("checkbox")}
             ${slot("checkbox-text")}
+            </div>
             ${slot("button-neutral")}
             </div>
         `
@@ -25,12 +27,12 @@ export function Molecule_SignupForm(model) {
         let input = new Atom_Input(model.atom_input)
         let checkbox = new Atom_Checkbox(model.atom_checkbox)
         // let checkbox = new Atom_Input(model.atom_checkbox)
-        let checkboxText = new Atom_Text1(model.atom_text1)
+        let checkboxLabel = new Atom_Text1(model.atom_text1)
         let buttonNeutral = new Atom_ButtonNeutral(model.atom_buttonNeutral)
         this.fillSlot("input", input.getElement())
         this.fillSlot("button-neutral", buttonNeutral.getElement())
         this.fillSlot("checkbox", checkbox.getElement())
-        this.fillSlot("checkbox-text", checkboxText.getElement());
+        this.fillSlot("checkbox-label", checkboxLabel.getElement());
     }
 
 }

@@ -21,3 +21,13 @@
     padding: 30px;
     gap: 20px;
 }
+
+.molecule_signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.molecule_checkbox_label {
+    border: black solid 1px;
+}
