@@ -7,7 +7,7 @@ export function Atom_Heading3(model) {
     this.getHtml = function() {
 
         return `
-                <h3 class="atom_heading3 card_heading3">${model.heading}</h3>
+                <h3 class="atom_heading3 card_heading3">${model.text}</h3>
                 `
     }
 
