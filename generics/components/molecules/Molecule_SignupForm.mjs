@@ -5,7 +5,6 @@ import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
 import { Atom_ButtonNeutral } from "../atoms/Atom_ButtonNeutral.mjs";
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
 import { Atom_Checkbox } from "../atoms/Atom_CheckBox.mjs";
-import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
 
 export function Molecule_SignupForm(model) {
     Component.call(this)
