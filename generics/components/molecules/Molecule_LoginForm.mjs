@@ -6,38 +6,14 @@ import { Atom_Input } from "../atoms/Atom_Input.mjs";
 export function Molecule_LoginForm(model) {
   Component.call(this);
 
-  this.props = {
-    atom_input: {
-      type: model?.inputType ?? "",
-      placeholder: model?.inputPlaceholder ?? "",
-    },
-    // ,
-    // atom_buttonPositive: {
-    //   text: model?.buttonPositive.text ?? "",
-    //   onClick: model?.buttonPositive.onClick ?? "",
-    // },
-  };
-
   this.getHtml = function () {
     return `
             <div class="molecule_login-form">
             ${slot("input")}
             ${slot("button-positive")}
             </div>
-<<<<<<< HEAD
-        `
-    }
-
-    this.bindScript= function() {
-        let input = new Atom_Input(model.atom_input)
-        let buttonPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
-        this.fillSlot("input", input.getElement());
-        this.fillSlot("button-positive", buttonPositive.getElement());
-    }
-=======
         `;
   };
->>>>>>> ffbb30265821def798ded44639bb24e8b3bd72e5
 
   this.bindScript = function () {
     let input = new Atom_Input(model.atom_input);
