@@ -7,6 +7,8 @@ export function Component(){
      */
     this.element= null
 
+    this.subComponents = {}
+
     /**
      * Make sure the returned string have only one component at the top level
      * @returns <string>
@@ -26,6 +28,14 @@ export function Component(){
     this.bindScript= function(){
 
     }
+
+     /**
+     * Create child components
+     * @returns <void>
+     */
+     this.treeCreateComponents= function(){
+
+     }
 
 
     /**
