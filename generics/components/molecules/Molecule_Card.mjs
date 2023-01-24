@@ -12,7 +12,7 @@ export function Molecule_Card(model) {
 
         return `
             <div class="molecule_card">
-            <img src="" class="project-img" alt="Avatar">
+            <img src="" class="molecule_card_image" alt="Avatar">
                 <div class="molecule_card_content">
                     ${slot("heading1")}
                     ${slot("paragraph")}
