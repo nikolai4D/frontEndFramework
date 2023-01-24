@@ -11,7 +11,7 @@ export function Atom_Input(model) {
     }
 
     this.bindScript= function() {
-        this.element.addEventListener("click", model.onClick)
+        // this.element.addEventListener("click", model.onClick)
     }
 
 }

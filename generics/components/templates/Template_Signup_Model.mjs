@@ -28,13 +28,13 @@ export function Template_Signup_Model(model) {
                             type: model.inputType.email,
                             placeholder: model.inputPlaceholder,
                         },
-                        atom_checkbox: {
-                            type: model.inputType.checkbox,
-                            onClick: model.toggleCheckbox.onClick
-                        },
                         // atom_checkbox: {
-                        //     type: model.inputCheckbox
+                        //     type: model.inputType.checkbox,
+                        //     onClick: model.toggleCheckbox.onClick
                         // },
+                        atom_checkbox: {
+                            type: model.inputCheckbox
+                        },
                         atom_buttonNeutral : {
                             text : model.buttonNeutral.text,
                             onClick : model.buttonNeutral.onClick
