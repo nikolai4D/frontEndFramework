@@ -6,7 +6,7 @@ export function Button(data) {
 
     this.getHtml= function() {
         return `
-        <button type="button"  class="btn btn-primary">${text}</button>`
+        <button type="button"  class="btn btn-primary molecule_card_btn">${text}</button>`
     }
 
     this.bindScript= function() {
@@ -15,19 +15,3 @@ export function Button(data) {
 
     this.onClick = onClick
 }
-
-// export function Button(data) {
-//     Component.call(this)
-//     const {text, onClick} = data
-
-//     this.getHtml= function() {
-//         return `
-//         <button type="button"  class="btn btn-primary">${text}</button>`
-//     }
-
-//     this.bindScript= function() {
-//         this.element.addEventListener("click", this.onClick)
-//     }
-
-//     this.onClick = onClick
-// }

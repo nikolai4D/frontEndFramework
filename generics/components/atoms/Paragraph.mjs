@@ -7,11 +7,3 @@ export function Paragraph(model) {
         return `<p>${model.text}</p>`
     }
 }
-
-// export function Paragraph(text) {
-//     Component.call(this)
-
-//     this.getHtml = function() {
-//         return `<p>${text}</p>`
-//     }
-// }
