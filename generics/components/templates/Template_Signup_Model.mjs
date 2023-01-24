@@ -33,11 +33,12 @@ export function Template_Signup_Model(model) {
                         //     onClick: model.toggleCheckbox.onClick
                         // },
                         atom_checkbox : {
-                            type: model.inputCheckbox
-                        },
-                        atom_text1 : {
+                            type: model.inputCheckbox,
                             text: model.labelCheckbox
                         },
+                        // atom_text1 : {
+                        //     text: model.labelCheckbox
+                        // },
                         atom_buttonNeutral : {
                             text : model.buttonNeutral.text,
                             onClick : model.buttonNeutral.onClick

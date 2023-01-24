@@ -28,7 +28,7 @@ export function Molecule_SignupForm(model) {
         let input = new Atom_Input(model.atom_input)
         let checkbox = new Atom_Checkbox(model.atom_checkbox)
         // let checkbox = new Atom_Input(model.atom_checkbox)
-        let checkboxLabel = new Atom_Heading6()
+        let checkboxLabel = new Atom_Heading6(model.atom_checkbox)
         let buttonNeutral = new Atom_ButtonNeutral(model.atom_buttonNeutral)
         this.fillSlot("input", input.getElement())
         this.fillSlot("button-neutral", buttonNeutral.getElement())
