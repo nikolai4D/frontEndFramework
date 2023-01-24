@@ -7,3 +7,17 @@
 .organism_login-or-signup{
 
 }
+
+.organism_Sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    width: 8rem;
+    height: 100vh;
+}
+
+.organism_Sidebar * {
+    color: #fff;
+    margin-top: 2rem;
+    margin-right: 0.8rem;
+}
