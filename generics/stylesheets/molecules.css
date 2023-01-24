@@ -41,6 +41,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
+    gap: 9px;
 }
 
 .molecule_card_image {
@@ -55,4 +56,5 @@
     border: none;
     color: white;
     background-color: #D63384;
+    width: 73px;
 }
