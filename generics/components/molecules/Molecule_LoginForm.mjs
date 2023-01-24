@@ -8,12 +8,12 @@ export function Molecule_LoginForm(model) {
 
   this.props = {
     atom_input: {
-      type: model?.inputType,
-      placeholder: model?.inputPlaceholder,
+      type: model?.inputType ?? "",
+      placeholder: model?.inputPlaceholder ?? "",
     },
     atom_buttonPositive: {
-      text: model?.buttonPositive.text,
-      onClick: model?.buttonPositive.onClick,
+      text: model?.buttonPositive.text ?? "",
+      onClick: model?.buttonPositive.onClick ?? "",
     },
   };
 
