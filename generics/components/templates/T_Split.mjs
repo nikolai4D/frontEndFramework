@@ -27,7 +27,4 @@ export function t_Split() {
         `
     }
 
-    this.bindScript= function() {
-        let model = State.views[view].components
-    };
 }
