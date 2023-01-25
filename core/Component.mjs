@@ -70,9 +70,9 @@ export function Component(){
         try {
             key = Object.keys(this.subComponents).find(key => this.subComponents[key] === component)
         } catch (e) {
-            console.error("Error while finding key for component: ", component, "while trying to fill slot")
-            console.error("key: ", key)
-            console.error("subComponents keys: ", Object.keys(this.subComponents))
+            console.error("Error while finding key for component: ", component, "while trying to fill slot",
+                "key: ", key,
+                "subComponents keys: ", Object.keys(this.subComponents))
         }
         return `<div data-slot="${key}" class="slot"></div>`
     }
@@ -80,8 +80,13 @@ export function Component(){
     this.bindSlots = function(){
         let slots = this.element.querySelectorAll("[data-slot]")
         slots.forEach(slot => {
-            let key = slot.dataset.slot
-            slot.replaceWith(this.subComponents[key].getElement())
+            try{
+                let key = slot.getAttribute("data-slot")
+                slot.replaceWith(this.subComponents[key].getElement())
+            } catch (e) {
+                console.error("Error while binding slot: ", slot, e,
+                    "subComponents keys: ", Object.keys(this.subComponents))
+            }
         })
     }
 
