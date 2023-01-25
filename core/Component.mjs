@@ -86,12 +86,10 @@ export function Component(){
                 key = slot.getAttribute("data-slot")
                 slot.replaceWith(this.subComponents[key].getElement())
             } catch (e) {
-                console.error("Error while binding slot: ", key,
+                console.error("Error while binding slot: ", key, slot,
                     "subComponents keys: ", Object.keys(this.subComponents),
                     e)
             }
         })
     }
-
 }
-
