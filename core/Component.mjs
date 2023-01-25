@@ -66,7 +66,14 @@ export function Component(){
     }
 
     this.slot = function(component) {
-        let key = Object.keys(this.subComponents).find(key => this.subComponents[key] === component)
+        let key
+        try {
+            key = Object.keys(this.subComponents).find(key => this.subComponents[key] === component)
+        } catch (e) {
+            console.error("Error while finding key for component: ", component, "while trying to fill slot")
+            console.error("key: ", key)
+            console.error("subComponents keys: ", Object.keys(this.subComponents))
+        }
         return `<div data-slot="${key}" class="slot"></div>`
     }
 
