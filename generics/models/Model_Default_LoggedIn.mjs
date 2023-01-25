@@ -11,7 +11,7 @@ import {o_LoginOrSignup} from "../components/organisms/o_LoginOrSignup.mjs";
 import {o_StartInfo} from "../components/organisms/o_StartInfo.mjs";
 
 
-export const Model_Start = {
+export const Model_Default_Start = {
             component: t_Split,
             subComponents: {
                 left_panel : {
