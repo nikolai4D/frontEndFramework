@@ -1,4 +1,4 @@
-import {t_LoggedIn} from "../components/templates/T_LoggedIn.mjs";
+import {t_Split} from "../components/templates/T_Split.mjs";
 import {m_Logo} from "../components/molecules/m_Logo.mjs";
 import {a_Icon} from "../components/atoms/a_Icon.mjs";
 import {m_HeaderAndText} from "../components/molecules/m_HeaderAndText.mjs";
@@ -7,13 +7,14 @@ import {a_Paragraph} from "../components/atoms/a__paragraph.mjs";
 import {m_LoginOrSignup} from "../components/molecules/M_LoginOrSignup.mjs";
 import {a_ButtonPositive} from "../components/atoms/A_ButtonPositive.mjs";
 import {a_ButtonNeutral} from "../components/atoms/A_ButtonNeutral.mjs";
-import {o_LoginOrSignup} from "../components/organisms/O_LoginOrSignup.mjs";
-import {o_StartInfo} from "../components/organisms/O_StartInfo.mjs";
+import {o_LoginOrSignup} from "../components/organisms/o_LoginOrSignup.mjs";
+import {o_StartInfo} from "../components/organisms/o_StartInfo.mjs";
 
-export const Model_Default_LoggedIn = {
-            component: t_LoggedIn,
+
+export const Model_Start = {
+            component: t_Split,
             subComponents: {
-                organism_startInfo : {
+                left_panel : {
                     component: o_StartInfo,
                     subComponents: {
                         top : {
@@ -53,7 +54,7 @@ export const Model_Default_LoggedIn = {
                             }
                         }
                 },
-                organism_loginOrSignup: {
+                right_panel: {
                     component: o_LoginOrSignup,
                     subComponents: {
                         molecule_loginOrSignup: {

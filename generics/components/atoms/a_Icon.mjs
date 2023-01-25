@@ -5,7 +5,7 @@ export function a_Icon(options) {
     Component.call(this)
 
     this.options = {
-        icon: options.icon,
+        icon: "bi bi-emoji-smile",
     }
 
     this.getHtml = function() {

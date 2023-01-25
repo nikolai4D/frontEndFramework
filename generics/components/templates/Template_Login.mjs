@@ -2,7 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Organism_LoginForm } from "../organisms/Organism_LoginForm.mjs";
 
-import { o_StartInfo } from "../organisms/O_StartInfo.mjs";
+import { o_StartInfo } from "../organisms/o_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
 export function Template_Login(view) {

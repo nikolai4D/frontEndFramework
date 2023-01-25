@@ -1,13 +1,13 @@
 import {Component} from "../../../core/Component.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function t_LoggedIn() {
+export function t_Split() {
     Component.call(this)
 
     this.options = {
         subComponents: {
-            organism_startInfo : null,
-            organism_loginOrSignup: null
+           left_panel : null,
+            right_panel: null
         }
     }
 
@@ -16,10 +16,10 @@ export function t_LoggedIn() {
         return `
             <div class="grid grid__c3r3 template_start">
                 <div class="grid-placement__c1r1-3">
-                    ${this.slot(this.subComponents.organism_startInfo)}
+                    ${this.slot(this.subComponents.left_panel)}
                 </div>
                 <div class="grid-placement__c2-3r2">
-                    ${this.slot(this.subComponents.organism_loginOrSignup)}
+                    ${this.slot(this.subComponents.right_panel)}
                 </div>
             </div>
         `

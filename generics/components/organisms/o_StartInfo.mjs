@@ -1,7 +1,4 @@
 import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
-import { m_Logo } from "../molecules/m_Logo.mjs";
-import { m_HeaderAndText } from "../molecules/m_HeaderAndText.mjs";
 
 export function o_StartInfo(model) {
     Component.call(this)
