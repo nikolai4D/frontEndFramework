@@ -9,7 +9,7 @@ export const ComponentModel = {
     options: {},
     subComponents: {}
 }
-export function createComponentsFromModel(model, parentModel) {
+export function createComponentsFromModel(model, parentModel = null) {
     try {
         let component = new model.component()
         component.options = model.options
@@ -20,7 +20,7 @@ export function createComponentsFromModel(model, parentModel) {
         return component
 
     } catch (e) {
-        let key = (parentModel !== undefined) ? "template" : Object.keys(parentModel.subComponents).find(key => parentModel.subComponents[key] === model)
+        let key = (parentModel) ? "template" : Object.keys(parentModel.subComponents).find(key => parentModel.subComponents[key] === model)
 
         console.log("error below relates to component model", key)
         console.log(e)
