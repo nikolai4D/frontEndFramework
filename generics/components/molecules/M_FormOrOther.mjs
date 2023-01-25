@@ -4,7 +4,7 @@ import { a_ButtonPositive } from "../atoms/A_ButtonPositive.mjs";
 import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
 import { a_ButtonNeutral } from "../atoms/A_ButtonNeutral.mjs";
 
-export function m_LoginOrSignup() {
+export function m_FormOrOther() {
     Component.call(this)
 
     this.options = {

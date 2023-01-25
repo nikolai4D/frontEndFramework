@@ -5,7 +5,7 @@ import { Atom_Text1 } from "../components/atoms/Atom_Text1.mjs";
 import { m_Logo } from "../components/molecules/m_Logo.mjs";
 import { o_StartInfo } from "../components/organisms/o_StartInfo.mjs";
 import { o_LoginOrSignup } from "../components/organisms/o_LoginOrSignup.mjs";
-import { m_LoginOrSignup } from "../components/molecules/M_LoginOrSignup.mjs";
+import { m_FormOrOther } from "../components/molecules/M_FormOrOther.mjs";
 import { m_HeaderAndText } from "../components/molecules/m_HeaderAndText.mjs";
 import { a_ButtonPositive } from "../components/atoms/A_ButtonPositive.mjs";
 import { a_ButtonNeutral } from "../components/atoms/A_ButtonNeutral.mjs";
@@ -44,7 +44,7 @@ export function Model_Start(model) {
                 organism_loginOrSignup: {
                     component: o_LoginOrSignup,
                     molecule_loginOrSignup : {
-                        component: m_LoginOrSignup,
+                        component: m_FormOrOther,
                         atom_buttonPositive : {
                             component: a_ButtonPositive,
                             text : model.buttonPositive.text,
