@@ -17,25 +17,25 @@ export const Model_Default_Start = {
                 left_panel : {
                     component: o_StartInfo,
                     subComponents: {
-                        top : {
+                        top: {
                             component: m_Logo,
                             subComponents: {
-                                icon : {
+                                icon: {
                                     component: a_Icon,
                                     options: {
-                                        icon : "bi bi-person-circle"
+                                        icon: "bi bi-person-circle"
                                     }
                                 },
                                 heading: {
                                     component: a_Heading,
                                     options: {
-                                        text : "Brand",
+                                        text: "Brand",
                                         level: 4
                                     }
                                 }
                             }
                         },
-                        central : {
+                        central: {
                             component: m_HeaderAndText,
                             subComponents: {
                                 heading: {
@@ -53,6 +53,7 @@ export const Model_Default_Start = {
                                 }
                             }
                         }
+                    },
                 },
                 right_panel: {
                     component: o_LoginOrSignup,
