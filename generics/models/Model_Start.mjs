@@ -1,16 +1,16 @@
-import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_state.mjs";
-import { Atom_Icon } from "../atoms/Atom_Icon.mjs";
-import { Header } from "../atoms/Header.mjs";
-import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
-import { Molecule_Logo } from "../molecules/Molecule_Logo.mjs";
-import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
-import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs";
-import { Molecule_LoginOrSignup } from "../molecules/Molecule_LoginOrSignup.mjs";
-import { Molecule_HeaderAndText } from "../molecules/Molecule_HeaderAndText.mjs";
-import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
-import { Atom_ButtonNeutral } from "../atoms/Atom_ButtonNeutral.mjs";
+import { SEND_VIEWSTATE_TO_STATE } from "../../core/actions/action_send_view_state.mjs";
+import { Atom_Icon } from "../components/atoms/Atom_Icon.mjs";
+import { Header } from "../components/atoms/Header.mjs";
+import { Atom_Text1 } from "../components/atoms/Atom_Text1.mjs";
+import { Molecule_Logo } from "../components/molecules/Molecule_Logo.mjs";
+import { Organism_StartInfo } from "../components/organisms/Organism_StartInfo.mjs";
+import { Organism_LoginOrSignup } from "../components/organisms/Organism_LoginOrSignup.mjs";
+import { Molecule_LoginOrSignup } from "../components/molecules/Molecule_LoginOrSignup.mjs";
+import { Molecule_HeaderAndText } from "../components/molecules/Molecule_HeaderAndText.mjs";
+import { Atom_ButtonPositive } from "../components/atoms/Atom_ButtonPositive.mjs";
+import { Atom_ButtonNeutral } from "../components/atoms/Atom_ButtonNeutral.mjs";
 
-export function Template_Start_Model(model) { 
+export function Model_Start(model) {
     const template_model = {
             view: model.view,
             components: {

@@ -1,6 +1,6 @@
-import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_state.mjs";
+import { SEND_VIEWSTATE_TO_STATE } from "../../core/actions/action_send_view_state.mjs";
 
-export function Template_Loggedin_Model(model) { 
+export function Model_Signup(model) {
     const template_model = {
             view: model.view,
             components: {
@@ -22,14 +22,11 @@ export function Template_Loggedin_Model(model) {
                         }
                     }
                 },
-                organism_loginOrSignup: {
-                    molecule_loginOrSignup : {
-                        atom_buttonPositive : {
-                            text : model.buttonPositive.text,
-                            onClick : model.buttonPositive.onClick
-                        },
-                        atom_text1: {
-                            text : model.text1
+                organism_signupForm: {
+                    molecule_signupForm : {
+                        atom_input: {
+                            type: model.inputType,
+                            placeholder: model.inputPlaceholder,
                         },
                         atom_buttonNeutral : {
                             text : model.buttonNeutral.text,

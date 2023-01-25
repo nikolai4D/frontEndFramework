@@ -38,6 +38,7 @@ export function Component(){
 
         if(!this.element || forceInit){
             this.element = stringToHTMLElement(this.getHtml())
+            this.bindSlots()
             this.bindScript()
         }
 
@@ -64,57 +65,18 @@ export function Component(){
         oldElement.replaceWith(this.element)
     }
 
-    this.getState= function(state) {
-        return null
+    this.slot = function(component) {
+        let key = Object.keys(this.subComponents).find(key => this.subComponents[key] === component)
+        return `<div data-slot="${key}" class="slot"></div>`
+
+    }
+    this.bindSlots = function(){
+        let slots = this.element.querySelectorAll("[data-slot]")
+        slots.forEach(slot => {
+            let key = slot.dataset.slot
+            slot.replaceWith(this.subComponents[key].getElement())
+        })
     }
 
-    this.setState= function(state) {
-        // do something
-    }
-
-     /**
-     * Create child components
-     * @returns <void>
-     */
-     this.treeCreateComponents= function() {
-        for(const [key, value] of Object.entries(this.model)){
-            const newSubCompInstance = new value.component(value)
-            this.subComponents[key] = newSubCompInstance
-        }
-    }
-
-    this.bindSlots= function() {
-        if(!this.element) throw new Error("Cannot fill slot before the element is defined.")
-
-        const slots = this.element.querySelectorAll(`[data-slot"]`)
-        
-        slots.forEach(element => {
-            const slotName = element.attributes["data-slot"].value
-            this.fillSlot(slotName, this.subComponents[slotName].getElement());
-        });
-        //this.fillSlot("organism_startInfo", organism_startInfo.getElement());
-        //this.fillSlot("organismLoginOrSignup", organism_loginOrSignup.getElement());
-    };
-
-    /**
-     * Replace the designated slot with the given element
-     * @param slotName {String}
-     * @param element {HTMLElement}
-     */
-    this.fillSlot= function(slotName, element) {
-        if(!this.element) throw new Error("Cannot fill slot before the element is defined.")
-
-        const slot = this.element.querySelector(`[data-slot="${slotName.toString()}"]`)
-        if(!slot) throw new Error(`Slot ${slotName} not found`)
-        slot.replaceWith(element)
-    }
-
-    /**
-     * Replace the designated slots with the given elements
-     * @param slotMap {Map<String,HTMLElement>}
-     */
-    this.fillSlots= function (slotMap) {
-        for(let [slotName, element] of slotMap){ this.fillSlot(slotName, element) }
-    }
 }
 

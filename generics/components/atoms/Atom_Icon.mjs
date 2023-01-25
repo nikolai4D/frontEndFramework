@@ -1,13 +1,17 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
-export function Atom_Icon(model) {
+export function Atom_Icon(options) {
     Component.call(this)
+
+    this.options = {
+        icon: options.icon,
+    }
 
     this.getHtml = function() {
 
         return `
-                <i class="${model.icon} atom_icon"></i>
+                <i class="${this.options.icon} atom_icon"></i>
             `
     }
 

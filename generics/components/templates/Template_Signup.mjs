@@ -4,7 +4,7 @@ import { Organism_SignupForm } from "../organisms/Organism_SignupForm.mjs";
 import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function Template_Signup_View(view) {
+export function Template_Signup(view) {
     Component.call(this)
 
     this.getHtml = function() {

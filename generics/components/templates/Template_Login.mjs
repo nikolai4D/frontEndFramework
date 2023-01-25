@@ -5,7 +5,7 @@ import { Organism_LoginForm } from "../organisms/Organism_LoginForm.mjs";
 import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function Template_Login_View(view) {
+export function Template_Login(view) {
     Component.call(this)
 
     this.getHtml = function() {

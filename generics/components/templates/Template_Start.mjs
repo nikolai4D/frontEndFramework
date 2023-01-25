@@ -4,29 +4,32 @@ import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs"
 import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function Template_Loggedin_View(view) {
+export function Template_Start(view) {
     Component.call(this)
+    this.model = State.views[view].components
 
     this.getHtml = function() {
 
         return `
             <div class="grid grid__c3r3 template_start">
                 <div class="grid-placement__c1r1-3">
-                    ${slot("organismStartInfo")}
+                    ${slot("organism_startInfo")}
                 </div>
                 <div class="grid-placement__c2-3r2">
-                    ${slot("organismLoginOrSignup")}
+                    ${slot("organism_loginOrSignup")}
                 </div>
             </div>
         `
     }
 
     this.bindScript= function() {
-        let model = State.views[view].components
-        let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
-        let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
+        this.treeCreateComponents()
+        this.bindSlots()
+        //let model = State.views[view].components
+        //let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
+        //let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
 
-        this.fillSlot("organismStartInfo", organismStartInfo.getElement());
-        this.fillSlot("organismLoginOrSignup", organismLoginOrSignup.getElement());
+        //this.fillSlot("organism_startInfo", organismStartInfo.getElement());
+        //this.fillSlot("organism_loginOrSignup", organismLoginOrSignup.getElement());
     };
 }
