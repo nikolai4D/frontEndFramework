@@ -8,11 +8,13 @@ import {Molecule_LoginOrSignup} from "../components/molecules/Molecule_LoginOrSi
 import {Atom_ButtonPositive} from "../components/atoms/Atom_ButtonPositive.mjs";
 import {Atom_ButtonNeutral} from "../components/atoms/Atom_ButtonNeutral.mjs";
 import {Organism_LoginOrSignup} from "../components/organisms/Organism_LoginOrSignup.mjs";
+import {Organism_StartInfo} from "../components/organisms/Organism_StartInfo.mjs";
 
 export const Model_Default_LoggedIn = {
             component: Template_Loggedin,
             subComponents: {
                 organism_startInfo : {
+                    component: Organism_StartInfo,
                     subComponents: {
                         molecule_logo : {
                             component: Molecule_Logo,
