@@ -17,10 +17,10 @@ export function Template_Loggedin() {
         return `
             <div class="grid grid__c3r3 template_start">
                 <div class="grid-placement__c1r1-3">
-                    ${slot(this.options.subComponents.organism_startInfo)}
+                    ${this.slot(this.subComponents.organism_startInfo)}
                 </div>
                 <div class="grid-placement__c2-3r2">
-                    ${slot(this.options.subComponents.organism_loginOrSignup)}
+                    ${this.slot(this.subComponents.organism_loginOrSignup)}
                 </div>
             </div>
         `
