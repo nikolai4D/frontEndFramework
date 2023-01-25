@@ -2,7 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function Template_Loggedin(view) {
+export function Template_Loggedin() {
     Component.call(this)
 
     this.options = {
