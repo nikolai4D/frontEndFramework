@@ -4,11 +4,13 @@ import { State } from "../../../core/actions/State.mjs";
 export function t_Split() {
     Component.call(this)
 
-    this.options = {
-        subComponents: {
-           left_panel : null,
-            right_panel: null
-        }
+    this.subComponents= {
+        left_panel : null,
+        right_panel: null
+    }
+
+    this.options= {
+
     }
 
     this.getHtml = function() {
