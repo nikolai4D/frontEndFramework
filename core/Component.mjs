@@ -68,8 +68,8 @@ export function Component(){
     this.slot = function(component) {
         let key = Object.keys(this.subComponents).find(key => this.subComponents[key] === component)
         return `<div data-slot="${key}" class="slot"></div>`
-
     }
+
     this.bindSlots = function(){
         let slots = this.element.querySelectorAll("[data-slot]")
         slots.forEach(slot => {
