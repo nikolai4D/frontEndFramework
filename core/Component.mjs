@@ -29,18 +29,6 @@ export function Component(){
 
     }
 
-     /**
-     * Create child components
-     * @returns <void>
-     */
-     this.treeCreateComponents= function() {
-        for(const [key, value] of Object.entries(this.model)){
-            const newSubCompInstance = new value.component(value)
-            this.subComponents[key] = newSubCompInstance
-        }
-    }
-
-
     /**
      * Get the DOM element of the component. Init the element if it is not already done.
      * param <boolean> forceInit if true, the element will be reinitialized
@@ -84,6 +72,29 @@ export function Component(){
         // do something
     }
 
+     /**
+     * Create child components
+     * @returns <void>
+     */
+     this.treeCreateComponents= function() {
+        for(const [key, value] of Object.entries(this.model)){
+            const newSubCompInstance = new value.component(value)
+            this.subComponents[key] = newSubCompInstance
+        }
+    }
+
+    this.bindSlots= function() {
+        if(!this.element) throw new Error("Cannot fill slot before the element is defined.")
+
+        const slots = this.element.querySelectorAll(`[data-slot"]`)
+        
+        slots.forEach(element => {
+            const slotName = element.attributes["data-slot"].value
+            this.fillSlot(slotName, this.subComponents[slotName].getElement());
+        });
+        //this.fillSlot("organism_startInfo", organism_startInfo.getElement());
+        //this.fillSlot("organismLoginOrSignup", organism_loginOrSignup.getElement());
+    };
 
     /**
      * Replace the designated slot with the given element
@@ -91,14 +102,12 @@ export function Component(){
      * @param element {HTMLElement}
      */
     this.fillSlot= function(slotName, element) {
-
         if(!this.element) throw new Error("Cannot fill slot before the element is defined.")
 
         const slot = this.element.querySelector(`[data-slot="${slotName.toString()}"]`)
         if(!slot) throw new Error(`Slot ${slotName} not found`)
         slot.replaceWith(element)
     }
-
 
     /**
      * Replace the designated slots with the given elements

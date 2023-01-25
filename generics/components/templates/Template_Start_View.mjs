@@ -16,7 +16,7 @@ export function Template_Start_View(view) {
                     ${slot("organism_startInfo")}
                 </div>
                 <div class="grid-placement__c2-3r2">
-                    ${slot("organismLoginOrSignup")}
+                    ${slot("organism_loginOrSignup")}
                 </div>
             </div>
         `
@@ -24,11 +24,12 @@ export function Template_Start_View(view) {
 
     this.bindScript= function() {
         this.treeCreateComponents()
+        this.bindSlots()
         //let model = State.views[view].components
         //let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
         //let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
 
-        this.fillSlot("organism_startInfo", this.subComponents.organism_startInfo.getElement());
-        this.fillSlot("organismLoginOrSignup", this.subComponents.organism_loginOrSignup.getElement());
+        //this.fillSlot("organism_startInfo", organismStartInfo.getElement());
+        //this.fillSlot("organism_loginOrSignup", organismLoginOrSignup.getElement());
     };
 }
