@@ -10,8 +10,8 @@ export function m_Logo(model) {
 
         return `
             <div class="molecule_logo">
-                    ${this.slot(this.subComponents.atom_icon)}
-                    ${this.slot(this.subComponents.atom_heading)}
+                    ${this.slot(this.subComponents.icon)}
+                    ${this.slot(this.subComponents.heading)}
             </div>
         `
     }
