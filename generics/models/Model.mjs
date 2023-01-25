@@ -14,7 +14,7 @@ export function createComponentsFromModel(model, parentModel = null) {
         let component = new model.component(model.options)
         component.options = model.options
         for (let subComponent in model.subComponents) {
-            component.subComponents[subComponent] = createComponentsFromModel(model.subComponents[subComponent], parentModel)
+            component.subComponents[subComponent] = createComponentsFromModel(model.subComponents[subComponent], model)
         }
 
         return component
@@ -22,6 +22,6 @@ export function createComponentsFromModel(model, parentModel = null) {
     } catch (e) {
         let key = (!parentModel) ? "template" : Object.keys(parentModel.subComponents).find(key => parentModel.subComponents[key] === model)
 
-        throw(`Error while creating component ${key}: ${e}`)
+        console.error(`Error while creating component ${key}: ${e}`)
     }
 }
