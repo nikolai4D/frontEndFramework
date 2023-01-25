@@ -2,7 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Organism_LoginForm } from "../organisms/Organism_LoginForm.mjs";
 
-import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
+import { o_StartInfo } from "../organisms/O_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
 export function Template_Login(view) {
@@ -24,7 +24,7 @@ export function Template_Login(view) {
 
     this.bindScript= function() {
         let model = State.views[view].components
-        let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
+        let organismStartInfo = new o_StartInfo(model.organism_startInfo);
         let organismLoginForm = new Organism_LoginForm(model.organism_loginForm);
 
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());

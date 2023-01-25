@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Atom_ButtonNeutral(model) {
+export function a_ButtonNeutral(model) {
     Component.call(this)
 
     this.getHtml = function() {

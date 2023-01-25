@@ -1,20 +1,25 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import { Molecule_Logo } from "../molecules/Molecule_Logo.mjs";
-import { Molecule_HeaderAndText } from "../molecules/Molecule_HeaderAndText.mjs";
+import { m_Logo } from "../molecules/m_Logo.mjs";
+import { m_HeaderAndText } from "../molecules/m_HeaderAndText.mjs";
 
-export function Organism_StartInfo(model) {
+export function o_StartInfo(model) {
     Component.call(this)
 
     this.getHtml = function() {
 
+        this.options = {
+            top: null,
+            central: null,
+        }
+
         return `
             <div class="grid__c1r7 organism_start-info">
                 <div class="grid-placement__c1r1">
-                    ${this.slot(this.subComponents.molecule_logo)}
+                    ${this.slot(this.subComponents.top)}
                 </div>
                 <div class="grid-placement__c1r3">
-                    ${this.slot(this.subComponents.molecule_headerAndText)}
+                    ${this.slot(this.subComponents.central)}
                 </div>
             </div>
         `

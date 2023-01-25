@@ -8,6 +8,7 @@ export function Component(){
     this.element= null
 
     this.subComponents = {}
+    this.options = {}
 
     /**
      * Make sure the returned string have only one component at the top level

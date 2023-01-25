@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Button(data) {
+export function A_Button(data) {
     Component.call(this)
     const {text, onClick} = data
 

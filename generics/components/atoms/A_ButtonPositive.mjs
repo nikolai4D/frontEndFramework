@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Atom_ButtonPositive(model = {}) {
+export function a_ButtonPositive(model = {}) {
     const {text = "", onClick = ()=> {console.log}}= model
     this.props = {
         text,

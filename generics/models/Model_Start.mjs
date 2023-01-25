@@ -1,37 +1,37 @@
 import { SEND_VIEWSTATE_TO_STATE } from "../../core/actions/action_send_view_state.mjs";
-import { Atom_Icon } from "../components/atoms/Atom_Icon.mjs";
-import { Header } from "../components/atoms/Header.mjs";
+import { a_Icon } from "../components/atoms/a_Icon.mjs";
+import { a_Heading } from "../components/atoms/a_Heading.mjs";
 import { Atom_Text1 } from "../components/atoms/Atom_Text1.mjs";
-import { Molecule_Logo } from "../components/molecules/Molecule_Logo.mjs";
-import { Organism_StartInfo } from "../components/organisms/Organism_StartInfo.mjs";
-import { Organism_LoginOrSignup } from "../components/organisms/Organism_LoginOrSignup.mjs";
-import { Molecule_LoginOrSignup } from "../components/molecules/Molecule_LoginOrSignup.mjs";
-import { Molecule_HeaderAndText } from "../components/molecules/Molecule_HeaderAndText.mjs";
-import { Atom_ButtonPositive } from "../components/atoms/Atom_ButtonPositive.mjs";
-import { Atom_ButtonNeutral } from "../components/atoms/Atom_ButtonNeutral.mjs";
+import { m_Logo } from "../components/molecules/m_Logo.mjs";
+import { o_StartInfo } from "../components/organisms/O_StartInfo.mjs";
+import { o_LoginOrSignup } from "../components/organisms/O_LoginOrSignup.mjs";
+import { m_LoginOrSignup } from "../components/molecules/M_LoginOrSignup.mjs";
+import { m_HeaderAndText } from "../components/molecules/m_HeaderAndText.mjs";
+import { a_ButtonPositive } from "../components/atoms/A_ButtonPositive.mjs";
+import { a_ButtonNeutral } from "../components/atoms/A_ButtonNeutral.mjs";
 
 export function Model_Start(model) {
     const template_model = {
             view: model.view,
             components: {
                 organism_startInfo : {
-                    component: Organism_StartInfo,
+                    component: o_StartInfo,
                     molecule_logo : {
-                        component: Molecule_Logo,
+                        component: m_Logo,
                         atom_icon : {
-                            component: Atom_Icon,
+                            component: a_Icon,
                             icon : model.logoIcon
                         },
                         atom_heading4 : {
-                            component: Header,
+                            component: a_Heading,
                             text : model.logoText,
                             importance: model.importance
                         }
                     },
                     molecule_headerAndText : {
-                        component: Molecule_HeaderAndText,
+                        component: m_HeaderAndText,
                         atom_heading4 : {
-                            component: Header,
+                            component: a_Heading,
                             text : model.startHeading,
                             importance: model.importance
                         },
@@ -42,11 +42,11 @@ export function Model_Start(model) {
                     }
                 },
                 organism_loginOrSignup: {
-                    component: Organism_LoginOrSignup,
+                    component: o_LoginOrSignup,
                     molecule_loginOrSignup : {
-                        component: Molecule_LoginOrSignup,
+                        component: m_LoginOrSignup,
                         atom_buttonPositive : {
-                            component: Atom_ButtonPositive,
+                            component: a_ButtonPositive,
                             text : model.buttonPositive.text,
                             onClick : model.buttonPositive.onClick
                         },
@@ -55,7 +55,7 @@ export function Model_Start(model) {
                             text : model.text1
                         },
                         atom_buttonNeutral : {
-                            component: Atom_ButtonNeutral,
+                            component: a_ButtonNeutral,
                             text : model.buttonNeutral.text,
                             onClick : model.buttonNeutral.onClick
                         }

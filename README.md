@@ -16,7 +16,7 @@ As you will find them in others frameworks like react, it associates logic to an
 Component is not supposed to be used as such but to be used in composition as in the following example:
 
 ```
-function Button(){
+function A_Button(){
     Component.call(this)
 }
 ```

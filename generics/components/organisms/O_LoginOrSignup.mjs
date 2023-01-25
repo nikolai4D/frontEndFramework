@@ -1,8 +1,8 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import {Molecule_LoginOrSignup} from "../molecules/Molecule_LoginOrSignup.mjs";
+import {m_LoginOrSignup} from "../molecules/M_LoginOrSignup.mjs";
 
-export function Organism_LoginOrSignup(model) {
+export function o_LoginOrSignup(model) {
     Component.call(this)
 
     this.getHtml = function() {
@@ -17,7 +17,7 @@ export function Organism_LoginOrSignup(model) {
     }
 
     this.bindScript= function() {
-        let loginOrSignup = new Molecule_LoginOrSignup(model.molecule_loginOrSignup)
+        let loginOrSignup = new m_LoginOrSignup(model.molecule_loginOrSignup)
         this.fillSlot("loginOrSignup", loginOrSignup.getElement());
     }
 }

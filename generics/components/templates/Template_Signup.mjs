@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Organism_SignupForm } from "../organisms/Organism_SignupForm.mjs";
-import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
+import { o_StartInfo } from "../organisms/O_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
 export function Template_Signup(view) {
@@ -23,7 +23,7 @@ export function Template_Signup(view) {
 
     this.bindScript= function() {
         let model = State.views[view].components
-        let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
+        let organismStartInfo = new o_StartInfo(model.organism_startInfo);
         let organismSignup = new Organism_SignupForm(model.organism_signupForm);
 
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());

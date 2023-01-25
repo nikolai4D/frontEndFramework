@@ -1,79 +1,81 @@
-import {Template_Loggedin} from "../components/templates/Template_Loggedin.mjs";
-import {Molecule_Logo} from "../components/molecules/Molecule_Logo.mjs";
-import {Atom_Icon} from "../components/atoms/Atom_Icon.mjs";
-import {Molecule_HeaderAndText} from "../components/molecules/Molecule_HeaderAndText.mjs";
-import {Header} from "../components/atoms/Header.mjs";
-import {Paragraph} from "../components/atoms/Paragraph.mjs";
-import {Molecule_LoginOrSignup} from "../components/molecules/Molecule_LoginOrSignup.mjs";
-import {Atom_ButtonPositive} from "../components/atoms/Atom_ButtonPositive.mjs";
-import {Atom_ButtonNeutral} from "../components/atoms/Atom_ButtonNeutral.mjs";
-import {Organism_LoginOrSignup} from "../components/organisms/Organism_LoginOrSignup.mjs";
-import {Organism_StartInfo} from "../components/organisms/Organism_StartInfo.mjs";
+import {t_LoggedIn} from "../components/templates/T_LoggedIn.mjs";
+import {m_Logo} from "../components/molecules/m_Logo.mjs";
+import {a_Icon} from "../components/atoms/a_Icon.mjs";
+import {m_HeaderAndText} from "../components/molecules/m_HeaderAndText.mjs";
+import {a_Heading} from "../components/atoms/a_Heading.mjs";
+import {a_Paragraph} from "../components/atoms/a__paragraph.mjs";
+import {m_LoginOrSignup} from "../components/molecules/M_LoginOrSignup.mjs";
+import {a_ButtonPositive} from "../components/atoms/A_ButtonPositive.mjs";
+import {a_ButtonNeutral} from "../components/atoms/A_ButtonNeutral.mjs";
+import {o_LoginOrSignup} from "../components/organisms/O_LoginOrSignup.mjs";
+import {o_StartInfo} from "../components/organisms/O_StartInfo.mjs";
 
 export const Model_Default_LoggedIn = {
-            component: Template_Loggedin,
+            component: t_LoggedIn,
             subComponents: {
                 organism_startInfo : {
-                    component: Organism_StartInfo,
+                    component: o_StartInfo,
                     subComponents: {
-                        molecule_logo : {
-                            component: Molecule_Logo,
+                        top : {
+                            component: m_Logo,
                             subComponents: {
                                 icon : {
-                                    component: Atom_Icon,
+                                    component: a_Icon,
                                     options: {
                                         icon : "bi bi-person-circle"
                                     }
                                 },
-                                heading : {
-                                    component: Header,
+                                heading: {
+                                    component: a_Heading,
                                     options: {
-                                        text : "Brand"
+                                        text : "Brand",
+                                        level: 4
                                     }
                                 }
                             }
                         },
-                        molecule_headerAndText : {
-                            component: Molecule_HeaderAndText,
+                        central : {
+                            component: m_HeaderAndText,
                             subComponents: {
                                 heading: {
-                                    component: Header,
+                                    component: a_Heading,
                                     options: {
-                                        text: "Welcome back!"
+                                        text: "Welcome back!",
+                                        level: 4
                                     }
                                 },
-                                atom_text1: {
-                                    component: Paragraph,
+                                text: {
+                                    component: a_Paragraph,
                                     options: {
-                                        text: "this is the text for a paragraph"
+                                        text: "this is the text for a paragraph",
                                     }
                                 }
                             }
                         }
                 },
                 organism_loginOrSignup: {
-                    component: Organism_LoginOrSignup,
+                    component: o_LoginOrSignup,
                     subComponents: {
                         molecule_loginOrSignup: {
-                            component: Molecule_LoginOrSignup,
+                            component: m_LoginOrSignup,
                             subComponents: {
-                                atom_buttonPositive: {
-                                    component: Atom_ButtonPositive,
+                                top_button: {
+                                    component: a_ButtonPositive,
                                     options: {
-                                        text: "Button positive",
+                                        text: "A_Button positive",
                                         onClick: () => console.log("positive button clicked")
                                     }
                                 },
-                                atom_text1: {
-                                    component: Paragraph,
+                                text: {
+                                    component: a_Paragraph,
                                     options: {
                                         text: "This is another paragraph"
                                     }
                                 },
-                                atom_buttonNeutral: {
-                                    component: Atom_ButtonNeutral,
+                                bottom_button: {
+                                    component: a_ButtonNeutral,
                                     options: {
-                                        text: "Button neutral",
+                                        text: "a_Button neutral",
                                         onClick: () => console.log("neutral button clicked")
                                     }
                                 }

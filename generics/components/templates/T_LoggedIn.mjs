@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function Template_Loggedin() {
+export function t_LoggedIn() {
     Component.call(this)
 
     this.options = {

@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 
-export function Atom_Icon(options) {
+export function a_Icon(options) {
     Component.call(this)
 
     this.options = {
