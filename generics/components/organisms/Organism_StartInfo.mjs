@@ -11,20 +11,14 @@ export function Organism_StartInfo(model) {
         return `
             <div class="grid__c1r7 organism_start-info">
                 <div class="grid-placement__c1r1">
-                    ${slot("logo")}
+                    ${this.slot(this.subComponents.molecule_logo)}
                 </div>
                 <div class="grid-placement__c1r3">
-                    ${slot("headerAndText")}
+                    ${this.slot(this.subComponents.molecule_headerAndText)}
                 </div>
             </div>
         `
     }
 
-    this.bindScript= function() {
-        let logo = new Molecule_Logo(model.molecule_logo)
-        let headerAndText = new Molecule_HeaderAndText(model.molecule_headerAndText)
-        this.fillSlot("logo", logo.getElement());
-        this.fillSlot("headerAndText", headerAndText.getElement());
-    }
 
 }

@@ -10,21 +10,9 @@ export function Molecule_Logo(model) {
 
         return `
             <div class="molecule_logo">
-                    ${slot("icon")}
-                    ${slot("heading4")}
+                    ${this.slot(this.subComponents.atom_icon)}
+                    ${this.slot(this.subComponents.atom_heading4)}
             </div>
         `
     }
-
-    this.bindScript= function() {
-        let icon = new Atom_Icon(model.atom_icon)
-        let heading4 = new Atom_Heading4(model.atom_heading4)
-        this.fillSlot("icon", icon.getElement());
-        this.fillSlot("heading4", heading4.getElement());
-
-
-
-
-    }
-
 }

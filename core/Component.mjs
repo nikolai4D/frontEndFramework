@@ -80,12 +80,14 @@ export function Component(){
     this.bindSlots = function(){
         let slots = this.element.querySelectorAll("[data-slot]")
         slots.forEach(slot => {
+            let key
             try{
-                let key = slot.getAttribute("data-slot")
+                key = slot.getAttribute("data-slot")
                 slot.replaceWith(this.subComponents[key].getElement())
             } catch (e) {
-                console.error("Error while binding slot: ", slot, e,
-                    "subComponents keys: ", Object.keys(this.subComponents))
+                console.error("Error while binding slot: ", key,
+                    "subComponents keys: ", Object.keys(this.subComponents),
+                    e)
             }
         })
     }

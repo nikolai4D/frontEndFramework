@@ -9,6 +9,7 @@ export const ComponentModel = {
     options: {},
     subComponents: {}
 }
+
 export function createComponentsFromModel(model, parentModel = null) {
     try {
         let component = new model.component(model.options)
