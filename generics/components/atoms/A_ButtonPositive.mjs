@@ -2,7 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 
 export function a_ButtonPositive(model = {}) {
     const {text = "", onClick = ()=> {console.log}}= model
-    this.props = {
+    this.options = {
         text,
         onClick
     }

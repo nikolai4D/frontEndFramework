@@ -30,6 +30,10 @@ export function Component(){
 
     }
 
+    this.applyStyle= function(){
+        this.element.className = this.options.cssClasses
+    }
+
     /**
      * Get the DOM element of the component. Init the element if it is not already done.
      * param <boolean> forceInit if true, the element will be reinitialized
@@ -41,6 +45,7 @@ export function Component(){
             this.element = stringToHTMLElement(this.getHtml())
             this.bindSlots()
             this.bindScript()
+            this.applyStyle()
         }
 
         return this.element
