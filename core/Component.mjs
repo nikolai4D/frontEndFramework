@@ -6,7 +6,7 @@ export function Component(){
      * a reference to the main DOM element of this component. Preferably, use getElement() instead.
      */
     this.element= null
-
+    this.id = null
     this.subComponents = {}
     this.options = {}
 
@@ -46,6 +46,8 @@ export function Component(){
             this.bindSlots()
             this.bindScript()
             this.applyStyle()
+
+            if(this.id) this.element.id = this.id
         }
 
         return this.element

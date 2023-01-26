@@ -10,9 +10,8 @@ export function View() {
 
     this.title= "default title"
     this.template= null
-
     this.model= null
-    
+
     /**
      * Called by router. In most cases, should not be overridden.
      * @returns {Promise<void>}
@@ -20,8 +19,6 @@ export function View() {
     this.setView= async function() {
 
         if(!this.model) throw new Error("View model is not set")
-        this.template = createComponentsFromModel(this.model)
-
         this.template = createComponentsFromModel(this.model)
 
         if(!this.template) throw new Error("View template is not set")

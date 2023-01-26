@@ -10,12 +10,14 @@ export const ComponentModel = {
     subComponents: {}
 }
 
-export function createComponentsFromModel(model, parentModel = null) {
+export function createComponentsFromModel(model, parentModel = null, name = "t") {
     try {
         let component = new model.component(model.options)
         component.options = model.options
+        component.id = name
+        model.id = name
         for (let subComponent in model.subComponents) {
-            component.subComponents[subComponent] = createComponentsFromModel(model.subComponents[subComponent], model)
+            component.subComponents[subComponent] = createComponentsFromModel(model.subComponents[subComponent], model, name + subComponent + "__")
         }
 
         return component

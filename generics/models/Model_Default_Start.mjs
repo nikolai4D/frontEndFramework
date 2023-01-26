@@ -10,22 +10,22 @@ import {a_Button} from "../components/atoms/a__button.mjs";
 
 
 export const Model_Default_Start = {
-    component: t_Split,
+    componentType: t_Split,
     subComponents: {
         left_panel : {
-            component: o_StartInfo,
+            componentType: o_StartInfo,
             subComponents: {
                 top: {
-                    component: m_Logo,
+                    componentType: m_Logo,
                     subComponents: {
                         icon: {
-                            component: a_Icon,
+                            componentType: a_Icon,
                             options: {
                                 icon: "bi bi-person-circle"
                             }
                         },
                         heading: {
-                            component: a_Heading,
+                            componentType: a_Heading,
                             options: {
                                 text: "Brand",
                                 level: 4
@@ -34,17 +34,17 @@ export const Model_Default_Start = {
                     }
                 },
                 central: {
-                    component: m_HeaderAndText,
+                    componentType: m_HeaderAndText,
                     subComponents: {
                         heading: {
-                            component: a_Heading,
+                            componentType: a_Heading,
                             options: {
                                 text: "Welcome back!",
                                 level: 4
                             }
                         },
                         text: {
-                            component: a_Paragraph,
+                            componentType: a_Paragraph,
                             options: {
                                 text: "this is the text for a paragraph",
                             }
@@ -54,10 +54,10 @@ export const Model_Default_Start = {
             },
         },
         right_panel: {
-            component: m_FormOrOther,
+            componentType: m_FormOrOther,
             subComponents: {
                 top_button: {
-                    component: a_Button,
+                    componentType: a_Button,
                     options: {
                         text: "A_Button positive",
                         cssClasses: "atom_button-positive",
@@ -65,13 +65,13 @@ export const Model_Default_Start = {
                     }
                 },
                 text: {
-                    component: a_Paragraph,
+                    componentType: a_Paragraph,
                     options: {
                         text: "This is another paragraph"
                     }
                 },
                 bottom_button: {
-                    component: a_Button,
+                    componentType: a_Button,
                     options: {
                         text: "a_Button neutral",
                         cssClasses: "atom_button-neutral",
