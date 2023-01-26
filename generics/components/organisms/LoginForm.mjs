@@ -2,7 +2,7 @@ import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
 import TextInputField from "../molecules/TextInputField.mjs";
 import TextInput from "../atoms/TextInput.mjs";
-import {A_Button} from "../atoms/a_Button.mjs";
+import {a_Button} from "../atoms/a__button.mjs";
 
 
 export function LoginForm(onSubmit, idLabel, passwordLabel){
@@ -39,7 +39,7 @@ export function LoginForm(onSubmit, idLabel, passwordLabel){
                 "password")
         )
 
-        const submitBtn = new A_Button(
+        const submitBtn = new a_Button(
                             "Login",
             (e)=>this.onSubmit(e))
 
