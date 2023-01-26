@@ -27,4 +27,12 @@ export function View() {
         document.title = this.title
     }
 
+    this.updateModelAndComponent = function(e, modelComponent, option) {
+        modelComponent.options[option] = e.target.value
+
+        let component = this.template.findComponentById(modelComponent.id)
+        component.options[option] = e.target.value
+        component.updateElement()
+    }
+
 }

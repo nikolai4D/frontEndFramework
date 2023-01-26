@@ -99,4 +99,13 @@ export function Component(){
             }
         })
     }
+
+    this.findComponentById= function(id){
+        let foundComponent = null
+        if(this.id === id) return this
+        Object.values(this.subComponents).forEach(component => {
+            if(foundComponent === null) foundComponent = component.findComponentById(id)
+        })
+        return foundComponent
+    }
 }
