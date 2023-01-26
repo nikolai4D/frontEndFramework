@@ -17,7 +17,7 @@ export function createComponentsFromModel(model, parentModel = null, name = "t")
         component.id = name
         model.id = name
         for (let subComponent in model.subComponents) {
-            component.subComponents[subComponent] = createComponentsFromModel(model.subComponents[subComponent], model, name + subComponent + "__")
+            component.subComponents[subComponent] = createComponentsFromModel(model.subComponents[subComponent], model,  "__" + name + subComponent)
         }
 
         return component
