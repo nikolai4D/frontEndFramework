@@ -31,7 +31,7 @@ export function Component(){
     }
 
     this.applyStyle= function(){
-        this.element.className = this.options.cssClasses
+        if (this.options?.cssClasses) this.element.classList.add(this.options.cssClasses)
     }
 
     /**

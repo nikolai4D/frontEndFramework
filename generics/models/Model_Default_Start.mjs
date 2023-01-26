@@ -60,7 +60,7 @@ export const Model_Default_Start = {
                     component: a_Button,
                     options: {
                         text: "A_Button positive",
-                        cssClasses: "a_button-positive",
+                        cssClasses: "atom_button-positive",
                         onClick: () => console.log("positive button clicked")
                     }
                 },
@@ -74,7 +74,7 @@ export const Model_Default_Start = {
                     component: a_Button,
                     options: {
                         text: "a_Button neutral",
-                        cssClasses: "a_button-neutral",
+                        cssClasses: "atom_button-neutral",
                         onClick: () => console.log("neutral button clicked")
                     }
                 }
