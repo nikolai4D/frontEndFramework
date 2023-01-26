@@ -12,7 +12,7 @@ export const ComponentModel = {
 
 export function createComponentsFromModel(model, parentModel = null, name = "t") {
     try {
-        let component = new model.component(model.options)
+        let component = new model.componentType(model.options)
         component.options = model.options
         component.id = name
         model.id = name
