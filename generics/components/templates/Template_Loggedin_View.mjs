@@ -25,7 +25,7 @@ export function Template_Loggedin_View(view) {
 
     this.bindScript= function() {
         let model = State.views[view].components
-        let organismNewNavbar = new NewNavBar(model.organism_startInfo)
+        let organismNewNavbar = new NewNavBar(model.organism_newNavBar)
         let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
         let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
         this.fillSlot("organismNewNabar", organismNewNavbar.getElement());
