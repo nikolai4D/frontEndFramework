@@ -28,8 +28,8 @@ export function Template_Login_View(view = {}) {
 
   this.bindScript = function () {
     let model = State.views[view].components;
-    let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
-    let organismLoginForm = new Organism_LoginForm(model.organism_loginForm);
+    let organismStartInfo = new Organism_StartInfo();
+    let organismLoginForm = new Organism_LoginForm();
 
     this.fillSlot("organismStartInfo", organismStartInfo.getElement());
     this.fillSlot("organismLoginForm", organismLoginForm.getElement());

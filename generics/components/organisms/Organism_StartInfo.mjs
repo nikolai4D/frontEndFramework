@@ -3,7 +3,7 @@ import {slot} from "../../../core/helpers.mjs";
 import { Molecule_Logo } from "../molecules/Molecule_Logo.mjs";
 import { Molecule_HeaderAndText } from "../molecules/Molecule_HeaderAndText.mjs";
 
-export function Organism_StartInfo(model) {
+export function Organism_StartInfo() {
     Component.call(this)
 
     this.getHtml = function() {
@@ -21,8 +21,8 @@ export function Organism_StartInfo(model) {
     }
 
     this.bindScript= function() {
-        let logo = new Molecule_Logo(model.molecule_logo)
-        let headerAndText = new Molecule_HeaderAndText(model.molecule_headerAndText)
+        let logo = new Molecule_Logo()
+        let headerAndText = new Molecule_HeaderAndText()
         this.fillSlot("logo", logo.getElement());
         this.fillSlot("headerAndText", headerAndText.getElement());
     }

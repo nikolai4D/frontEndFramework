@@ -2,7 +2,7 @@ import { Component } from "../../../core/Component.mjs";
 import { slot } from "../../../core/helpers.mjs";
 import { Molecule_LoginForm } from "../molecules/Molecule_LoginForm.mjs";
 
-export function Organism_LoginForm(model) {
+export function Organism_LoginForm() {
   Component.call(this);
 
   this.props = {
@@ -20,7 +20,7 @@ export function Organism_LoginForm(model) {
   };
 
   this.bindScript = function () {
-    let loginForm = new Molecule_LoginForm(model.molecule_loginForm);
+    let loginForm = new Molecule_LoginForm();
     this.fillSlot("loginForm", loginForm.getElement());
   };
 }

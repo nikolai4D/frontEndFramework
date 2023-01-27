@@ -4,7 +4,7 @@ import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
 import { Atom_ButtonNeutral } from "../atoms/Atom_ButtonNeutral.mjs";
 
-export function Molecule_LoginOrSignup(model) {
+export function Molecule_LoginOrSignup() {
     Component.call(this)
 
     this.getHtml = function() {
@@ -19,9 +19,9 @@ export function Molecule_LoginOrSignup(model) {
     }
 
     this.bindScript= function() {
-        let buttonPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
-        let text1 = new Atom_Text1(model.atom_text1)
-        let buttonNeutral = new Atom_ButtonNeutral(model.atom_buttonNeutral)
+        let buttonPositive = new Atom_ButtonPositive()
+        let text1 = new Atom_Text1()
+        let buttonNeutral = new Atom_ButtonNeutral()
         this.fillSlot("button-positive", buttonPositive.getElement());
         this.fillSlot("text1", text1.getElement());
         this.fillSlot("button-neutral", buttonNeutral.getElement());

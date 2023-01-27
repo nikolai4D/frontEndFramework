@@ -3,7 +3,7 @@ import {slot} from "../../../core/helpers.mjs";
 import { Atom_ButtonNeutral } from "../atoms/Atom_ButtonNeutral.mjs";
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
 
-export function Molecule_SignupForm(model) {
+export function Molecule_SignupForm() {
     Component.call(this)
 
     this.getHtml = function() {
@@ -17,8 +17,8 @@ export function Molecule_SignupForm(model) {
     }
 
     this.bindScript= function() {
-        let input = new Atom_Input(model.atom_input)
-        let buttonNeutral = new Atom_ButtonNeutral(model.atom_buttonNeutral)
+        let input = new Atom_Input()
+        let buttonNeutral = new Atom_ButtonNeutral()
         this.fillSlot("input", input.getElement())
         this.fillSlot("button-neutral", buttonNeutral.getElement());
     }

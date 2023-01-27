@@ -23,8 +23,8 @@ export function Template_Loggedin_View(view) {
 
     this.bindScript= function() {
         let model = State.views[view].components
-        let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
-        let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
+        let organismStartInfo = new Organism_StartInfo();
+        let organismLoginOrSignup = new Organism_LoginOrSignup();
 
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());
         this.fillSlot("organismLoginOrSignup", organismLoginOrSignup.getElement());

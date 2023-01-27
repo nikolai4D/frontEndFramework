@@ -23,8 +23,8 @@ export function Template_Signup_View(view) {
 
     this.bindScript= function() {
         let model = State.views[view].components
-        let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
-        let organismSignup = new Organism_SignupForm(model.organism_signupForm);
+        let organismStartInfo = new Organism_StartInfo();
+        let organismSignup = new Organism_SignupForm();
 
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());
         this.fillSlot("organismSignup", organismSignup.getElement());
