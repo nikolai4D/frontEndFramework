@@ -26,10 +26,8 @@ export function Organism_Navbar(model){
                 ${slot("link3")}
                 ${slot("link4")}
                 ${slot("link5")}
-            </ul>
-            <div class="rightElements_wrapper">   
+            </ul>  
                 ${slot("textAndBtn")}
-            </div>
         </nav>
         `
     }

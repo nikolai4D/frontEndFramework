@@ -9,7 +9,7 @@ export function Molecule_TextAndButton(model) {
     this.getHtml = function() {
 
         return `
-            <div class="molecule_login-form">
+            <div>
             ${slot("user")}
             ${slot("button")}
             </div>
