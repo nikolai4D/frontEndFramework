@@ -21,6 +21,18 @@
     gap: 20px;
 }
 
+.molecule_paginator {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    grid-auto-columns: min-content;
+}
+
+.molecule_paginator--item {
+    cursor: pointer;
+
+}
+
 .molecule_signup-form {
     display: flex;
     flex-direction: column;
