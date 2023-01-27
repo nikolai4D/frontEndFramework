@@ -24,14 +24,16 @@ nav {
     display: flex;
     justify-content: space-evenly;
     padding: 1em;
+    height: 58px;
 
 }
 .molecule_text_and_btn > p{
     padding: 0 !important;
+
 }
 
 .molecule_text_and_btn > button {
-    height: 38px;
+    height: 42px;
     padding: 12px;
     width: 80px;
     border-radius: 17px;
