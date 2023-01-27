@@ -12,8 +12,8 @@ export function Template_Loggedin_View(view) {
 
         return `
             <div class="grid grid__c3r3 template_start">
+                ${slot("organismNavbar")}
                 <div class="grid-placement__c1r1-3">
-                    ${slot("organismNavbar")}
                     ${slot("organismStartInfo")}
                 </div>
                 <div class="grid-placement__c2-3r2">
