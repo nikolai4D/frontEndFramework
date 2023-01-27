@@ -10,7 +10,7 @@ import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs";
 export function NewNavBar(model){
     Component.call(this)
 
-    this.routesMap = routesMap
+    // this.routesMap = routesMap
 
     this.getHtml = function(){
 
