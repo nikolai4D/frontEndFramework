@@ -54,7 +54,7 @@ export function Organism_Navbar(model){
         this.fillSlot("link3", link3.getElement())
         this.fillSlot("link4", link4.getElement())
         this.fillSlot("link5", link5.getElement())
-        this.fillSlot("user", user.getElement())
+        // this.fillSlot("user", user.getElement())
         this.fillSlot("textAndBtn", textAndBtn.getElement());
         // this.fillSlot("logoutBtn", logoutBtn.getElement());
 
