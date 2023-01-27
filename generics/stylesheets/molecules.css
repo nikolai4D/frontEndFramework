@@ -9,7 +9,6 @@
 
 .molecule_login-or-signup {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -32,4 +31,24 @@
     border: solid 1px black;
     width: 9rem;
     height: 15rem;
+
+.molecule_paginator {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    grid-auto-columns: min-content;
+}
+
+.molecule_paginator--item {
+    cursor: pointer;
+
+}
+
+.molecule_signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
 }
