@@ -64,6 +64,8 @@ export function Molecule_Paginator(model) {
     this.bindScript = function() {
         
         for (let button of this.element.querySelectorAll("*[data-paginator_page]")) {
+            if(button.dataset.paginator_page == this.currentPage) button.style.fontWeight = "bold"
+
             button.addEventListener('click', ()=>{
                 this.updatePage(button.dataset.paginator_page)
             })
@@ -74,7 +76,7 @@ export function Molecule_Paginator(model) {
             })
         
         this.element.querySelector("*[data-paginator_next]").addEventListener('click', ()=>{
-                if (this.currentPage < this.numberOfPages + 1) this.updatePage(parseInt(this.currentPage) + 1)
+                if (this.currentPage < this.numberOfPages - 1) this.updatePage(parseInt(this.currentPage) + 1)
             })
     }
     
