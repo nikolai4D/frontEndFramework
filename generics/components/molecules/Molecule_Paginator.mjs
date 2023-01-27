@@ -74,7 +74,7 @@ export function Molecule_Paginator(model) {
             })
         
         this.element.querySelector("*[data-paginator_next]").addEventListener('click', ()=>{
-                if (this.currentPage < this.numberOfPages) this.updatePage(parseInt(this.currentPage) + 1)
+                if (this.currentPage < this.numberOfPages + 1) this.updatePage(parseInt(this.currentPage) + 1)
             })
     }
     
