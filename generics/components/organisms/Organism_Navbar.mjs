@@ -10,14 +10,14 @@ import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs";
 export function Organism_Navbar(model){
     Component.call(this)
 
-    // this.routesMap = routesMap
+    this.routesMap = routesMap
 
     this.getHtml = function(){
 
         let links = ""
-        // for (let i of this.routesMap.keys()){
-        //     links += "<li>" + slot(i) + "</li>"
-        // }
+        for (let i of this.routesMap.keys()){
+            links += "<li>" + slot(i) + "</li>"
+        }
 
         return `
         <nav>
@@ -41,10 +41,10 @@ export function Organism_Navbar(model){
         let logoutBtn = new Button(model.atom_button)
         
         this.fillSlot("logo", logo.getElement());
-        // for (let i of this.routesMap){
-        //     let link = new Link(i[0], i[1], router)
-        //     this.fillSlot(i[0], link.getElement())
-        // }
+        for (let i of this.routesMap){
+            let link = new Link(i[0], i[1], router)
+            this.fillSlot(i[0], link.getElement())
+        }
         this.fillSlot("user", user.getElement());
         this.fillSlot("logoutBtn", logoutBtn.getElement());
     }

@@ -13,6 +13,9 @@ export function Template_Loggedin_Model(model) {
                             text : model.logoText
                         }
                     },
+                    molecule_iconAndLink : {
+                        text : model.links 
+                    },
                     atom_heading4 : {
                         text : model.user
                     },
