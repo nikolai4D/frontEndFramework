@@ -39,7 +39,7 @@ export function NewNavBar(model){
     this.bindScript = function(){
         
         let logo = new Molecule_Logo(model.molecule_logo)
-        let user = new Atom_Heading4(model.atom_heading3)
+        let user = new Atom_Heading4(model.atom_heading4)
         let logoutBtn = new Button(model.atom_button)
         
         this.fillSlot("logo", logo.getElement());
