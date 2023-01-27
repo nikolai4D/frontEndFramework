@@ -3,7 +3,7 @@ import {slot} from "../../../core/helpers.mjs";
 import { Link } from "../atoms/Link.mjs";
 import {Atom_Icon} from "../atoms/Atom_Icon.mjs";
 
-export function Molecule_IconAndLinks(model) {
+export function Molecule_IconAndLink(model) {
     Component.call(this)
 
     this.getHtml = function() {
@@ -18,7 +18,7 @@ export function Molecule_IconAndLinks(model) {
 
     this.bindScript= function() {
         let icon = new Atom_Icon(model.atom_icon)
-        let link = new Link(model.text)
+        let link = new Link(model.atom_link)
         this.fillSlot("icon", icon.getElement());
         this.fillSlot("link", link.getElement());
     }

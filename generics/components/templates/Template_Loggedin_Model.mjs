@@ -13,8 +13,45 @@ export function Template_Loggedin_Model(model) {
                             text : model.logoText
                         }
                     },
-                    molecule_iconAndLink : {
-                        text : model.links 
+                    molecule_iconAndLink1 : {
+                        atom_icon : {
+                            icon : model.logoIcon
+                        },
+                        atom_link : {
+                            text : model.link1
+                        }
+                    },
+                    molecule_iconAndLink2 : {
+                        atom_icon : {
+                            icon : model.logoIcon
+                        },
+                        atom_link : {
+                            text : model.link2
+                        }
+                    },
+                    molecule_iconAndLink3 : {
+                        atom_icon : {
+                            icon : model.logoIcon
+                        },
+                        atom_link : {
+                            text : model.link3
+                        }
+                    },
+                    molecule_iconAndLink4 : {
+                        atom_icon : {
+                            icon : model.logoIcon
+                        },
+                        atom_link : {
+                            text : model.link4
+                        }
+                    },
+                    molecule_iconAndLink5 : {
+                        atom_icon : {
+                            icon : model.logoIcon
+                        },
+                        atom_link : {
+                            text : model.link5
+                        }
                     },
                     atom_heading4 : {
                         text : model.user
