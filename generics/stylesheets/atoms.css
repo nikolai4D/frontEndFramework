@@ -35,3 +35,59 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 1em;
 }
+
+.dropbtn {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #000000;
+    width: 161px;
+    height: 35px;
+    border-radius: 2px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown i {
+    padding-left: 50px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    border: 1px solid #000000;
+    z-index: 1;
+    border-radius: 2px;
+  }
+
+  .dropdown-padding {
+    height: 5px;
+  }
+  
+  .dropdown-content a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #000;
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block; 
+}
+  
+  .dropdown:hover .dropbtn {
+    background-color: #FFFFFF;
+}
+
