@@ -8,3 +8,9 @@
 .organism_login-or-signup{
 
 }
+
+.organism_form_4_dropdowns {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
