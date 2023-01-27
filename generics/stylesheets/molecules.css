@@ -9,11 +9,19 @@
 
 .molecule_login-or-signup {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .molecule_login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
+}
+
+.molecule_signup-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
