@@ -30,8 +30,8 @@ export function Organism_Navbar(model){
             <div class="rightElements_wrapper">
                 <div class="rightElements_content">    
                 ${slot("user")}
-                ${slot("logoutBtn")}
                 </div>
+                ${slot("logoutBtn")}
             </div>
         </nav>
         `
