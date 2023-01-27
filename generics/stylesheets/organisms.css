@@ -12,6 +12,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     width: 100vw;
+    height: 75px;
 }
 /* .rightElements_wrapper{
     padding: 1em;
@@ -25,7 +26,6 @@ nav {
     justify-content: space-evenly;
     padding: 1em;
     height: 58px;
-
 }
 .molecule_text_and_btn > p{
     padding: 0 !important;
@@ -37,14 +37,15 @@ nav {
     padding: 12px;
     width: 80px;
     border-radius: 17px;
+    border: 1px solid black;
 }
 
-.rightElements_wrapper > button{
+/* .rightElements_wrapper > button{
     height: 38px;
     padding: 12px;
     width: 80px;
     border-radius: 17px;
-}
+} */
 
 nav > ul {
     display: flex;
