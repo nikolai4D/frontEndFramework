@@ -5,7 +5,9 @@ import { Molecule_Logo } from "../molecules/Molecule_Logo.mjs";
 import { Button } from "../atoms/Button.mjs";
 import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs";
 
-export function NewNavBar(routesMap, router, model){
+// routesMap, router, model
+
+export function NewNavBar(model){
     Component.call(this)
 
     this.routesMap = routesMap
@@ -13,9 +15,9 @@ export function NewNavBar(routesMap, router, model){
     this.getHtml = function(){
 
         let links = ""
-        for (let i of this.routesMap.keys()){
-            links += "<li>" + slot(i) + "</li>"
-        }
+        // for (let i of this.routesMap.keys()){
+        //     links += "<li>" + slot(i) + "</li>"
+        // }
 
         return `
         <nav>
