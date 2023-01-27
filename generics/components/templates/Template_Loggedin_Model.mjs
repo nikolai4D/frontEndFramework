@@ -4,7 +4,7 @@ export function Template_Loggedin_Model(model) {
     const template_model = {
             view: model.view,
             components: {
-                organism_newNavbar : {
+                organism_navbar : {
                     molecule_logo : {
                         atom_icon : {
                             icon : model.logoIcon

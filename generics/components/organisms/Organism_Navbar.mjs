@@ -7,7 +7,7 @@ import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs";
 
 // routesMap, router, model
 
-export function NewNavBar(model){
+export function Organism_NavBar(model){
     Component.call(this)
 
     // this.routesMap = routesMap
