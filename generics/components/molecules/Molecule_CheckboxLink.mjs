@@ -1,7 +1,7 @@
 import { slot } from "../../../core/helpers.mjs";
 import { Component } from "../../../core/Component.mjs";
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
-import { Atom_Text2Link } from "../atoms/Atom_Text1.mjs";
+import { Atom_Text2Link } from "../atoms/Atom_Text2Link";
 
 export default function ( model )
 {
