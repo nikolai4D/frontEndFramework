@@ -13,8 +13,12 @@ nav {
     grid-template-columns: 1fr 2fr 1fr;
     width: 100vw;
 }
-.rightElements{
+.rightElements_wrapper{
     padding: 1em;
+}
+
+.rightElements_content{
+    background-color: red;
 }
 
 .rightElements_btn {
