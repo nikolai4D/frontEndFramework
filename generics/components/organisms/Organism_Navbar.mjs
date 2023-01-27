@@ -29,7 +29,7 @@ export function Organism_Navbar(model){
             </ul>
             <div class="">
                 ${slot("user")}
-                ${slot("logutBtn")}
+                ${slot("logoutBtn")}
             </div>
         </nav>
         `

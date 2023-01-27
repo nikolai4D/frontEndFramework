@@ -29,7 +29,7 @@ export function Template_Loggedin_View(view) {
         // let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
         let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
         this.fillSlot("organismNavbar", organismNavbar.getElement());
-        this.fillSlot("organismStartInfo", organismStartInfo.getElement());
+        // this.fillSlot("organismStartInfo", organismStartInfo.getElement());
         this.fillSlot("organismLoginOrSignup", organismLoginOrSignup.getElement());
     };
 }
