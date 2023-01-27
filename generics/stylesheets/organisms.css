@@ -7,8 +7,19 @@
 .organism_login-or-signup{
 
 }
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100vw;
+}
 .rightElements{
     padding: 1em;
+}
+
+.rightElements_btn {
+    color: brown;
+    width: 120px;
 }
 
 nav > ul {
@@ -16,7 +27,8 @@ nav > ul {
     padding: 1em;
 }
 
-nav > div > button {
+/* nav > div > button {
     width: 120px;
     color: red
-}
+} */
+
