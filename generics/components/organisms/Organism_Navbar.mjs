@@ -21,7 +21,7 @@ export function Organism_Navbar(model){
 
         return `
         <nav>
-            <div class="">
+            <div class="grid-placement__c1r1">
                 ${slot("logo")}
             </div>
             <ul>
