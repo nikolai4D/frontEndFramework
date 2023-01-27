@@ -3,7 +3,7 @@ import {slot} from "../../../core/helpers.mjs";
 import { Organism_LoginOrSignup } from "../organisms/Organism_LoginOrSignup.mjs";
 import { Organism_StartInfo } from "../organisms/Organism_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
-import { Organism_NavBar } from "../organisms/Organism_Navbar.mjs";
+import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs";
 
 export function Template_Loggedin_View(view) {
     Component.call(this)
@@ -25,8 +25,8 @@ export function Template_Loggedin_View(view) {
 
     this.bindScript= function() {
         let model = State.views[view].components
-        let organismNavbar = new Organism_NavBar(model.organism_navbar)
-        let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
+        let organismNavbar = new Organism_Navbar(model.organism_navbar)
+        // let organismStartInfo = new Organism_StartInfo(model.organism_startInfo);
         let organismLoginOrSignup = new Organism_LoginOrSignup(model.organism_loginOrSignup);
         this.fillSlot("organismNavbar", organismNavbar.getElement());
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());
