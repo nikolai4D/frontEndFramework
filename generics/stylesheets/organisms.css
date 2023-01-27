@@ -7,3 +7,16 @@
 .organism_login-or-signup{
 
 }
+.rightElements{
+    padding: 1em;
+}
+
+nav > ul {
+    display: flex;
+    padding: 1em;
+}
+
+nav > div > button {
+    width: 120px;
+    color: red
+}
