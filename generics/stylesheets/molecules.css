@@ -1,9 +1,9 @@
-.molecule_logo{
+.molecule_logo {
     display: flex;
-    padding:1em;
+    padding: 1em;
 }
 
-.molecule_header-and-text{
+.molecule_header-and-text {
     padding: 3em;
 }
 
@@ -20,4 +20,16 @@
     align-items: flex-start;
     padding: 30px;
     gap: 20px;
+}
+
+.molecule_image-and-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    /* gap: 20px; */
+    border: solid 1px black;
+    width: 9rem;
+    height: 15rem;
 }
