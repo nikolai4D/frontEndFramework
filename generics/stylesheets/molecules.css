@@ -31,6 +31,7 @@
     border: solid 1px black;
     width: 9rem;
     height: 15rem;
+}
 
 .molecule_paginator {
     display: grid;
