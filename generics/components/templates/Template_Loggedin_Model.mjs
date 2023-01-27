@@ -53,6 +53,15 @@ export function Template_Loggedin_Model(model) {
                             text : model.link5
                         }
                     },
+                    molecule_textAndButton : {
+                        atom_text1 : {
+                            text : model.user
+                        },
+                        atom_button : {
+                            text : model.button.text,
+                            onClick : model.button.onClick
+                        } 
+                    }, 
                     atom_heading4 : {
                         text : model.user
                     },

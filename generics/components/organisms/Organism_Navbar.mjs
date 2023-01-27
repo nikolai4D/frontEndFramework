@@ -4,7 +4,7 @@ import { Molecule_IconAndLink } from "../molecules/Molecule_IconAndLink.mjs";
 import { Molecule_Logo } from "../molecules/Molecule_Logo.mjs";
 import { Button } from "../atoms/Button.mjs";
 import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs";
-
+import { Molecule_TextAndButton } from "../molecules/Molecule_TextAndButton.mjs";
 // routesMap, router, model
 
 export function Organism_Navbar(model){
@@ -28,8 +28,7 @@ export function Organism_Navbar(model){
                 ${slot("link5")}
             </ul>
             <div class="rightElements_wrapper">   
-                ${slot("user")}
-                ${slot("logoutBtn")}
+                ${slot("textAndBtn")}
             </div>
         </nav>
         `
@@ -40,7 +39,8 @@ export function Organism_Navbar(model){
         
         let logo = new Molecule_Logo(model.molecule_logo)
         let user = new Atom_Heading4(model.atom_heading4)
-        let logoutBtn = new Button(model.atom_button)
+        // let logoutBtn = new Button(model.atom_button)
+        let textAndBtn = new Molecule_TextAndButton(model.molecule_textAndButton)
 
         let link1 = new Molecule_IconAndLink(model.molecule_iconAndLink1)
         let link2 = new Molecule_IconAndLink(model.molecule_iconAndLink2)
@@ -54,8 +54,9 @@ export function Organism_Navbar(model){
         this.fillSlot("link3", link3.getElement())
         this.fillSlot("link4", link4.getElement())
         this.fillSlot("link5", link5.getElement())
-        this.fillSlot("user", user.getElement());
-        this.fillSlot("logoutBtn", logoutBtn.getElement());
+        this.fillSlot("user", user.getElement())
+        this.fillSlot("textAndBtn", textAndBtn.getElement());
+        // this.fillSlot("logoutBtn", logoutBtn.getElement());
 
 
         // for (let i of this.routesMap){
