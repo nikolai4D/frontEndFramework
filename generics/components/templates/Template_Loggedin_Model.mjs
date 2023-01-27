@@ -4,6 +4,23 @@ export function Template_Loggedin_Model(model) {
     const template_model = {
             view: model.view,
             components: {
+                organism_newNavbar : {
+                    molecule_logo : {
+                        atom_icon : {
+                            icon : model.logoIcon
+                        },
+                        atom_heading4 : {
+                            text : model.logoText
+                        }
+                    },
+                    atom_heading4 : {
+                        text : model.user
+                    },
+                    atom_button : {
+                        text : model.button.text,
+                        onClick : model.button.onClick
+                    }
+                },
                 organism_startInfo : {
                     molecule_logo : {
                         atom_icon : {

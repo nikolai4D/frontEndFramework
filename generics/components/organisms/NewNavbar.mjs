@@ -41,10 +41,10 @@ export function NewNavBar(routesMap, router, model){
         let logoutBtn = new Button(model.atom_button)
         
         this.fillSlot("logo", logo.getElement());
-        for (let i of this.routesMap){
-            let link = new Link(i[0], i[1], router)
-            this.fillSlot(i[0], link.getElement())
-        }
+        // for (let i of this.routesMap){
+        //     let link = new Link(i[0], i[1], router)
+        //     this.fillSlot(i[0], link.getElement())
+        // }
         this.fillSlot("user", user.getElement());
         this.fillSlot("logoutBtn", logoutBtn.getElement());
     }
