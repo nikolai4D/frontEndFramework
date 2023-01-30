@@ -6,7 +6,7 @@ export function Button(data) {
 
     this.getHtml= function() {
         return `
-        <button type="button"  class="btn btn-primary molecule_card_btn">${text}</button>`
+        <button type="button"  class="btn btn-primary">${text}</button>`
     }
 
     this.bindScript= function() {
