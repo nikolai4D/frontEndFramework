@@ -1,4 +1,4 @@
-import {Form4Dropdowns} from "../generics/components/organisms/Form4Dropdowns.mjs";
+import {Organism_Form4Dropdowns} from "../generics/components/organisms/Organism_Form4Dropdowns.mjs";
 
 let testmodel ={
     heading1: {
@@ -49,6 +49,6 @@ let testmodel ={
     }
 }
 
-let testedComponent = new Form4Dropdowns(testmodel)
+let testedComponent = new Organism_Form4Dropdowns(testmodel)
 
 document.body.appendChild(testedComponent.getElement())
