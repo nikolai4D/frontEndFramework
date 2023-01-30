@@ -8,3 +8,13 @@
 .organism_login-or-signup{
 
 }
+
+.organism_form_4_dropdowns {
+    display:grid;
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr 1fr 1fr 1fr auto;
+    grid-gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+
+}
