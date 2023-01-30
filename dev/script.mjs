@@ -1,54 +1,59 @@
-import {Form4Dropdowns} from "../generics/components/organisms/Form4Dropdowns.mjs";
+import {ListAllSearch} from "../generics/components/organisms/ListAllSearch.mjs";
 
-let testmodel ={
-    heading1: {
-        text: "dropdown 1"
+let testModel ={
+    atom_heading4: {
+        text: 'Heading 1'
     },
-    heading2: {
-        text: "dropdown 2"
+    atom_input: {
+        placeholder: 'InputField1'
     },
-    heading3: {
-        text: "dropdown 3"
+    atom_button_positive: {
+        text: 'Light Grey'
     },
-    heading4: {
-        text: "dropdown 4"
-    },
-    dropdown1: {
-        options: [
-            {
-                text: "Option 1",
-            }
-        ]
-    },
-    dropdown2: {
-        options: [
-            {
-                text: "Option 2",
-            }
-        ]
-    },
-    dropdown3: {
-        options: [
-            {
-                text: "Option 3",
-            }
-        ]
-    },
-    dropdown4: {
-        options: [
-            {
-                text: "Option 4",
-            }
-        ]
-    },
-    buttonNeutral: {
-        text: "Light Grey",
-        onClick: function () {
-            console.log("Button clicked")
+    lists: [
+        {
+            heading: 'list heading 1',
+            items: [
+                {
+                    text: 'item 1',
+                },
+                {
+                    text: 'item 2',
+                },
+                {
+                    text: 'item 3',
+                },
+                {
+                    text: 'item 4',
+                },
+                {
+                    text: 'item 5',
+                }
+            ]
+        },
+        {
+            heading: 'list heading 2',
+            items: [
+                {
+                    text: 'item 1',
+                },
+                {
+                    text: 'item 2',
+                },
+                {
+                    text: 'item 3',
+                },
+                {
+                    text: 'item 4',
+                },
+                {
+                    text: 'item 5',
+                }
+            ]
         }
-    }
+    ]
 }
 
-let testedComponent = new Form4Dropdowns(testmodel)
+let testedComponent = new ListAllSearch(testModel)
 
 document.body.appendChild(testedComponent.getElement())
