@@ -12,7 +12,9 @@ let testModel ={
     },
     lists: [
         {
-            heading: 'list heading 1',
+            atom_heading4: {
+                text:'list heading 1'
+            },
             items: [
                 {
                     text: 'item 1',
@@ -32,7 +34,9 @@ let testModel ={
             ]
         },
         {
-            heading: 'list heading 2',
+            atom_heading4: {
+                text:'list heading 2'
+            },
             items: [
                 {
                     text: 'item 1',

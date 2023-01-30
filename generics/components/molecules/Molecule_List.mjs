@@ -2,19 +2,19 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import {Atom_Heading4} from "../atoms/Atom_Heading4.mjs";
 
-export function MoleculeList (model){
+export function Molecule_List (model){
     Component.call(this)
 
     this.getHtml = function(){
         return `
-            ${slot('heading')}
-            <div class="molecule_list">
-                <ul>
-                    ${model.items.map(item => `
-                        <li>${item.text}</li>
-                    `).join('')}
-                </ul>
-            </div>
+                <div class="molecule_list">
+                    ${slot('heading')}
+                    <ul class="molecule_list__list">
+                        ${model.items.map(item => `
+                            <li>${item.text}</li>
+                        `).join('')}
+                    </ul>
+                </div> 
         `
     }
 

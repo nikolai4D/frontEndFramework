@@ -3,6 +3,8 @@ import {slot} from "../../../core/helpers.mjs";
 import {Atom_Heading4} from "../atoms/Atom_Heading4.mjs";
 import {Atom_Input} from "../atoms/Atom_Input.mjs";
 import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
+import {Molecule_List} from "../molecules/Molecule_List.mjs";
+import {Atom_Heading1} from "../atoms/Atom_Heading1.mjs";
 
 export function ListAllSearch (model){
     Component.call(this)
@@ -11,40 +13,30 @@ export function ListAllSearch (model){
     this.getHtml = function(){
 
         let lists = ""
-        for (let list of model.lists){
+        for (let listIndex in model.lists){
             lists += `
-                <div class="list-all-search-list">
-                    <div class="list-all-search-list-heading">
-                        <h4>${list.heading}</h4>
-                    </div>
-                    <div class="list-all-search__list-items">
-                        ${list.items.map(item => `
-                            <ul class="list-all-search__list-item">
-                                <li>${item.text}</li>
-                            </ul>
-                        `).join('')}
-                    </div>
-                </div>
+            ${slot('list' + listIndex)}
             `
         }
 
         return `
             <div class="organism_list-all-search">
-                <div>
+                <div class="organism_list-all-search__top">
                     ${slot('heading')}
-                    ${slot('search')}
-                    ${slot('button')}
+                    <div>
+                        ${slot('search')}
+                        ${slot('button')}
+                    </div>
+                    
                 </div>
-                <div>
-                    ${lists}
-                </div>
+                ${lists}
             </div>
         `
     }
 
 
     this.bindScript = function(){
-        let heading = new Atom_Heading4(model.atom_heading4)
+        let heading = new Atom_Heading1(model.atom_heading4)
         this.fillSlot('heading', heading.getElement())
 
         let searchInput = new Atom_Input(model.atom_input)
@@ -52,6 +44,12 @@ export function ListAllSearch (model){
 
         let searchButton = new Atom_ButtonPositive(model.atom_button_positive)
         this.fillSlot('button', searchButton.getElement())
+
+        for (let listIndex in model.lists){
+            let list = model.lists[listIndex]
+            let listComponent = new Molecule_List(list)
+            this.fillSlot('list' + listIndex, listComponent.getElement())
+        }
     }
 
 
