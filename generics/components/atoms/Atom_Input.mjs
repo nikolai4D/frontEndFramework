@@ -1,8 +1,14 @@
 import {Component} from "nd_frontend/core/Component.mjs";
 
-export function Atom_Input(model) {
+export function Atom_Input(model = {}) {
     const {type="text", placeholder="..."} = model
+    this.props = {
+        type,
+        placeholder
+    }
     Component.call(this)
+    
+
 
     this.getHtml = function() {
         return `
@@ -10,4 +16,7 @@ export function Atom_Input(model) {
         `
     }
 
+
+
 }
+
