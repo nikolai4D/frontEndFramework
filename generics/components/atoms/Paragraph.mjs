@@ -1,9 +1,9 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Paragraph(text) {
+export function Paragraph(model) {
     Component.call(this)
 
     this.getHtml = function() {
-        return `<p>${text}</p>`
+        return `<p>${model.text}</p>`
     }
 }

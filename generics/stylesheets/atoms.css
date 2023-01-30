@@ -15,16 +15,16 @@
 }
 
 .atom_button-neutral{
-    background-color: var(--custom-color-1);
-    padding: 1em;
-    border-radius: 6px;
-    border: 0;
+    background-color: var(--white-color);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    border: 2px solid black;
 }
 
 .atom_button-positive{
-    padding: 1em;
-    background-color: var(--custom-color-2);
-    border-radius: 6px;
+    padding: 1rem 2rem;
+    background-color: var(--light-grey-color);
+    border-radius: 15px;
     border: 0;
 }
 
@@ -34,4 +34,10 @@
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 1em;
+}
+
+.card_heading3 {
+    padding: 0 !important;
+    font-size: large;
+
 }

@@ -1,19 +1,90 @@
-.molecule_logo{
+.molecule_logo {
     display: flex;
-    padding:1em;
+    padding: 1em;
 }
 
-.molecule_header-and-text{
+.molecule_header-and-text {
     padding: 3em;
 }
 
 .molecule_login-or-signup {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .molecule_login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
+}
+
+.molecule_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 200px;
+    height: 350px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.molecule_card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 9px;
+}
+
+.molecule_card_image {
+    width: 100%;
+    height: 202px;
+    background-color: #6C757D;
+    object-fit: cover;
+}
+
+.molecule_card_btn {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #D63384;
+    width: 73px;
+
+}
+
+.molecule_image-and-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    /* gap: 20px; */
+    border: solid 1px black;
+    width: 9rem;
+    height: 15rem;
+}
+
+.molecule_paginator {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    grid-auto-columns: min-content;
+}
+
+.molecule_paginator--item {
+    cursor: pointer;
+
+}
+
+.molecule_signup-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
