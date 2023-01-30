@@ -3,6 +3,7 @@ import {Component} from "../../../core/Component.mjs";
 export function Button(data) {
     Component.call(this)
     const {text, onClick} = data
+    this.onClick = onClick
 
     this.getHtml= function() {
         return `

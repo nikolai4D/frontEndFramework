@@ -1,6 +1,9 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
-
+import {Molecule_HeaderAndText} from "../molecules/Molecule_HeaderAndText.mjs";
+import {Molecule_HeaderAndList} from "../molecules/Molecule_HeaderAndList.mjs";
+import {Atom_Image} from "../atoms/Atom_Image.mjs";
+import {Button} from "../atoms/Button.mjs";
 
 export function SearchResultDetail(model){
     Component.call(this)
@@ -34,7 +37,7 @@ export function SearchResultDetail(model){
         let headerAndList1 = new Molecule_HeaderAndList(model.molecule_headerAndList1)
         let headerAndList2 = new Molecule_HeaderAndList(model.molecule_headerAndList2)
         let headerAndList3 = new Molecule_HeaderAndList(model.molecule_headerAndList3)
-        let button = new Atom_Button(model.atom_button)
+        let button = new Button(model.button)
 
 
         this.fillSlot("headerAndText", headerAndText.getElement());
