@@ -3,7 +3,6 @@ import { State } from "nd_frontend/core/actions/State.mjs";
 import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs"
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
-import { Atom_ButtonBasic } from "../atoms/Atom_ButtonBasic.mjs";
 
 export function Template_SearchResult_View(view){
     
