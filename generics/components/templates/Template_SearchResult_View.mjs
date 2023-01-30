@@ -13,7 +13,6 @@ export function Template_SearchResult_View(view){
         return `<div>
         ${slot("organismNavbar")}
         ${slot("atomHeader")}
-        ${slot("button")}
         </div>`
     }
 
@@ -21,10 +20,8 @@ export function Template_SearchResult_View(view){
         let model = State.views[view].components;
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
         let atom_heading4 = new Atom_Heading4(model.atom_heading4)
-        let button = new Atom_ButtonBasic(model.atom_button)
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
         this.fillSlot("atomHeader", atom_heading4.getElement())
-        this.fillSlot("button", button.getElement())
     }
 }
