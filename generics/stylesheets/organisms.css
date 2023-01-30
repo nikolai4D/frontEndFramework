@@ -14,6 +14,11 @@ nav {
     width: 100vw;
     height: 75px;
 }
+
+nav > ul > div > a {
+    color: black; 
+}
+
 /* .rightElements_wrapper{
     padding: 1em;
     display: flex;
