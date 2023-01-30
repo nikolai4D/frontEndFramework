@@ -55,6 +55,7 @@ nav > ul > div > a {
 nav > ul {
     display: flex;
     padding: 1em;
+    justify-content: center;
 }
 
 
