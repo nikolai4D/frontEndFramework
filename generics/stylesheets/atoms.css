@@ -31,8 +31,6 @@
 .atom_button-white{
     background-color: var(--white-color);
     width: 80px;
-    /* padding: 1em; */
-    /* border-radius: 6px; */
     border: 1px solid black;
     height: 42px;
     padding: 12px;
@@ -42,8 +40,6 @@
 .atom_button-white:hover{
     background-color: var(--custom-color-1);
 }
-
-
 
 .atom_input {
 }

@@ -19,49 +19,9 @@ nav > ul > div > a {
     color: black; 
 }
 
-/* .rightElements_wrapper{
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-} */
-
-.molecule_text_and_btn {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1em;
-    height: 58px;
-}
-.molecule_text_and_btn > p{
-    padding: 0 !important;
-
-}
-
-/* .molecule_text_and_btn > button {
-    height: 42px;
-    padding: 12px;
-    width: 80px;
-    border-radius: 17px;
-    border: 1px solid black;
-} */
-
-/* .rightElements_wrapper > button{
-    height: 38px;
-    padding: 12px;
-    width: 80px;
-    border-radius: 17px;
-} */
-
 nav > ul {
     display: flex;
     padding: 1em;
     justify-content: center;
 }
-
-
-
-/* nav > div > button {
-    width: 120px;
-    color: red
-} */
 

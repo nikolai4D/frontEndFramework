@@ -15,7 +15,7 @@ export function Template_Loggedin_Model(model) {
                     },
                     molecule_iconAndLink1 : {
                         atom_icon : {
-                            icon : model.logoIcon
+                            icon : model.icon1
                         },
                         atom_link : {
                             text : model.link1
@@ -23,7 +23,7 @@ export function Template_Loggedin_Model(model) {
                     },
                     molecule_iconAndLink2 : {
                         atom_icon : {
-                            icon : model.logoIcon
+                            icon : model.icon2
                         },
                         atom_link : {
                             text : model.link2
@@ -31,7 +31,7 @@ export function Template_Loggedin_Model(model) {
                     },
                     molecule_iconAndLink3 : {
                         atom_icon : {
-                            icon : model.logoIcon
+                            icon : model.icon3
                         },
                         atom_link : {
                             text : model.link3
@@ -39,7 +39,7 @@ export function Template_Loggedin_Model(model) {
                     },
                     molecule_iconAndLink4 : {
                         atom_icon : {
-                            icon : model.logoIcon
+                            icon : model.icon4
                         },
                         atom_link : {
                             text : model.link4
@@ -47,7 +47,7 @@ export function Template_Loggedin_Model(model) {
                     },
                     molecule_iconAndLink5 : {
                         atom_icon : {
-                            icon : model.logoIcon
+                            icon : model.icon5
                         },
                         atom_link : {
                             text : model.link5
