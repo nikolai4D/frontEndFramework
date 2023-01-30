@@ -15,19 +15,16 @@
 }
 
 .atom_button-neutral{
-    background-color: var(--custom-color-1);
-    width: 79px;
-    height: 38px;
-    padding: 10px, 20px, 10px, 20px;
-    border: 0;
-    border-radius: 12px;
+    background-color: var(--white-color);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    border: 2px solid black;
 }
 
 .atom_button-positive{
-    background-color: var(--custom-color-2);
-    width: 79px;
-    height: 38px;
-    padding: 10px, 20px, 10px, 20px;
+    padding: 1rem 2rem;
+    background-color: var(--light-grey-color);
+    border-radius: 15px;
     border: 0;
     border-radius: 12px;
 }

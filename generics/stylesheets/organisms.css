@@ -1,7 +1,8 @@
 @import "colors.css";
 
 .organism_start-info {
-    background-color: var(--custom-color-1);
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 .organism_login-or-signup{
