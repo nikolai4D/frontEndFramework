@@ -11,9 +11,9 @@ export function Molecule_LoginOrSignup(model) {
 
         return `
             <div class="molecule_login-or-signup">
-            ${slot("button-positive")}
-            ${slot("text1")}
             ${slot("button-neutral")}
+            ${slot("text1")}
+            ${slot("button-positive")}
             </div>
         `
     }
