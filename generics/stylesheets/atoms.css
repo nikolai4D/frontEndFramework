@@ -28,16 +28,16 @@
     border: 0;
 }
 
-.atom_button-white{
+.atom_button-basic{
     background-color: var(--white-color);
-    width: 80px;
+    width: 79px;
     border: 1px solid black;
-    height: 42px;
-    padding: 12px;
-    border-radius: 17px;
+    height: 38px;
+    padding: 10px, 20px, 10px, 20px;
+    border-radius: 12px;
 }
 
-.atom_button-white:hover{
+.atom_button-basic:hover{
     background-color: var(--custom-color-1);
 }
 

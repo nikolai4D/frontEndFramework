@@ -1,12 +1,12 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Atom_ButtonWhite(model) {
+export function Atom_ButtonBasic(model) {
     Component.call(this)
 
     this.getHtml = function() {
 
         return `
-                <button class="atom_button-white">${model.text}</button>
+                <button class="atom_button-basic">${model.text}</button>
                 `
     }
 
