@@ -59,20 +59,14 @@
     display: flex;
     justify-content: space-evenly;
     padding: 1em;
-    height: 58px;
 }
-.molecule_text_and_btn > p{
-    padding: 0 !important;
-
-}
-
 .molecule_text_and_btn > p{
     padding: 0 !important;
 
 }
 
 .molecule_text_and_btn > button{
-    margin-top: 4px;
+    align-self: center;
 }
 
 
