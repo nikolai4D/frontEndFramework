@@ -39,3 +39,18 @@
     grid-auto-flow: row;
     grid-gap: 2rem;
 }
+
+.organism_two-fields-one-dropdown-one-picture{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.organism_two-fields-one-dropdown-one-picture__first-column {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 2rem;
+}
