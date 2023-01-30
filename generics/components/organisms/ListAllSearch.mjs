@@ -5,6 +5,7 @@ import {Atom_Input} from "../atoms/Atom_Input.mjs";
 import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
 import {Molecule_List} from "../molecules/Molecule_List.mjs";
 import {Atom_Heading1} from "../atoms/Atom_Heading1.mjs";
+import {Atom_Heading2} from "../atoms/Atom_Heading2.mjs";
 
 export function ListAllSearch (model){
     Component.call(this)
@@ -29,14 +30,17 @@ export function ListAllSearch (model){
                     </div>
                     
                 </div>
-                ${lists}
+                <div class="organism_list-all-search__lists">
+                    ${lists}
+                </div>
+                
             </div>
         `
     }
 
 
     this.bindScript = function(){
-        let heading = new Atom_Heading1(model.atom_heading4)
+        let heading = new Atom_Heading2(model.atom_heading4)
         this.fillSlot('heading', heading.getElement())
 
         let searchInput = new Atom_Input(model.atom_input)
