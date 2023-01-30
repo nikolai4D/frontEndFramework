@@ -32,12 +32,11 @@
     background-color: none;
     padding: 1em;
     border-radius: 6px;
-    border: 0;
+    border: 1px solid black;
 }
 
 .atom_button-white:hover{
     background-color: var(--custom-color-1);
-    transition: 0.7s;
 }
 
 
