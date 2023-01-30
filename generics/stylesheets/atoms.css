@@ -24,11 +24,6 @@
 }
 
 .atom_button-positive{
-    /* padding: 1em;
-    background-color: var(--custom-color-2);
-    border-radius: 6px;
-    border: 0; */
-
     background-color: var(--custom-color-2);
     width: 79px;
     height: 38px;
@@ -48,6 +43,7 @@
 
 .atom_button-basic:hover{
     background-color: var(--custom-color-1);
+    border: none;
 }
 
 .atom_input {
