@@ -16,24 +16,33 @@
 
 .atom_button-neutral{
     background-color: var(--custom-color-1);
-    padding: 1em;
-    border-radius: 6px;
+    width: 79px;
+    height: 38px;
+    padding: 10px, 20px, 10px, 20px;
     border: 0;
+    border-radius: 12px;
 }
 
 .atom_button-positive{
-    padding: 1em;
+    /* padding: 1em;
     background-color: var(--custom-color-2);
     border-radius: 6px;
+    border: 0; */
+
+    background-color: var(--custom-color-2);
+    width: 79px;
+    height: 38px;
+    padding: 10px, 20px, 10px, 20px;
     border: 0;
+    border-radius: 12px;
 }
 
 .atom_button-basic{
     background-color: var(--white-color);
     width: 79px;
-    border: 1px solid black;
     height: 38px;
     padding: 10px, 20px, 10px, 20px;
+    border: 1px solid black;
     border-radius: 12px;
 }
 
