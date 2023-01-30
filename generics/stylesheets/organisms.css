@@ -11,6 +11,10 @@
 
 .organism_form_4_dropdowns {
     display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr 1fr 1fr 1fr auto;
+    grid-gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+
 }

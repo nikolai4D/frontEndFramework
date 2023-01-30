@@ -1,8 +1,9 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import {Atom_Heading6} from "../atoms/Atom_Heading6.mjs";
-import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
 import {Atom_Dropdown} from "../atoms/Atom_Dropdown.mjs";
+import {Atom_ButtonNeutral} from "../atoms/Atom_ButtonNeutral.mjs";
+import {Atom_Text2} from "../atoms/Atom_Text2.mjs";
+import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
 
 export function Form4Dropdowns(model) {
     Component.call(this)
@@ -10,7 +11,7 @@ export function Form4Dropdowns(model) {
 
     this.getHtml = function() {
         return `
-            <div class="form-4-dropdowns">
+            <div class="organism_form_4_dropdowns">
                 <div>
                     ${slot("heading1")}
                     ${slot("dropdown1")}
@@ -28,17 +29,18 @@ export function Form4Dropdowns(model) {
                     ${slot("dropdown4")}
                 </div>
                 
-                ${slot("button-positive")}
+                    ${slot("button")}
+                
             </div>
         `
     }
 
     this.bindScript= function() {
 
-        let heading1 = new Atom_Heading6(model.heading1)
-        let heading2 = new Atom_Heading6(model.heading2)
-        let heading3 = new Atom_Heading6(model.heading3)
-        let heading4 = new Atom_Heading6(model.heading4)
+        let heading1 = new Atom_Text2(model.heading1)
+        let heading2 = new Atom_Text2(model.heading2)
+        let heading3 = new Atom_Text2(model.heading3)
+        let heading4 = new Atom_Text2(model.heading4)
 
         this.fillSlot("heading1", heading1.getElement())
         this.fillSlot("heading2", heading2.getElement())
@@ -56,8 +58,8 @@ export function Form4Dropdowns(model) {
         this.fillSlot("dropdown3", dropdown3.getElement())
         this.fillSlot("dropdown4", dropdown4.getElement())
 
-        let buttonPositive = new Atom_ButtonPositive(model.buttonPositive)
-        this.fillSlot("button-positive", buttonPositive.getElement())
+        let buttonNeutral = new Atom_ButtonPositive(model.buttonNeutral)
+        this.fillSlot("button", buttonNeutral.getElement())
 
     }
 }
