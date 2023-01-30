@@ -3,7 +3,7 @@ import { Component } from "../../../core/Component.mjs";
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
 import { Atom_Text2Link } from "../atoms/Atom_Text2Link";
 
-export default function ( model )
+export function Molecule_CheckboxLink( model )
 {
     Component.call( this );
 
