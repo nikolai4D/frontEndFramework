@@ -1,6 +1,6 @@
 import { Component } from "../../../core/Component.mjs";
 import { slot } from "../../../core/helpers.mjs";
-import { Molecule_ImageAndText } from "../molecules/Molecule_ImageAndText.mjs";
+import { Molecule_ImageAndText } from "../molecules/Molecule_ImgAndText.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 
 export function Organism_ButtonFilledPictures ( model )
@@ -9,11 +9,10 @@ export function Organism_ButtonFilledPictures ( model )
 
     this.getHtml = function ()
     {
-
         return `
             <div class="__">
-            ${ slot( "btn" ) }
-                <div class="___">
+                ${ slot( "btn" ) }
+                <div class="organism_buttonFilledPicture">
                     ${ ( model.cards.map( ( card, index ) => slot( "card" + index ) ) ).join( "" ) }
                 </div>
             </div>
@@ -22,12 +21,13 @@ export function Organism_ButtonFilledPictures ( model )
 
     this.bindScript = function ()
     {
-        model.cards.forEach( ( card, index ) =>
+        let btn = new Atom_ButtonPositive( model.btn );
+        this.fillSlot( "btn", btn.getElement() );
+
+        model.cards.forEach( ( cardData, index ) =>
         {
-            let btn = new Atom_ButtonPositive( model.btn );
-            let card = new Molecule_ImageAndText( model.molecule_imgText );
+            let card = new Molecule_ImageAndText( cardData );
             this.fillSlot( "card" + index, card.getElement() );
-            this.fillSlot( "btn", btn.getElement() );
         } );
     };
 }

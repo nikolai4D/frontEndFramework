@@ -7,3 +7,13 @@
 .organism_login-or-signup{
 
 }
+
+.organism_buttonFilledPicture div{
+    margin: 50px 50px;
+}
+
+.organism_buttonFilledPicture img {
+    height: 140px;
+    width: 140px;
+    margin: 50px 50px;
+}
