@@ -7,7 +7,7 @@ import {Button} from "../atoms/Button.mjs";
 
 export function SearchResultDetail(model){
     Component.call(this)
-    
+
     this.getHtml = function() {
         return `
         <div>
@@ -30,7 +30,7 @@ export function SearchResultDetail(model){
 
 
     this.bindScript= function() {
-        let headerAndText = new Molecule_HeaderAndText(model.molecule_headerAndText)
+        let headerAndText = new Molecule_HeaderAndText(model.headerAndText)
         let atom_image = new Atom_Image(model.atom_image)
         let headerAndList1 = new Molecule_HeaderAndList(model.molecule_headerAndList1)
         let headerAndList2 = new Molecule_HeaderAndList(model.molecule_headerAndList2)
