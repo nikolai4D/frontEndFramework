@@ -1,4 +1,4 @@
-import {ListAllSearch} from "../generics/components/organisms/ListAllSearch.mjs";
+import {Organism_ListAllSearch} from "../generics/components/organisms/Organism_ListAllSearch.mjs";
 
 let testModel ={
     atom_heading4: {
@@ -58,6 +58,6 @@ let testModel ={
     ]
 }
 
-let testedComponent = new ListAllSearch(testModel)
+let testedComponent = new Organism_ListAllSearch(testModel)
 
 document.body.appendChild(testedComponent.getElement())
