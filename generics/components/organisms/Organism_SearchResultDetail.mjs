@@ -7,9 +7,7 @@ import {Button} from "../atoms/Button.mjs";
 
 export function SearchResultDetail(model){
     Component.call(this)
-
-    this.onSubmit = onSubmit
-
+    
     this.getHtml = function() {
         return `
         <div>
