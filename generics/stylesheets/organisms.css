@@ -71,3 +71,25 @@ nav > ul {
     grid-auto-flow: row;
     grid-gap: 2rem;
 }
+
+.search-result-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.search-result-content {
+    grid-area: 2 / 2 / 5 / 7;
+}
+
+.search-result-content input {
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+
+.overflow-container {
+    overflow-y: scroll;
+    height: 500px;
+    width: 80%;
+}

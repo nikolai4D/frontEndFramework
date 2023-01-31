@@ -72,7 +72,50 @@ export function Template_Search_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
-                }
+                }, 
+                atom_heading4 : {
+                    text : model.startHeading
+                   },
+                   atom_input : {
+                        type: model.inputType,
+                        placeholder: model.inputPlaceholder,
+                    },
+                    atom_button : {
+                        text : model.btnText,
+                    },
+                    searchResult : [{
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    }, 
+                    {
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    },
+                    {
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    },
+                    {
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    },
+                ],
             }
         }
 
