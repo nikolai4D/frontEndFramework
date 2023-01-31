@@ -12,5 +12,5 @@ export function Atom_Image ( model )
 
     this.bindScript = function () {};
 
-    this.onClick = onClick;
+    this.onClick = model.onClick;
 }
