@@ -1,4 +1,4 @@
-import {Component} from "nd_frontend/core/Component.mjs";
+import {Component} from "../../../core/Component.mjs";
 
 export function Atom_Input(model = {}) {
     const {type="text", placeholder="..."} = model
