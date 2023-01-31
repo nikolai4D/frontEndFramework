@@ -7,10 +7,7 @@ export function Atom_Image ( model )
     this.getHtml = function ()
     {
         return `
-        <img src="${ model.imgSrc }" alt="${ model.alt }" class="__"/>`;
+        <img src="${ model.src }" alt="${ model.alt }" class="atom_image" />`;
     };
 
-    this.bindScript = function () {};
-
-    this.onClick = onClick;
 }

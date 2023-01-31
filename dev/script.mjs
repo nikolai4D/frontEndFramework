@@ -1,63 +1,22 @@
-import {Organism_ListAllSearch} from "../generics/components/organisms/Organism_ListAllSearch.mjs";
+import {Organism_TwoFieldsOneDropdownOnePicture} from "../generics/components/organisms/Organism_TwoFieldsOneDropdownOnePicture.mjs";
 
-let testModel ={
-    atom_heading4: {
-        text: 'Heading 1'
+let testmodel ={
+    atom_input__1: {
+        placeholder: 'First input',
     },
-    atom_input: {
-        placeholder: 'InputField1'
+    atom_input__2: {
+        placeholder: 'Second input',
     },
-    atom_button_positive: {
-        text: 'Light Grey'
+    atom_dropdown: {
+        text: 'Dropdown',
     },
-    lists: [
-        {
-            atom_heading4: {
-                text:'list heading 1'
-            },
-            items: [
-                {
-                    text: 'item 1',
-                },
-                {
-                    text: 'item 2',
-                },
-                {
-                    text: 'item 3',
-                },
-                {
-                    text: 'item 4',
-                },
-                {
-                    text: 'item 5',
-                }
-            ]
-        },
-        {
-            atom_heading4: {
-                text:'list heading 2'
-            },
-            items: [
-                {
-                    text: 'item 1',
-                },
-                {
-                    text: 'item 2',
-                },
-                {
-                    text: 'item 3',
-                },
-                {
-                    text: 'item 4',
-                },
-                {
-                    text: 'item 5',
-                }
-            ]
-        }
-    ]
+    atom_picture: {
+        src: 'https://www.w3schools.com/images/lamp.jpg',
+        alt: 'flower picture',
+    }
+
 }
 
-let testedComponent = new Organism_ListAllSearch(testModel)
+let testedComponent = new Organism_TwoFieldsOneDropdownOnePicture(testmodel)
 
 document.body.appendChild(testedComponent.getElement())
