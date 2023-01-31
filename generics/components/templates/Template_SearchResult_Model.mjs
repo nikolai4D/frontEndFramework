@@ -72,7 +72,54 @@ export function Template_SearchResult_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
-                }
+                },
+                atom_input : {
+                    type: model.inputType,
+                    placeholder: model.inputPlaceholder,
+                },
+                atom_button : {
+                    text : model.btnText,
+                },
+                searchResult : [{
+                    atom_heading4 : {
+                        text : model.headerResult,
+                    },
+                   atom_text1 : {
+                        text : model.headerText
+                   },
+                }, 
+                {
+                    atom_heading4 : {
+                        text : model.headerResult,
+                    },
+                   atom_text1 : {
+                        text : model.headerText
+                   },
+                },
+                {
+                    atom_heading4 : {
+                        text : model.headerResult,
+                    },
+                   atom_text1 : {
+                        text : model.headerText
+                   },
+                },
+                {
+                    atom_heading4 : {
+                        text : model.headerResult,
+                    },
+                   atom_text1 : {
+                        text : model.headerText
+                   },
+                },
+            ],
+            molecule_paginator : {
+                onPageNumberClick : model.paginator.onPageNumberClick, 
+                numberOfPages : model.paginator.numberOfPages,
+                currentPage : model.paginator.currentPage,
+                pageNumberToDisplay : model.paginator.pageNumberToDisplay
+            }
+                
             }
         }
 
