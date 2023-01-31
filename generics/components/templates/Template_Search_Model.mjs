@@ -21,7 +21,8 @@ export function Template_Search_Model(model) {
                             icon : model.icon1
                         },
                         atom_link : {
-                            text : model.link1
+                            text : model.link1,
+                            route: model.route
                         }
                     },
                     molecule_iconAndLink2 : {
