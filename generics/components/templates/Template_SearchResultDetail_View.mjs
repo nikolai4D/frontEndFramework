@@ -15,7 +15,7 @@ export function Template_SearchResultDetail_View(view){
 
     this.bindScript = function() {
         let model = State.views[view].components;
-        let searchResultDetail = new SearchResultDetail(model.searchResultDetail)
+        let searchResultDetail = new SearchResultDetail(model)
 
         this.fillSlot("searchResultDetail", searchResultDetail.getElement())
     }
