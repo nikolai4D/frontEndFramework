@@ -5,7 +5,7 @@ import {Atom_ButtonNeutral} from "../atoms/Atom_ButtonNeutral.mjs";
 import {Atom_Text2} from "../atoms/Atom_Text2.mjs";
 import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
 
-export function Form4Dropdowns(model) {
+export function Organism_Form4Dropdowns(model) {
     Component.call(this)
 
 
