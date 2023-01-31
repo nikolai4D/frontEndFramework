@@ -7,7 +7,7 @@ import {Molecule_List} from "../molecules/Molecule_List.mjs";
 import {Atom_Heading1} from "../atoms/Atom_Heading1.mjs";
 import {Atom_Heading2} from "../atoms/Atom_Heading2.mjs";
 
-export function ListAllSearch (model){
+export function Organism_ListAllSearch (model){
     Component.call(this)
 
 
