@@ -18,12 +18,19 @@ nav {
 
 nav > ul > div > a {
     color: black;
+   
+}
+
+a:active {
+    font-weight: bold;
 }
 
 nav > ul {
     display: flex;
     padding: 1em;
     justify-content: center;
+    gap: 16xpx;
+    width: 545px;
 }
 
 .organism_form_4_dropdowns {

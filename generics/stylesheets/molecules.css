@@ -65,8 +65,12 @@
 
 .molecule_text_and_btn {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 1em;
+    gap: 30px;
+    justify-content: end;
+    margin-right: 3em;
+
 }
 .molecule_text_and_btn > p{
     padding: 0 !important;
