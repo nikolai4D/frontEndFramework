@@ -4,9 +4,30 @@
     background-color: var(--custom-color-1);
 }
 
-.organism_login-or-signup{
+.organism_login-or-signup {}
 
+.organism_buttonFilledPicture_btnParent{
+    display: grid;
 }
+.organism_buttonFilledPicture_btnParent:first-child{
+    justify-content: right !important;
+    width: 99px !important;
+}
+
+.organism_buttonFilledPicture {
+    display: flex;
+    /* justify-content: center; */
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 50%;
+}
+
+/* .organism_buttonFilledPicture button{
+    justify-content: right;
+    height: 38px;
+    width: 99px;
+} */
 
 .organism_buttonFilledPicture div{
     margin: 50px 50px;
