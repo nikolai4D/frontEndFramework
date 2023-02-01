@@ -1,5 +1,5 @@
 import {Component} from "../../../core/Component.mjs";
-import {router} from "../../../../UrbanCloud-alt1/src/javascript/index.mjs";
+// import {router} from "../../../../UrbanCloud-alt1/src/javascript/index.mjs";
 
 export function Link(data){
     Component.call(this)
