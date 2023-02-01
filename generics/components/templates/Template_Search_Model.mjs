@@ -30,7 +30,8 @@ export function Template_Search_Model(model) {
                             icon : model.icon2
                         },
                         atom_link : {
-                            text : model.link2
+                            text : model.link2.text,
+                            route: model.link2.onClick
                         }
                     },
                     molecule_iconAndLink3 : {
@@ -38,7 +39,8 @@ export function Template_Search_Model(model) {
                             icon : model.icon3
                         },
                         atom_link : {
-                            text : model.link3
+                            text : model.link3.text,
+                            route: model.link3.onClick
                         }
                     },
                     molecule_iconAndLink4 : {
@@ -46,7 +48,8 @@ export function Template_Search_Model(model) {
                             icon : model.icon4
                         },
                         atom_link : {
-                            text : model.link4
+                            text : model.link4.text,
+                            route: model.link4.onClick
                         }
                     },
                     molecule_iconAndLink5 : {
@@ -54,7 +57,9 @@ export function Template_Search_Model(model) {
                             icon : model.icon5
                         },
                         atom_link : {
-                            text : model.link5
+                            text : model.link5.text,
+                            route: model.link5.onClick
+                            
                         }
                     },
                     molecule_textAndButton : {
