@@ -85,3 +85,12 @@
     font-weight: bolder;
     color: red;
 }
+
+.molecule_icon_and_link > a {
+    color: black;
+    cursor: pointer;
+   
+}
+nav > ul > div > a {
+   
+}
