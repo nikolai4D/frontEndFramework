@@ -81,7 +81,7 @@
     align-self: center;
 }
 
-.molecule_icon_and_link > a:focus {
+.molecule_icon_and_link > a:focus-visible {
     font-weight: bolder;
     color: red;
 }
