@@ -22,7 +22,7 @@ export function Template_Search_Model(model) {
                         },
                         atom_link : {
                             text : model.link1.text,
-                            route: model.link1.onClick
+                            route: model.link1.route
                         }
                     },
                     molecule_iconAndLink2 : {
@@ -31,7 +31,7 @@ export function Template_Search_Model(model) {
                         },
                         atom_link : {
                             text : model.link2.text,
-                            route: model.link2.onClick
+                            route: model.link2.route
                         }
                     },
                     molecule_iconAndLink3 : {
