@@ -22,7 +22,7 @@ nav > ul > div > a {
    
 }
 
-a:focus {
+nav > ul > div > a:focus {
     font-weight: bolder;
     color: red;
 }
