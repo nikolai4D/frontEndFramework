@@ -22,7 +22,7 @@ export function Template_Search_Model(model) {
                         },
                         atom_link : {
                             text : model.link1.text,
-                            route: model.link1.onClick
+                            onClick: model.link1.onClick
                         }
                     },
                     molecule_iconAndLink2 : {
@@ -31,7 +31,7 @@ export function Template_Search_Model(model) {
                         },
                         atom_link : {
                             text : model.link2.text,
-                            route: model.link2.onClick
+                            onClick: model.link2.onClick
                         }
                     },
                     molecule_iconAndLink3 : {
@@ -40,7 +40,7 @@ export function Template_Search_Model(model) {
                         },
                         atom_link : {
                             text : model.link3.text,
-                            route: model.link3.onClick
+                            onClick: model.link3.onClick
                         }
                     },
                     molecule_iconAndLink4 : {
@@ -49,7 +49,7 @@ export function Template_Search_Model(model) {
                         },
                         atom_link : {
                             text : model.link4.text,
-                            route: model.link4.onClick
+                            onClick: model.link4.onClick
                         }
                     },
                     molecule_iconAndLink5 : {
@@ -58,7 +58,7 @@ export function Template_Search_Model(model) {
                         },
                         atom_link : {
                             text : model.link5.text,
-                            route: model.link5.onClick
+                            onClick: model.link5.onClick
                             
                         }
                     },
