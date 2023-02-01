@@ -22,7 +22,7 @@ nav > ul > div > a {
    
 }
 
-nav > ul > div > a:active {
+a:active {
     font-weight: bolder;
     color: red;
 }
