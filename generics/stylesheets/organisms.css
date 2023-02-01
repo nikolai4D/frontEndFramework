@@ -18,10 +18,11 @@ nav {
 
 nav > ul > div > a {
     color: black;
+    cursor: pointer;
    
 }
 
-a:active {
+nav > ul > div > a:active {
     font-weight: bold;
 }
 
