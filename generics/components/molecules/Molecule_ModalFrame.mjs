@@ -1,7 +1,7 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 
-export function ModalFrame(model) {
+export function Molecule_ModalFrame(model) {
   Component.call(this);
 
   this.content = model.content;
