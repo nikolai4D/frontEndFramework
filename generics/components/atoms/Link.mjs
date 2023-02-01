@@ -11,6 +11,6 @@ export function Link(data){
     }
 
     this.bindScript = function(){
-        this.element.addEventListener("click", this.data.onClick)
+        this.element.addEventListener("click", this.onClick)
     }
 }
