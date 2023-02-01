@@ -4,13 +4,13 @@ import { router } from "../../../../UrbanCloud-alt1/src/javascript/index.mjs";
 export function Link(data){
     Component.call(this)
 
-    this.onClick = this.onClick
+    this.onClick = onClick
 
     this.getHtml = function(){
         return `<a  class="${data.class}">${data.text}</a>`
     }
 
     this.bindScript = function(){
-        this.element.addEventListener("click", this.onClick(data.route))
+        this.element.addEventListener("click", this.data.onClick)
     }
 }
