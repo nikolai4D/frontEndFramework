@@ -24,8 +24,6 @@ nav > ul > div > a {
 
 a:active {
     font-weight: bolder;
-    color: red;
-    font-size: large;
 }
 
 nav > ul {
