@@ -24,9 +24,7 @@ nav > ul > div > a {
 
 a:focus {
     font-weight: bolder;
-}
-nav > ul > div > a--active {
-    font-weight: bold;
+    color: red;
 }
 
 nav > ul {
