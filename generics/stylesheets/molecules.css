@@ -80,3 +80,8 @@
 .molecule_text_and_btn > button{
     align-self: center;
 }
+
+.molecule_icon_and_link > a:focus {
+    font-weight: bolder;
+    color: red;
+}
