@@ -81,9 +81,10 @@
     align-self: center;
 }
 
-.molecule_icon_and_link > a:focus-visible {
+.molecule_icon_and_link > a:focus {
     font-weight: bolder;
     color: red;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .molecule_icon_and_link > a {
