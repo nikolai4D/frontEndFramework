@@ -93,7 +93,7 @@
     cursor: pointer;
    
 }
-nav > ul > div > a {
+nav > ul > div > a:active {
     font-weight: bolder;
     color: red;
     font-family: 'Times New Roman', Times, serif;
