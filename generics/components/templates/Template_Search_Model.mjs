@@ -72,6 +72,14 @@ export function Template_Search_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
+                },
+                atom_input : {
+                    type: model.inputType,
+                    placeholder: model.inputPlaceholder
+                },
+                atom_button : {
+                    text: model.searchButtonText,
+                    onClick: model.searchButtonClick
                 }
             }
         }
