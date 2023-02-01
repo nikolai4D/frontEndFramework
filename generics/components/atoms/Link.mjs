@@ -1,5 +1,5 @@
 import {Component} from "../../../core/Component.mjs";
-import { router } from "../../../../UrbanCloud-alt1/src/javascript/index.mjs";
+// import { router } from "../../../../UrbanCloud-alt1/src/javascript/index.mjs";
 
 export function Link(data){
     Component.call(this)
@@ -9,6 +9,6 @@ export function Link(data){
     }
 
     this.bindScript = function(){
-        this.element.addEventListener("click", ()=> router.goTo(data.route))
+        this.element.addEventListener("click", this.data.route)
     }
 }
