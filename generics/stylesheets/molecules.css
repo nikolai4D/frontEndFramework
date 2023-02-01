@@ -81,12 +81,12 @@
     align-self: center;
 }
 
-.molecule_icon_and_link > a:active {
+/* .molecule_icon_and_link > a:active {
     font-weight: bolder;
     color: red;
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
-}
+} */
 
 .molecule_icon_and_link > a {
     color: black;
@@ -94,5 +94,8 @@
    
 }
 nav > ul > div > a {
-   
+    font-weight: bolder;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
 }
