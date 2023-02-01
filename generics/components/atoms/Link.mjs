@@ -9,6 +9,6 @@ export function Link(data){
     }
 
     this.bindScript = function(){
-        this.element.addEventListener("click", this.data.route)
+        this.element.addEventListener("click", ()=> router.goTo(data.route))
     }
 }
