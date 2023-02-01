@@ -10,7 +10,7 @@ export function Organism_ButtonFilledPictures ( model )
     this.getHtml = function ()
     {
         return `
-            <div class="organism_buttonFilledPicture">
+            <div class="organism_buttonFilledPicture_btnParent">
                 ${ slot( "btn" ) }
                 <div class="organism_buttonFilledPicture">
                     ${ ( model.cards.map( ( card, index ) => slot( "card" + index ) ) ).join( "" ) }
