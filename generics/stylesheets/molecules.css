@@ -81,21 +81,15 @@
     align-self: center;
 }
 
-/* .molecule_icon_and_link > a:active {
-    font-weight: bolder;
-    color: red;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: xx-large;
-} */
+.molecule_icon_and_link > a:active {
+    font-weight: bold;
+}
 
 .molecule_icon_and_link > a {
     color: black;
     cursor: pointer;
    
 }
-nav > ul > div > a:active {
-    font-weight: bolder;
-    color: red;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: xx-large;
-}
+/* nav > ul > div > a:active {
+    font-weight: bold;
+} */
