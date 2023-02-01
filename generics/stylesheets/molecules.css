@@ -81,7 +81,7 @@
     align-self: center;
 }
 
-.molecule_icon_and_link > a:focus {
+.molecule_icon_and_link > a:active {
     font-weight: bolder;
     color: red;
     font-family: 'Times New Roman', Times, serif;
