@@ -16,12 +16,6 @@ nav {
     height: 75px;
 }
 
-nav > ul > div > a {
-    color: black;
-    cursor: pointer;
-   
-}
-
 nav > ul {
     display: flex;
     padding: 1em;
