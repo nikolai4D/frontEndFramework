@@ -64,7 +64,7 @@ export function Template_ListAllProcesses_Model(model) {
                             text : model.button.text,
                             onClick : model.button.onClick
                         } 
-                    }, 
+                    },   
                     atom_heading4 : {
                         text : model.user
                     },
@@ -75,15 +75,15 @@ export function Template_ListAllProcesses_Model(model) {
                     atom_heading4 : {
                         text : model.heading
                     }, 
-                    molecule_inputAndButton : {
-                        atom_input : {
-                            type: model.inputType, 
-                            placeholder : model.inputPlaceholder
-                        },
-                        atom_buttonBasic : {
-                            text : model.buttonBasic.text,
-                            onClick : model.buttonBasic.onClick
-                        }
+                },
+                molecule_inputAndButton : {
+                    atom_input : {
+                        type: model.inputType, 
+                        placeholder : model.inputPlaceholder
+                    },
+                    atom_buttonBasic : {
+                        text : model.buttonBasic.text,
+                        onClick : model.buttonBasic.onClick
                     }
                 }
             }
