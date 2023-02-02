@@ -9,17 +9,17 @@ export function Molecule_InputAndButton(model) {
     this.getHtml = function() {
 
         return `
-            <div class="molecule_icon_and_link">
-                    ${slot("input")}
-                    ${slot("button")}
+            <div class="molecule_input_and_button">
+                ${slot("input")}
+                ${slot("button")}
             </div>
         `
     }
 
     this.bindScript= function() {
-        let input = new Atom_Input(model.atom_input)
+        let atomInput = new Atom_Input(model.atom_input)
         let button = new Atom_ButtonBasic(model.atom_buttonBasic)
-        this.fillSlot("input", input.getElement());
+        this.fillSlot("input", atomInput.getElement());
         this.fillSlot("button", button.getElement());
     }
 }
