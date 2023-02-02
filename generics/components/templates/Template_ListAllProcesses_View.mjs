@@ -14,7 +14,6 @@ export function Template_ListAllProcesses_View(view){
     this.getHtml = function(){
         return `<div>
             ${slot("organismNavbar")}
-            ${slot("atomHeader")}
             <div>
                 <div>
                     <div class="heading_mol_input_btn">
@@ -32,7 +31,6 @@ export function Template_ListAllProcesses_View(view){
     this.bindScript = function() {
         let model = State.views[view].components;
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
-        let atom_heading4 = new Atom_Heading4(model.atom_heading4)
         let heading = new Atom_Heading4(model.atom_heading4)
         let mol_inputBtn = new Molecule_InputAndButton(model.molecule_inputAndButton)
         let mol_list1 = new Molecule_List(model.molecule_list1)
@@ -43,7 +41,6 @@ export function Template_ListAllProcesses_View(view){
         // let mol_list6 = new Molecule_ListNoHeading(model.molecule_list2)
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
-        this.fillSlot("atomHeader", atom_heading4.getElement())
         this.fillSlot("heading", heading.getElement())
         this.fillSlot("mol_Input_Btn", mol_inputBtn.getElement())
 
