@@ -9,13 +9,9 @@ export function Organism_StartInfo(model) {
     this.getHtml = function() {
 
         return `
-            <div class="grid__c1r7 organism_start-info">
-                <div class="grid-placement__c1r1">
+            <div class="organism_start-info">
                     ${slot("logo")}
-                </div>
-                <div class="grid-placement__c1r3">
                     ${slot("headerAndText")}
-                </div>
             </div>
         `
     }

@@ -1,14 +1,20 @@
 .template_start {
-
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-
 .template_login {
-    
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
 }
 
 .template_signup {
-
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
 }
 
 .template_loggedin {
