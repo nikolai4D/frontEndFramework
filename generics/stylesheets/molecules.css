@@ -78,6 +78,8 @@
 }
 
 .heading_mol_input_btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 630px;
 }
 
