@@ -87,6 +87,8 @@
     gap: 20px;
     padding: 20px;
     align-items: flex-start;
+    width: 285px;
+    height: 78px;
 }
 
 .molecule_input_and_button > input {
