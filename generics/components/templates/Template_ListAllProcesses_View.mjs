@@ -5,6 +5,7 @@ import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Molecule_InputAndButton } from "../molecules/Molecule_InputAndButton.mjs";
 import { Molecule_List } from "../molecules/Molecule_List.mjs";
+import { Molecule_ListNoHeading } from "../molecules/Molecule_ListNoHeading.mjs";
 
 export function Template_ListAllProcesses_View(view){
     
@@ -42,9 +43,7 @@ export function Template_ListAllProcesses_View(view){
         let mol_list3 = new Molecule_List(model.molecule_list1)
         let mol_list4 = new Molecule_List(model.molecule_list2)
         let mol_list5 = new Molecule_List(model.molecule_list2)
-        let mol_list6 = new Molecule_List(model.molecule_list2)
-         
-
+        let mol_list6 = new Molecule_ListNoHeading(model.molecule_list2)
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
         this.fillSlot("atomHeader", atom_heading4.getElement())
