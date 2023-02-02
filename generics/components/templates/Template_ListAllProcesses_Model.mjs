@@ -88,6 +88,18 @@ export function Template_ListAllProcesses_Model(model) {
                         text : model.buttonBasic.text,
                         onClick : model.buttonBasic.onClick
                     }
+                },
+                molecule_list1 : {
+                    atom_heading4 : {
+                        text : model.listHeading1
+                    },
+                    items : model.items 
+                },
+                molecule_list2 : {
+                    atom_heading4 : {
+                        text : model.listHeading2
+                    },
+                    items : model.items 
                 }
             }
         }
