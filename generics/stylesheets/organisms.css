@@ -4,10 +4,16 @@
     background-color: var(--custom-color-1);
 }
 
-/* .organism_login-or-signup {} */
+.organism_login-or-signup {}
 
-.organism_buttonFilledPicture_btnParent {
+.organism_buttonFilledPicture_wrapper {
     display: inline-block;
+}
+
+#organism_buttonFilledPicture_btnParent {
+    display: flex;
+    justify-content: right;
+    width: 69.5%;
 }
 
 .organism_buttonFilledPicture {
@@ -19,7 +25,7 @@
     height: 50%;
 }
 
-.organism_buttonFilledPicture div{
+.organism_buttonFilledPicture div {
     margin: 50px 50px;
 }
 
