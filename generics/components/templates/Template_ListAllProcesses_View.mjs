@@ -14,7 +14,7 @@ export function Template_ListAllProcesses_View(view){
     this.getHtml = function(){
         return `<div>
             ${slot("organismNavbar")}
-            <div class="template_process>
+            <div class="template_process">
                 <div>
                     <div class="heading_mol_input_btn">
                         ${slot("heading")}
