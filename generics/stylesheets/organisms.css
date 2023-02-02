@@ -8,22 +8,20 @@
 .organism_login-or-signup {}
 
 .organism_buttonFilledPicture_wrapper {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(4, 206px);
+    grid-auto-rows: minmax(20px, auto);
 }
+
+.organism_buttonFilledPicture_wrapper::before {
+    content: '';
+    grid-area: 1 / 1 / 2 / 5;
+    display: grid;
+  }
 
 #organism_buttonFilledPicture_btnParent {
-    display: flex;
-    justify-content: right;
-    width: 69.5%;
-}
-
-.organism_buttonFilledPicture {
-    display: flex;
-    justify-content: center;
-    overflow-y: scroll;
-    flex-wrap: wrap;
-    width: 80%;
-    height: 50%;
+    grid-area: 1 / 3 / 2 / 4;
+    display: grid;
 }
 
 .organism_buttonFilledPicture div {
