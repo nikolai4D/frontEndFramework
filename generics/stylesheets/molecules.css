@@ -77,8 +77,15 @@
     align-self: center;
 }
 
-.heading_mol_input_btn{
-    
+.heading_mol_input_btn {
+    width: 630px;
+}
+
+.heading_mol_input_btn > h4{
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: -0.32px;
+
 }
 
 .molecule_input_and_button {
@@ -101,8 +108,9 @@
 
 .molecule_input_and_button > button {
     width: 99px;
-    height: 38px;
+    height: 35px;
     border-radius: 12px;
     padding: 10px 20px 10px 20px;
     font-size: 12px;
+    background-color: #CCCCCC;
 }
