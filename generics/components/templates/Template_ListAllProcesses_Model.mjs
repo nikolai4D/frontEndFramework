@@ -99,7 +99,9 @@ export function Template_ListAllProcesses_Model(model) {
                     atom_heading4 : {
                         text : model.listHeading2
                     },
-                    items : model.items 
+                    items : {
+                        text: model.items 
+                    } 
                 }
             }
         }
