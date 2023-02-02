@@ -76,6 +76,9 @@ export function Template_ListAllProcesses_Model(model) {
                         text : model.heading
                     }, 
                 },
+                atom_heading4 : {
+                    text : model.heading
+                },
                 molecule_inputAndButton : {
                     atom_input : {
                         type: model.inputType, 

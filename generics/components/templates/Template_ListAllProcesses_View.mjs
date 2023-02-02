@@ -1,6 +1,6 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { State } from "nd_frontend/core/actions/State.mjs";
-import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs"
+import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs"
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Molecule_InputAndButton } from "../molecules/Molecule_InputAndButton.mjs";
