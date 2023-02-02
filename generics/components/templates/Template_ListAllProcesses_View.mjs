@@ -39,10 +39,10 @@ export function Template_ListAllProcesses_View(view){
         let heading = new Atom_Heading4(model.atom_heading4)
         let mol_inputBtn = new Molecule_InputAndButton(model.molecule_inputAndButton)
         let mol_list1 = new Molecule_List(model.molecule_list1)
-        let mol_list2 = new Molecule_List(model.molecule_list1)
-        let mol_list3 = new Molecule_List(model.molecule_list1)
+        let mol_list2 = new Molecule_ListNoHeading(model.molecule_list1)
+        let mol_list3 = new Molecule_ListNoHeading(model.molecule_list1)
         let mol_list4 = new Molecule_List(model.molecule_list2)
-        let mol_list5 = new Molecule_List(model.molecule_list2)
+        let mol_list5 = new Molecule_ListNoHeading(model.molecule_list2)
         let mol_list6 = new Molecule_ListNoHeading(model.molecule_list2)
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
