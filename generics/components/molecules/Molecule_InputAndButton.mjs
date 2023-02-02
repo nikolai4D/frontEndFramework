@@ -19,7 +19,7 @@ export function Molecule_InputAndButton(model) {
     this.bindScript= function() {
         let input = new Atom_Input(model.atom_input)
         let button = new Atom_ButtonBasic(model.atom_buttonBasic)
-        this.fillSlot("icon", input.getElement());
-        this.fillSlot("link", button.getElement());
+        this.fillSlot("input", input.getElement());
+        this.fillSlot("button", button.getElement());
     }
 }
