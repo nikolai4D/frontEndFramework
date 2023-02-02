@@ -71,6 +71,18 @@ export function Template_ListAllProcesses_Model(model) {
                     atom_button : {
                         text : model.button.text,
                         onClick : model.button.onClick
+                    },
+                    atom_heading4 : {
+                        text : model.heading
+                    }, 
+                    molecule_inputAndButton : {
+                        atom_input : {
+                            text : model.inputPlaceholder
+                        },
+                        atom_buttonBasic : {
+                            text : model.buttonBasic.text,
+                            onClick : model.buttonBasic.onClick
+                        }
                     }
                 }
             }
