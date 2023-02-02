@@ -74,6 +74,7 @@
 }
 .molecule_text_and_btn > p{
     padding: 0 !important;
+    cursor: pointer;
 
 }
 
