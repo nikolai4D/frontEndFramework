@@ -1,7 +1,8 @@
 @import "colors.css";
 
 .organism_start-info {
-    background-color: var(--custom-color-1);
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 .organism_login-or-signup {}
@@ -33,4 +34,67 @@
     height: 140px;
     width: 140px;
     margin: 50px 50px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100vw;
+    height: 75px;
+}
+
+nav > ul > div > a {
+    color: black;
+}
+
+nav > ul {
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+}
+
+.organism_form_4_dropdowns {
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr 1fr 1fr 1fr auto;
+    grid-gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.organism_list-all-search {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 4rem;
+}
+
+.organism_list-all-search__top {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 2rem;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.organism_list-all-search__lists {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 2rem;
+}
+
+.organism_two-fields-one-dropdown-one-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.organism_two-fields-one-dropdown-one-picture__first-column {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 2rem;
 }

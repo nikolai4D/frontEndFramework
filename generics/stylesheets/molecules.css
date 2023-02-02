@@ -1,15 +1,14 @@
-.molecule_logo{
+.molecule_logo {
     display: flex;
-    padding:1em;
+    padding: 1em;
 }
 
-.molecule_header-and-text{
+.molecule_header-and-text {
     padding: 3em;
 }
 
 .molecule_login-or-signup {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -20,4 +19,60 @@
     align-items: flex-start;
     padding: 30px;
     gap: 20px;
+}
+
+.molecule_image-and-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    /* gap: 20px; */
+    border: solid 1px black;
+    width: 9rem;
+    height: 15rem;
+}
+
+.molecule_paginator {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    grid-auto-columns: min-content;
+}
+
+.molecule_paginator--item {
+    cursor: pointer;
+
+}
+
+.molecule_signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
+}
+
+.molecule_list__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 0;
+}
+
+.molecule_text_and_btn {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+.molecule_text_and_btn > p{
+    padding: 0 !important;
+
+}
+
+.molecule_text_and_btn > button{
+    align-self: center;
 }

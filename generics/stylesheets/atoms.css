@@ -1,37 +1,119 @@
-
 @import "colors.css";
 
 .atom_icon{
-    padding: 1em;
-    padding-right: 0;
+    padding: 1em 0 1em 1em;
 }
 
 .atom_heading1{
     padding: 1em;
 }
 
+.atom_heading2{
+    padding: 0;
+}
+
 .atom_text1{
     padding: 1em;
 }
 
+.atom_text2{
+    padding: 0 0 0 0.5em;
+    margin-top: 0;
+}
+
 .atom_button-neutral{
-    background-color: var(--custom-color-1);
-    padding: 1em;
-    border-radius: 6px;
-    border: 0;
+    background-color: var(--white-color);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    border: 2px solid black;
 }
 
 .atom_button-positive{
-    padding: 1em;
-    background-color: var(--custom-color-2);
-    border-radius: 6px;
+    padding: 1rem 2rem;
+    background-color: var(--grey-color);
+    border-radius: 15px;
     border: 0;
+    border-radius: 12px;
+}
+
+.atom_button-basic{
+    background-color: var(--white-color);
+    width: 79px;
+    height: 38px;
+    padding: 10px, 20px, 10px, 20px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.atom_button-basic:hover{
+    background-color: var(--custom-color-1);
+    border: none;
 }
 
 .atom_input {
+    padding: 0.8rem 2rem;
+    border-radius: 15px;
+    border: 2px solid black;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 1em;
 }
+
+.dropbtn {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #000000;
+    width: 161px;
+    height: 35px;
+    border-radius: 2px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown i {
+    padding-left: 50px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    border: 1px solid #000000;
+    z-index: 1;
+    border-radius: 2px;
+    background-color: white;
+  }
+
+  .dropdown-padding {
+    height: 5px;
+  }
+  
+  .dropdown-content a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #000;
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block; 
+}
+  
+  .dropdown:hover .dropbtn {
+    background-color: #FFFFFF;
+}
+
