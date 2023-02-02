@@ -77,6 +77,30 @@
     align-self: center;
 }
 
-.mol_input_btn {
+.heading_mol_input_btn{
     
+}
+
+.molecule_input_and_button {
+    display: flex;
+    border: 1px solid black;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.molecule_input_and_button > input {
+    width: 161px;
+    height: 35px;
+    border: 0.5px solid #000000;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.molecule_input_and_button > button {
+    width: 99px;
+    height: 38px;
+    border-radius: 12px;
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
 }
