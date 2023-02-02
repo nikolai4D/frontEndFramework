@@ -18,7 +18,6 @@
 .template_process {
     width: 1116px;
     height: 606px;
-    top: 209px;
-    left: 162px;
     border: 1px solid green;
+    align-self: center;
 }
