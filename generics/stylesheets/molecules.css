@@ -70,16 +70,16 @@
     gap: 30px;
     justify-content: end;
     margin-right: 3em;
-
 }
+
 .molecule_text_and_btn > p{
     padding: 0 !important;
     cursor: pointer;
-
 }
 
 .molecule_text_and_btn > button{
     align-self: center;
+    cursor: pointer;
 }
 
 .molecule_icon_and_link > a:active {
