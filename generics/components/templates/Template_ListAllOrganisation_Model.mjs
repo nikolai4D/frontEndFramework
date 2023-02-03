@@ -85,6 +85,9 @@ export function Template_ListAllOrganisation_Model(model) {
                         onClick : model.buttonBasic.onClick
                     },
                     molecule_list : {
+                        atom_heading4 : {
+                            text : model.listHeading1
+                        },
                         lists : model.items
                     }
                 }
