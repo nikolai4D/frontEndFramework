@@ -19,11 +19,11 @@ export function Template_ListAllOrganisation_View(view){
     this.bindScript = function() {
         let model = State.views[view].components;
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
-        let atom_heading4 = new Atom_Heading4(model.atom_heading4)
+        // let atom_heading4 = new Atom_Heading4(model.atom_heading4)
         let organism_listAll = new Organism_ListAllSearch(model.organism_listAllSearch)
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
-        this.fillSlot("atomHeader", atom_heading4.getElement())
+        // this.fillSlot("atomHeader", atom_heading4.getElement())
         this.fillSlot("organismListAllSearch", organism_listAll.getElement())
     }
 }
