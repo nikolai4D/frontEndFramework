@@ -10,7 +10,7 @@ export function Molecule_List (model){
                 <div class="molecule_list">
                     ${slot('heading')}
                     <ul class="molecule_list__list">
-                        ${model.lists.items.map(item => `
+                        ${model.items.map(item => `
                             <li>${item.text}</li>
                         `).join('')}
                     </ul>
