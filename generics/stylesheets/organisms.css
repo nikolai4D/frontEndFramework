@@ -60,12 +60,17 @@ nav > ul {
     display: flex;
     gap: 20px;
     align-items:flex-start;
-    height: 35px;
+    font-size: 12px;
 }
 
 .organism_list_search_btn > input {
     border-radius: 2px;
     border: 0.5px solid #000000;
+    padding: 1rem 2rem !important;
+}
+
+.organism_list_search_btn > button {
+    padding: 1rem 2rem !important;
 }
 
 .organism_list-all-search__lists {
