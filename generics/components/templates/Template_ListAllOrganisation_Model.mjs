@@ -84,12 +84,24 @@ export function Template_ListAllOrganisation_Model(model) {
                         text : model.buttonBasic.text,
                         onClick : model.buttonBasic.onClick
                     },
-                    lists : {
+                    lists1 : {
                         atom_heading4 : {
                             text : model.listHeading1
                         },
                         items : model.items
-                    } 
+                    },
+                    lists2 : {
+                        atom_heading4 : {
+                            text : model.listHeading2
+                        },
+                        items : model.items
+                    },
+                    lists3 : {
+                        atom_heading4 : {
+                            text : model.listHeading3
+                        },
+                        items : model.items
+                    }   
                 }
             }
         }

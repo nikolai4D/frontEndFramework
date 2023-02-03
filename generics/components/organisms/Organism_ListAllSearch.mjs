@@ -33,7 +33,9 @@ export function Organism_ListAllSearch (model){
                     
                 </div>
                 <div class="organism_list-all-search__lists">
-                    ${slot('list')}
+                    ${slot('list1')}
+                    ${slot('list2')}
+                    ${slot('list3')}
                 </div>
                 
             </div>
@@ -57,8 +59,15 @@ export function Organism_ListAllSearch (model){
         //     let listComponent = new Molecule_List(list)
         //     this.fillSlot('list' + listIndex, listComponent.getElement())
         // }
-            let listComponent = new Molecule_List(model.lists)
-            this.fillSlot('list', listComponent.getElement())
+
+        let listComponent1 = new Molecule_List(model.lists)
+        this.fillSlot('list1', listComponent1.getElement())
+
+        let listComponent2 = new Molecule_List(model.lists)
+        this.fillSlot('list2', listComponent2.getElement())
+
+        let listComponent3 = new Molecule_List(model.lists)
+        this.fillSlot('list3', listComponent3.getElement())
     }
 
 
