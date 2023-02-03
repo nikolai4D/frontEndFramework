@@ -61,6 +61,7 @@ nav > ul {
     grid-auto-flow: row;
     grid-gap: 2rem;
     overflow: auto;
+    cursor: pointer;
 }
 
 .organism_two-fields-one-dropdown-one-picture{

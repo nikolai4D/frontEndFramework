@@ -36,6 +36,10 @@
     border-radius: 12px;
 }
 
+.atom_button-positive:hover{
+  background-color: #9BFFE5
+}
+
 .atom_button-basic{
     background-color: var(--white-color);
     width: 79px;
