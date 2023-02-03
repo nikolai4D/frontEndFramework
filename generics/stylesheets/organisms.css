@@ -21,6 +21,10 @@ nav {
     padding: 1em;
 }
 
+nav > div {
+    padding-left: 1em;
+}
+
 nav > ul > div > a {
     color: black;
 }
