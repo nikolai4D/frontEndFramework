@@ -4,7 +4,7 @@
 }
 
 .molecule_header-and-text {
-    padding: 3em;
+    /* padding: 3em; */
 }
 
 .molecule_login-or-signup {
@@ -78,3 +78,10 @@
 }
 
 
+.molecule_heading-icon {
+    display: flex;
+}
+
+.molecule_heading-icon i {
+    cursor: pointer;
+}

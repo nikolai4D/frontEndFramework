@@ -1,9 +1,12 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { State } from "nd_frontend/core/actions/State.mjs";
-import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs"
+import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs"
+import { Atom_ButtonGrey } from "../atoms/Atom_ButtonGrey.mjs"
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
+import { Molecule_HeadingIconAndText } from "../molecules/Molecule_HeadingIconAndText.mjs";
+import { Molecule_Paginator } from "../molecules/Molecule_Paginator.mjs"
 
 export function Template_Search_View(view){
     
@@ -48,9 +51,16 @@ export function Template_Search_View(view){
         let atom_button = new Atom_ButtonGrey(model.atom_button)
         this.fillSlot("searchBtn", atom_button.getElement())
             
-        for (let result in model.searchResult ) {
-             let searchResult = new Molecule_HeaderAndText(model.searchResult[result])
-        this.fillSlot("searchResult" + result, searchResult.getElement());
-        }
+        let informationResult = new Molecule_HeadingIconAndText(model.informationResult)
+        this.fillSlot("informationResult", informationResult.getElement())
+
+        let processResult = new Molecule_HeadingIconAndText(model.processResult)
+        this.fillSlot("processResult", processResult.getElement())
+        let organisationResult = new Molecule_HeadingIconAndText(model.organisationResult)
+        this.fillSlot("organisationResult", organisationResult.getElement())
+        
+
+        let paginator = new Molecule_Paginator(model.molecule_paginator)
+        this.fillSlot("paginator", paginator.getElement())
     }
 }
