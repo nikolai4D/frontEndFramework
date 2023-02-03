@@ -16,7 +16,7 @@ export function Organism_ListAllSearch (model){
     this.getHtml = function(){
 
         let lists = ""
-        for (let listIndex in model.molecule_list.lists){
+        for (let listIndex in model.lists){
             lists += `
             ${slot('list' + listIndex)}
             `
@@ -53,7 +53,7 @@ export function Organism_ListAllSearch (model){
         let searchButton = new Atom_ButtonPositive(model.atom_button_positive)
         this.fillSlot('button', searchButton.getElement())
 
-        for (let listIndex in model.molecule_list.lists){
+        for (let listIndex in model.lists){
             let list = model.lists[listIndex]
             let listComponent = new Molecule_List(list)
             this.fillSlot('list' + listIndex, listComponent.getElement())

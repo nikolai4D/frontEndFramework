@@ -84,12 +84,12 @@ export function Template_ListAllOrganisation_Model(model) {
                         text : model.buttonBasic.text,
                         onClick : model.buttonBasic.onClick
                     },
-                    molecule_list : {
+                    lists : {
                         atom_heading4 : {
                             text : model.listHeading1
                         },
-                        lists : model.items
-                    }
+                        items : model.items
+                    } 
                 }
             }
         }
