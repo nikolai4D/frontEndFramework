@@ -1,0 +1,84 @@
+.modal-title-section {
+  height: 40px;
+}
+
+.modal-container {
+  width: 497px;
+  box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #c6c7c8;
+  border-radius: 5px;
+}
+
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.modal-title {
+  font-size: 19px;
+}
+
+.lower-section {
+  height: 70px;
+}
+
+#x-btn {
+  font-size: 28px;
+  color: #212529;
+  cursor: pointer;
+}
+
+.btn-container {
+  padding-bottom: 15px;
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+  justify-content: end;
+}
+
+.profile-modal-container {
+  margin: 1rem;
+}
+
+.modal-profile-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.modal-profile-container input {
+  height: 38px;
+  border: 1px solid #cfd4d9;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.input-container {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 194px;
+  margin: 30px 0 15px 29px;
+}
+
+.select-dropdown {
+  width: 194px;
+  height: 38px;
+  background-color: #fff;
+  border: 1px #cfd4d9 solid;
+  border-radius: 4px;
+  padding-left: 12px;
+}
+
+.modal-profile-picture {
+  margin-top: 33px;
+}
+
+.modal-profile-picture img {
+  width: 161px;
+  height: 161px;
+  margin: 0 41px 0 72px;
+}
