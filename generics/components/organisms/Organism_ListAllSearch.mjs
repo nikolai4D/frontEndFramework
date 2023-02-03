@@ -8,13 +8,15 @@ import {Atom_Heading1} from "../atoms/Atom_Heading1.mjs";
 import {Atom_Heading2} from "../atoms/Atom_Heading2.mjs";
 
 export function Organism_ListAllSearch (model){
+    
+
     Component.call(this)
 
 
     this.getHtml = function(){
 
         let lists = ""
-        for (let listIndex in model.lists){
+        for (let listIndex in model.molecule_list.lists){
             lists += `
             ${slot('list' + listIndex)}
             `
@@ -40,6 +42,8 @@ export function Organism_ListAllSearch (model){
 
 
     this.bindScript = function(){
+
+        const { lists } = model
         let heading = new Atom_Heading2(model.atom_heading4)
         this.fillSlot('heading', heading.getElement())
 
@@ -49,7 +53,7 @@ export function Organism_ListAllSearch (model){
         let searchButton = new Atom_ButtonPositive(model.atom_button_positive)
         this.fillSlot('button', searchButton.getElement())
 
-        for (let listIndex in model.lists){
+        for (let listIndex in model.molecule_lists.lists){
             let list = model.lists[listIndex]
             let listComponent = new Molecule_List(list)
             this.fillSlot('list' + listIndex, listComponent.getElement())
