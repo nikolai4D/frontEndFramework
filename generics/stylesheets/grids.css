@@ -1,8 +1,11 @@
-
 .grid {
     display:grid;
     height: 100vh;
-    margin: -8px;
+}
+
+.grid__c2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .grid__c3r3 {

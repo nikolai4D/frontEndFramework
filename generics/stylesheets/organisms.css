@@ -3,6 +3,9 @@
 .organism_start-info {
     background-color: var(--black-color);
     color: var(--white-color);
+
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 .organism_login-or-signup {}
@@ -24,6 +27,11 @@
 #organism_buttonFilledPicture_btnParent {
     grid-area: 1 / 4 / 2 / 4;
     display: grid;
+}
+
+.organism_start-info > *:nth-child(2) {
+    max-width: 400px;
+    justify-self: center;
 }
 
 nav {
