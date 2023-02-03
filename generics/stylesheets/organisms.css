@@ -56,6 +56,10 @@ nav > ul {
     padding-left: 1rem;
 }
 
+.organism_list-all-search__top > h2{
+    font-size: 16px;
+}
+
 .organism_list_search_btn {
     display: flex;
     gap: 20px;
@@ -80,6 +84,20 @@ nav > ul {
     overflow: auto;
     cursor: pointer;
 }
+
+.organism_list-all-search__lists::-webkit-scrollbar {
+    width: 2em;
+}
+
+.organism_list-all-search__lists::-webkit-scrollbar-track {
+    width: 2em;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.organism_list-all-search__lists::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, orange, darksalmon);
+}
+
 
 .organism_two-fields-one-dropdown-one-picture{
     display: grid;
