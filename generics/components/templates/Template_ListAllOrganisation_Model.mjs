@@ -72,7 +72,7 @@ export function Template_ListAllOrganisation_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
-                },organism_listAllSearch : {
+                },organism_listAll : {
                     atom_heading4 : {
                         text : model.heading
                     },
