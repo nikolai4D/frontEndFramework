@@ -72,6 +72,21 @@ export function Template_ListAllOrganisation_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
+                },organism_listAllSearch : {
+                    atom_heading4 : {
+                        text : model.heading
+                    },
+                    atom_input : {
+                        type : model.inputType,
+                        placeholder : model.inputPlaceholder
+                    },
+                    atom_button_positive : {
+                        text : model.buttonBasic.text,
+                        onClick : model.buttonBasic.onClick
+                    },
+                    molecule_list : {
+                        lists : model.items
+                    }
                 }
             }
         }
