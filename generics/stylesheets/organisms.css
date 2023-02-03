@@ -3,10 +3,14 @@
 .organism_start-info {
     background-color: var(--black-color);
     color: var(--white-color);
+
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
-.organism_login-or-signup{
-
+.organism_start-info > *:nth-child(2) {
+    max-width: 400px;
+    justify-self: center;
 }
 
 nav {
