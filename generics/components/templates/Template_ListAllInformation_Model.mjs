@@ -72,6 +72,37 @@ export function Template_ListAllInformation_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
+                },
+                organism_listAll : {
+                    atom_heading4 : {
+                        text : model.heading
+                    },
+                    atom_input : {
+                        type : model.inputType,
+                        placeholder : model.inputPlaceholder
+                    },
+                    atom_button_positive : {
+                        text : model.buttonBasic.text,
+                        onClick : model.buttonBasic.onClick
+                    },
+                    lists1 : {
+                        atom_heading4 : {
+                            text : model.listHeading1
+                        },
+                        items : model.items
+                    },
+                    lists2 : {
+                        atom_heading4 : {
+                            text : model.listHeading2
+                        },
+                        items : model.items
+                    },
+                    lists3 : {
+                        atom_heading4 : {
+                            text : model.listHeading3
+                        },
+                        items : model.items
+                    }   
                 }
             }
         }

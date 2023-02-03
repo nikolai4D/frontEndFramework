@@ -8,34 +8,30 @@ import {Atom_Heading1} from "../atoms/Atom_Heading1.mjs";
 import {Atom_Heading2} from "../atoms/Atom_Heading2.mjs";
 
 export function Organism_ListAllSearch (model){
-    
-
     Component.call(this)
 
 
     this.getHtml = function(){
 
-        // let lists = ""
-        // for (let listIndex in model.lists){
-        //     lists += `
-        //     ${slot('list' + listIndex)}
-        //     `
-        // }
+        let lists = ""
+        for (let listIndex in model.lists){
+            lists += `
+            ${slot('list' + listIndex)}
+            `
+        }
 
         return `
             <div class="organism_list-all-search">
                 <div class="organism_list-all-search__top">
                     ${slot('heading')}
-                    <div class="organism_list_search_btn">
+                    <div>
                         ${slot('search')}
                         ${slot('button')}
                     </div>
                     
                 </div>
                 <div class="organism_list-all-search__lists">
-                    ${slot('list1')}
-                    ${slot('list2')}
-                    ${slot('list3')}
+                    ${lists}
                 </div>
                 
             </div>
@@ -44,7 +40,6 @@ export function Organism_ListAllSearch (model){
 
 
     this.bindScript = function(){
-
         let heading = new Atom_Heading2(model.atom_heading4)
         this.fillSlot('heading', heading.getElement())
 
@@ -54,20 +49,11 @@ export function Organism_ListAllSearch (model){
         let searchButton = new Atom_ButtonPositive(model.atom_button_positive)
         this.fillSlot('button', searchButton.getElement())
 
-        // for (let listIndex in model.lists){
-        //     let list = model.lists[listIndex]
-        //     let listComponent = new Molecule_List(list)
-        //     this.fillSlot('list' + listIndex, listComponent.getElement())
-        // }
-
-        let listComponent1 = new Molecule_List(model.lists1)
-        this.fillSlot('list1', listComponent1.getElement())
-
-        let listComponent2 = new Molecule_List(model.lists2)
-        this.fillSlot('list2', listComponent2.getElement())
-
-        let listComponent3 = new Molecule_List(model.lists3)
-        this.fillSlot('list3', listComponent3.getElement())
+        for (let listIndex in model.lists){
+            let list = model.lists[listIndex]
+            let listComponent = new Molecule_List(list)
+            this.fillSlot('list' + listIndex, listComponent.getElement())
+        }
     }
 
 

@@ -89,23 +89,36 @@ export function Template_ListAllProcesses_Model(model) {
                         onClick : model.buttonBasic.onClick
                     }
                 },
-                molecule_list1 : {
+                organism_listAll : {
                     atom_heading4 : {
-                        text : model.listHeading1
+                        text : model.heading
                     },
-                    items : model.items 
-                },
-                molecule_list2 : {
-                    atom_heading4 : {
-                        text : model.listHeading2
+                    atom_input : {
+                        type : model.inputType,
+                        placeholder : model.inputPlaceholder
                     },
-                    items : model.items
-                },
-                molecule_list3 : {
-                    atom_heading4 : {
-                        text : model.listHeading3
+                    atom_button_positive : {
+                        text : model.buttonBasic.text,
+                        onClick : model.buttonBasic.onClick
                     },
-                    items : model.items
+                    lists1 : {
+                        atom_heading4 : {
+                            text : model.listHeading1
+                        },
+                        items : model.items
+                    },
+                    lists2 : {
+                        atom_heading4 : {
+                            text : model.listHeading2
+                        },
+                        items : model.items
+                    },
+                    lists3 : {
+                        atom_heading4 : {
+                            text : model.listHeading3
+                        },
+                        items : model.items
+                    }   
                 }
             }
         }
