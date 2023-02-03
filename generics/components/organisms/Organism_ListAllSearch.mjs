@@ -15,12 +15,12 @@ export function Organism_ListAllSearch (model){
 
     this.getHtml = function(){
 
-        let lists = ""
-        for (let listIndex in model.lists){
-            lists += `
-            ${slot('list' + listIndex)}
-            `
-        }
+        // let lists = ""
+        // for (let listIndex in model.lists){
+        //     lists += `
+        //     ${slot('list' + listIndex)}
+        //     `
+        // }
 
         return `
             <div class="organism_list-all-search">
@@ -33,7 +33,7 @@ export function Organism_ListAllSearch (model){
                     
                 </div>
                 <div class="organism_list-all-search__lists">
-                    ${lists}
+                    ${slot('list')}
                 </div>
                 
             </div>
