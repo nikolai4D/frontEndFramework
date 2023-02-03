@@ -39,6 +39,9 @@ nav > ul {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 4rem;
+    height: 562px;
+    width: 783px;
+    border: 1px solid black;
 }
 
 .organism_list-all-search__top {
@@ -55,6 +58,7 @@ nav > ul {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 2rem;
+    overflow: auto;
 }
 
 .organism_two-fields-one-dropdown-one-picture{
