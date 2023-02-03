@@ -11,19 +11,16 @@ export function Molecule_LoginOrSignup(model) {
 
         return `
             <div class="molecule_login-or-signup">
-            ${slot("button-neutral")}
-            ${slot("text1")}
-            ${slot("button-positive")}
+                ${slot("button-neutral")}
+                ${slot("button-positive")}
             </div>
         `
     }
 
     this.bindScript= function() {
         let buttonPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
-        let text1 = new Atom_Text1(model.atom_text1)
         let buttonNeutral = new Atom_ButtonNeutral(model.atom_buttonNeutral)
         this.fillSlot("button-positive", buttonPositive.getElement());
-        this.fillSlot("text1", text1.getElement());
         this.fillSlot("button-neutral", buttonNeutral.getElement());
     }
 

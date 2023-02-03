@@ -10,7 +10,7 @@ export function Molecule_CheckboxLink( model )
     this.getHtml = function ()
     {
         return `
-        <div>
+        <div class="molecule_checkbox">
         ${ slot( "input" ) }
         ${ slot( "paragraphLink" ) }
         </div>
