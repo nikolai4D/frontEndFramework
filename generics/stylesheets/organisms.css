@@ -11,6 +11,8 @@
     display: grid;
     grid-template-columns: repeat(4, 206px);
     grid-auto-rows: minmax(20px, auto);
+    gap: 50px;
+    justify-content: center;
 }
 
 .organism_buttonFilledPicture_wrapper::before {
@@ -20,18 +22,8 @@
   }
 
 #organism_buttonFilledPicture_btnParent {
-    grid-area: 1 / 3 / 2 / 4;
+    grid-area: 1 / 4 / 2 / 4;
     display: grid;
-}
-
-.organism_buttonFilledPicture div {
-    margin: 50px 50px;
-}
-
-.organism_buttonFilledPicture img {
-    height: 140px;
-    width: 140px;
-    margin: 50px 50px;
 }
 
 nav {
