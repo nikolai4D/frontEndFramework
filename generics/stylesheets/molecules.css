@@ -78,7 +78,7 @@
     padding: 1em;
     justify-content: end;
     gap: 3em;
-    padding-right: 4em;
+    padding-right: 2em;
 }
 .molecule_text_and_btn > p{
     padding: 0 !important;
