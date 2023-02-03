@@ -60,13 +60,13 @@ export function Organism_ListAllSearch (model){
         //     this.fillSlot('list' + listIndex, listComponent.getElement())
         // }
 
-        let listComponent1 = new Molecule_List(model.lists)
+        let listComponent1 = new Molecule_List(model.lists1)
         this.fillSlot('list1', listComponent1.getElement())
 
-        let listComponent2 = new Molecule_List(model.lists)
+        let listComponent2 = new Molecule_List(model.lists2)
         this.fillSlot('list2', listComponent2.getElement())
 
-        let listComponent3 = new Molecule_List(model.lists)
+        let listComponent3 = new Molecule_List(model.lists3)
         this.fillSlot('list3', listComponent3.getElement())
     }
 
