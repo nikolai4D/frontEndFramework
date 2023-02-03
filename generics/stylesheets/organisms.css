@@ -18,6 +18,7 @@ nav {
     grid-template-columns: 1fr 2fr 1fr;
     width: 100vw;
     height: 75px;
+    padding: 1em;
 }
 
 nav > ul > div > a {
@@ -28,6 +29,7 @@ nav > ul {
     display: flex;
     padding: 1em;
     justify-content: center;
+    gap: 37px;
 }
 
 .organism_form_4_dropdowns {
