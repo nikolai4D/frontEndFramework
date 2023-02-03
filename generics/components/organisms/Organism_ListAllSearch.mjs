@@ -58,7 +58,7 @@ export function Organism_ListAllSearch (model){
         //     this.fillSlot('list' + listIndex, listComponent.getElement())
         // }
             let listComponent = new Molecule_List(model.lists)
-            this.fillSlot('list' + listIndex, listComponent.getElement())
+            this.fillSlot('list', listComponent.getElement())
     }
 
 
