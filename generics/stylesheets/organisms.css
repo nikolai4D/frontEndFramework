@@ -41,7 +41,6 @@ nav > ul {
     grid-gap: 4rem;
     height: 562px;
     width: 783px;
-    border: 1px solid black;
     margin: auto;
     margin-top: 50px;
 }
@@ -82,7 +81,6 @@ nav > ul {
     grid-auto-flow: row;
     grid-gap: 2rem;
     overflow: auto;
-    cursor: pointer;
 }
 
 .organism_list-all-search__lists::-webkit-scrollbar {
