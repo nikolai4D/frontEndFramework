@@ -21,6 +21,6 @@ export function Template_ListAllOrganisation_View(view){
         let organism_listAll = new Organism_ListAll(model.organism_listAll)
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
-        this.fillSlot("organismListAllSearch", organism_listAll.getElement())
+        this.fillSlot("organismListAll", organism_listAll.getElement())
     }
 }
