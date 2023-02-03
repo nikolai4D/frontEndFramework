@@ -26,7 +26,7 @@ export function Organism_ListAllSearch (model){
             <div class="organism_list-all-search">
                 <div class="organism_list-all-search__top">
                     ${slot('heading')}
-                    <div>
+                    <div class="organism_list_search_btn">
                         ${slot('search')}
                         ${slot('button')}
                     </div>
