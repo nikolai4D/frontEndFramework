@@ -2,7 +2,7 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function Template_Start(view) {
+export function t_Start(view) {
     Component.call(this)
     this.model = State.views[view].components
 

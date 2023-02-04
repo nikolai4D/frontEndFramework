@@ -1,8 +1,8 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import {Molecule_SignupForm} from "../molecules/Molecule_SignupForm.mjs";
+import {M_SignupForm} from "../molecules/m_SignupForm.mjs";
 
-export function Organism_SignupForm(model) {
+export function O_SignupForm(model) {
     Component.call(this)
 
     this.getHtml = function() {
@@ -17,7 +17,7 @@ export function Organism_SignupForm(model) {
     }
 
     this.bindScript= function() {
-        let signupForm = new Molecule_SignupForm(model.molecule_signupForm)
+        let signupForm = new M_SignupForm(model.molecule_signupForm)
         this.fillSlot("signupForm", signupForm.getElement());
     }
 }

@@ -1,8 +1,8 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import {Link} from "../atoms/Link.mjs";
+import {A_link} from "../atoms/a_Link.mjs";
 
-export function NavBar(routesMap, router){
+export function O_NavBar(routesMap, router){
     Component.call(this)
 
     this.routesMap = routesMap
@@ -27,7 +27,7 @@ export function NavBar(routesMap, router){
     this.bindScript = function(){
 
         for (let i of this.routesMap){
-            let link = new Link(i[0], i[1], router)
+            let link = new A_link(i[0], i[1], router)
             this.fillSlot(i[0], link.getElement())
         }
     }

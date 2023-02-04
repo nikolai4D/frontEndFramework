@@ -3,7 +3,7 @@ An atomic-component based front-end framework package.
 
 We attempted to write a readable, commented and concise code-base. We recommend having a direct look at it.
 
-You will find a functionnal example here: https://github.com/nikolai4D/nikdev_app_example.git
+You will find a functional example here: https://github.com/nikolai4D/nikdev_app_example.git
 
 # Structure:
 This framework revolves around 4 classes:
@@ -60,7 +60,7 @@ let myCard = new Card()
 this.fillSlot('myCard', myCard.getElement())
 ```
 
-### View
+### Controller
 
 A view is called by the router.
 It bind data to components.
@@ -71,7 +71,7 @@ A view is defined in a per-project basis.
 You can create a new view by composition as follow:
 ```
 function myView(){
-    View.call(this)
+    Controller.call(this)
     
     this.title = "my view"
     
@@ -156,12 +156,12 @@ In the src folder, create a new file named Home, and paste the following code to
 
 ```
 import {router} from "./index.mjs";
-import {View} from "nd_frontend/core/View.mjs";
+import {Controller} from "nd_frontend/core/Controller.mjs";
 import {Header} from "nd_frontend/generics/components/atoms/Header.mjs";
-import {Default} from "nd_frontend/generics/components/templates/Default.mjs";
+import {T_Default} from "nd_frontend/generics/components/templates/T_Default.mjs";
 
 export function Home() {
-    View.call(this)
+    Controller.call(this)
 
     // This property is used to set the title of the page
     this.title = "Home"
@@ -169,7 +169,7 @@ export function Home() {
     // These are the components that will be rendered in the view. Keeping a reference to them can be convenient but is not mandatory.
     this.header = new Header(1,"Home")
 
-    this.template = new Default()
+    this.template = new T_Default()
     this.template.components.push(this.header)
 
 }

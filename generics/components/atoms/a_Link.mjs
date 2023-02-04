@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Link(data){
+export function a_Link(data){
     Component.call(this)
 
     this.getHtml = function(){

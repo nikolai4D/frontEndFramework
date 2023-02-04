@@ -1,11 +1,11 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import { Organism_LoginForm } from "../organisms/Organism_LoginForm.mjs";
+import { O_LoginForm } from "../organisms/o_LoginForm.mjs";
 
 import { o_StartInfo } from "../organisms/o_StartInfo.mjs";
 import { State } from "../../../core/actions/State.mjs";
 
-export function Template_Login(view) {
+export function T_Login(view) {
     Component.call(this)
 
     this.getHtml = function() {
@@ -25,7 +25,7 @@ export function Template_Login(view) {
     this.bindScript= function() {
         let model = State.views[view].components
         let organismStartInfo = new o_StartInfo(model.organism_startInfo);
-        let organismLoginForm = new Organism_LoginForm(model.organism_loginForm);
+        let organismLoginForm = new O_LoginForm(model.organism_loginForm);
 
         this.fillSlot("organismStartInfo", organismStartInfo.getElement());
         this.fillSlot("organismLoginForm", organismLoginForm.getElement());

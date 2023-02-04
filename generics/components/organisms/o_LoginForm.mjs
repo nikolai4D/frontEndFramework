@@ -1,11 +1,11 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
-import TextInputField from "../molecules/TextInputField.mjs";
+import TextInputField from "../molecules/m_InputField.mjs";
 import TextInput from "../atoms/TextInput.mjs";
-import {a_Button} from "../atoms/a__button.mjs";
+import {a_Button} from "../atoms/a_Button.mjs";
 
 
-export function LoginForm(onSubmit, idLabel, passwordLabel){
+export function O_LoginForm(onSubmit, idLabel, passwordLabel){
     Component.call(this)
 
     this.onSubmit = onSubmit

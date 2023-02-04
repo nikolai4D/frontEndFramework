@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function Table(headersString = [], rowsString = [], clickHandler = () => {}, data = null) {
+export function O_Table(headersString = [], rowsString = [], clickHandler = () => {}, data = null) {
     Component.call(this)
 
 

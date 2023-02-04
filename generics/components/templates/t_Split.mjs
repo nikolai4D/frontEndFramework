@@ -1,5 +1,4 @@
 import {Component} from "../../../core/Component.mjs";
-import { State } from "../../../core/actions/State.mjs";
 
 export function t_Split() {
     Component.call(this)

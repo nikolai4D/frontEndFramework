@@ -1,7 +1,7 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
 
-export function Modal(content) {
+export function O_Modal(content) {
     Component.call(this)
 
     this.content = content
