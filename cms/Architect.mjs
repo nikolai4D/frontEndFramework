@@ -27,6 +27,9 @@ Architect.prototype.getPanel = function() {
 }
 
 Architect.prototype.outputJSON = function() {
+
+    // This is for test purpose, but in the end it should probably output the json to the server which will store it.
+
     const data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.schema, null, 2));
 
     const a = document.createElement('a');
@@ -37,7 +40,7 @@ Architect.prototype.outputJSON = function() {
     a.click();
 }
 
-Architect.prototype.updateConstructor = function(id, newConstructorKey) {
+Architect.prototype.onConstructorUpdate = function(id, newConstructorKey) {
     // swap component
     let constructor = constructorMap.get(newConstructorKey)
     let component = new constructor()
@@ -48,7 +51,9 @@ Architect.prototype.updateConstructor = function(id, newConstructorKey) {
     // swap schema
     let newSchema = buildSchemaFromComponent(component)
     let {parentSchema, key, schema} = getSchemaDataFromId(id, this.schema.root)
-    parentSchema.subComponents[key] = newSchema
+
+    if(!parentSchema && !key && schema) this.schema.root = newSchema
+    else parentSchema.subComponents[key] = newSchema
 
     // swap panel
     let newPanel = buildElementPanelFromSchema(newSchema, this, constructorMap)
@@ -57,7 +62,7 @@ Architect.prototype.updateConstructor = function(id, newConstructorKey) {
 }
 
 
-Architect.prototype.updateOption = function(id, optionKey, optionValue) {
+Architect.prototype.onOptionUpdate = function(id, optionKey, optionValue) {
     this.controller.updateComponentOption(id, optionKey, optionValue)
 }
 

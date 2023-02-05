@@ -64,8 +64,6 @@ export function buildOptionsPanel(options, architect, id){
 
     for(let key in options){
 
-        console.log("option::: " + key, options[key])
-
         let option = document.createElement("li")
         option.innerText = key
         let input = document.createElement("input")
@@ -104,9 +102,9 @@ export function addSectionTitle(HtmlElement, sectionHeadingText){
 }
 
 export function onConstructorChange(architect, id, newConstructorKey){
-    architect.updateConstructor(id, newConstructorKey)
+    architect.onConstructorUpdate(id, newConstructorKey)
 }
 
 export function onOptionChange(architect, id, optionKey, optionValue){
-    architect.updateOption(id, optionKey, optionValue)
+    architect.onOptionUpdate(id, optionKey, optionValue)
 }

@@ -90,12 +90,6 @@ export function Component(options = {}){
     this.bindSlots = function(){
         let slots = Array.from(this.element.querySelectorAll("[data-slot]"))
 
-
-        console.log("subComponents keys: ", Object.keys(this.subComponents))
-        let foundSLotsNames = slots.map(slot => slot.getAttribute("data-slot"))
-        console.log("foundSLotsNames: ", foundSLotsNames)
-
-
         slots.forEach(slot => {
             let key
             try{
