@@ -2,8 +2,7 @@
 @import "colors.css";
 
 .atom_icon{
-    padding: 1em;
-    padding-right: 0;
+    padding: 1em 0 1em 1em;
 }
 
 .atom_heading1{
@@ -34,4 +33,11 @@
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 1em;
+}
+
+.atom_placeholder{
+    background: rgba(133, 222, 199, 0.63);
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }

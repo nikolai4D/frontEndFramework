@@ -1,14 +1,16 @@
 import {stringToHTMLElement} from "./helpers.mjs";
 
-export function Component(){
+export function Component(options = {}){
 
     /**
      * a reference to the main DOM element of this component. Preferably, use getElement() instead.
      */
     this.element= null
     this.id = null
+    this.constructorKey = this.constructor.name // Should be overridden to avoid unwanted behavior when minifying.
     this.subComponents = {}
     this.options = {}
+
 
     /**
      * Make sure the returned string have only one component at the top level
@@ -86,12 +88,24 @@ export function Component(){
     }
 
     this.bindSlots = function(){
-        let slots = this.element.querySelectorAll("[data-slot]")
+        let slots = Array.from(this.element.querySelectorAll("[data-slot]"))
+
+
+        console.log("subComponents keys: ", Object.keys(this.subComponents))
+        let foundSLotsNames = slots.map(slot => slot.getAttribute("data-slot"))
+        console.log("foundSLotsNames: ", foundSLotsNames)
+
+
         slots.forEach(slot => {
             let key
             try{
                 key = slot.getAttribute("data-slot")
-                slot.replaceWith(this.subComponents[key].getElement())
+                if(this.subComponents[key]){
+                    slot.replaceWith(this.subComponents[key].getElement())
+                }
+                else {
+                    console.warn("No subComponent found for slot: " + key)
+                }
             } catch (e) {
                 console.error("Error while binding slot: ", key, slot,
                     "subComponents keys: ", Object.keys(this.subComponents),
@@ -100,12 +114,24 @@ export function Component(){
         })
     }
 
-    this.findComponentById= function(id){
-        let foundComponent = null
-        if(this.id === id) return this
-        Object.values(this.subComponents).forEach(component => {
-            if(foundComponent === null) foundComponent = component.findComponentById(id)
-        })
-        return foundComponent
+    /**
+     *
+     * @param id
+     * @returns {{parentComponent: Component, key: String, foundComponent: Component}}
+     */
+    this.findComponentDataById= function(id){
+
+        if(this.id === id) return { parentComponent: null, key: null,  foundComponent: this}
+        else {
+            for (let key in this.subComponents) {
+                let component = this.subComponents[key]
+                if(component.id === id) return {parentComponent: this, key, foundComponent: component}
+                else {
+                    let result = component.findComponentDataById(id)
+                    if(result && result.foundComponent) return result
+                }
+            }
+        }
+
     }
 }

@@ -1,5 +1,4 @@
 import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
 
 export function a_Icon(options) {
     Component.call(this)

@@ -1,59 +1,26 @@
-import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
-import TextInputField from "../molecules/m_InputField.mjs";
-import TextInput from "../atoms/TextInput.mjs";
 import {a_Button} from "../atoms/a_Button.mjs";
 
 
-export function O_LoginForm(onSubmit, idLabel, passwordLabel){
+export function O_LoginForm(options){
     Component.call(this)
 
-    this.onSubmit = onSubmit
+    this.subComponents = {
+        id: null,
+        password: null,
+    }
 
     this.getHtml = function() {
         return `
         <div>
             <h1>Login</h1>
             <div>
-                ${slot("username")}
-                ${slot("password")}
-                ${slot("submitBtn")}
+                ${this.slot("username")}
+                ${this.slot("password")}
+                ${this.slot("submitBtn")}
             </div>
         </div>`
     }
 
-
-    this.bindScript= function() {
-
-        this.id = new TextInputField(
-            idLabel,
-            new TextInput(
-                "text",
-                "username")
-        )
-
-        this.password = new TextInputField(
-            passwordLabel,
-            new TextInput(
-                "password",
-                "password")
-        )
-
-        const submitBtn = new a_Button(
-                            "Login",
-            (e)=>this.onSubmit(e))
-
-
-        this.fillSlots(new Map([
-            ["username", this.id.getElement()],
-            ["password", this.password.getElement()],
-            ["submitBtn", submitBtn.getElement()]
-        ]))
-    }
-
-
-    this.getValues= function(){
-        return [this.id.getValue(), this.password.getValue()]
-    }
 }
 

@@ -1,11 +1,11 @@
 export function componentSchemaFactory(
-    componentTypeKey = "t_default",
+    constructorKey = "t_default",
     componentId = "t__default",
     subComponents = [],
     options = {})
 {
     return {
-        componentTypeKey,
+        constructorKey,
         componentId,
         subComponents,
         options

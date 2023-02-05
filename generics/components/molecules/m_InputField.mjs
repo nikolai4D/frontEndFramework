@@ -1,23 +1,26 @@
-import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
 
-export default function(label, input) {
+export default function(options) {
     Component.call(this)
+
+    this.options = {
+        label: "input",
+    }
+
+    this.subComponents = {
+        input: null,
+    }
 
     this.getHtml = function() {
         return `
         <div>
-            <label>${label}</label>
-            ${slot("input")}
+            <label>${this.options.label}</label>
+            ${this.slot("input")}
         </div>
         `
     }
 
-    this.bindScript= function() {
-        this.fillSlot("input", input.getElement())
-    }
-
     this.getValue= function() {
-        return input.getElement().value
+        return this.input.getElement().value
     }
 }

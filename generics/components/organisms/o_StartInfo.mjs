@@ -1,23 +1,20 @@
 import {Component} from "../../../core/Component.mjs";
+import {a_Paragraph} from "../atoms/a_Paragraph.mjs";
 
 export function o_StartInfo(model) {
     Component.call(this)
 
-    this.getHtml = function() {
+    this.subComponents = {
+        top: new a_Paragraph(),
+        central: new a_Paragraph()
+    }
 
-        this.options = {
-            top: null,
-            central: null,
-        }
+    this.getHtml = function() {
 
         return `
             <div class="grid__c1r7 organism_start-info">
-                <div class="grid-placement__c1r1">
-                    ${this.slot(this.subComponents.top)}
-                </div>
-                <div class="grid-placement__c1r3">
-                    ${this.slot(this.subComponents.central)}
-                </div>
+                ${this.slot(this.subComponents.top)}
+                ${this.slot(this.subComponents.central)}
             </div>
         `
     }

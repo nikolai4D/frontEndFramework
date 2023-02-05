@@ -1,28 +1,26 @@
 import {Controller} from "../core/Controller.mjs";
-import {Model_Default_Start} from "../generics/models/Model_Default_Start.mjs";
-import {listFromModelComponent} from "./cms/CmsHelpers.mjs";
+import {s_Default} from "../generics/models/s_Default.mjs";
+import {Architect} from "../cms/Architect.mjs";
 
 
 console.log('Hello World');
 
-let cms = {
-    show: () => { console.log("cms.show()") },
-    hide: () => { console.log("cms.hide()") },
-}
-
-function bop () {
-    console.log("bop")
-}
+let Schema = s_Default
 
 export function v_Start() {
     Controller.call(this)
 
     this.title = "Start"
-    this.model = Model_Default_Start
+    this.schema = Schema
 
-    this.adminPanel= listFromModelComponent(this.model, this)
-    document.body.append(this.adminPanel)
 }
 
-let view = new v_Start()
-view.render()
+let controller = new v_Start()
+
+
+controller.setView()
+
+let archi = new Architect(controller)
+document.body.insertAdjacentElement("afterbegin", archi.getPanel(controller))
+
+console.log("schema: ", Schema)

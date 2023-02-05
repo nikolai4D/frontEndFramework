@@ -1,7 +1,4 @@
 import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
-import {Atom_Heading4} from "../atoms/Atom_Heading4.mjs";
-import {a_Icon} from "../atoms/a_Icon.mjs";
 
 export function m_Logo(model) {
     Component.call(this)
