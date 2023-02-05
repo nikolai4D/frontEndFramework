@@ -1,3 +1,18 @@
+export function buildArchitectPanel(schema, architect, constructorMap){
+    let panel = document.createElement("div")
+
+    let saveButton = document.createElement("button")
+    saveButton.innerText = "Save"
+    saveButton.addEventListener("click", () => architect.outputJSON())
+
+    let componentPanel = buildElementPanelFromSchema(schema, architect, constructorMap)
+
+    panel.appendChild(saveButton)
+    panel.appendChild(componentPanel)
+
+    return panel
+}
+
 export function buildElementPanelFromSchema(schema, architect, constructorMap){
 
     let panel = document.createElement("div")

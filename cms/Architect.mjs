@@ -1,5 +1,5 @@
 import {constructorMap} from "./constructorMap.mjs";
-import {buildElementPanelFromSchema} from "./PanelBuilder.mjs";
+import {buildArchitectPanel, buildElementPanelFromSchema} from "./PanelBuilder.mjs";
 import {buildSchemaFromComponent} from "../core/helpers.mjs";
 
 export function Architect(controller = null) {
@@ -22,8 +22,19 @@ export function Architect(controller = null) {
 }
 
 Architect.prototype.getPanel = function() {
-    this.panel = buildElementPanelFromSchema(this.schema.root, this, constructorMap)
+    this.panel = buildArchitectPanel(this.schema.root, this, constructorMap)
     return this.panel
+}
+
+Architect.prototype.outputJSON = function() {
+    const data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.schema, null, 2));
+
+    const a = document.createElement('a');
+    a.href = 'data:' + data;
+    a.download = 'data.json';
+    a.innerHTML = 'download JSON';
+
+    a.click();
 }
 
 Architect.prototype.updateConstructor = function(id, newConstructorKey) {
