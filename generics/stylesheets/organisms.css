@@ -93,9 +93,9 @@ nav > ul {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.org_search_res_det_lists > ul {
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 2rem !important;
-    margin: 0 !important;
+.org_search_res_det_lists > .molecule_list > ul {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0;
 }
