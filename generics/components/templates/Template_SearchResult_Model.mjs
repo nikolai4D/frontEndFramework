@@ -76,7 +76,7 @@ export function Template_SearchResult_Model(model) {
                 content : {
                     atom_button :{
                         text: model.buttonPositive1.text,
-                        onClick : model.buttonPositive.onClick
+                        onClick : model.buttonPositive1.onClick
                     },
                     organism_searchResultDetail : {
                         molecule_headerAndText : {
