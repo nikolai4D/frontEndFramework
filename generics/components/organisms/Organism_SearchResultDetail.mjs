@@ -11,12 +11,14 @@ export function Organism_SearchResultDetail(model) {
     this.getHtml = function() {
 
         return `
-            <div>
-                <div>
+            <div class="organism_search_result_detail">
+                <div class="organism_search_res_det_top">
                     <div>
                         ${slot("mol_head_text")}
                     </div>
+                    <div class="organism_search_res_det_image">
                         ${slot("atom_image")}
+                    </div>
                 </div>
                 <div>
                     ${slot("listInfo")}
@@ -44,7 +46,7 @@ export function Organism_SearchResultDetail(model) {
         let listOrg = new Molecule_List(model.molecule_list3)
         this.fillSlot("listOrg", listOrg.getElement());
 
-        let atom_btnPositive = new Atom_ButtonPositive(model.molecule_list3)
+        let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
         this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
     }
 }
