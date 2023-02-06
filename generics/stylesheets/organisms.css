@@ -94,8 +94,8 @@ nav > ul {
 }
 
 .org_search_res_det_lists > .molecule_list > .molecule_list__list {
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-    margin: 0;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+    margin: 0 !important;
 }
