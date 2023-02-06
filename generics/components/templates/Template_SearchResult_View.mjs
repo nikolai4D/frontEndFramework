@@ -21,8 +21,8 @@ export function Template_SearchResult_View(view){
     this.bindScript = function() {
         let model = State.views[view].components;
         let modal = new Molecule_ModalSearchResultDetail(model.content)
-        let organismNavbar = new Organism_Navbar(model.content.organism_navbar)
-        let organismSearchResultDetail = new Organism_SearchResultDetail(model.organism_searchResultDetail)
+        let organismNavbar = new Organism_Navbar(model.organism_navbar)
+        let organismSearchResultDetail = new Organism_SearchResultDetail(model.content.organism_searchResultDetail)
 
         this.fillSlot("modal", modal.getElement())
         this.fillSlot("organismNavbar", organismNavbar.getElement())
