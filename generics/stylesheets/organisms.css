@@ -111,6 +111,6 @@ nav > ul {
     grid-template-columns: 1fr;
 }
 
-.org_search_result_detail > button {
+.org_search_result_detail > .atom_button-positive {
     align-self: center;
 }
