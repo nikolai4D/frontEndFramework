@@ -76,7 +76,18 @@ nav > ul {
     grid-gap: 2rem;
 }
 
-.organism_search_res_det_image {
+.organism_search_res_det_image > img{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /*Preserve aspect ratio*/
+    min-width: 200px;
+    min-height: auto;
+
+}
+
+.organism_search_res_det_image > img{
     position: fixed;
     top: 0;
     left: 0;
