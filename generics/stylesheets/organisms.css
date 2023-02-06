@@ -92,3 +92,10 @@ nav > ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.org_search_res_det_lists > ul {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0;
+}
