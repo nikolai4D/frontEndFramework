@@ -8,7 +8,7 @@ export function Molecule_ModalSearchResultDetail(model) {
   this.content = model.content;
   this.modal = null;
 
-  this.primary = model.primaryButton
+//   this.primary = model.primaryButton
 
   this.getHtml = function () {
     return `
@@ -23,9 +23,6 @@ export function Molecule_ModalSearchResultDetail(model) {
                     ${slot("content")}
                   
                 <hr>
-                    <div class="btn-container">
-                      ${slot("primary")}
-                    </div>
         </div>
       `;
   };
@@ -34,15 +31,15 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
-    this.fillSlot("primary", this.primary.getElement());
+    // this.fillSlot("primary", this.primary.getElement());
     this.fillSlot("content", this.content.getElement());
     
     this.getElement().querySelector(".bi-x").addEventListener("click", () => {
       document.querySelectorAll('.modal')[0].remove()
       });
       
-    this.primary.getElement().addEventListener("click", () => {
-      document.querySelectorAll('.modal')[0].remove()
-    });
+    // this.primary.getElement().addEventListener("click", () => {
+    //   document.querySelectorAll('.modal')[0].remove()
+    // });
   };
 }
