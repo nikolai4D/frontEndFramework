@@ -110,3 +110,7 @@ nav > ul {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+.org_search_result_detail > button {
+    align-self: center;
+}
