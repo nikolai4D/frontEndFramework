@@ -88,8 +88,12 @@ nav > ul {
 .org_search_res_det_top {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 575px;
+    /* width: 575px; */
     gap: 118px;
+}
+
+.org_search_res_det_top > div > .atom_text1 {
+    padding: 0;
 }
 
 .org_search_res_det_image > img{
@@ -121,3 +125,4 @@ nav > ul {
     display: flex;
     justify-content: center;
 }
+
