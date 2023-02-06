@@ -82,18 +82,34 @@ nav > ul {
 }
 
 .org_search_result_detail > div {
-    margin: 1em;
+    margin-bottom: 3em;
 }
 
 .org_search_res_det_top {
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* width: 575px; */
-    gap: 118px;
+    width: 610px;
+    gap: 34px;
+    margin: auto;
+}
+
+.org_search_res_det_top > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.org_search_res_det_top > .molecule_header-and-text{
+    margin-left: 3em;
 }
 
 .org_search_res_det_top > div > .molecule_header-and-text > .atom_text1 {
     padding: 0;
+}
+
+.org_search_res_det_top > div > .molecule_header-and-text {
+    margin-left: 3em;
 }
 
 .org_search_res_det_image > img{
@@ -106,6 +122,9 @@ nav > ul {
     grid-template-columns: 1fr 1fr 1fr;
     /* width: 482px;
     gap: 46px; */
+    width: 417px;
+    margin: auto;
+    gap: 19px;
 }
 
 .org_search_res_det_lists > .molecule_list > .molecule_list__list {
@@ -118,7 +137,7 @@ nav > ul {
 }
 
 .org_search_res_det_lists > .molecule_list > h4 {
-    margin-bottom: 2em;
+    margin: 1.5em;
 }
 
 .org_searh_res_det_btn {
