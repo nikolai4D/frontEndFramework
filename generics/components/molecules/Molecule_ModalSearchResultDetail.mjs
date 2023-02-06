@@ -1,5 +1,6 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
+import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultDetail.mjs";
 
 export function Molecule_ModalSearchResultDetail(model) {
   Component.call(this);
@@ -8,7 +9,6 @@ export function Molecule_ModalSearchResultDetail(model) {
   this.modal = null;
 
   this.primary = model.primaryButton
-  this.secondary = model.secondaryButton
 
   this.getHtml = function () {
     return `
@@ -25,15 +25,16 @@ export function Molecule_ModalSearchResultDetail(model) {
                 <hr>
                     <div class="btn-container">
                       ${slot("primary")}
-                      ${slot("secondary")}
                     </div>
         </div>
       `;
   };
   
   this.bindScript = function () {
+
+    this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
+
     this.fillSlot("primary", this.primary.getElement());
-    this.fillSlot("secondary", this.secondary.getElement());
     this.fillSlot("content", this.content.getElement());
     
     this.getElement().querySelector(".bi-x").addEventListener("click", () => {
