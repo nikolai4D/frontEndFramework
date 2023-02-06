@@ -80,13 +80,11 @@ nav > ul {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
+}
+
+.organism_search_res_det_image > img{
     height: 141px;
     width: 141px;
 
 }
-
-/* .organism_search_res_det_image > img{
-    min-width: 100%;
-    min-height: 100%;
-
-} */
