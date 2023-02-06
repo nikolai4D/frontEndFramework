@@ -25,7 +25,7 @@ export function Template_SearchResult_View(view){
     this.bindScript = function() {
         let model = State.views[view].components;
         let modal = new Molecule_ModalSearchResultDetail(model.content)
-        let button = new Atom_ButtonPositive(model.content.buttonPositive1)
+        let button = new Atom_ButtonPositive(model.atom_button)
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
         // let organismSearchResultDetail = new Organism_SearchResultDetail(model.content.organism_searchResultDetail)
 
