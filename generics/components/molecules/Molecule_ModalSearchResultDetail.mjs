@@ -13,14 +13,10 @@ export function Molecule_ModalSearchResultDetail(model) {
         <div class="modal-container">
                 <div class="modal-title-section">
                     <div class="upper-section">
-                        <h4 class="modal-title">${model.title}</h4>
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 
-                <hr>
                     ${slot("content")}
-                  
-                <hr>
         </div>
       `;
   };

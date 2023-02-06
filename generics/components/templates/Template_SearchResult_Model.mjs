@@ -74,6 +74,10 @@ export function Template_SearchResult_Model(model) {
                     }
                 },
                 content : {
+                    atom_button :{
+                        text: model.buttonPositive1.text,
+                        onClick : model.buttonPositive.onClick
+                    },
                     organism_searchResultDetail : {
                         molecule_headerAndText : {
                             atom_heading4 : {

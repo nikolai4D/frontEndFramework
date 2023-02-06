@@ -5,6 +5,7 @@ import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultDetail.mjs";
 import { Molecule_ModalSearchResultDetail } from "../molecules/Molecule_ModalSearchResultDetail.mjs";
+import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 
 export function Template_SearchResult_View(view){
     
@@ -14,18 +15,24 @@ export function Template_SearchResult_View(view){
         return `<div>
         ${slot("organismNavbar")}
         ${slot("modal")}
-        ${slot("organismSearchResultDetail")}
+        ${slot("button")}
+        
         </div>`
     }
+
+    // ${slot("organismSearchResultDetail")}
 
     this.bindScript = function() {
         let model = State.views[view].components;
         let modal = new Molecule_ModalSearchResultDetail(model.content)
+        let button = new Atom_ButtonPositive(model.buttonPositive)
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
-        let organismSearchResultDetail = new Organism_SearchResultDetail(model.content.organism_searchResultDetail)
+        // let organismSearchResultDetail = new Organism_SearchResultDetail(model.content.organism_searchResultDetail)
 
+
+        this.fillSlot("button", button.getElement())
         this.fillSlot("modal", modal.getElement())
         this.fillSlot("organismNavbar", organismNavbar.getElement())
-        this.fillSlot("organismSearchResultDetail", organismSearchResultDetail.getElement())
+        // this.fillSlot("organismSearchResultDetail", organismSearchResultDetail.getElement())
     }
 }
