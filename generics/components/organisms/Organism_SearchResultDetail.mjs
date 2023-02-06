@@ -25,7 +25,9 @@ export function Organism_SearchResultDetail(model) {
                     ${slot("listProcess")}
                     ${slot("listOrg")}
                 </div>
-                ${slot("atom_btnPositive")}
+                <div class="org_searh_res_det_btn">
+                    ${slot("atom_btnPositive")}
+                <div>
             </div>
         ` 
     }
