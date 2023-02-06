@@ -76,15 +76,19 @@ nav > ul {
     grid-gap: 2rem;
 }
 
-.organism_search_res_det_image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-
+.org_search_res_det_top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 575px;
+    gap: 118px;
 }
 
-.organism_search_res_det_image > img{
-    height: 141px;
-    width: 141px;
+.org_search_res_det_image > img{
+    height: 100%;
+    width: 100%;
+}
 
+.org_search_res_det_lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }

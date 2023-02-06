@@ -11,16 +11,16 @@ export function Organism_SearchResultDetail(model) {
     this.getHtml = function() {
 
         return `
-            <div class="organism_search_result_detail">
-                <div class="organism_search_res_det_top">
+            <div class="org_search_result_detail">
+                <div class="org_search_res_det_top">
                     <div>
                         ${slot("mol_head_text")}
                     </div>
-                    <div class="organism_search_res_det_image">
+                    <div class="org_search_res_det_image">
                         ${slot("atom_image")}
                     </div>
                 </div>
-                <div>
+                <div class="org_search_res_det_lists">
                     ${slot("listInfo")}
                     ${slot("listProcess")}
                     ${slot("listOrg")}
