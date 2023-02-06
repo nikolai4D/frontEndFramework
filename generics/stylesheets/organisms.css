@@ -76,6 +76,15 @@ nav > ul {
     grid-gap: 2rem;
 }
 
+.org_search_result_detail {
+    width: 575px;
+    margin: auto;
+}
+
+.org_search_result_detail > div {
+    margin: 1em;
+}
+
 .org_search_res_det_top {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,8 +93,8 @@ nav > ul {
 }
 
 .org_search_res_det_image > img{
-    height: 100%;
-    width: 100%;
+    height: 141px;
+    width: 141px;
 }
 
 .org_search_res_det_lists {
