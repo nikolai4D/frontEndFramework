@@ -82,7 +82,7 @@ nav > ul {
 }
 
 .org_search_result_detail > div {
-    margin: 1em;
+    margin: 3em;
 }
 
 .org_search_res_det_top {
@@ -111,6 +111,11 @@ nav > ul {
     grid-template-columns: 1fr;
 }
 
+.org_search_res_det_lists > .molecule_list > h4 {
+    margin-bottom: 2em;
+}
+
 .org_searh_res_det_btn {
-    align-self: center;
+    display: flex;
+    justify-content: center;
 }
