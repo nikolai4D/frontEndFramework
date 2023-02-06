@@ -73,61 +73,62 @@ export function Template_SearchResult_Model(model) {
                         onClick : model.button.onClick
                     }
                 },
-                organism_searchResultDetail : {
-                    molecule_headerAndText : {
-                        atom_heading4 : {
-                            text : model.heading
+                content : {
+                    organism_searchResultDetail : {
+                        molecule_headerAndText : {
+                            atom_heading4 : {
+                                text : model.heading
+                            },
+                            atom_text1 : {
+                                text: model.infoText 
+                            }
                         },
-                        atom_text1 : {
-                            text: model.infoText 
+                        atom_image : {
+                            src : model.src,
+                            alt : model.alt
+                        },
+                        molecule_list1 : {
+                            atom_heading4 : {
+                                text : model.listInfo
+                            },
+                            items: [
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                            ]
+                        },
+                        molecule_list2 : {
+                            atom_heading4 : {
+                                text : model.listProcess
+                            },
+                            items: [
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                            ]
+                        },
+                        molecule_list3 : {
+                            atom_heading4 : {
+                                text : model.listOrg
+                            },
+                            items: [
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                            ]
+                        },
+                        atom_buttonPositive : {
+                            text: model.buttonPositive.text,
+                            onClick : model.buttonPositive.onClick
                         }
-                    },
-                    atom_image : {
-                        src : model.src,
-                        alt : model.alt
-                    },
-                    molecule_list1 : {
-                        atom_heading4 : {
-                            text : model.listInfo
-                        },
-                        items: [
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                        ]
-                    },
-                    molecule_list2 : {
-                        atom_heading4 : {
-                            text : model.listProcess
-                        },
-                        items: [
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                        ]
-                    },
-                    molecule_list3 : {
-                        atom_heading4 : {
-                            text : model.listOrg
-                        },
-                        items: [
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                            {text: "List item"},
-                        ]
-                    },
-                    atom_buttonPositive : {
-                        text: model.buttonPositive.text,
-                        onClick : model.buttonPositive.onClick
                     }
                 }
-
             }
         }
 
