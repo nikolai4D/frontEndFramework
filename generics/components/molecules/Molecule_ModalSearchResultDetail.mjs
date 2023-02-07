@@ -29,9 +29,10 @@ export function Molecule_ModalSearchResultDetail(model) {
     
     this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
       if(e.target === this.getElement()){
-        this.getElement().remove
+        // this.getElement().remove
+        document.querySelectorAll('.modal')[0].remove()
       }
-      // document.querySelectorAll('.modal')[0].remove()
+      
       });
   };
 
