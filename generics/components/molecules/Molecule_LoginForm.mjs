@@ -17,8 +17,10 @@ export function Molecule_LoginForm(model) {
 
         return `
             <div class="molecule_login-form">
-            ${slot("input")}
-            ${slot("button-positive")}
+                ${slot("input")}
+                <div>
+                    ${slot("button-positive")}
+                </div>
             </div>
         `
     }

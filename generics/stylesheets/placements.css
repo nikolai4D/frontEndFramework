@@ -28,3 +28,9 @@
     align-items: flex-end;
 }
 
+.paginator-placement {
+    display: grid;
+    justify-content: center;
+    width: 80%;
+    padding-top: 3rem;
+}
