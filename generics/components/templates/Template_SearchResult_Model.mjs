@@ -129,8 +129,8 @@ export function Template_SearchResult_Model(model) {
                         }
                     },
                     atom_buttonPositive : {
-                        text: model.buttonPositive.text,
-                        onClick : model.buttonPositive.onClick
+                        text: model.buttonPositive.text
+                        // onClick : model.buttonPositive.onClick
                     }
                 }
             }
