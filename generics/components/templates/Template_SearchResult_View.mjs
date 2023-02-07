@@ -16,7 +16,7 @@ export function Template_SearchResult_View(view){
         return `<div>
         ${slot("organismNavbar")}
         ${slot("modal")}
-        <div class=".org_searh_res_det_btn">
+        <div class="org_searh_res_det_btn">
         ${slot("button")}
         </div>
             ${slot("new-modal")}
