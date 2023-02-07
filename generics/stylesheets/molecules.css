@@ -1,19 +1,16 @@
 .molecule_logo {
-<<<<<<< HEAD
     display: flex;
     padding: 1em;
 }
 
 .molecule_header-and-text {
     /* padding: 3em; */
-=======
     margin: 0.5rem;
     display: grid;
     grid-template-columns: auto auto;
     width: max-content;
     align-items: center;
     grid-gap: 0.5rem;
->>>>>>> e1b173432442406ff0684d24ce4cc27eec5dab84
 }
 
 .molecule_login-or-signup {
@@ -102,7 +99,6 @@
    
 }
 
-<<<<<<< HEAD
 
 .molecule_heading-icon {
     display: flex;
@@ -110,7 +106,6 @@
 
 .molecule_heading-icon i {
     cursor: pointer;
-=======
 .molecule_header-and-text {
     display:grid;
     grid-template-columns: 1fr;
@@ -121,5 +116,4 @@
 .molecule_checkbox {
     display:grid;
     grid-template-columns: auto auto;
->>>>>>> e1b173432442406ff0684d24ce4cc27eec5dab84
 }
