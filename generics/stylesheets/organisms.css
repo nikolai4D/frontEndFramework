@@ -8,6 +8,27 @@
     grid-template-rows: auto 1fr;
 }
 
+.organism_login-or-signup {}
+
+.organism_buttonFilledPicture_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 206px);
+    grid-auto-rows: minmax(20px, auto);
+    gap: 50px;
+    justify-content: center;
+}
+
+.organism_buttonFilledPicture_wrapper::before {
+    content: '';
+    grid-area: 1 / 1 / 2 / 5;
+    display: grid;
+  }
+
+#organism_buttonFilledPicture_btnParent {
+    grid-area: 1 / 4 / 2 / 4;
+    display: grid;
+}
+
 .organism_start-info > *:nth-child(2) {
     max-width: 400px;
     justify-self: center;
@@ -36,7 +57,7 @@ nav > ul {
 }
 
 .organism_form_4_dropdowns {
-    display:grid;
+    display: grid;
     grid-template-columns: min-content;
     grid-template-rows: 1fr 1fr 1fr 1fr auto;
     grid-gap: 2rem;
@@ -101,8 +122,12 @@ nav > ul {
     background: #666666
 }
 
+<<<<<<< HEAD
 
 .organism_two-fields-one-dropdown-one-picture{
+=======
+.organism_two-fields-one-dropdown-one-picture {
+>>>>>>> 1b596b78a664fa5a326359ca4962b619fb99c7b6
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -115,4 +140,26 @@ nav > ul {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 2rem;
+}
+
+.search-result-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.search-result-content {
+    grid-area: 2 / 2 / 5 / 7;
+}
+
+.search-result-content input {
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+
+.overflow-container {
+    overflow-y: scroll;
+    height: 500px;
+    width: 80%;
 }
