@@ -39,6 +39,7 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.fillSlot("content", this.content.getElement());
     this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
+    this.fillSlot("new-modal", this.modal.getElement());
 
 
  
@@ -52,11 +53,10 @@ export function Molecule_ModalSearchResultDetail(model) {
 
       function addModal() {
         console.log('btn-project button pressed')
-        
+
         this.modal = new Modal(
           this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
         )
-        this.fillSlot("new-modal", this.modal.getElement());
       };
   };
 }
