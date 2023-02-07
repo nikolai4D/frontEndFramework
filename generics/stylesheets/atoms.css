@@ -46,6 +46,13 @@
     border: none;
 }
 
+.atom_button-grey{
+  padding: 1rem 2rem;
+  background-color: var(--grey-color);
+  border-radius: 15px;
+  border: 0;
+}
+
 .atom_button-basic{
     background-color: var(--white-color);
     width: 79px;

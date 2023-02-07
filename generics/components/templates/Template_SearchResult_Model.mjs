@@ -4,9 +4,7 @@ export function Template_SearchResult_Model(model) {
     const template_model = {
             view: model.view,
             components: {
-               atom_heading4 : {
-                text : model.startHeading
-               },
+               
                organism_navbar : {
                     molecule_logo : {
                         atom_icon : {
@@ -78,7 +76,53 @@ export function Template_SearchResult_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
-                }
+                },
+                atom_input : {
+                    type: model.inputType,
+                    placeholder: model.inputPlaceholder,
+                },
+                atom_button : {
+                    text : model.btnText,
+                },
+                informationResult : {
+                    atom_heading4 : {
+                        text : model.informationHeader,
+                    },
+                    atom_icon : {
+                        icon: model.informationIcon
+                    },
+                   atom_text1 : {
+                        text : model.informationTextc
+                   },},
+                   processResult : {
+                   atom_heading4 : {
+                    text : model.processHeader,
+                    },
+                    atom_icon : {
+                        icon: model.processIcon
+                    },
+                    atom_text1 : {
+                        text : model.processText
+                    },
+                },
+                organisationResult : {
+                    atom_heading4 : {
+                        text : model.organisationHeader,
+                    },
+                    atom_icon : {
+                        icon: model.organisationIcon
+                    },
+                    atom_text1 : {
+                        text : model.organisationText
+                    },
+                },
+            molecule_paginator : {
+                onPageNumberClick : model.paginator.onPageNumberClick, 
+                numberOfPages : model.paginator.numberOfPages,
+                currentPage : model.paginator.currentPage,
+                pageNumberToDisplay : model.paginator.pageNumberToDisplay
+            }
+                
             }
         }
 

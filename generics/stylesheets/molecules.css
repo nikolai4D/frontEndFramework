@@ -1,4 +1,10 @@
 .molecule_logo {
+    display: flex;
+    padding: 1em;
+}
+
+.molecule_header-and-text {
+    /* padding: 3em; */
     margin: 0.5rem;
     display: grid;
     grid-template-columns: auto auto;
@@ -91,6 +97,15 @@
     color: black;
     cursor: pointer;
    
+}
+
+
+.molecule_heading-icon {
+    display: flex;
+}
+
+.molecule_heading-icon i {
+    cursor: pointer;
 }
 
 .molecule_header-and-text {
