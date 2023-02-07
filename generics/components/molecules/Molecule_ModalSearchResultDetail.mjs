@@ -2,7 +2,6 @@ import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultDetail.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
-import { Molecule_ModalFrame } from "../molecules/Molecule_ModalFrame.mjs"
 
 export function Molecule_ModalSearchResultDetail(model) {
   Component.call(this);
@@ -19,8 +18,8 @@ export function Molecule_ModalSearchResultDetail(model) {
                     </div>
                 </div> 
                     ${slot("content")}
-                <div class="btn-project">
-                    ${slot("btn-project")}
+                <div class="org_searh_res_det_btn">
+                    ${slot("atom_btnPositive")}
                 </div>
         </div>
       `;
@@ -30,20 +29,18 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
-    let button = new Atom_ButtonPositive(model.atom_button)
+    let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
 
     this.fillSlot("content", this.content.getElement());
-    this.fillSlot("btn-project", button.getElement());
+    this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
     
     this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
       // document.querySelectorAll('.modal')[0].remove()
       console.log('cross button pressed')
       });
 
-    this.getElement().querySelector(".btn-project").addEventListener("click", (e) => {
+    this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
       console.log('btn-project button pressed')
-      new Molecule_ModalFrame(model.content)
-
       });
   };
 }

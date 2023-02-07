@@ -126,11 +126,11 @@ export function Template_SearchResult_Model(model) {
                                 {text: "List item"},
                                 {text: "List item"},
                             ]
-                        },
-                        atom_buttonPositive : {
-                            text: model.buttonPositive.text,
-                            onClick : model.buttonPositive.onClick
                         }
+                    },
+                    atom_buttonPositive : {
+                        text: model.buttonPositive.text,
+                        onClick : model.buttonPositive.onClick
                     }
                 }
             }

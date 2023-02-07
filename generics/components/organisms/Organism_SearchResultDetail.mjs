@@ -25,9 +25,6 @@ export function Organism_SearchResultDetail(model) {
                     ${slot("listProcess")}
                     ${slot("listOrg")}
                 </div>
-                <div class="org_searh_res_det_btn">
-                    ${slot("atom_btnPositive")}
-                <div>
             </div>
         ` 
     }
@@ -48,7 +45,12 @@ export function Organism_SearchResultDetail(model) {
         let listOrg = new Molecule_List(model.molecule_list3)
         this.fillSlot("listOrg", listOrg.getElement());
 
-        let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
-        this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
+        // let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
+        // this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
     }
 }
+
+
+// <div class="org_searh_res_det_btn">
+//                     ${slot("atom_btnPositive")}
+//                 <div></div>
