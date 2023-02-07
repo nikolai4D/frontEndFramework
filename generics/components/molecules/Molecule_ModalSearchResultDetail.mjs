@@ -12,7 +12,7 @@ export function Molecule_ModalSearchResultDetail(model) {
     return `
         <div class="modal-container">
                 <div class="modal-title-section">
-                    <div class="upper-section">
+                    <div class="search-res-det-upper-section">
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 
@@ -27,17 +27,9 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.fillSlot("content", this.content.getElement());
     
-    this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-      if(e.target === this.getElement()){
-        console.log('pressing button')
-        // this.getElement().remove
-        document.querySelectorAll('.modal')[0].remove()
-      }
-      
+    this.getElement().querySelector(".bi-x").addEventListener("click", () => {
+      document.querySelectorAll('.modal')[0].remove()
       });
+    
   };
-
-  this.show = function() {
-    document.body.append(this.getElement())
-  }
 }
