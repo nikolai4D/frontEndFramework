@@ -8,6 +8,7 @@ import { Atom_Input } from "../atoms/Atom_Input.mjs";
 import { Molecule_HeadingIconAndText } from "../molecules/Molecule_HeadingIconAndText.mjs";
 import { Molecule_Paginator } from "../molecules/Molecule_Paginator.mjs"
 
+
 export function Template_Search_View(view){
     
     Component.call(this)
