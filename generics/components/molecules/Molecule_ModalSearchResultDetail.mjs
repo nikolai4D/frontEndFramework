@@ -42,7 +42,7 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.getElement().querySelector(".btn-project").addEventListener("click", (e) => {
       console.log('btn-project button pressed')
-      this.content = new Molecule_ModalFrame(model.content)
+      new Molecule_ModalFrame(model.content)
 
       });
   };
