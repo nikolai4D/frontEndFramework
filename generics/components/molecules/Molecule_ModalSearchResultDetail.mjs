@@ -2,7 +2,7 @@ import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultDetail.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
-import { Modal} from "../organisms/Modal.mjs"
+import { Molecule_ModalFrame } from "../molecules/Molecule_ModalFrame.mjs"
 
 export function Molecule_ModalSearchResultDetail(model) {
   Component.call(this);
@@ -42,7 +42,7 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.getElement().querySelector(".btn-project").addEventListener("click", (e) => {
       console.log('btn-project button pressed')
-      this.content = new Modal()
+      this.content = new Molecule_ModalFrame(model.content)
 
       });
   };
