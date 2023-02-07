@@ -52,7 +52,7 @@ export function Molecule_ModalSearchResultDetail(model) {
       // document.querySelectorAll('.modal')[0].add()
 
       this.modal = new Modal(
-        this.paragrap = new Paragraph('testing')
+        this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
       )
       this.fillSlot("new-modal", this.modal.getElement());
       });
