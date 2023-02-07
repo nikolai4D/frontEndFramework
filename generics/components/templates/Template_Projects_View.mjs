@@ -3,6 +3,7 @@ import { State } from "nd_frontend/core/actions/State.mjs";
 import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_ButtonFilledPictures } from "../organisms/Organism_ButtonFilledPictures.mjs";
+import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 
 export function Template_Projects_View ( view )
 {
@@ -22,6 +23,10 @@ export function Template_Projects_View ( view )
     this.bindScript = function ()
     {
         let model = State.views[ view ].components;
+
+        let organismNavbar = new Organism_Navbar(model.organism_navbar)
+        this.fillSlot("organismNavbar", organismNavbar.getElement())
+
         let atom_heading4 = new Atom_Heading4( model.atom_heading4 );
         let organismButtonFilledPictures = new Organism_ButtonFilledPictures( model.Organism_ButtonFilledPictures );
 
