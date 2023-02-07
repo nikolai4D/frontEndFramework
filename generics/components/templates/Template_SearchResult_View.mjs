@@ -10,6 +10,9 @@ import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultD
 
 export function Template_SearchResult_View(view){
     
+    this.content = content;
+    this.modal = null;
+
     Component.call(this)
 
     this.getHtml = function(){
