@@ -11,9 +11,9 @@ export function Molecule_ModalSearchResultDetail(model) {
 
   this.getHtml = function () {
     return `
-        <div class="modal-container">
+        <div class="modal-container modal-search-res-det">
                 <div class="modal-title-section">
-                    <div class="search-res-det-upper-section">
+                    <div class="modal-search-res-det-upper-section">
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 

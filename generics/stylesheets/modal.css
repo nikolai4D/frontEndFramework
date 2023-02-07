@@ -83,10 +83,13 @@
   margin: 0 41px 0 72px;
 }
 
-.search-res-det-upper-section {
+.modal-search-res-det-upper-section {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   padding: 15px;
   justify-content: end
+}
+
+.modal-search-res-det {
+  width: 520px;
 }
