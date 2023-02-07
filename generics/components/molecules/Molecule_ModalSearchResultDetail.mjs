@@ -6,7 +6,7 @@ export function Molecule_ModalSearchResultDetail(model) {
   Component.call(this);
 
   this.content = model.content;
-  this.modal = null;
+  this.modal = this;
 
   this.getHtml = function () {
     return `
@@ -27,9 +27,15 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.fillSlot("content", this.content.getElement());
     
-    this.getElement().querySelector(".bi-x").addEventListener("click", () => {
-      document.querySelectorAll('.modal')[0].remove()
+    this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+      if(e.target === this.getElement()){
+        this.getElement().remove
+      }
+      // document.querySelectorAll('.modal')[0].remove()
       });
-    
   };
+
+  this.show = function() {
+    document.body.append(this.getElement())
+  }
 }
