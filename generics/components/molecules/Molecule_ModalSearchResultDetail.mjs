@@ -23,15 +23,13 @@ export function Molecule_ModalSearchResultDetail(model) {
                 <div class="org_searh_res_det_btn">
                     ${slot("atom_btnPositive")}
                 </div>
-                
+                <div class="modal">
+                  ${slot("new-modal")}
+                </div>
 
         </div>
       `;
   };
-
-  // <div class="modal">
-  //                 ${slot("new-modal")}
-  //               </div>
 
  
   
@@ -45,9 +43,8 @@ export function Molecule_ModalSearchResultDetail(model) {
     this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
 
     
-    
     this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-      document.querySelectorAll('.modal')[0].remove()
+      document.querySelectorAll('.modal-container')[0].remove()
       console.log('cross button pressed')
       });
 
@@ -58,7 +55,8 @@ export function Molecule_ModalSearchResultDetail(model) {
       this.modal = new Modal(
         this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
       )
-      // this.fillSlot("new-modal", this.modal.getElement());
+      this.fillSlot("new-modal", this.modal.getElement());
       });
   };
+  
 }
