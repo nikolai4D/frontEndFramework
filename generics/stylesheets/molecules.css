@@ -106,6 +106,8 @@
 
 .molecule_heading-icon i {
     cursor: pointer;
+}
+
 .molecule_header-and-text {
     display:grid;
     grid-template-columns: 1fr;
