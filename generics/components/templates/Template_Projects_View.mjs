@@ -13,6 +13,7 @@ export function Template_Projects_View ( view )
     {
         return `
         <div class="grid-template-projects">
+        ${slot("organismNavbar")}
             ${ slot( "atomHeader" ) }
             ${ slot( "organismButtonFilledPictures" ) }
         </div>`;
