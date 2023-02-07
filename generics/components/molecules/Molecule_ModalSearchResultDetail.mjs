@@ -6,7 +6,7 @@ export function Molecule_ModalSearchResultDetail(model) {
   Component.call(this);
 
   this.content = model.content;
-  this.modal = this;
+  this.modal = null;
 
   this.getHtml = function () {
     return `
@@ -29,6 +29,7 @@ export function Molecule_ModalSearchResultDetail(model) {
     
     this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
       if(e.target === this.getElement()){
+        console.log('pressing button')
         // this.getElement().remove
         document.querySelectorAll('.modal')[0].remove()
       }
