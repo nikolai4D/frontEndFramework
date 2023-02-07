@@ -23,18 +23,13 @@ export function Molecule_ModalSearchResultDetail(model) {
                 <div class="org_searh_res_det_btn">
                     ${slot("atom_btnPositive")}
                 </div>
-               
-
+                <div class="modal">
+                  ${slot("new-modal")}
+                </div>
         </div>
       `;
   };
-
-//   <div class="modal">
-//   ${slot("new-modal")}
-// </div>
-
  
-  
   this.bindScript = function () {
 
     this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
