@@ -87,8 +87,8 @@ export function Template_ListAllOrganisation_Model(model) {
                         placeholder : model.inputPlaceholder
                     },
                     atom_button_positive : {
-                        text : model.buttonBasic.text,
-                        onClick : model.buttonBasic.onClick
+                        text : model.buttonNeutral.text,
+                        onClick : model.buttonNeutral.onClick
                     },
                     lists1 : {
                         atom_heading4 : {
