@@ -51,7 +51,7 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
       console.log('btn-project button pressed')
-      document.querySelectorAll('.modal')[0].add()
+      // document.querySelectorAll('.modal')[0].add()
       
       this.modal = new Modal(
         this.paragraph = new Paragraph("testing")
