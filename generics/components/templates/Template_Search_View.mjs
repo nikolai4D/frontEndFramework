@@ -1,15 +1,9 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { State } from "nd_frontend/core/actions/State.mjs";
-<<<<<<< HEAD
 import { Atom_ButtonNeutral } from "../atoms/Atom_ButtonNeutral.mjs"
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
-=======
-import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs"
-import { Atom_ButtonGrey } from "../atoms/Atom_ButtonGrey.mjs"
->>>>>>> 8b11c13df71971952b52f6fdb5c758fdfc6d2be6
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
-import { Atom_Input } from "../atoms/Atom_Input.mjs";
 import { Molecule_HeadingIconAndText } from "../molecules/Molecule_HeadingIconAndText.mjs";
 import { Molecule_Paginator } from "../molecules/Molecule_Paginator.mjs"
 
