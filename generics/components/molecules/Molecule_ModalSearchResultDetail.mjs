@@ -27,8 +27,9 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.fillSlot("content", this.content.getElement());
     
-    this.getElement().querySelector(".bi-x").addEventListener("click", () => {
-      document.querySelectorAll('.modal')[0].remove()
+    this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+      // document.querySelectorAll('.modal')[0].remove()
+      console.log('cross button pressed')
       });
     
   };
