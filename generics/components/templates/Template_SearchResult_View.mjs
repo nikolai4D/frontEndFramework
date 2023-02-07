@@ -28,10 +28,10 @@ export function Template_SearchResult_View(view){
         let modal = new Molecule_ModalSearchResultDetail(model.content)
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
 
-        let text = new Atom_ButtonPositive(model.atom_buttonPositive)
+        let button = new Atom_ButtonPositive(model.atom_buttonPositive)
 
         this.fillSlot("modal", modal.getElement())
-        this.fillSlot("text", text.getElement())
+        this.fillSlot("button", button.getElement())
         this.fillSlot("organismNavbar", organismNavbar.getElement())
 
         this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
