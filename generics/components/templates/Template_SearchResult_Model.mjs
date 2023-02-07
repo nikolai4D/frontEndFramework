@@ -83,6 +83,7 @@ export function Template_SearchResult_Model(model) {
                 },
                 atom_button : {
                     text : model.btnText,
+                    onClick : model.onClick
                 },
                 informationResult : {
                     atom_heading4 : {
