@@ -21,6 +21,12 @@
 
 }
 
+.template_process {
+    margin: 88px 162px;
+    display: flex;
+    justify-content: center;
+}
+
 .template_projects {
     display: grid;
 }

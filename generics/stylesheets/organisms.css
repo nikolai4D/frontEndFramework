@@ -41,11 +41,19 @@ nav {
     height: 75px;
 }
 
+nav > div {
+    padding-left: 1em;
+}
+
+nav > ul > div > a {
+    color: black;
+}
+
 nav > ul {
     display: flex;
     padding: 1em;
     justify-content: center;
-    gap: 14px;
+    gap: 37px;
 }
 
 .organism_form_4_dropdowns {
@@ -61,6 +69,10 @@ nav > ul {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 4rem;
+    height: 562px;
+    width: 783px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .organism_list-all-search__top {
@@ -70,13 +82,27 @@ nav > ul {
     justify-content: space-between;
     justify-items: center;
     align-items: center;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
+}
+
+.organism_list-all-search__top > h2{
+    font-size: 16px;
 }
 
 .organism_list-all-search__lists {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 2rem;
+    overflow: auto;
+}
+
+.organism_list-all-search__lists::-webkit-scrollbar {
+    width: 8px;
+    height: 30px;
+}
+
+.organism_list-all-search__lists::-webkit-scrollbar-thumb {
+    background: #666666
 }
 
 .organism_two-fields-one-dropdown-one-picture {
