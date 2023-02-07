@@ -46,6 +46,13 @@
     border: none;
 }
 
+.atom_button-grey{
+  padding: 1rem 2rem;
+  background-color: var(--grey-color);
+  border-radius: 15px;
+  border: 0;
+}
+
 .atom_button-basic{
     background-color: var(--white-color);
     width: 79px;
@@ -125,3 +132,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #FFFFFF;
 }
 
+.grid-placement__c2-2r3 button {
+  margin-left: 10px;
+}
