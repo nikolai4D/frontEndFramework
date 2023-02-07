@@ -48,11 +48,14 @@ export function Template_Search_View(view){
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
         this.fillSlot("organismNavbar", organismNavbar.getElement())
 
+
         let searchInput = new Atom_Input(model.atom_input)
         this.fillSlot("searchInput", searchInput.getElement())
 
         let searchButton = new Atom_ButtonNeutral(model.atom_button)
         this.fillSlot("searchButton", searchButton.getElement())
+        
+        let atom_heading4 = new Atom_Heading4(model.atom_heading4)
         this.fillSlot("atomHeader", atom_heading4.getElement())
 
         let atom_heading = new Atom_Heading4(model.atom_heading4)
