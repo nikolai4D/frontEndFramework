@@ -127,6 +127,10 @@ export function Template_SearchResult_Model(model) {
                     atom_buttonPositive : {
                         text: model.buttonPositive.text
                     }
+                },
+                atom_buttonPositive : {
+                    text : model.testButton.text,
+                    onClick : model.testButton.onClick
                 }
             }
         }
