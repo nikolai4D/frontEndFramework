@@ -2,6 +2,8 @@ import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultDetail.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
+import { Modal } from "../organisms/Modal.mjs"
+import { Paragraph } from "../atoms/Paragraph.mjs"
 
 export function Molecule_ModalSearchResultDetail(model) {
   Component.call(this);
@@ -21,6 +23,10 @@ export function Molecule_ModalSearchResultDetail(model) {
                 <div class="org_searh_res_det_btn">
                     ${slot("atom_btnPositive")}
                 </div>
+                <div class="modal">
+                  ${slot("new-modal")}
+                </div>
+
         </div>
       `;
   };
@@ -33,6 +39,8 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.fillSlot("content", this.content.getElement());
     this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
+
+    
     
     this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
       // document.querySelectorAll('.modal')[0].remove()
@@ -41,6 +49,12 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
       console.log('btn-project button pressed')
+      // document.querySelectorAll('.modal')[0].add()
+
+      this.modal = new Modal(
+        this.paragrap = new Paragraph('testing')
+      )
+      this.fillSlot("new-modal", this.modal.getElement());
       });
   };
 }
