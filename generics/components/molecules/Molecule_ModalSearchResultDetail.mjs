@@ -55,7 +55,7 @@ export function Molecule_ModalSearchResultDetail(model) {
       this.modal = new Modal(
         this.paragraph = new Paragraph("testing")
       )
-      // this.fillSlot("new-modal", this.modal.getElement());
+      this.fillSlot("new-modal", this.modal.getElement());
       });
   };
 }
