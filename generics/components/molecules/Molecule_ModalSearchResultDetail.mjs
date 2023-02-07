@@ -39,26 +39,22 @@ export function Molecule_ModalSearchResultDetail(model) {
 
     this.fillSlot("content", this.content.getElement());
     this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
+
     
-
-
- 
     
     this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
       // document.querySelectorAll('.modal')[0].remove()
       console.log('cross button pressed')
       });
 
-    this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", addModal)
+    this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
+      console.log('btn-project button pressed')
+      // document.querySelectorAll('.modal')[0].add()
 
-      function addModal() {
-        console.log('btn-project button pressed')
-
-        this.modal = new Modal(
-          this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
-        )
-      };
-      
-    this.fillSlot("new-modal", this.modal.getElement());
+      this.modal = new Modal(
+        this.paragrap = new Paragraph("testing")
+      )
+      this.fillSlot("new-modal", this.modal.getElement());
+      });
   };
 }
