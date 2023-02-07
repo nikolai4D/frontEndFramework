@@ -116,6 +116,11 @@ nav > ul {
     margin-left: 3em;
 }
 
+.org_search_res_det_top > .org_search_res_det_image {
+    display: flex;
+    justify-content: end;
+}
+
 .org_search_res_det_image > img{
     height: 141px;
     width: 141px;
