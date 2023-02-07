@@ -48,8 +48,8 @@
 
 .atom_button-grey{
   padding: 1rem 2rem;
-  background-color: var(--grey-color);
-  border-radius: 15px;
+  background-color: var(--custom-color-2);
+  border-radius: 12px;
   border: 0;
 }
 
