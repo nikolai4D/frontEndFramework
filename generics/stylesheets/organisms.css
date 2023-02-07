@@ -114,7 +114,7 @@ nav > ul {
 }
 
 .org_search_res_det_top > div > .molecule_header-and-text {
-    margin-left: 3em;
+    /* margin-left: 3em; */
 }
 
 .org_search_res_det_top > .org_search_res_det_image {
@@ -125,6 +125,7 @@ nav > ul {
 .org_search_res_det_image > img{
     height: 141px;
     width: 141px;
+    align-self: end;
 }
 
 .org_search_res_det_lists {

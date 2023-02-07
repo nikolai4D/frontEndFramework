@@ -3,7 +3,6 @@ import {slot} from "../../../core/helpers.mjs";
 import { Molecule_HeaderAndText } from "../molecules/Molecule_HeaderAndText.mjs"
 import { Atom_Image } from "../atoms/Atom_Image.mjs";
 import { Molecule_List } from "../molecules/Molecule_List.mjs";
-import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 
 export function Organism_SearchResultDetail(model) {
     Component.call(this)
@@ -44,13 +43,5 @@ export function Organism_SearchResultDetail(model) {
 
         let listOrg = new Molecule_List(model.molecule_list3)
         this.fillSlot("listOrg", listOrg.getElement());
-
-        // let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
-        // this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
     }
 }
-
-
-// <div class="org_searh_res_det_btn">
-//                     ${slot("atom_btnPositive")}
-//                 <div></div>
