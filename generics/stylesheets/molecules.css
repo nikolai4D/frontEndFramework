@@ -110,6 +110,7 @@
 
 .molecule_heading-icon {
     display: flex;
+    gap: 3px;
 }
 
 .molecule_heading-icon i {
