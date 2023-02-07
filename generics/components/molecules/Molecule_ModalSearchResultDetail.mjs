@@ -23,13 +23,14 @@ export function Molecule_ModalSearchResultDetail(model) {
                 <div class="org_searh_res_det_btn">
                     ${slot("atom_btnPositive")}
                 </div>
-                <div class="modal">
-                  ${slot("new-modal")}
-                </div>
 
         </div>
       `;
   };
+
+  // <div class="modal">
+  //                 ${slot("new-modal")}
+  //               </div>
   
   this.bindScript = function () {
 
@@ -54,7 +55,7 @@ export function Molecule_ModalSearchResultDetail(model) {
       this.modal = new Modal(
         this.paragrap = new Paragraph("testing")
       )
-      this.fillSlot("new-modal", this.modal.getElement());
+      // this.fillSlot("new-modal", this.modal.getElement());
       });
   };
 }
