@@ -43,12 +43,12 @@
 
 .atom_button-positive:hover{
     background-color: var(--custom-color-2);
-    border: 1px solid var(--grey-color);
+    border: 1px solid var(--custom-color-2);
 }
 
 .atom_button-grey{
   padding: 1rem 2rem;
-  background-color: var(--custom-color-2);
+  background-color: 1px solid var(--grey-color);
   border-radius: 12px;
   border: 0;
 }
