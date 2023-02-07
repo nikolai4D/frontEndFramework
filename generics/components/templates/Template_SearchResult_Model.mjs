@@ -93,7 +93,7 @@ export function Template_SearchResult_Model(model) {
                         icon: model.informationIcon
                     },
                    atom_text1 : {
-                        text : model.informationTextc
+                        text : model.informationText
                    },},
                    processResult : {
                    atom_heading4 : {
