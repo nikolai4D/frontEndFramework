@@ -122,12 +122,7 @@ nav > ul {
     background: #666666
 }
 
-<<<<<<< HEAD
-
-.organism_two-fields-one-dropdown-one-picture{
-=======
 .organism_two-fields-one-dropdown-one-picture {
->>>>>>> 1b596b78a664fa5a326359ca4962b619fb99c7b6
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
