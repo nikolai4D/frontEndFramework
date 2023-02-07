@@ -5,9 +5,7 @@ export function Template_Projects_Model ( model )
   const template_model = {
     view: model.view,
     components: {
-      atom_heading4: {
-        text: model.startHeading
-      },
+
       organism_navbar : {
         molecule_logo : {
             atom_icon : {
