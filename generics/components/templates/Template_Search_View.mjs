@@ -4,6 +4,7 @@ import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Headin
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 
+
 export function Template_Search_View(view){
     
     Component.call(this)

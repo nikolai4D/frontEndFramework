@@ -20,14 +20,11 @@ nav {
     height: 75px;
 }
 
-nav > ul > div > a {
-    color: black;
-}
-
 nav > ul {
     display: flex;
     padding: 1em;
     justify-content: center;
+    gap: 14px;
 }
 
 .organism_form_4_dropdowns {
