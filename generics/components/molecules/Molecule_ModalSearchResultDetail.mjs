@@ -41,8 +41,6 @@ export function Molecule_ModalSearchResultDetail(model) {
  
   this.bindScript = function () {
 
-    let modal1 = this.fillSlot("new-modal", this.modal.getElement())
-
     this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
     let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
