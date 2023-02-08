@@ -164,6 +164,11 @@ nav > ul {
     margin: 4em auto;
 }
 
+.org_add-to-proj-btn > button {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
 .mod-addToProj-cross {
     justify-content: end !important;
 }
