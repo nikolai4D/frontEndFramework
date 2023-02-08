@@ -129,7 +129,7 @@ export function Template_SearchResult_Model(model) {
                         text : model.projHeader
                     },
                     atom_dropdown : {
-                        text : dropdown
+                        text : model.dropdown
                     }
                 },
                 molecule_textAndDropDown2 : {
@@ -137,7 +137,7 @@ export function Template_SearchResult_Model(model) {
                         text : model.infoHeader
                     },
                     atom_dropdown : {
-                        text : dropdown
+                        text : model.dropdown
                     }
                 },
                 molecule_textAndDropDown3 : {
@@ -145,7 +145,7 @@ export function Template_SearchResult_Model(model) {
                         text : model.proHeader
                     },
                     atom_dropdown : {
-                        text : dropdown
+                        text : model.dropdown
                     }
                 },
                 molecule_textAndDropDown4 : {
@@ -153,7 +153,7 @@ export function Template_SearchResult_Model(model) {
                         text : model.orgHeader
                     },
                     atom_dropdown : {
-                        text : dropdown
+                        text : model.dropdown
                     }
                 },
                 atom_buttonPositive : {
