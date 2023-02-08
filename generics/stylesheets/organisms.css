@@ -155,7 +155,7 @@ nav > ul {
     margin: auto;
 }
 
-.modal-container .mod-addToProj {
-    width: 328px;
+.mod-addToProj {
+    width: 328px !important;
     margin: auto;
 }
