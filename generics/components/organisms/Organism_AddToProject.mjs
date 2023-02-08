@@ -32,7 +32,7 @@ export function Organism_AddToProject(model) {
         let relOrg = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
         this.fillSlot("relOrg", relOrg.getElement());
 
-        let button = new Atom_ButtonPositive(model.atom_button)
+        let button = new Atom_ButtonPositive(model.atom_buttonPositive)
         this.fillSlot("button", button.getElement());
     }
 }
