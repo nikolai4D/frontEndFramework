@@ -30,8 +30,8 @@ export function Molecule_ModalAddToProject(model) {
       document.querySelectorAll('.modal')[0].remove()
       });
       
-    this.primary.getElement().addEventListener("click", () => {
-      document.querySelectorAll('.modal')[0].remove()
-    });
+    // this.primary.getElement().addEventListener("click", () => {
+    //   document.querySelectorAll('.modal')[0].remove()
+    // });
   };
 }
