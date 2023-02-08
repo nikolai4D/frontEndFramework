@@ -1,7 +1,7 @@
 @import "colors.css";
 
 .atom_icon{
-    padding: 1em 0 1em 1em;
+    font-size: 1.1rem;
 }
 
 .atom_heading1{
@@ -22,43 +22,45 @@
 }
 
 .atom_button-neutral{
-    background-color: var(--white-color);
-    padding: 1rem 2rem;
-    border-radius: 15px;
-    border: 2px solid black;
+  background-color: var(--white-color);
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 12px;
 }
+
+.atom_button-neutral:hover{
+  background-color: var(--custom-color-1);
+  border: 1px solid var(--custom-color-1);
+}
+
 
 .atom_button-positive{
-    padding: 1rem 2rem;
     background-color: var(--grey-color);
-    border-radius: 15px;
-    border: 0;
+    padding: 1em;
+    border: 1px solid var(--grey-color);
     border-radius: 12px;
 }
 
-.atom_button-basic{
-    background-color: var(--white-color);
-    width: 79px;
-    height: 38px;
-    padding: 10px, 20px, 10px, 20px;
-    border: 1px solid black;
-    border-radius: 12px;
+.atom_button-positive:hover{
+    background-color: var(--custom-color-2);
+    border: 1px solid var(--custom-color-2);
 }
 
-.atom_button-basic:hover{
-    background-color: var(--custom-color-1);
-    border: none;
+.atom_button-grey{
+  padding: 1rem 2rem;
+  background-color: 1px solid var(--grey-color);
+  border-radius: 12px;
+  border: 0;
 }
+
 
 .atom_input {
-    padding: 0.8rem 2rem;
-    border-radius: 15px;
-    border: 2px solid black;
+    padding: 0.8rem 1rem;
+    border: 1px solid black;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding: 1em;
 }
 
 .dropbtn {
@@ -117,3 +119,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #FFFFFF;
 }
 
+.grid-placement__c2-2r3 button {
+  margin-left: 10px;
+}

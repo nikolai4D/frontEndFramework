@@ -4,9 +4,7 @@ export function Template_SearchResult_Model(model) {
     const template_model = {
             view: model.view,
             components: {
-               atom_heading4 : {
-                text : model.startHeading
-               },
+               
                organism_navbar : {
                     molecule_logo : {
                         atom_icon : {
@@ -21,7 +19,8 @@ export function Template_SearchResult_Model(model) {
                             icon : model.icon1
                         },
                         atom_link : {
-                            text : model.link1
+                            text : model.link1.text,
+                            onClick: model.link1.onClick
                         }
                     },
                     molecule_iconAndLink2 : {
@@ -29,7 +28,8 @@ export function Template_SearchResult_Model(model) {
                             icon : model.icon2
                         },
                         atom_link : {
-                            text : model.link2
+                            text : model.link2.text,
+                            onClick: model.link2.onClick
                         }
                     },
                     molecule_iconAndLink3 : {
@@ -37,7 +37,8 @@ export function Template_SearchResult_Model(model) {
                             icon : model.icon3
                         },
                         atom_link : {
-                            text : model.link3
+                            text : model.link3.text,
+                            onClick: model.link3.onClick
                         }
                     },
                     molecule_iconAndLink4 : {
@@ -45,7 +46,8 @@ export function Template_SearchResult_Model(model) {
                             icon : model.icon4
                         },
                         atom_link : {
-                            text : model.link4
+                            text : model.link4.text,
+                            onClick: model.link4.onClick
                         }
                     },
                     molecule_iconAndLink5 : {
@@ -53,7 +55,9 @@ export function Template_SearchResult_Model(model) {
                             icon : model.icon5
                         },
                         atom_link : {
-                            text : model.link5
+                            text : model.link5.text,
+                            onClick: model.link5.onClick
+                            
                         }
                     },
                     molecule_textAndButton : {
@@ -72,7 +76,54 @@ export function Template_SearchResult_Model(model) {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
-                }
+                },
+                atom_input : {
+                    type: model.inputType,
+                    placeholder: model.inputPlaceholder,
+                },
+                atom_button : {
+                    text : model.btnText,
+                    onClick : model.onClick
+                },
+                informationResult : {
+                    atom_heading4 : {
+                        text : model.informationHeader,
+                    },
+                    atom_icon : {
+                        icon: model.informationIcon
+                    },
+                   atom_text1 : {
+                        text : model.informationText
+                   },},
+                   processResult : {
+                   atom_heading4 : {
+                    text : model.processHeader,
+                    },
+                    atom_icon : {
+                        icon: model.processIcon
+                    },
+                    atom_text1 : {
+                        text : model.processText
+                    },
+                },
+                organisationResult : {
+                    atom_heading4 : {
+                        text : model.organisationHeader,
+                    },
+                    atom_icon : {
+                        icon: model.organisationIcon
+                    },
+                    atom_text1 : {
+                        text : model.organisationText
+                    },
+                },
+            molecule_paginator : {
+                onPageNumberClick : model.paginator.onPageNumberClick, 
+                numberOfPages : model.paginator.numberOfPages,
+                currentPage : model.paginator.currentPage,
+                pageNumberToDisplay : model.paginator.pageNumberToDisplay
+            }
+                
             }
         }
 
