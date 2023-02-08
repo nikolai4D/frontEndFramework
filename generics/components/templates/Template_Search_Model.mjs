@@ -71,10 +71,54 @@ export function Template_Search_Model(model) {
                     atom_button : {
                         text : model.button.text,
                         onClick : model.button.onClick
+                    },
+                    organism_usermodal : {
+                        primary : model.primary
+                    },
+
+                },
+                content : {
+                organism_userProfileContent : {
+                    molecule_nameInput : {
+                        atom_text1 : {
+                             text: model.nameInputText
+                        },
+                       atom_input : {
+                        type : model.nameInputType,
+                        placeholder: model.placeholderName
+                       },
+                    },
+                    molecule_emailInput : {
+                        atom_text1 : {
+                             text: model.emailInputText
+                        },
+                       atom_input : {
+                        type : model.emailInputType,
+                        placeholder: model.placeholderEmail
+                       },
+                    },
+                    molecule_textAndDropdown : {
+                        atom_text1 : {
+                             text: model.dropdownInputText
+                        },
+                       atom_dropdown : {
+                        dropdown: model.dropdown
+                       },
+                    },
+                    atom_buttonPositive : {
+                        text: model.buttonPositive.text,
+                        onClick : model.buttonPositive.onClick
+                    },
+                    atom_image : {
+                        src : model.image,
+                        alt : model.alt
                     }
+                    
                 }
             }
+            
         }
+    }
 
     SEND_VIEWSTATE_TO_STATE(template_model)
 }

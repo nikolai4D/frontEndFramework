@@ -71,3 +71,19 @@ nav > ul {
     grid-auto-flow: row;
     grid-gap: 2rem;
 }
+
+.organism_user-modal {
+    display: grid;
+}
+
+.organism_lower-section {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding-bottom: 50px;
+}
+
+.image-field img {
+    width: 150px;
+    height: 150px;
+}
