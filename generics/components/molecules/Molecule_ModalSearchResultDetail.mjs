@@ -13,14 +13,6 @@ export function Molecule_ModalSearchResultDetail(model) {
 
   this.getHtml = function () {
 
-    // let modal1 = ""
-    
-    // for (let listIndex in model.lists){
-    //     modal1 += `
-    //     ${slot('list' + listIndex)}
-    //     `
-    // }
-
     return `
         <div class="modal-container modal-search-res-det">
                 <div class="modal-title-section">
@@ -36,8 +28,6 @@ export function Molecule_ModalSearchResultDetail(model) {
         </div>
       `;
   };
-
-  // ${slot("new-modal")}
  
   this.bindScript = function () {
 
@@ -60,9 +50,7 @@ export function Molecule_ModalSearchResultDetail(model) {
       const modalId = document.getElementById('modal-id')
 
       modalId.innerHTML = `
-        <div>
           ${slot("new-modal")}
-        </div>
       `
       this.modal = new Modal(
         this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
