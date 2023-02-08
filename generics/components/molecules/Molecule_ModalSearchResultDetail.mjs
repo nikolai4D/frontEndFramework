@@ -14,7 +14,7 @@ export function Molecule_ModalSearchResultDetail(model) {
   this.getHtml = function () {
 
     // let modal1 = ""
-    let modal1 = this.fillSlot("new-modal", this.modal.getElement())
+    
     // for (let listIndex in model.lists){
     //     modal1 += `
     //     ${slot('list' + listIndex)}
@@ -32,10 +32,7 @@ export function Molecule_ModalSearchResultDetail(model) {
                 <div class="org_searh_res_det_btn">
                     ${slot("atom_btnPositive")}
                 </div>
-                <div class="modal">
-                  
-                  ${modal1}
-                </div>
+                <div id="modal-id" class="modal"></div>
         </div>
       `;
   };
@@ -44,7 +41,7 @@ export function Molecule_ModalSearchResultDetail(model) {
  
   this.bindScript = function () {
 
-    
+    let modal1 = this.fillSlot("new-modal", this.modal.getElement())
 
     this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
@@ -62,12 +59,17 @@ export function Molecule_ModalSearchResultDetail(model) {
     this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
       console.log('btn-project button pressed')
       // document.querySelectorAll('.modal')[0].add()
-      
+      const modalId = document.getElementById('modal-id')
+
+      modalId.innerHTML = `
+        <div>
+          ${slot("new-modal")}
+        </div>
+      `
       this.modal = new Modal(
         this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
       )
-      
-      // this.fillSlot("new-modal", this.modal.getElement());
+      this.fillSlot("new-modal", this.modal.getElement());
       });
   };
   
