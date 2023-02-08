@@ -1,8 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
 
 
-export default function(centralComponent) {
+export function t_Central() {
     Component.call(this)
 
     this.getHtml = function() {
@@ -12,9 +11,4 @@ export default function(centralComponent) {
         </div>
         `
     }
-
-    this.bindScript= function() {
-        this.fillSlot("central", centralComponent.getElement())
-    }
-
 }

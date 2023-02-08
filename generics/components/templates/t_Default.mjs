@@ -1,7 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
 
-export function T_Default() {
+export function t_Default() {
     Component.call(this)
 
     this.components = []

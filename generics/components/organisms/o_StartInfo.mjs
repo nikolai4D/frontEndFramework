@@ -5,8 +5,8 @@ export function o_StartInfo(model) {
     Component.call(this)
 
     this.subComponents = {
-        top: new a_Paragraph(),
-        central: new a_Paragraph()
+        top: null,
+        central: null,
     }
 
     this.getHtml = function() {

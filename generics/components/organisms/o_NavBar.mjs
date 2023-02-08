@@ -2,8 +2,14 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import {A_link} from "../atoms/a_Link.mjs";
 
-export function O_NavBar(routesMap, router){
+export function O_NavBar(model){
     Component.call(this)
+
+    this.options = {
+        headers: null,
+        rows: null,
+        data: null
+    }
 
     this.routesMap = routesMap
 
