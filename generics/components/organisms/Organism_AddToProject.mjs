@@ -14,7 +14,9 @@ export function Organism_AddToProject(model) {
                 ${slot("relInfo")}
                 ${slot("relProc")}
                 ${slot("relOrg")}
+                <div class="org_add-to-proj-btn">
                 ${slot("button")}
+                <div>
             </div>
         ` 
     }

@@ -153,6 +153,7 @@ nav > ul {
 
 .organism_add-to-proj .molecule_text_and_dropdown {
     margin: auto;
+    margin-top: 1em;
 }
 
 .mod-addToProj {
@@ -163,5 +164,10 @@ nav > ul {
 .organism_add-to-proj .molecule_text_and_dropdown > p {
     padding: 0 !important;
     text-align: center;
+}
+
+.org_add-to-proj-btn {
+    margin: auto;
+    background-color: red;
 }
 
