@@ -11,7 +11,7 @@ export function Molecule_ModalAddToProject(model) {
   this.getHtml = function () {
     return `
         <div class="modal-container mod-addToProj">
-                <div class="modal-title-section">
+                <div class="modal-title-section mod-addToProj-cross">
                     <div class="upper-section">
                         <i class="bi bi-x"></i>
                     </div>

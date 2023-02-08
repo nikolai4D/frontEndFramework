@@ -164,3 +164,6 @@ nav > ul {
     margin: 4em auto;
 }
 
+.mod-addToProj-cross {
+    justify-content: end !important;
+}
