@@ -143,13 +143,13 @@ nav > ul {
 }
 
 .organism_add-to-proj {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
 }
 
-.organism_add-to-proj > button {
+/* .organism_add-to-proj > button {
     margin: auto;
-}
+} */
 
 .organism_add-to-proj .molecule_text_and_dropdown {
     margin: auto;
@@ -167,7 +167,7 @@ nav > ul {
 }
 
 .org_add-to-proj-btn {
-    margin: auto;
-    background-color: red;
+    margin: 2em auto;
+    /* background-color: red; */
 }
 
