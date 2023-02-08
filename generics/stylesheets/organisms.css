@@ -159,3 +159,9 @@ nav > ul {
     width: 328px !important;
     margin: auto;
 }
+
+.organism_add-to-proj .molecule_text_and_dropdown > p {
+    padding: 0 !important;
+    text-align: center;
+}
+
