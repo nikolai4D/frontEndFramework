@@ -12,6 +12,15 @@ export function Molecule_ModalSearchResultDetail(model) {
   this.modal = null;
 
   this.getHtml = function () {
+
+    // let modal1 = ""
+    let modal1 = this.fillSlot("new-modal", this.modal.getElement())
+    // for (let listIndex in model.lists){
+    //     modal1 += `
+    //     ${slot('list' + listIndex)}
+    //     `
+    // }
+
     return `
         <div class="modal-container modal-search-res-det">
                 <div class="modal-title-section">
@@ -24,13 +33,18 @@ export function Molecule_ModalSearchResultDetail(model) {
                     ${slot("atom_btnPositive")}
                 </div>
                 <div class="modal">
-                  ${slot("new-modal")}
+                  
+                  ${modal1}
                 </div>
         </div>
       `;
   };
+
+  // ${slot("new-modal")}
  
   this.bindScript = function () {
+
+    
 
     this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
@@ -52,7 +66,8 @@ export function Molecule_ModalSearchResultDetail(model) {
       this.modal = new Modal(
         this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
       )
-      this.fillSlot("new-modal", this.modal.getElement());
+      
+      // this.fillSlot("new-modal", this.modal.getElement());
       });
   };
   
