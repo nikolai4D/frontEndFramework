@@ -27,7 +27,7 @@ export function Molecule_ModalAddToProject(model) {
     this.fillSlot("content", this.content.getElement());
     
     this.getElement().querySelector(".bi-x").addEventListener("click", () => {
-      document.querySelectorAll('.modal')[0].remove()
+      document.querySelectorAll('.modal-container')[0].remove()
       });
       
     // this.primary.getElement().addEventListener("click", () => {
