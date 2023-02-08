@@ -23,13 +23,13 @@ export function Organism_AddToProject(model) {
         let relProj = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
         this.fillSlot("relProj", relProj.getElement());
 
-        let relInfo = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
+        let relInfo = new Molecule_textAndDropDown(model.molecule_textAndDropDown2)
         this.fillSlot("relInfo", relInfo.getElement());
 
-        let relProc = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
+        let relProc = new Molecule_textAndDropDown(model.molecule_textAndDropDown3)
         this.fillSlot("relProc", relProc.getElement());
 
-        let relOrg = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
+        let relOrg = new Molecule_textAndDropDown(model.molecule_textAndDropDown4)
         this.fillSlot("relOrg", relOrg.getElement());
 
         let button = new Atom_ButtonPositive(model.atom_buttonPositive)
