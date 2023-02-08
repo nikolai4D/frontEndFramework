@@ -122,7 +122,46 @@ export function Template_SearchResult_Model(model) {
                 numberOfPages : model.paginator.numberOfPages,
                 currentPage : model.paginator.currentPage,
                 pageNumberToDisplay : model.paginator.pageNumberToDisplay
+            },
+            organism_addToProject : {
+                molecule_textAndDropDown1 : {
+                    atom_text1 : {
+                        text : model.projHeader
+                    },
+                    atom_dropdown : {
+                        text : dropdown
+                    }
+                },
+                molecule_textAndDropDown2 : {
+                    atom_text1 : {
+                        text : model.infoHeader
+                    },
+                    atom_dropdown : {
+                        text : dropdown
+                    }
+                },
+                molecule_textAndDropDown3 : {
+                    atom_text1 : {
+                        text : model.proHeader
+                    },
+                    atom_dropdown : {
+                        text : dropdown
+                    }
+                },
+                molecule_textAndDropDown4 : {
+                    atom_text1 : {
+                        text : model.orgHeader
+                    },
+                    atom_dropdown : {
+                        text : dropdown
+                    }
+                },
+                atom_buttonPositive : {
+                    text : model.buttonPositive.text,
+                    onClick : model.buttonPositive.onClick
+                }
             }
+            
                 
             }
         }
