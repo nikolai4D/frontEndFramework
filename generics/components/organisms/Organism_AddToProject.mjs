@@ -21,18 +21,18 @@ export function Organism_AddToProject(model) {
 
     this.bindScript= function() {
         let relProj = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
-        this.fillSlot("user", relProj.getElement());
+        this.fillSlot("relProj", relProj.getElement());
 
         let relInfo = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
-        this.fillSlot("user", relInfo.getElement());
+        this.fillSlot("relInfo", relInfo.getElement());
 
         let relProc = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
-        this.fillSlot("user", relProc.getElement());
+        this.fillSlot("relProc", relProc.getElement());
 
         let relOrg = new Molecule_textAndDropDown(model.molecule_textAndDropDown1)
-        this.fillSlot("user", relOrg.getElement());
+        this.fillSlot("relOrg", relOrg.getElement());
 
         let button = new Atom_ButtonPositive(model.atom_button)
-        this.fillSlot("user", button.getElement());
+        this.fillSlot("button", button.getElement());
     }
 }
