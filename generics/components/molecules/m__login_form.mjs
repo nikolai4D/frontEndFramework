@@ -4,10 +4,6 @@ import {Component} from "../../../core/Component.mjs";
 export function m_LoginForm(options) {
     Component.call(this)
 
-    this.options = {
-
-    }
-
     this.subComponents = {
         input: null,
         button: null,
@@ -19,8 +15,8 @@ export function m_LoginForm(options) {
 
         return `
             <div class="molecule_login-form">
-            ${this.slot("input")}
-            ${this.slot("button")}
+                ${this.slot(this.subComponents.input)}
+                ${this.slot(this.subComponents.button)}
             </div>
         `
     }

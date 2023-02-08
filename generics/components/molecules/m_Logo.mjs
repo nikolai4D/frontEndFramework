@@ -3,6 +3,11 @@ import {Component} from "../../../core/Component.mjs";
 export function m_Logo(model) {
     Component.call(this)
 
+    this.subComponents = {
+        icon: null,
+        heading: null,
+    }
+
     this.getHtml = function() {
 
         return `

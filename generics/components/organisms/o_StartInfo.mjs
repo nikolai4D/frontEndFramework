@@ -1,5 +1,4 @@
 import {Component} from "../../../core/Component.mjs";
-import {a_Paragraph} from "../atoms/a_Paragraph.mjs";
 
 export function o_StartInfo(model) {
     Component.call(this)

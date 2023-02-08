@@ -1,13 +1,13 @@
 import {Component} from "../../../core/Component.mjs";
-import {a_Button} from "../atoms/a_Button.mjs";
 
 
 export function O_LoginForm(options){
     Component.call(this)
 
     this.subComponents = {
-        id: null,
+        username: null,
         password: null,
+        submitBtn: null,
     }
 
     this.getHtml = function() {
@@ -15,9 +15,9 @@ export function O_LoginForm(options){
         <div>
             <h1>Login</h1>
             <div>
-                ${this.slot("username")}
-                ${this.slot("password")}
-                ${this.slot("submitBtn")}
+                ${this.slot(this.subComponents.username)}
+                ${this.slot(this.subComponents.password)}
+                ${this.slot(this.subComponents.submitBtn)}
             </div>
         </div>`
     }

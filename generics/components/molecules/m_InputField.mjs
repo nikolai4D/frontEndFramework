@@ -15,7 +15,7 @@ export default function(options) {
         return `
         <div>
             <label>${this.options.label}</label>
-            ${this.slot("input")}
+            ${this.slot(this.subComponents.input)}
         </div>
         `
     }

@@ -6,7 +6,7 @@ export function o_LoginOrSignup() {
     Component.call(this)
 
     this.subComponents = {
-
+        loginOrSignup: null,
     }
 
     this.getHtml = function() {
@@ -14,7 +14,7 @@ export function o_LoginOrSignup() {
         return `
             <div class="grid__c4r1 organism_login-or-signup">
                 <div class="grid-placement__c2-3r1 center">
-                    ${slot("loginOrSignup")}
+                    ${this.slot(this.subComponents.loginOrSignup)}
                 </div>
             </div>
         `

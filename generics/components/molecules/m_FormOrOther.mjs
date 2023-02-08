@@ -13,9 +13,9 @@ export function m_FormOrOther() {
 
         return `
             <div class="molecule_login-or-signup">
-            ${this.slot(this.subComponents.top_button)}
-            ${this.slot(this.subComponents.text)}
-            ${this.slot(this.subComponents.bottom_button)}
+                ${this.slot(this.subComponents.top_button)}
+                ${this.slot(this.subComponents.text)}
+                ${this.slot(this.subComponents.bottom_button)}
             </div>
         `
     }

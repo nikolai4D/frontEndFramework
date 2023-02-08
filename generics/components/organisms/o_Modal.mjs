@@ -4,20 +4,19 @@ import {Component} from "../../../core/Component.mjs";
 export function O_Modal(content) {
     Component.call(this)
 
-    this.content = content
-    this.content.modal = this;
+    this.subComponents = {
+        content: null,
+    }
 
     this.getHtml = function() {
         return `
         <div class="modal">
-                ${slot("content")}
+            ${this.slot(this.subComponents.content)}
         </div>
         `
     }
 
     this.bindScript= function() {
-        this.fillSlot("content", this.content.getElement())
-
         const mStyle = this.getElement().style
         mStyle.position = "absolute"
         mStyle.width = window.innerWidth + "px"
@@ -29,7 +28,7 @@ export function O_Modal(content) {
         mStyle.justifyContent = "center"
         mStyle.alignItems = "center"
 
-        this.content.getElement().style.backgroundColor = "white"
+        this.subComponents.content.getElement().style.backgroundColor = "white"
 
         this.getElement().addEventListener("click", (e)=>{
             if(e.target === this.getElement()){

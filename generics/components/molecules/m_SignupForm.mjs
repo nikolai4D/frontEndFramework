@@ -16,8 +16,8 @@ export function M_SignupForm(options) {
 
         return `
             <div class="molecule_signup-form">
-            ${this.slot("input")}
-            ${this.slot("button")}
+            ${this.slot(this.subComponents.input)}
+            ${this.slot(this.subComponents.button)}
             </div>
         `
     }
