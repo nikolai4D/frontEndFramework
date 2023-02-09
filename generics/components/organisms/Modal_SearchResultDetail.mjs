@@ -4,7 +4,6 @@ import { Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs"
 import { Organism_SearchResultDetail } from "./Organism_SearchResultDetail.mjs";
 import { Modal } from "./Modal.mjs"
 import { Paragraph } from "../atoms/Paragraph.mjs";
-import { Modal_SearchResultDetail } from "../organisms/"
 
 
 export function Modal_SearchResultDetail(model) {
