@@ -10,6 +10,7 @@ import { Molecule_HeadingIconAndText } from "nd_frontend/generics/components/mol
 import { Molecule_ModalSearchResultDetail } from "../molecules/Molecule_ModalSearchResultDetail.mjs";
 import { Modal } from "../organisms/Modal.mjs";
 import { Paragraph } from "../atoms/Paragraph.mjs";
+import { Modal_SearchResultDetail } from "../organisms/Modal_SearchResultDetail.mjs";
 
 export function Template_SearchResult_View(view){
     
@@ -31,7 +32,9 @@ export function Template_SearchResult_View(view){
                     <div class="paginator-placement">
                     ${slot("paginator")}
                     </div>
-                    <div id="modal-id" class="modal"></div>
+                    <div class="modal-container modal-search-res-det">
+                        <div id="modal-id" class="modal"></div>
+                    </div>
                 </div>
             </div>
         </div>`
@@ -68,6 +71,11 @@ export function Template_SearchResult_View(view){
         let paginator = new Molecule_Paginator(model.molecule_paginator)
         this.fillSlot("paginator", paginator.getElement())
 
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelectorAll('.modal-container')[0].remove()
+            console.log('cross button pressed')
+        });
+
         this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
             console.log('btn-project button pressed')
       
@@ -77,7 +85,7 @@ export function Template_SearchResult_View(view){
                 ${slot("new-modal")}
             `
             this.modal = new Modal(
-              this.paragrap = new Paragraph("Testing")
+              this.content = new Modal_SearchResultDetail(model.content)
             )
             this.fillSlot("new-modal", this.modal.getElement());
         });

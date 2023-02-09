@@ -6,7 +6,7 @@ import { Modal } from "./Modal.mjs"
 import { Paragraph } from "../atoms/Paragraph.mjs";
 
 
-export function Modal_SearchResultDetail(content) {
+export function Modal_SearchResultDetail(model) {
     Component.call(this)
 
     this.content = content
