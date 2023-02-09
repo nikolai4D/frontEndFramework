@@ -10,8 +10,8 @@ export function Modal_SearchResultDetail(model) {
     Component.call(this)
 
     this.content = model.content
-    // this.modal = null;
-    this.content.modal = null;
+    this.modal = null;
+    // this.content.modal = null;
     
 
     // this.content.modal = this;
