@@ -7,9 +7,6 @@ import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Headin
 import { Atom_ButtonPositive } from "nd_frontend/generics/components/atoms/Atom_ButtonPositive.mjs"
 import { Molecule_Paginator } from "nd_frontend/generics/components/molecules/Molecule_Paginator.mjs"
 import { Molecule_HeadingIconAndText } from "nd_frontend/generics/components/molecules/Molecule_HeadingIconAndText.mjs";
-import { Molecule_ModalSearchResultDetail } from "../molecules/Molecule_ModalSearchResultDetail.mjs";
-import { Modal } from "../organisms/Modal.mjs";
-import { Paragraph } from "../atoms/Paragraph.mjs";
 import { Modal_SearchResultDetail } from "../organisms/Modal_SearchResultDetail.mjs";
 
 export function Template_SearchResult_View(view){
@@ -32,9 +29,7 @@ export function Template_SearchResult_View(view){
                     <div class="paginator-placement">
                     ${slot("paginator")}
                     </div>
-                    <div class="modal-container modal-search-res-det">
-                        <div id="modal-id" class="modal"></div>
-                    </div>
+                    <div id="modal-id" class="modal"></div>
                 </div>
             </div>
         </div>`
@@ -71,11 +66,6 @@ export function Template_SearchResult_View(view){
         let paginator = new Molecule_Paginator(model.molecule_paginator)
         this.fillSlot("paginator", paginator.getElement())
 
-        // this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-        //     document.querySelectorAll('.modal-container')[0].remove()
-        //     console.log('cross button pressed')
-        // });
-
         this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
             console.log('btn-project button pressed')
       
@@ -84,9 +74,8 @@ export function Template_SearchResult_View(view){
             modalId.innerHTML = `
                 ${slot("new-modal")}
             `
-            this.modal = new Modal(
-              this.content = new Modal_SearchResultDetail(model.content)
-            )
+            this.modal = new Modal_SearchResultDetail(model.content)
+
             this.fillSlot("new-modal", this.modal.getElement());
         });
     }

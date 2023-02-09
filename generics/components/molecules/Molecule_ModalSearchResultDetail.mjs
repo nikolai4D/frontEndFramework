@@ -3,6 +3,7 @@ import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultDetail.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 import { Modal } from "../organisms/Modal.mjs"
+import { Modal_SearchResultDetail } from "../organisms/Modal_SearchResultDetail.mjs";
 import { Paragraph } from "../atoms/Paragraph.mjs"
 
 export function Molecule_ModalSearchResultDetail(model) {
@@ -55,9 +56,10 @@ export function Molecule_ModalSearchResultDetail(model) {
           ${slot("new-modal")}
       `
       
-      this.modal = new Modal(
-        this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
+      this.modal = new Modal_SearchResultDetail(
+        this.paragraph = new Paragraph("testing")
       )
+      
       this.fillSlot("new-modal", this.modal.getElement());
       });
 
