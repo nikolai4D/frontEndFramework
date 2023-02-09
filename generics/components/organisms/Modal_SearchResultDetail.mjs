@@ -45,37 +45,37 @@ export function Modal_SearchResultDetail(model) {
         this.fillSlot("content", this.content.getElement())
         this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
 
-        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-container')[0].remove()
-            console.log('cross button pressed')
-        });
+        // this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+        //     document.querySelectorAll('.modal-container')[0].remove()
+        //     console.log('cross button pressed')
+        // });
 
-        this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
-            console.log('btn-project button pressed')
+        // this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
+        //     console.log('btn-project button pressed')
       
-            const modalId = document.getElementById('modal-id')
+        //     const modalId = document.getElementById('modal-id')
       
-            modalId.innerHTML = `
-                ${slot("new-modal")}
-            `
-            this.modal = new Modal(
-              this.paragraph = new Paragraph("Testing")
-            )
-            this.fillSlot("new-modal", this.modal.getElement());
-        });
+        //     modalId.innerHTML = `
+        //         ${slot("new-modal")}
+        //     `
+        //     this.modal = new Modal(
+        //       this.paragraph = new Paragraph("Testing")
+        //     )
+        //     this.fillSlot("new-modal", this.modal.getElement());
+        // });
 
-        // const mStyle = this.getElement().style
-        // mStyle.position = "absolute"
-        // mStyle.width = window.innerWidth + "px"
-        // mStyle.height = window.innerHeight + "px"
-        // mStyle.top = "0px"
-        // mStyle.left = "0px"
-        // mStyle.backgroundColor = "rgba(0,0,0,0.5)"
-        // mStyle.display = "flex"
-        // mStyle.justifyContent = "center"
-        // mStyle.alignItems = "center"
+        const mStyle = this.getElement().style
+        mStyle.position = "absolute"
+        mStyle.width = window.innerWidth + "px"
+        mStyle.height = window.innerHeight + "px"
+        mStyle.top = "0px"
+        mStyle.left = "0px"
+        mStyle.backgroundColor = "rgba(0,0,0,0.5)"
+        mStyle.display = "flex"
+        mStyle.justifyContent = "center"
+        mStyle.alignItems = "center"
 
-        // this.content.getElement().style.backgroundColor = "white"
+        this.content.getElement().style.backgroundColor = "white"
 
         this.getElement().addEventListener("click", (e)=>{
             if(e.target === this.getElement()){
@@ -89,4 +89,23 @@ export function Modal_SearchResultDetail(model) {
     this.show= function() {
         document.body.append(this.getElement())
     }
+
+    this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+        document.querySelectorAll('.modal-container')[0].remove()
+        console.log('cross button pressed')
+    });
+
+    this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
+        console.log('btn-project button pressed')
+  
+        const modalId = document.getElementById('modal-id')
+  
+        modalId.innerHTML = `
+            ${slot("new-modal")}
+        `
+        this.modal = new Modal(
+          this.paragraph = new Paragraph("Testing")
+        )
+        this.fillSlot("new-modal", this.modal.getElement());
+    });
 }
