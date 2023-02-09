@@ -45,7 +45,24 @@ export function Modal_SearchResultDetail(model) {
         this.fillSlot("content", this.content.getElement())
         this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
 
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelectorAll('.modal-container')[0].remove()
+            console.log('cross button pressed')
+        });
+
+        this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
+            console.log('btn-project button pressed')
       
+            const modalId = document.getElementById('modal-id')
+      
+            modalId.innerHTML = `
+                ${slot("new-modal")}
+            `
+            this.modal = new Modal(
+              this.paragrap = new Paragraph("Testing")
+            )
+            this.fillSlot("new-modal", this.modal.getElement());
+        });
 
         const mStyle = this.getElement().style
         mStyle.position = "absolute"
@@ -66,24 +83,7 @@ export function Modal_SearchResultDetail(model) {
             }
         })
 
-        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-container')[0].remove()
-            console.log('cross button pressed')
-        });
-
-        this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
-            console.log('btn-project button pressed')
       
-            const modalId = document.getElementById('modal-id')
-      
-            modalId.innerHTML = `
-                ${slot("new-modal")}
-            `
-            this.modal = new Modal(
-              this.paragrap = new Paragraph("Testing")
-            )
-            this.fillSlot("new-modal", this.modal.getElement());
-        });
     }
 
     this.show= function() {

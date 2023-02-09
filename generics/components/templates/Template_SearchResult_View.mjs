@@ -70,6 +70,11 @@ export function Template_SearchResult_View(view){
         let paginator = new Molecule_Paginator(model.molecule_paginator)
         this.fillSlot("paginator", paginator.getElement())
 
+        // this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+        //     document.querySelectorAll('.modal-container')[0].remove()
+        //     console.log('cross button pressed')
+        // });
+
         this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
             console.log('btn-project button pressed')
       
