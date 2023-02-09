@@ -44,6 +44,7 @@ export function Modal_SearchResultDetail(model) {
 
         this.fillSlot("content", this.content.getElement())
         this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
+        this.fillSlot("new-modal", this.modal.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelectorAll('.modal-container')[0].remove()
@@ -65,7 +66,7 @@ export function Modal_SearchResultDetail(model) {
 
             console.log(modalId, "modelId")
             console.log(this.modal, "this.modal")
-            this.fillSlot("new-modal", this.modal.getElement());
+           
         });
 
         const mStyle = this.getElement().style
