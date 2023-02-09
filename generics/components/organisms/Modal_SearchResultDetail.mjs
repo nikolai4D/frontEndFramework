@@ -62,6 +62,9 @@ export function Modal_SearchResultDetail(model) {
             this.modal = new Modal(
               this.paragraph = new Paragraph("Testing")
             )
+
+            console.log(modalId, "modelId")
+            console.log(this.modal, "this.modal")
             this.fillSlot("new-modal", this.modal.getElement());
         });
 
