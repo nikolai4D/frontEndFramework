@@ -9,7 +9,7 @@ import { Paragraph } from "../atoms/Paragraph.mjs";
 export function Modal_SearchResultDetail(model) {
     Component.call(this)
 
-    this.content = content
+    this.content = model.content
     this.content.modal = this;
 
     this.getHtml = function() {
