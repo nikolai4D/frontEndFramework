@@ -41,7 +41,7 @@ export function Template_SearchResult_View(view){
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
 
         this.modal = new Modal(
-            this.content = new Molecule_ModalSearchResultDetail
+            this.content = new Molecule_ModalSearchResultDetail(model.content)
         )
 
         this.fillSlot("modal", modal.getElement())

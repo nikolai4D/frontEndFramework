@@ -117,11 +117,11 @@ export function Template_SearchResult_Model(model) {
                         text : model.organisationText
                     },
                 },
-            molecule_paginator : {
-                onPageNumberClick : model.paginator.onPageNumberClick, 
-                numberOfPages : model.paginator.numberOfPages,
-                currentPage : model.paginator.currentPage,
-                pageNumberToDisplay : model.paginator.pageNumberToDisplay
+                molecule_paginator : {
+                    onPageNumberClick : model.paginator.onPageNumberClick, 
+                    numberOfPages : model.paginator.numberOfPages,
+                    currentPage : model.paginator.currentPage,
+                    pageNumberToDisplay : model.paginator.pageNumberToDisplay
                 },
                 content : {
                     organism_searchResultDetail : {
