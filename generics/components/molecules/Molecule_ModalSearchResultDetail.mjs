@@ -5,6 +5,7 @@ import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 import { Modal } from "../organisms/Modal.mjs"
 import { Modal_SearchResultDetail } from "../organisms/Modal_SearchResultDetail.mjs";
 import { Paragraph } from "../atoms/Paragraph.mjs"
+import { Organism_AddToProject } from "../organisms"
 
 export function Molecule_ModalSearchResultDetail(model) {
   Component.call(this);
@@ -57,9 +58,9 @@ export function Molecule_ModalSearchResultDetail(model) {
       `
       
       this.modal = new Modal_SearchResultDetail(
-        this.paragraph = new Paragraph("testing")
+        this.paragraph = new Organism_AddToProject()
       )
-      
+
       this.fillSlot("new-modal", this.modal.getElement());
       });
 

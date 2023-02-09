@@ -3,7 +3,8 @@ import {Component} from "../../../core/Component.mjs";
 import { Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs"
 import { Organism_SearchResultDetail } from "./Organism_SearchResultDetail.mjs";
 import { Modal } from "./Modal.mjs"
-import { Paragraph } from "../atoms/Paragraph.mjs";
+import { Organism_AddToProject } from "./Organism_AddToProject.mjs";
+
 
 
 export function Modal_SearchResultDetail(model) {
@@ -11,10 +12,6 @@ export function Modal_SearchResultDetail(model) {
 
     this.content = model.content
     this.modal = null;
-    // this.content.modal = null;
-    
-
-    // this.content.modal = this;
 
     this.getHtml = function() {
         return `
@@ -60,7 +57,7 @@ export function Modal_SearchResultDetail(model) {
                 ${slot("second-modal")}
             `
             this.modal = new Modal(
-              this.paragraph = new Paragraph("Testing")
+              this.content = new Organism_AddToProject(model.organism_addToProject)
             )
 
             console.log(modalIdSecond, "modelId")
