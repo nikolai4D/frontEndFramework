@@ -59,23 +59,23 @@ export function Modal_SearchResultDetail(model) {
                 ${slot("new-modal")}
             `
             this.modal = new Modal(
-              this.paragrap = new Paragraph("Testing")
+              this.paragraph = new Paragraph("Testing")
             )
             this.fillSlot("new-modal", this.modal.getElement());
         });
 
-        const mStyle = this.getElement().style
-        mStyle.position = "absolute"
-        mStyle.width = window.innerWidth + "px"
-        mStyle.height = window.innerHeight + "px"
-        mStyle.top = "0px"
-        mStyle.left = "0px"
-        mStyle.backgroundColor = "rgba(0,0,0,0.5)"
-        mStyle.display = "flex"
-        mStyle.justifyContent = "center"
-        mStyle.alignItems = "center"
+        // const mStyle = this.getElement().style
+        // mStyle.position = "absolute"
+        // mStyle.width = window.innerWidth + "px"
+        // mStyle.height = window.innerHeight + "px"
+        // mStyle.top = "0px"
+        // mStyle.left = "0px"
+        // mStyle.backgroundColor = "rgba(0,0,0,0.5)"
+        // mStyle.display = "flex"
+        // mStyle.justifyContent = "center"
+        // mStyle.alignItems = "center"
 
-        this.content.getElement().style.backgroundColor = "white"
+        // this.content.getElement().style.backgroundColor = "white"
 
         this.getElement().addEventListener("click", (e)=>{
             if(e.target === this.getElement()){
