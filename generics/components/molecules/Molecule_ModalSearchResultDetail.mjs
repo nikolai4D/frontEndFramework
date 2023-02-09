@@ -44,19 +44,24 @@ export function Molecule_ModalSearchResultDetail(model) {
       console.log('cross button pressed')
     });
 
+
+
     this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
       console.log('btn-project button pressed')
-      // document.querySelectorAll('.modal')[0].add()
+
       const modalId = document.getElementById('modal-id')
 
       modalId.innerHTML = `
           ${slot("new-modal")}
       `
+      
       this.modal = new Modal(
         this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
       )
       this.fillSlot("new-modal", this.modal.getElement());
       });
+
+
   };
   
 }
