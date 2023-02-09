@@ -8,6 +8,27 @@
     grid-template-rows: auto 1fr;
 }
 
+.organism_login-or-signup {}
+
+.organism_buttonFilledPicture_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 206px);
+    grid-auto-rows: minmax(20px, auto);
+    gap: 50px;
+    justify-content: center;
+}
+
+.organism_buttonFilledPicture_wrapper::before {
+    content: '';
+    grid-area: 1 / 1 / 2 / 5;
+    display: grid;
+  }
+
+#organism_buttonFilledPicture_btnParent {
+    grid-area: 1 / 4 / 2 / 4;
+    display: grid;
+}
+
 .organism_start-info > *:nth-child(2) {
     max-width: 400px;
     justify-self: center;
@@ -20,6 +41,10 @@ nav {
     height: 75px;
 }
 
+nav > div {
+    padding-left: 1em;
+}
+
 nav > ul > div > a {
     color: black;
 }
@@ -28,10 +53,11 @@ nav > ul {
     display: flex;
     padding: 1em;
     justify-content: center;
+    gap: 37px;
 }
 
 .organism_form_4_dropdowns {
-    display:grid;
+    display: grid;
     grid-template-columns: min-content;
     grid-template-rows: 1fr 1fr 1fr 1fr auto;
     grid-gap: 2rem;
@@ -43,6 +69,10 @@ nav > ul {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 4rem;
+    height: 562px;
+    width: 783px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .organism_list-all-search__top {
@@ -52,16 +82,30 @@ nav > ul {
     justify-content: space-between;
     justify-items: center;
     align-items: center;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
+}
+
+.organism_list-all-search__top > h2{
+    font-size: 16px;
 }
 
 .organism_list-all-search__lists {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 2rem;
+    overflow: auto;
 }
 
-.organism_two-fields-one-dropdown-one-picture{
+.organism_list-all-search__lists::-webkit-scrollbar {
+    width: 8px;
+    height: 30px;
+}
+
+.organism_list-all-search__lists::-webkit-scrollbar-thumb {
+    background: #666666
+}
+
+.organism_two-fields-one-dropdown-one-picture {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -130,3 +174,25 @@ nav > ul {
     margin-bottom: 2em;
 }
 
+
+.search-result-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.search-result-content {
+    grid-area: 2 / 2 / 5 / 7;
+}
+
+.search-result-content input {
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+
+.overflow-container {
+    overflow-y: scroll;
+    height: 500px;
+    width: 80%;
+}
