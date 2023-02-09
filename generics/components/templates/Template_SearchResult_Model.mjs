@@ -212,7 +212,7 @@ export function Template_SearchResult_Model(model) {
                         },
                         atom_buttonPositive2 : {
                             text : model.buttonPositive2.text,
-                            onClick : model.buttonPositive.onClick
+                            onClick : model.buttonPositive2.onClick
                         }
                     }
 

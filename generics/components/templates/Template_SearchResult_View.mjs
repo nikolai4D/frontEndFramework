@@ -40,16 +40,8 @@ export function Template_SearchResult_View(view){
         </div>`
     }
 
-    // ${slot("modal")}
-
     this.bindScript = function() {
         let model = State.views[view].components;
-        // let modal = new Molecule_ModalSearchResultDetail(model.content)
-        // this.fillSlot("modal", modal.getElement())
-       
-        // this.modal = new Modal(
-        //     this.content = new Molecule_ModalSearchResultDetail(model.content)
-        // )
 
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
         this.fillSlot("organismNavbar", organismNavbar.getElement())
@@ -71,10 +63,6 @@ export function Template_SearchResult_View(view){
         let paginator = new Molecule_Paginator(model.molecule_paginator)
         this.fillSlot("paginator", paginator.getElement())
 
-        // this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-        //     document.querySelectorAll('.modal-container')[0].remove()
-        //     console.log('cross button pressed')
-        // });
 
         this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
             console.log('btn-project button pressed')
