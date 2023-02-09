@@ -8,6 +8,7 @@ import { Atom_ButtonPositive } from "nd_frontend/generics/components/atoms/Atom_
 import { Molecule_Paginator } from "nd_frontend/generics/components/molecules/Molecule_Paginator.mjs"
 import { Molecule_HeadingIconAndText } from "nd_frontend/generics/components/molecules/Molecule_HeadingIconAndText.mjs";
 import { Molecule_ModalAddToProject } from "../molecules/Molecule_ModalAddToProject.mjs";
+import { Modal } from "../organisms/Modal.mjs"
 
 export function Template_SearchResult_View(view){
     
@@ -60,7 +61,11 @@ export function Template_SearchResult_View(view){
         let paginator = new Molecule_Paginator(model.molecule_paginator)
         this.fillSlot("paginator", paginator.getElement())
 
-        let modal = new Molecule_ModalAddToProject(model.content)
+        let modal = new Modal(
+            this.content = new Molecule_ModalAddToProject(model.content)
+        )
         this.fillSlot("temporary", modal.getElement())
+
+        
     }
 }
