@@ -10,7 +10,11 @@ export function Modal_SearchResultDetail(model) {
     Component.call(this)
 
     this.content = model.content
-    this.content.modal = this;
+    // this.modal = null;
+    this.content.modal = null;
+    
+
+    // this.content.modal = this;
 
     this.getHtml = function() {
         return `
