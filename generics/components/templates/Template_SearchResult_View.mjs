@@ -31,7 +31,8 @@ export function Template_SearchResult_View(view){
                     </div>
                     <div class="modal-remove">
                         <div class="modal-container-remove modal-search-res-det-remove">
-                            <div id="modal-id" class="modal-remove"></div>
+                            <div id="modal-id" class="modal-remove">
+                            ${slot("new-modal")}</div>
                         </div>
                     </div>
                 </div>
@@ -78,11 +79,11 @@ export function Template_SearchResult_View(view){
         this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
             console.log('btn-project button pressed')
       
-            const modalId = document.getElementById('modal-id')
+            // const modalId = document.getElementById('modal-id')
       
-            modalId.innerHTML = `
-                ${slot("new-modal")}
-            `
+            // modalId.innerHTML = `
+            //     ${slot("new-modal")}
+            // `
             this.modal = new Modal_SearchResultDetail(model.content)
 
             this.fillSlot("new-modal", this.modal.getElement());
