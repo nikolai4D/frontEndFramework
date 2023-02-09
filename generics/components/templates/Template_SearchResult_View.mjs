@@ -9,6 +9,7 @@ import { Molecule_Paginator } from "nd_frontend/generics/components/molecules/Mo
 import { Molecule_HeadingIconAndText } from "nd_frontend/generics/components/molecules/Molecule_HeadingIconAndText.mjs";
 import { Molecule_ModalSearchResultDetail } from "../molecules/Molecule_ModalSearchResultDetail.mjs";
 import { Modal } from "../organisms/Modal.mjs";
+import { Paragraph } from "../atoms/Paragraph.mjs";
 
 export function Template_SearchResult_View(view){
     
@@ -30,6 +31,7 @@ export function Template_SearchResult_View(view){
                     <div class="paginator-placement">
                     ${slot("paginator")}
                     </div>
+                    <div id="modal-id" class="modal"></div>
                 </div>
             </div>
         </div>`
@@ -40,16 +42,14 @@ export function Template_SearchResult_View(view){
     this.bindScript = function() {
         let model = State.views[view].components;
         // let modal = new Molecule_ModalSearchResultDetail(model.content)
-        let organismNavbar = new Organism_Navbar(model.organism_navbar)
-
-        this.modal = new Modal(
-            this.content = new Molecule_ModalSearchResultDetail(model.content)
-        )
-
         // this.fillSlot("modal", modal.getElement())
-        this.fillSlot("organismNavbar", organismNavbar.getElement())
+       
+        // this.modal = new Modal(
+        //     this.content = new Molecule_ModalSearchResultDetail(model.content)
+        // )
 
-        
+        let organismNavbar = new Organism_Navbar(model.organism_navbar)
+        this.fillSlot("organismNavbar", organismNavbar.getElement())
 
         let atom_input = new Atom_Input(model.atom_input)
         this.fillSlot("searchInput", atom_input.getElement())
@@ -67,5 +67,19 @@ export function Template_SearchResult_View(view){
         
         let paginator = new Molecule_Paginator(model.molecule_paginator)
         this.fillSlot("paginator", paginator.getElement())
+
+        this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
+            console.log('btn-project button pressed')
+      
+            const modalId = document.getElementById('modal-id')
+      
+            modalId.innerHTML = `
+                ${slot("new-modal")}
+            `
+            this.modal = new Modal(
+              this.paragrap = new Paragraph("Testing")
+            )
+            this.fillSlot("new-modal", this.modal.getElement());
+        });
     }
 }
