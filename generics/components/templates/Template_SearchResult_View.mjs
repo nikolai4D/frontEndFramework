@@ -29,7 +29,11 @@ export function Template_SearchResult_View(view){
                     <div class="paginator-placement">
                     ${slot("paginator")}
                     </div>
-                    <div id="modal-id" class="modal"></div>
+                    <div class="modal">
+                        <div class="modal-container modal-search-res-det">
+                            <div id="modal-id" class="modal"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>`
