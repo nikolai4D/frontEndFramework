@@ -29,9 +29,9 @@ export function Template_SearchResult_View(view){
                     <div class="paginator-placement">
                     ${slot("paginator")}
                     </div>
-                    <div class="modal">
-                        <div class="modal-container modal-search-res-det">
-                            <div id="modal-id" class="modal"></div>
+                    <div class="modal-remove">
+                        <div class="modal-container-remove modal-search-res-det-remove">
+                            <div id="modal-id" class="modal-remove"></div>
                         </div>
                     </div>
                 </div>
