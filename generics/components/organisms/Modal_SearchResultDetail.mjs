@@ -39,7 +39,6 @@ export function Modal_SearchResultDetail(model) {
     this.bindScript= function() {
 
         this.fillSlot("content", this.content.getElement())
-        this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
         const mStyle = this.getElement().style
         mStyle.position = "absolute"
@@ -60,7 +59,7 @@ export function Modal_SearchResultDetail(model) {
             }
         })
 
-        
+        this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
         let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
         this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
