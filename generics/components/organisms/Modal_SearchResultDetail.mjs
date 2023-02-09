@@ -38,17 +38,8 @@ export function Modal_SearchResultDetail(model) {
 
     this.bindScript= function() {
 
-        this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
-
-        let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
-
         this.fillSlot("content", this.content.getElement())
-        this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
-
-        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-container')[0].remove()
-            console.log('cross button pressed')
-        });
+        this.content = new Organism_SearchResultDetail(model.organism_searchResultDetail)
 
         const mStyle = this.getElement().style
         mStyle.position = "absolute"
@@ -68,6 +59,16 @@ export function Modal_SearchResultDetail(model) {
                 this.getElement().remove()
             }
         })
+
+        
+
+        let atom_btnPositive = new Atom_ButtonPositive(model.atom_buttonPositive)
+        this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
+
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelectorAll('.modal-container')[0].remove()
+            console.log('cross button pressed')
+        });
 
         this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
             console.log('btn-project button pressed')
