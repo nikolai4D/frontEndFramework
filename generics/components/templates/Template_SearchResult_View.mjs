@@ -32,7 +32,7 @@ export function Template_SearchResult_View(view){
                     <div class="modal-remove">
                         <div class="modal-container-remove modal-search-res-det-remove">
                             <div id="modal-id" class="modal-remove">
-                            ${slot("new-modal")}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,10 @@ export function Template_SearchResult_View(view){
             const modalId = document.getElementById('modal-id')
       
             modalId.innerHTML = `
+            <div>
                 ${slot("new-modal")}
+                <div id="modal-id-second"></div>
+            </div>
             `
             this.modal = new Modal_SearchResultDetail(model.content)
 

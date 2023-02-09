@@ -29,7 +29,8 @@ export function Modal_SearchResultDetail(model) {
                 <div class="org_searh_res_det_btn">
                     ${slot("atom_btnPositive")}
                 </div>
-                <div id="modal-id" class="modal"></div>
+                <div id="modal-id-second" class="modal"></div>
+                
             </div>
         </div>
         
@@ -51,21 +52,21 @@ export function Modal_SearchResultDetail(model) {
         });
 
         this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
-            console.log('btn-project button pressed')
+            console.log('second modal btn-project pressed')
       
-            const modalId = document.getElementById('modal-id')
-            console.log(modalId)
+            const modalIdSecond = document.getElementById('modal-id-second')
+            console.log(modalIdSecond)
       
-            modalId.innerHTML = `
-                ${slot("new-modal")}
+            modalIdSecond.innerHTML = `
+                ${slot("second-modal")}
             `
             this.modal = new Modal(
               this.paragraph = new Paragraph("Testing")
             )
 
-            console.log(modalId, "modelId")
+            console.log(modalIdSecond, "modelId")
             console.log(this.modal, "this.modal")
-            this.fillSlot("new-modal", this.modal.getElement());
+            this.fillSlot("second-modal", this.modal.getElement());
         });
 
         const mStyle = this.getElement().style
