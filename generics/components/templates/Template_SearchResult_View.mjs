@@ -17,7 +17,7 @@ export function Template_SearchResult_View(view){
     this.getHtml = function(){
         return `<div>
         ${slot("organismNavbar")}
-        ${slot("modal")}
+       
         <div class="search-result-container">
                 <div class="search-result-content">
                     ${slot("searchInput")}
@@ -35,16 +35,18 @@ export function Template_SearchResult_View(view){
         </div>`
     }
 
+    // ${slot("modal")}
+
     this.bindScript = function() {
         let model = State.views[view].components;
-        let modal = new Molecule_ModalSearchResultDetail(model.content)
+        // let modal = new Molecule_ModalSearchResultDetail(model.content)
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
 
         this.modal = new Modal(
             this.content = new Molecule_ModalSearchResultDetail(model.content)
         )
 
-        this.fillSlot("modal", modal.getElement())
+        // this.fillSlot("modal", modal.getElement())
         this.fillSlot("organismNavbar", organismNavbar.getElement())
 
         
