@@ -47,7 +47,7 @@ export function Organism_AddToProject(model) {
         this.fillSlot("button", button.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-org-add-to-proj')[1].remove()
+            document.querySelectorAll('.modal-org-add-to-proj')[0].remove()
             console.log('cross button pressed')
 
             // const modalAddtoProj = document.getElementById('modal-addToProj')
