@@ -2,7 +2,14 @@
   height: 40px;
 }
 
-.modal-container, .model-container-second {
+.modal-container {
+  width: 497px;
+  box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #c6c7c8;
+  border-radius: 12px;
+}
+
+.model-container-second {
   width: 497px;
   box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.04);
   border: 1px solid #c6c7c8;
