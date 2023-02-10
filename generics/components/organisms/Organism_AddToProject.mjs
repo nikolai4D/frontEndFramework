@@ -10,7 +10,7 @@ export function Organism_AddToProject(model) {
 
         return `
         <div class="modal">
-            <div class="modal-container modal-search-res-det">
+            <div class="modal-container modal-add-to-project">
                 <div class="modal-title-section">
                         <div class="modal-search-res-det-upper-section">
                             <i class="bi bi-x"></i>
@@ -47,7 +47,7 @@ export function Organism_AddToProject(model) {
         this.fillSlot("button", button.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-search-res-det')[0].remove()
+            document.querySelectorAll('.modal-add-to-project')[0].remove()
             console.log('cross button pressed')
         });
     }
