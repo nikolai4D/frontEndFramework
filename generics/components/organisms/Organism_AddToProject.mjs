@@ -52,10 +52,7 @@ export function Organism_AddToProject(model) {
 
             modalSecond.remove()
 
-            // document.querySelectorAll('.modal-org-add-to-proj')[0].remove()
             console.log('cross button pressed')
-
-            // this.parentElement.style.display = 'none'
         });
     }
 }
