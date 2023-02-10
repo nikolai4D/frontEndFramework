@@ -13,7 +13,7 @@ export function buildArchitectPanel(schema, architect, constructorMap){
     return panel
 }
 
-export function buildElementPanelFromSchema(schema, architect, constructorMap){
+export function buildElementPanelFromSchema(schema, architect, constructorMap){0
 
     let panel = document.createElement("div")
     panel.setAttribute("data-id", schema.id)
