@@ -43,7 +43,7 @@ export function Modal_SearchResultDetail(model) {
         this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelector('.modal-container')[0].remove()
+            document.querySelectorAll('.modal-container')[0].remove()
             console.log('cross button pressed')
             const modalBg = document.getElementById('modal-background')
             modalBg.style.removeProperty('background-color')
