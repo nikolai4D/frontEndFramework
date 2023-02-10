@@ -196,3 +196,36 @@ nav > ul {
     height: 500px;
     width: 80%;
 }
+
+
+.organism_add-to-proj {
+    display: grid;
+}
+
+.organism_add-to-proj .molecule_text_and_dropdown {
+    margin: auto;
+    margin-top: 1em;
+}
+
+.mod-addToProj {
+    width: 328px !important;
+    margin: auto;
+}
+
+.organism_add-to-proj .molecule_text_and_dropdown > p {
+    padding: 0 !important;
+    text-align: center;
+}
+
+.org_add-to-proj-btn {
+    margin: 4em auto;
+}
+
+.org_add-to-proj-btn > button {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.mod-addToProj-cross {
+    justify-content: end !important;
+}

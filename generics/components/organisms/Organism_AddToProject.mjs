@@ -47,7 +47,7 @@ export function Organism_AddToProject(model) {
         this.fillSlot("button", button.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-container')[0].remove()
+            document.querySelectorAll('.modal-search-res-det')[0].remove()
             console.log('cross button pressed')
         });
     }
