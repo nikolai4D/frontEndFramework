@@ -15,7 +15,7 @@ export function Modal_SearchResultDetail(model) {
 
     this.getHtml = function() {
         return `
-        <div class="modal">
+        <div id="modal-background" class="modal">
             <div class="modal-container modal-search-res-det">
                 <div class="modal-title-section">
                     <div class="modal-search-res-det-upper-section">
@@ -45,6 +45,9 @@ export function Modal_SearchResultDetail(model) {
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelectorAll('.modal-container')[0].remove()
             console.log('cross button pressed')
+            const modalBg = document.getElementById('modal-background')
+            modalBg.style.backgroundColor = "white"
+
         });
 
         this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
