@@ -44,7 +44,9 @@ export function Component(options = {}){
     this.getElement = function(forceInit = false){
 
         if(!this.element || forceInit){
+            this.setComponentsToString()
             this.element = stringToHTMLElement(this.getHtml())
+            this.deSetComponentsFromString()
             this.bindSlots()
             this.bindScript()
             this.applyStyle()
@@ -76,6 +78,9 @@ export function Component(options = {}){
     }
 
     this.slot = function(component) {
+        if(this.isString(component)){
+            return `<div data-slot="${component}" class="slot"></div>`
+        }
         let key
         try {
             key = Object.keys(this.subComponents).find(key => this.subComponents[key] === component)
@@ -85,6 +90,20 @@ export function Component(options = {}){
                 "subComponents keys: ", Object.keys(this.subComponents))
         }
         return `<div data-slot="${key}" class="slot"></div>`
+    }
+
+    this.setComponentsToString = function() {
+        if(!Object.values(this.subComponents).every(v => v === null)) return;
+        for(const [key, value] of Object.entries(this.subComponents)){
+            this.subComponents[key] = key
+        }
+    }
+
+    this.deSetComponentsFromString = function() {
+        if(!Object.values(this.subComponents).every(v => this.isString(v))) return;
+        for(const [key, value] of Object.entries(this.subComponents)){
+            this.subComponents[key] = null
+        }
     }
 
     this.bindSlots = function(){
@@ -115,11 +134,12 @@ export function Component(options = {}){
      */
     this.findComponentDataById= function(id){
 
-        if(this.id === id) return { parentComponent: null, key: null,  foundComponent: this}
+        if(this.id === id) return { parentComponent: null, key: null,  foundComponent: this};
         else {
             for (let key in this.subComponents) {
                 let component = this.subComponents[key]
-                if(component.id === id) return {parentComponent: this, key, foundComponent: component}
+                if(component === null) return {parentComponent: this, key: key,  foundComponent: null};
+                if(component.id === id) return {parentComponent: this, key: key, foundComponent: component}
                 else {
                     let result = component.findComponentDataById(id)
                     if(result && result.foundComponent) return result
@@ -128,4 +148,8 @@ export function Component(options = {}){
         }
 
     }
+
+    this.defaultSlotName = varObj => Object.keys(varObj)[0]
+
+    this.isString = myVar => typeof myVar === 'string' || myVar instanceof String
 }

@@ -28,11 +28,14 @@ export function Controller() {
     this.swapComponent = function(id, newComponent) {
         let { parentComponent, key, foundComponent } = this.view.findComponentDataById(id)
 
-        foundComponent.getElement().replaceWith(newComponent.getElement())
-
-        if (parentComponent) parentComponent.subComponents[key] = newComponent
+        if(foundComponent !== null){
+            foundComponent.getElement().replaceWith(newComponent.getElement())
+        }
+        
+        if(parentComponent) parentComponent.subComponents[key] = newComponent;
         else {
             console.warn("Replacing root component")
+            this.view.removeElement()
             this.view = newComponent
         }
     }

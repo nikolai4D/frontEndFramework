@@ -52,7 +52,10 @@ Architect.prototype.onConstructorUpdate = function(id, newConstructorKey) {
     let newSchema = buildSchemaFromComponent(component)
     let {parentSchema, key, schema} = getSchemaDataFromId(id, this.schema.root)
 
-    if(!parentSchema && !key && schema) this.schema.root = newSchema
+    if(!parentSchema && !key && schema){
+        this.schema.root = newSchema
+        this.controller.schema = newSchema
+    }
     else parentSchema.subComponents[key] = newSchema
 
     // swap panel
