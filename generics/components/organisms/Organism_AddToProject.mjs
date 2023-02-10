@@ -9,15 +9,24 @@ export function Organism_AddToProject(model) {
     this.getHtml = function() {
 
         return `
-            <div class="organism_add-to-proj">
-                ${slot("relProj")}
-                ${slot("relInfo")}
-                ${slot("relProc")}
-                ${slot("relOrg")}
-                <div class="org_add-to-proj-btn">
-                ${slot("button")}
-                <div>
+        <div class="modal">
+            <div class="modal-container modal-search-res-det">
+                <div class="modal-title-section">
+                        <div class="modal-search-res-det-upper-section">
+                            <i class="bi bi-x"></i>
+                        </div>
+                </div> 
+                <div class="organism_add-to-proj">
+                    ${slot("relProj")}
+                    ${slot("relInfo")}
+                    ${slot("relProc")}
+                    ${slot("relOrg")}
+                    <div class="org_add-to-proj-btn">
+                    ${slot("button")}
+                    <div>
+                </div>
             </div>
+        </div>
         ` 
     }
 
@@ -36,5 +45,10 @@ export function Organism_AddToProject(model) {
 
         let button = new Atom_ButtonPositive(model.atom_buttonPositive2)
         this.fillSlot("button", button.getElement());
+
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelectorAll('.modal-container')[0].remove()
+            console.log('cross button pressed')
+        });
     }
 }
