@@ -56,12 +56,20 @@ Architect.prototype.onConstructorUpdate = function(id, newConstructorKey) {
         this.schema.root = newSchema
         this.controller.schema = newSchema
     }
-    else parentSchema.subComponents[key] = newSchema
+    else{ 
+        parentSchema.subComponents[key] = newSchema
+        { 
+            let {parentSchema, key, schema} = getSchemaDataFromId(id, this.controller.schema)
+            parentSchema.subComponents[key] = newSchema
+        }
+    }
 
     // swap panel
     let newPanel = buildElementPanelFromSchema(newSchema, this, constructorMap)
     let panel = this.panel.querySelector(`[data-id="${id}"]`)
     panel.replaceWith(newPanel)
+    component.updateElement()
+    this.controller.setView()
 }
 
 

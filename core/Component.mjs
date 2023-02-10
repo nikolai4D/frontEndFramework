@@ -74,7 +74,7 @@ export function Component(options = {}){
     this.updateElement = function(){
         let oldElement = this.element
         this.element = this.getElement(true)
-        oldElement.replaceWith(this.element)
+        if(oldElement) oldElement.replaceWith(this.element)
     }
 
     this.slot = function(component) {
@@ -142,7 +142,7 @@ export function Component(options = {}){
                 if(component.id === id) return {parentComponent: this, key: key, foundComponent: component}
                 else {
                     let result = component.findComponentDataById(id)
-                    if(result && result.foundComponent) return result
+                    if(result) return result
                 }
             }
         }
