@@ -130,7 +130,7 @@ nav > ul {
     margin: 3em 2em 1em 2em;
 }
 
-.org_search_res_det_top > .molecule_header-and-text {
+.org_search_res_det_top > div > .molecule_header-and-text {
     width: fit-content !important;
 }
 
