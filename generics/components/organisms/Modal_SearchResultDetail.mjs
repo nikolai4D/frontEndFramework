@@ -46,7 +46,7 @@ export function Modal_SearchResultDetail(model) {
             document.querySelectorAll('.modal-container')[0].remove()
             console.log('cross button pressed')
             const modalBg = document.getElementById('modal-background')
-            modalBg.style.backgroundColor = "white"
+            modalBg.removeProperty('background-color')
 
         });
 
