@@ -48,7 +48,7 @@ export function Organism_AddToProject(model) {
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
 
-            const modalSecond = document.getElementById("modal-id-second")
+            const modalSecond = document.getElementById("modal-popUp")
 
             modalSecond.remove()
 
