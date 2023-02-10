@@ -47,11 +47,11 @@ export function Organism_AddToProject(model) {
         this.fillSlot("button", button.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-container-second')[0].remove()
+            document.querySelectorAll('.modal')[1].remove()
             console.log('cross button pressed')
 
-            const modalAddtoProj = document.getElementById('modal-addToProj')
-            modalAddtoProj.style.removeProperty('background-color')
+            // const modalAddtoProj = document.getElementById('modal-addToProj')
+            // modalAddtoProj.style.removeProperty('background-color')
         });
     }
 }
