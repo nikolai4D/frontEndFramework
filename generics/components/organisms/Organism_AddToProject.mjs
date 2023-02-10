@@ -50,7 +50,7 @@ export function Organism_AddToProject(model) {
             document.querySelectorAll('.modal-org-add-to-proj')[0].remove()
             console.log('cross button pressed')
 
-            document.querySelectorAll('modal')[0].remove()
+            document.querySelectorAll('modal')[1].remove()
         });
     }
 }
