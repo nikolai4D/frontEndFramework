@@ -98,3 +98,7 @@
 .modal-add-to-project {
   width: 328px;
 }
+
+.modal-org-add-to-proj {
+  border-radius: 12px;
+}

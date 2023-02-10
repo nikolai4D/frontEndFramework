@@ -43,7 +43,7 @@ export function Modal_SearchResultDetail(model) {
         this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-container')[0].remove()
+            document.querySelector('.modal-container')[0].remove()
             console.log('cross button pressed')
             const modalBg = document.getElementById('modal-background')
             modalBg.style.removeProperty('background-color')
@@ -63,8 +63,6 @@ export function Modal_SearchResultDetail(model) {
               this.content = new Organism_AddToProject(model.organism_addToProject)
             )
 
-            console.log(modalIdSecond, "modelId")
-            console.log(this.modal, "this.modal")
             this.fillSlot("second-modal", this.modal.getElement());
         });
 

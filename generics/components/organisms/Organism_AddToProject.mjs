@@ -9,7 +9,7 @@ export function Organism_AddToProject(model) {
     this.getHtml = function() {
 
         return `
-        <div class="modal">
+        <div id="modal-addToProj" class="modal modal-org-add-to-proj">
             <div class="modal-container modal-add-to-project">
                 <div class="modal-title-section">
                         <div class="modal-search-res-det-upper-section">
@@ -47,8 +47,11 @@ export function Organism_AddToProject(model) {
         this.fillSlot("button", button.getElement());
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelectorAll('.modal-add-to-project')[0].remove()
+            document.querySelector('.modal-add-to-project')[0].remove()
             console.log('cross button pressed')
+
+            const modalAddtoProj = document.getElementById('modal-addToProj')
+            modalAddtoProj.style.removeProperty('background-color')
         });
     }
 }
