@@ -30,12 +30,9 @@ export function Controller() {
 
         if(foundComponent !== null){
             foundComponent.getElement().replaceWith(newComponent.getElement())
-        } 
-        
-        if(parentComponent){ 
-            parentComponent.subComponents[key] = newComponent;
-            if(foundComponent === null) parentComponent.getElement(true)
         }
+        
+        if(parentComponent) parentComponent.subComponents[key] = newComponent;
         else {
             console.warn("Replacing root component")
             this.view.removeElement()

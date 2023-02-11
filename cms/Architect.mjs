@@ -41,12 +41,11 @@ Architect.prototype.outputJSON = function() {
 }
 
 Architect.prototype.onConstructorUpdate = function(id, newConstructorKey) {
-    // swap component
+
     let constructor = constructorMap.get(newConstructorKey)
     let component = new constructor()
     if(!component) throw new Error(`Component type ${newConstructorKey} not found in componentsMap`)
     component.id = id
-    this.controller.swapComponent(id, component)
 
     // swap schema
     let newSchema = buildSchemaFromComponent(component)
@@ -68,7 +67,9 @@ Architect.prototype.onConstructorUpdate = function(id, newConstructorKey) {
     let newPanel = buildElementPanelFromSchema(newSchema, this, constructorMap)
     let panel = this.panel.querySelector(`[data-id="${id}"]`)
     panel.replaceWith(newPanel)
-    component.updateElement()
+
+    // swap component
+    document.getElementById("root").remove();
     this.controller.setView()
 }
 
