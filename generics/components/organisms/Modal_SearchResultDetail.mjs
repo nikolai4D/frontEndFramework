@@ -69,10 +69,8 @@ export function Modal_SearchResultDetail(model) {
 
         const mStyle = this.getElement().style
         mStyle.position = "absolute"
-        // mStyle.width = window.innerWidth + "px"
         mStyle.width = "100vw"
-        // mStyle.height = window.innerHeight + "px"
-        mStyle.height = "100vh"
+        mStyle.height = window.innerHeight + "px"
         mStyle.top = "0px"
         mStyle.left = "0px"
         mStyle.backgroundColor = "rgba(0,0,0,0.5)"

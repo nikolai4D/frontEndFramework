@@ -201,6 +201,9 @@ nav > ul {
     width: 80%;
 }
 
+.overflow-container > div {
+    cursor: pointer;
+}
 
 .organism_add-to-proj {
     display: grid;
