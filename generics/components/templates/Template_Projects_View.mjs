@@ -3,6 +3,7 @@ import { State } from "nd_frontend/core/actions/State.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_ButtonFilledPictures } from "../organisms/Organism_ButtonFilledPictures.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
+import { Modal_ProjectInfo } from "../organisms/Modal_ProjectInfo.mjs";
 
 export function Template_Projects_View ( view )
 {
@@ -15,6 +16,7 @@ export function Template_Projects_View ( view )
         <div class="grid-template-projects">
         ${slot("organismNavbar")}
             ${ slot( "organismButtonFilledPictures" ) }
+            ${slot("projInfoModal")}
         </div>`;
     };
 
@@ -28,5 +30,9 @@ export function Template_Projects_View ( view )
         let organismButtonFilledPictures = new Organism_ButtonFilledPictures( model.Organism_ButtonFilledPictures );
 
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
+
+        let projInfoModal = new Modal_ProjectInfo(model.content)
+        this.fillSlot("projInfoModal", projInfoModal.getElement())
+
     };
 }

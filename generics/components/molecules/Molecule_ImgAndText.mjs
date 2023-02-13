@@ -24,5 +24,10 @@ export function Molecule_ImageAndText ( model )
         let text1 = new Atom_Text1( model.atom_text1 );
         this.fillSlot( "img", img.getElement() );
         this.fillSlot( "text1", text1.getElement() );
+
+        this.getElement().querySelector(".molecule_image-and-text").addEventListener("click", () => {
+            // document.querySelectorAll('.modal')[0].remove()
+            console.log("card proj pressed")
+        });
     };
 }
