@@ -33,11 +33,11 @@ export function Organism_ProjectInfo(model) {
         let molecule2 = new Molecule_ProjectState(model.molecule_projectState)
         this.fillSlot("molecule2", molecule2.getElement());
 
-        let checkbox1 = new Molecule_ListCheckBox(model.molecule_listCheckbox1)
-        this.fillSlot("checkbox1", checkbox1.getElement());
+        // let checkbox1 = new Molecule_ListCheckBox(model.molecule_listCheckbox1)
+        // this.fillSlot("checkbox1", checkbox1.getElement());
 
-        let checkbox2 = new Molecule_ListCheckBox(model.molecule_listCheckbox2)
-        this.fillSlot("checkbox2", checkbox2.getElement());
+        // let checkbox2 = new Molecule_ListCheckBox(model.molecule_listCheckbox2)
+        // this.fillSlot("checkbox2", checkbox2.getElement());
 
         let button = new Atom_ButtonPositive(model.atom_buttonPositive)
         this.fillSlot("button", button.getElement());

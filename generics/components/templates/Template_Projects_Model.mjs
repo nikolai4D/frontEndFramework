@@ -256,7 +256,7 @@ export function Template_Projects_Model ( model )
               text : model.projModalAbout
             },
             atom_image : {
-              src: "",
+              src: "https://images.pexels.com/photos/3609139/pexels-photo-3609139.jpeg",
               alt: "project picture"
             }
           },
