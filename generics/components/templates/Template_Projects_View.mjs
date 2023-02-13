@@ -44,18 +44,18 @@ export function Template_Projects_View ( view )
         // let projInfoModal = new Organism_ProjectInfo(model.organism_projectInfo)
         // this.fillSlot("projInfoModal", projInfoModal.getElement())
 
-        this.getElement().querySelector("#mol-img-text").addEventListener("click", (e) => {
+        this.getElement().querySelector("#org-cards-container").addEventListener("click", (e) => {
             console.log('btn-project button pressed')
             
     
-            const modalProjInfo = document.getElementById('modal-projectInfo')
+            // const modalProjInfo = document.getElementById('modal-projectInfo')
             
-            modalProjInfo.innerHTML = `
-                ${slot("new-modal")}
-            `
-            this.modal = new Modal_ProjectInfo(model.content)
+            // modalProjInfo.innerHTML = `
+            //     ${slot("new-modal")}
+            // `
+            // this.modal = new Modal_ProjectInfo(model.content)
 
-            this.fillSlot("new-modal", this.modal.getElement());
+            // this.fillSlot("new-modal", this.modal.getElement());
         });
 
         // const molTextImgage = document.getElementById("#mol-img-text")
