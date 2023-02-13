@@ -79,223 +79,222 @@ export function Template_Projects_Model ( model )
         }
     },
       Organism_ButtonFilledPictures: {
-        btn: {
-          text: model.btnText,
-          onClick: model.onClick,
-        },
-        cards: [
-          {
-            atom_img: {
-              imgSrc: model.cards[ 0 ].imgSrc,
-              imgAlt: model.cards[ 0 ].imgAlt,
-              text: model.cards[ 0 ].text,
-            },
-            atom_text1: {
-              text: model.cards[ 0 ].text,
-            }
+      btn: {
+        text: model.btnText,
+        onClick: model.onClick,
+      },
+      cards: [
+        {
+          atom_img: {
+            imgSrc: model.cards[ 0 ].imgSrc,
+            imgAlt: model.cards[ 0 ].imgAlt,
+            text: model.cards[ 0 ].text,
           },
-          {
-            atom_img: {
-              imgSrc: model.cards[ 1 ].imgSrc,
-              imgAlt: model.cards[ 1 ].imgAlt,
-              text: model.cards[ 1 ].text,
-            },
-            atom_text1: {
-              text: model.cards[ 1 ].text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            atom_img: {
-              imgSrc: model.imgSrc,
-              imgAlt: model.imgAlt,
-              text: model.text,
-            },
-            atom_text1: {
-              text: model.text,
-            }
-          },
-          {
-            content : {
-              organism_projectInfo : {
-                molecule_headingAboutImage : {
-                  atom_heading4 : {
-                    text : model.projModalHeading
-                  },
-                  atom_text1 : {
-                    text : model.projModalAbout
-                  },
-                  atom_image : {
-                    src: "https://images.pexels.com/photos/3609139/pexels-photo-3609139.jpeg",
-                    alt: "project picture"
-                  }
-                },
-                molecule_projectState : {
-                  atom_text1 : {
-                    text : model.previousBox
-                  },
-                  atom_icon1 : {
-                    icon : model.icon6
-                  }, atom_text2 : {
-                    text : model.currentBox
-                  },
-                  atom_icon2 : {
-                    icon : model.icon7
-                  },
-                  atom_text3 : {
-                    text : model.nextBox
-                  }
-                },
-                molecule_listCheckbox1 :{
-                  atom_heading4 : {
-                    text : model.subHeading1
-                  },
-                  items: model.items1
-                },
-                molecule_listCheckbox2 :{
-                  atom_heading4 : {
-                    text : model.subHeading2
-                  },
-                  items : model.items2
-                },
-                atom_buttonPositive : {
-                  text : model.buttonPositive.text,
-                  onClick : model.buttonPositive.onClick
-                }
-              }
-            }
+          atom_text1: {
+            text: model.cards[ 0 ].text,
           }
-        ]
-      }
+        },
+        {
+          atom_img: {
+            imgSrc: model.cards[ 1 ].imgSrc,
+            imgAlt: model.cards[ 1 ].imgAlt,
+            text: model.cards[ 1 ].text,
+          },
+          atom_text1: {
+            text: model.cards[ 1 ].text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        },
+        {
+          atom_img: {
+            imgSrc: model.imgSrc,
+            imgAlt: model.imgAlt,
+            text: model.text,
+          },
+          atom_text1: {
+            text: model.text,
+          }
+        }
+      ]
+    },
+      content : {
+        organism_projectInfo : {
+          molecule_headingAboutImage : {
+            atom_heading4 : {
+              text : model.projModalHeading
+            },
+            atom_text1 : {
+              text : model.projModalAbout
+            },
+            atom_image : {
+              src: "https://images.pexels.com/photos/3609139/pexels-photo-3609139.jpeg",
+              alt: "project picture"
+            }
+          },
+          molecule_projectState : {
+            atom_text1 : {
+              text : model.previousBox
+            },
+            atom_icon1 : {
+              icon : model.icon6
+            }, atom_text2 : {
+              text : model.currentBox
+            },
+            atom_icon2 : {
+              icon : model.icon7
+            },
+            atom_text3 : {
+              text : model.nextBox
+            }
+          },
+          molecule_listCheckbox1 :{
+            atom_heading4 : {
+              text : model.subHeading1
+            },
+            items: model.items1
+          },
+          molecule_listCheckbox2 :{
+            atom_heading4 : {
+              text : model.subHeading2
+            },
+            items : model.items2
+          },
+          atom_buttonPositive : {
+            text : model.buttonPositive.text,
+            onClick : model.buttonPositive.onClick
+          }
+        }
+    }
+
     }
   };
 
