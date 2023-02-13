@@ -29,7 +29,7 @@ export function Molecule_ProjectState(model) {
         let box2 = new Atom_Text1(model.atom_text2)
         this.fillSlot("box2", box2.getElement());
 
-        let icon2 = new Atom_Dropdown(model.atom_icon2)
+        let icon2 = new Atom_Icon(model.atom_icon2)
         this.fillSlot("icon2", icon2.getElement());
 
         let box3 = new Atom_Text1(model.atom_text3)
