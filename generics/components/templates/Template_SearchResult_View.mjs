@@ -29,16 +29,23 @@ export function Template_SearchResult_View(view){
                     <div class="paginator-placement">
                     ${slot("paginator")}
                     </div>
-                    <div class="modal-remove">
-                        <div class="modal-container-remove modal-search-res-det-remove">
-                            <div id="modal-id" class="modal-remove">
+
+                    
+                            <div id="modal-id">
                             </div>
-                        </div>
-                    </div>
+                        
+
                 </div>
             </div>
         </div>`
     }
+
+    // <div class="modal-remove">
+    //                     <div class="modal-container-remove modal-search-res-det-remove">
+    //                         <div id="modal-id" class="modal-remove">
+    //                         </div>
+    //                     </div>
+    //                 </div>
 
     this.bindScript = function() {
         let model = State.views[view].components;
