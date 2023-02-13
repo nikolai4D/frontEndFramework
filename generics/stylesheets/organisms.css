@@ -12,10 +12,10 @@
 
 .organism_buttonFilledPicture_wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 206px);
-    grid-auto-rows: minmax(20px, auto);
+    /* grid-template-columns: repeat(4, 206px); */
+    /* grid-auto-rows: minmax(20px, auto);
     gap: 50px;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .organism_buttonFilledPicture_wrapper::before {
@@ -27,6 +27,11 @@
 #organism_buttonFilledPicture_btnParent {
     grid-area: 1 / 4 / 2 / 4;
     display: grid;
+}
+
+.organism_buttonFilledcards {
+    display: grid;
+    grid-area: 3 / 3/ 3 / 5;
 }
 
 .organism_buttonFilledPicture_wrapper > div {
