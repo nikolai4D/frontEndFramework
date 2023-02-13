@@ -2,7 +2,7 @@ import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
 import { Organism_ProjectInfo } from "./Organism_ProjectInfo.mjs";
 
-export function Modal_ProjectInfo(content) {
+export function Modal_ProjectInfo(model) {
     Component.call(this)
 
     this.content = content
