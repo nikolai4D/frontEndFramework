@@ -1,7 +1,6 @@
-import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
 
-export function O_Modal(content) {
+export function o_Modal(content) {
     Component.call(this)
 
     this.subComponents = {

@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function O_SignupForm(model) {
+export function o_SignupForm(model) {
     Component.call(this)
 
     this.subComponents = {

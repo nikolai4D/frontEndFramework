@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 
 
-export function O_LoginForm(options){
+export function o_LoginForm(options){
     Component.call(this)
 
     this.subComponents = {

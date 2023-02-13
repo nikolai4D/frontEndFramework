@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
-import {A_link} from "../atoms/a_Link.mjs";
+import {a_Link} from "../atoms/a_Link.mjs";
 
-export function O_NavBar(model){
+export function o_NavBar(model){
     Component.call(this)
 
     this.options = {
@@ -28,7 +28,7 @@ export function O_NavBar(model){
     this.bindScript = function(){
 
         for (let i of this.options.routesMap){
-            let link = new A_link(i[0], i[1], router)
+            let link = new a_Link(i[0], i[1], router)
             this.fillSlot(i[0], link.getElement())
         }
     }

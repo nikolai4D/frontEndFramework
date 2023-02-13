@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export function M_SignupForm(options) {
+export function m_SignupForm(options) {
     Component.call(this)
 
     this.options = {

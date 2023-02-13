@@ -1,6 +1,6 @@
 import {Component} from "../../../core/Component.mjs";
 
-export default function(options) {
+export function m_InputField(model){
     Component.call(this)
 
     this.options = {

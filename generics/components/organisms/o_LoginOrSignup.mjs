@@ -1,5 +1,4 @@
 import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
 import {m_FormOrOther} from "../molecules/m_FormOrOther.mjs";
 
 export function o_LoginOrSignup() {
