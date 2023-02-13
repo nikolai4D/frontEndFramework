@@ -27,8 +27,8 @@ export function Organism_ProjectInfo(model) {
     }
 
     this.bindScript= function() {
-        let molecule1 = new Molecule_headingAboutImage(model.molecule_headingAboutImage)
-        this.fillSlot("molecule1", molecule1.getElement());
+        // let molecule1 = new Molecule_headingAboutImage(model.molecule_headingAboutImage)
+        // this.fillSlot("molecule1", molecule1.getElement());
 
         let molecule2 = new Molecule_ProjectState(model.molecule_projectState)
         this.fillSlot("molecule2", molecule2.getElement());
