@@ -48,14 +48,14 @@ export function Template_Projects_View ( view )
             console.log('btn-project button pressed')
             
     
-            // const modalProjInfo = document.getElementById('modal-projectInfo')
+            const modalProjInfo = document.getElementById('modal-projectInfo')
             
-            // modalProjInfo.innerHTML = `
-            //     ${slot("new-modal")}
-            // `
-            // this.modal = new Modal_ProjectInfo(model.content)
+            modalProjInfo.innerHTML = `
+                ${slot("new-modal")}
+            `
+            this.modal = new Modal_ProjectInfo(model.content)
 
-            // this.fillSlot("new-modal", this.modal.getElement());
+            this.fillSlot("new-modal", this.modal.getElement());
         });
 
         // const molTextImgage = document.getElementById("#mol-img-text")
