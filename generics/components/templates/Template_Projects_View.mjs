@@ -18,7 +18,7 @@ export function Template_Projects_View ( view )
             ${slot("organismNavbar")}
             <div class="organism_btn-filled-pictures">
                 ${slot( "organismButtonFilledPictures")}
-                <div id="modal-projectInfo"></div>
+                
             </div>
             
         </div>`;
@@ -59,18 +59,6 @@ export function Template_Projects_View ( view )
         //     this.fillSlot("new-modal", this.modal.getElement());
         // });
 
-        const molTextImgage = document.getElementById("#mol-img-text")
-        molTextImgage.addEventListener("click", () => {
-
-            const modalProjInfo = document.getElementById('modal-projectInfo')
-            
-            modalProjInfo.innerHTML = `
-                ${slot("new-modal")}
-            `
-            this.modal = new Modal_ProjectInfo(model.content)
-
-            this.fillSlot("new-modal", this.modal.getElement());
-
-        })
+        
     };
 }
