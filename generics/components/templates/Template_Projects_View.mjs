@@ -42,7 +42,7 @@ export function Template_Projects_View ( view )
         // let projInfoModal = new Organism_ProjectInfo(model.organism_projectInfo)
         // this.fillSlot("projInfoModal", projInfoModal.getElement())
 
-        this.getElement().querySelector(".organism_btn-filled-pictures").addEventListener("click", (e) => {
+        this.getElement().querySelector(".molecule_image-and-text").addEventListener("click", (e) => {
             console.log('btn-project button pressed')      
             const modalProjInfo = document.getElementById('modal-projectInfo')
             
