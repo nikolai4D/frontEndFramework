@@ -294,7 +294,6 @@ export function Template_Projects_Model ( model )
           }
         }
       }
-      
     }
   };
 

@@ -5,13 +5,20 @@ import { Organism_ProjectInfo } from "./Organism_ProjectInfo.mjs";
 export function Modal_ProjectInfo(model) {
     Component.call(this)
 
-    this.content = content
-    this.content.modal = this;
+    this.content = model.content
+    this.modal = null;
 
     this.getHtml = function() {
         return `
-        <div class="modal">
+        <div id="modal-background" class="modal">
+            <div class="modal-container modal-search-res-det">
+                <div class="modal-title-section">
+                    <div class="modal-search-res-det-upper-section">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div> 
                 ${slot("content")}
+            </div>
         </div>
         `
     }
