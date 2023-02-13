@@ -25,8 +25,8 @@ export function Molecule_headingAboutImage(model) {
         let about = new Atom_Text1(model.atom_text1)
         this.fillSlot("about", about.getElement());
 
-        // let picture = new Atom_Image(model.atom_image)
-        // this.fillSlot("picture", picture.getElement());
+        let picture = new Atom_Image(model.atom_image)
+        this.fillSlot("picture", picture.getElement());
     }
 
 }
