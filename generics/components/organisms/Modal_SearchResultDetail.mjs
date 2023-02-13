@@ -26,7 +26,7 @@ export function Modal_SearchResultDetail(model) {
                 <div class="org_searh_res_det_btn">
                     ${slot("atom_btnPositive")}
                 </div>
-                <div id="modal-id-second" class="modal"></div>
+                <div id="modal-id-second"></div>
             </div>
         </div>
         
