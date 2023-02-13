@@ -14,7 +14,7 @@ export function Organism_ButtonFilledPictures ( model )
             <div id="organism_buttonFilledPicture_btnParent">
                 ${ slot( "btn" ) }
             </div>
-            <div id="org-cards-container">
+            <div id="org-cards-container" class="organism_buttonFilledPicture_wrapper">
                 ${ ( model.cards.map( ( card, index ) => slot( "card" + index ) ) ).join( "" ) }
             </div>
         </div>
