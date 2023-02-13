@@ -247,7 +247,7 @@ export function Template_Projects_Model ( model )
         ]
       },
       content : {
-        organism_projectInfo :{
+        organism_projectInfo : {
           molecule_headingAboutImage : {
             atom_heading4 : {
               text : model.projModalHeading

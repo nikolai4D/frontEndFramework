@@ -15,11 +15,15 @@ export function Template_Projects_View ( view )
     {
         return `
         <div class="grid-template-projects">
-        ${slot("organismNavbar")}
-            ${ slot( "organismButtonFilledPictures" ) }
-            ${slot("projInfoModal")}
+            ${slot("organismNavbar")}
+            <div class="organism_btn-filled-pictures">
+                ${slot( "organismButtonFilledPictures")}
+            </div>
+            <div id="modal-projectInfo">
         </div>`;
     };
+
+    // ${slot("projInfoModal")}
 
     this.bindScript = function ()
     {
@@ -32,11 +36,24 @@ export function Template_Projects_View ( view )
 
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
 
-        let projInfoModal = new Modal_ProjectInfo(model.content)
-        this.fillSlot("projInfoModal", projInfoModal.getElement())
+        // let projInfoModal = new Modal_ProjectInfo(model.content)
+        // this.fillSlot("projInfoModal", projInfoModal.getElement())
 
         // let projInfoModal = new Organism_ProjectInfo(model.organism_projectInfo)
         // this.fillSlot("projInfoModal", projInfoModal.getElement())
+
+        this.getElement().querySelector(".organism_btn-filled-pictures").addEventListener("click", (e) => {
+            console.log('btn-project button pressed')      
+            const modalProjInfo = document.getElementById('modal-projectInfo')
+            
+            modalProjInfo.innerHTML = `
+                ${slot("new-modal")}
+            `
+            this.modal = new Modal_ProjectInfo(model.content)
+
+            this.fillSlot("new-modal", this.modal.getElement());
+        });
+
 
     };
 }
