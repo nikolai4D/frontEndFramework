@@ -28,7 +28,7 @@ export function Molecule_ImageAndText ( model )
         this.fillSlot( "text1", text1.getElement() );
 
 
-        this.getElement().querySelectorAll("molecule_image-and-text").addEventListener("click", (e) => {
+        this.getElement().querySelectorAll("div.molecule_image-and-text").addEventListener("click", (e) => {
             console.log('btn-project button pressed')      
             const modalProjInfo = document.getElementById('modal-projectInfo')
             
