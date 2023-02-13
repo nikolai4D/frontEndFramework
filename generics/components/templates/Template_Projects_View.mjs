@@ -18,9 +18,8 @@ export function Template_Projects_View ( view )
             ${slot("organismNavbar")}
             <div class="organism_btn-filled-pictures">
                 ${slot( "organismButtonFilledPictures")}
-                
             </div>
-            
+            <div id="modal-projectInfo">
         </div>`;
     };
 
