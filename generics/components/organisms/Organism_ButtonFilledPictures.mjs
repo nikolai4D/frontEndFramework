@@ -34,7 +34,7 @@ export function Organism_ButtonFilledPictures ( model )
             this.fillSlot( "card" + index, card.getElement() );
         } );
 
-        this.getElement().querySelector("organism_buttonfilledPic-cards").addEventListener("click", (e) => {
+        this.getElement().querySelector("div.organism_buttonfilledPic-cards").addEventListener("click", (e) => {
             console.log('btn-project button pressed')      
             const modalProjInfo = document.getElementById('modal-projectInfo')
             
