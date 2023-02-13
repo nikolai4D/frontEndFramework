@@ -14,6 +14,7 @@ export function Molecule_ImageAndText ( model )
             <div class="molecule_image-and-text">
                     ${ slot( "img" ) }
                     ${ slot( "text1" ) }
+                <div id="modal-id" class="modal"></div>
             </div>
         `;
     };
@@ -25,9 +26,9 @@ export function Molecule_ImageAndText ( model )
         this.fillSlot( "img", img.getElement() );
         this.fillSlot( "text1", text1.getElement() );
 
-        // this.getElement().querySelector(".molecule_image-and-text").addEventListener("click", () => {
-        //     // document.querySelectorAll('.modal')[0].remove()
-        //     console.log("card proj pressed")
-        // });
+        this.getElement().querySelector(".molecule_image-and-text").addEventListener("click", () => {
+            // document.querySelectorAll('.modal')[0].remove()
+            console.log("card proj pressed")
+        });
     };
 }

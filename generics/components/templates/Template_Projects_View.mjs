@@ -32,11 +32,11 @@ export function Template_Projects_View ( view )
 
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
 
-        // let projInfoModal = new Modal_ProjectInfo(model.content)
-        // this.fillSlot("projInfoModal", projInfoModal.getElement())
-
-        let projInfoModal = new Organism_ProjectInfo(model.organism_projectInfo)
+        let projInfoModal = new Modal_ProjectInfo(model.content)
         this.fillSlot("projInfoModal", projInfoModal.getElement())
+
+        // let projInfoModal = new Organism_ProjectInfo(model.organism_projectInfo)
+        // this.fillSlot("projInfoModal", projInfoModal.getElement())
 
     };
 }

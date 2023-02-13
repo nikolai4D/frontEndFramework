@@ -246,6 +246,7 @@ export function Template_Projects_Model ( model )
           },
         ]
       },
+      content : {
         organism_projectInfo :{
           molecule_headingAboutImage : {
             atom_heading4 : {
@@ -292,7 +293,7 @@ export function Template_Projects_Model ( model )
             onClick : model.buttonPositive.onClick
           }
         }
-      
+      }
       
     }
   };
