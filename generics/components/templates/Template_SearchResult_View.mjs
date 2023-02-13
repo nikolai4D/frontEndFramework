@@ -3,7 +3,6 @@ import { State } from "nd_frontend/core/actions/State.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Atom_Input } from "nd_frontend/generics/components/atoms/Atom_Input.mjs"
-import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs";
 import { Atom_ButtonPositive } from "nd_frontend/generics/components/atoms/Atom_ButtonPositive.mjs"
 import { Molecule_Paginator } from "nd_frontend/generics/components/molecules/Molecule_Paginator.mjs"
 import { Molecule_HeadingIconAndText } from "nd_frontend/generics/components/molecules/Molecule_HeadingIconAndText.mjs";
@@ -29,23 +28,12 @@ export function Template_SearchResult_View(view){
                     <div class="paginator-placement">
                     ${slot("paginator")}
                     </div>
-
-                    
-                            <div id="modal-id">
-                            </div>
-                        
-
+                    <div id="modal-id">
+                    </div>
                 </div>
             </div>
         </div>`
     }
-
-    // <div class="modal-remove">
-    //                     <div class="modal-container-remove modal-search-res-det-remove">
-    //                         <div id="modal-id" class="modal-remove">
-    //                         </div>
-    //                     </div>
-    //                 </div>
 
     this.bindScript = function() {
         let model = State.views[view].components;
