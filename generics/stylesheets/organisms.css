@@ -29,6 +29,10 @@
     display: grid;
 }
 
+.organism_buttonFilledPicture_wrapper > div {
+    cursor: pointer;
+}
+
 .organism_start-info > *:nth-child(2) {
     max-width: 400px;
     justify-self: center;
