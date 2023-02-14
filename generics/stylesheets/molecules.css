@@ -194,14 +194,17 @@
 
 .molecule-proj_info-checkboxes {
     display: flex;
-    width: 287px;
+    width: 270px;
     margin: auto;
-    gap: 9px;
+    justify-content: space-between;
+    margin-top: 1em;
+
 }
 
 .mol_checkbox-list-heading > .molecule-input-text{
     display: flex;
     gap: 10px;
+    margin-bottom: 1em;
 }
 
 .mol_checkbox-list-heading{
