@@ -49,6 +49,10 @@
     padding: 0 1em;
 }
 
+.organism_buttonFilledcards ::-webkit-scrollbar-track {
+    background: none; 
+}
+
 .organism_buttonFilledPicture_wrapper > div {
     cursor: pointer;
 }
