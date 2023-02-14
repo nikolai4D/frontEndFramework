@@ -9,7 +9,7 @@ export function Molecule_ProjectState(model) {
     this.getHtml = function() {
 
         return `
-            <div class="molecule_text_and_dropdown">
+            <div class="molecule_project-state">
                 ${slot("box1")}
                 ${slot("icon1")}
                 ${slot("box2")}
