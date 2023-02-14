@@ -12,8 +12,8 @@ export function Modal_ProjectInfo(model) {
         return `
         <div id="modal-background" class="modal">
             <div class="modal-container modal-search-res-det">
-                <div class="modal-title-section">
-                    <div class="modal-search-res-det-upper-section">
+                <div class="modal-title-section modal-projInfo-section-bg">
+                    <div class="modal-projInfo-upper-section">
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 

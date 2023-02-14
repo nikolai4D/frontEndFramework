@@ -225,9 +225,16 @@
 
 .molecule_heading-abt-img {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-evenly; */
+    margin: 0 2em 2em;
+    gap: 100px;
 }
 
 .mol_heading-abt > p {
     padding: 0 !important;
+}
+
+.mol_heading-abt {
+    margin-left: 4em;
+    margin-top: 1em;
 }

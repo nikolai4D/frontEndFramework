@@ -89,6 +89,25 @@
   padding-bottom: 2em;
 }
 
+.modal-projectInfo-btn > button {
+  width: 68px;
+}
+
 .modal-projInfo-image {
-  
+  height: 141px;
+  width: 141px;
+}
+
+.modal-projInfo-image > img {
+  height: 100%;
+}
+
+.modal-projInfo-upper-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+}
+
+.modal-projInfo-section-bg {
+  background-color: white;
 }
