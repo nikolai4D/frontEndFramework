@@ -10,8 +10,8 @@ export function Modal_ProjectInfo(model) {
 
     this.getHtml = function() {
         return `
-        <div id="modal-background" class="modal modal-projectInfo">
-            <div class="modal-container modal-search-res-det">
+        <div id="modal-background" class="modal">
+            <div class="modal-container modal-projectInfo">
                 <div class="modal-title-section modal-projInfo-section-bg">
                     <div class="modal-projInfo-upper-section">
                         <i class="bi bi-x"></i>
