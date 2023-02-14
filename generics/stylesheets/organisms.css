@@ -12,26 +12,40 @@
 
 .organism_buttonFilledPicture_wrapper {
     display: grid;
-    /* grid-template-columns: repeat(4, 206px); */
-    /* grid-auto-rows: minmax(20px, auto);
+    grid-template-columns: repeat(4, 206px);
+    grid-auto-rows: minmax(20px, auto);
     gap: 50px;
-    justify-content: center; */
+    justify-content: center;
+    padding: 2em;
+    margin-top: 5em;
 }
 
-.organism_buttonFilledPicture_wrapper::before {
+/* .organism_buttonFilledPicture_wrapper::before {
     content: '';
     grid-area: 1 / 1 / 2 / 5;
     display: grid;
-  }
+  } */
 
 #organism_buttonFilledPicture_btnParent {
-    grid-area: 1 / 4 / 2 / 4;
-    display: grid;
+    grid-area: 1 / 4 / 1 / 4;
+    /* display: grid; */
+}
+
+#organism_buttonFilledPicture_btnParent > button {
+    width: 107px;
 }
 
 .organism_buttonFilledcards {
-    display: grid;
-    grid-area: 3 / 3/ 3 / 5;
+    /* display: grid; */
+    grid-area: 2 / 1 / 2 / 1;
+    overflow-y: scroll;
+    height: 412px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    /* flex-flow: wrap; */
+    width: 891px;
+    padding: 0 1em;
 }
 
 .organism_buttonFilledPicture_wrapper > div {
