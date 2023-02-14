@@ -111,3 +111,7 @@
 .modal-projInfo-section-bg {
   background-color: white;
 }
+
+.modal-projectInfo{
+  width: 568px !important;
+}
