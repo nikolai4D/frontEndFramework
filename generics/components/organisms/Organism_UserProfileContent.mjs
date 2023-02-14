@@ -1,16 +1,22 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
-import { Molecule_TextAndInput } from "nd_frontend/generics/components/molecules/Molecule_TextAndInput.mjs";
-import { Molecule_TextAndDropdown } from "nd_frontend/generics/components/molecules/Molecule_TextAndDropdown.mjs";
-import { Atom_ButtonPositive} from "nd_frontend/generics/components/atoms/Atom_ButtonPositive.mjs"
-import { Atom_Image} from "nd_frontend/generics/components/atoms/Atom_Image.mjs"
+import { Molecule_TextAndInput } from "../molecules/Molecule_TextAndInput.mjs";
+import { Molecule_TextAndDropdown } from "../molecules/Molecule_TextAndDropdown.mjs";
+import { Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs"
+import { Atom_Image} from "../atoms/Atom_Image.mjs";
+import { State } from "nd_frontend/core/actions/State.mjs";
 
 export function Organism_UserProfileContent(model) {
     Component.call(this)
 
     this.getHtml = function(){
         return `
-                  <div class="organism_user-modal">
+                <div id="modal-background" class="organism_user-modal">
+                    <div class="modal-title-section">
+                        <div class="organism_x-button">
+                            <i class="bi bi-x"></i>
+                        </div>
+                    </div> 
                   <div class="upper-section">
                   <div class="input-fields">
                       ${slot("nameAndInput")}
@@ -43,5 +49,13 @@ export function Organism_UserProfileContent(model) {
 
         let image = new Atom_Image(model.atom_image)
         this.fillSlot("image", image.getElement())
+
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelectorAll(".organism_user-modal")[0].remove()
+            console.log("cross button pressed")
+            let modalBg = document.getElementById("modal-user")
+            modalBg.style.removeProperty("background-color")
+            console.log(modalBg)
+        });
     }
 }

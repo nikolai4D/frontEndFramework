@@ -7,7 +7,6 @@ import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Molecule_HeadingIconAndText } from "../molecules/Molecule_HeadingIconAndText.mjs";
 import { Molecule_Paginator } from "../molecules/Molecule_Paginator.mjs"
 
-import { Molecule_UserModal } from "nd_frontend/generics/components/molecules/Molecule_UserModal.mjs";
 
 export function Template_Search_View(view){
     
@@ -28,7 +27,6 @@ export function Template_Search_View(view){
                 ${slot("searchButton")}
             </div>
         </div>
-        ${slot("modal")}
         </div>`
     }
 
@@ -36,9 +34,6 @@ export function Template_Search_View(view){
         let model = State.views[view].components;
         
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
-        let atom_heading4 = new Atom_Heading4(model.atom_heading4)
-        let modal = new Molecule_UserModal(model.content)
-
         this.fillSlot("organismNavbar", organismNavbar.getElement())
 
         let searchInput = new Atom_Input(model.atom_input)
@@ -46,6 +41,5 @@ export function Template_Search_View(view){
 
         let searchButton = new Atom_ButtonNeutral(model.atom_button)
         this.fillSlot("searchButton", searchButton.getElement())
-        this.fillSlot("modal", modal.getElement())
     }
 }

@@ -2,7 +2,10 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Molecule_IconAndLink } from "../molecules/Molecule_IconAndLink.mjs";
 import { Molecule_Logo } from "../molecules/Molecule_Logo.mjs";
-import { Molecule_TextAndButton } from "../molecules/Molecule_TextAndButton.mjs";
+import { Atom_ButtonPositive } from "nd_frontend/generics/components/atoms/Atom_ButtonPositive.mjs";
+import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs";
+import { Modal } from "../organisms/Modal.mjs"
+import { Organism_UserProfileContent } from "nd_frontend/generics/components/organisms/Organism_UserProfileContent.mjs";
 
 export function Organism_Navbar(model){
     Component.call(this)
@@ -10,24 +13,33 @@ export function Organism_Navbar(model){
     this.getHtml = function(){
 
         return `
-        <nav>
-            ${slot("logo")}
-            <ul>
-                ${slot("link1")}
-                ${slot("link2")}
-                ${slot("link3")}
-                ${slot("link4")}
-                ${slot("link5")}
-            </ul>  
-                ${slot("textAndBtn")}
-        </nav>
+        <div>
+            <nav class="my-nav">
+                ${slot("logo")}
+                <ul>
+                    ${slot("link1")}
+                    ${slot("link2")}
+                    ${slot("link3")}
+                    ${slot("link4")}
+                    ${slot("link5")}
+                </ul>  
+                <div class="organism_user-navbar">
+                <div class="user-text">
+                    ${slot("text")}
+                </div>
+                ${slot("btn")}
+            </nav>
+            <div id="user-modal"></div>
+            </div>
+        </div>
+        
         `
     }
-
     this.bindScript = function(){
-        
+
         let logo = new Molecule_Logo(model.molecule_logo)
-        let textAndBtn = new Molecule_TextAndButton(model.molecule_textAndButton)
+        let heading = new Atom_Heading4(model.atom_heading4)
+        let button = new Atom_ButtonPositive(model.atom_buttonPositive)
 
         let link1 = new Molecule_IconAndLink(model.molecule_iconAndLink1)
         let link2 = new Molecule_IconAndLink(model.molecule_iconAndLink2)
@@ -41,6 +53,19 @@ export function Organism_Navbar(model){
         this.fillSlot("link3", link3.getElement())
         this.fillSlot("link4", link4.getElement())
         this.fillSlot("link5", link5.getElement())
-        this.fillSlot("textAndBtn", textAndBtn.getElement());
+        this.fillSlot("text", heading.getElement());
+        this.fillSlot("btn", button.getElement());
+
+        this.getElement().querySelector(".user-text").addEventListener("click", (e) => {
+            console.log("btn-project button pressed")
+            const modalId = document.getElementById("user-modal")
+            modalId.innerHTML = `
+                ${slot("new-modal")}
+            `
+            this.modal = new Modal(
+              this.content = new Organism_UserProfileContent(model.organism_userProfileContent)
+            )
+            this.fillSlot("new-modal", this.modal.getElement());
+            }); 
     }
 }

@@ -6,6 +6,42 @@ export function Template_SearchResult_Model(model) {
             components: {
                
                organism_navbar : {
+                organism_userProfileContent : {
+                    molecule_nameInput : {
+                        atom_text1 : {
+                             text: model.nameInputText
+                        },
+                       atom_input : {
+                        type : model.nameInputType,
+                        placeholder: model.placeholderName
+                       },
+                    },
+                    molecule_emailInput : {
+                        atom_text1 : {
+                             text: model.emailInputText
+                        },
+                       atom_input : {
+                        type : model.emailInputType,
+                        placeholder: model.placeholderEmail
+                       },
+                    },
+                    molecule_textAndDropdown : {
+                        atom_text1 : {
+                             text: model.dropdownInputText
+                        },
+                       atom_dropdown : {
+                        dropdown: model.dropdown
+                       },
+                    },
+                    atom_buttonPositive : {
+                        text: model.buttonPositive.text,
+                        onClick : model.buttonPositive.onClick
+                    },
+                    atom_image : {
+                        src : model.image,
+                        alt : model.alt
+                    }
+                  },
                     molecule_logo : {
                         atom_icon : {
                             icon : model.logoIcon
@@ -72,7 +108,7 @@ export function Template_SearchResult_Model(model) {
                     atom_heading4 : {
                         text : model.user
                     },
-                    atom_button : {
+                    atom_buttonPositive : {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }

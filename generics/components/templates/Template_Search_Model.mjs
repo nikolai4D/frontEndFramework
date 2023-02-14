@@ -4,10 +4,49 @@ export function Template_Search_Model(model) {
     const template_model = {
             view: model.view,
             components: {
-               atom_heading4 : {
+              /*  atom_heading4 : {
                 text : model.startHeading
-               },
+               }, */
                organism_navbar : {
+              
+                    organism_userProfileContent : {
+                        molecule_nameInput : {
+                            atom_text1 : {
+                                 text: model.nameInputText
+                            },
+                           atom_input : {
+                            type : model.nameInputType,
+                            placeholder: model.placeholderName
+                           },
+                        },
+                        molecule_emailInput : {
+                            atom_text1 : {
+                                 text: model.emailInputText
+                            },
+                           atom_input : {
+                            type : model.emailInputType,
+                            placeholder: model.placeholderEmail
+                           },
+                        },
+                        molecule_textAndDropdown : {
+                            atom_text1 : {
+                                 text: model.dropdownInputText
+                            },
+                           atom_dropdown : {
+                            dropdown: model.dropdown
+                           },
+                        },
+                        atom_buttonPositive : {
+                            text: model.buttonPositive.text,
+                            onClick : model.buttonPositive.onClick
+                        },
+                        atom_image : {
+                            src : model.image,
+                            alt : model.alt
+                        }
+                        
+                    }
+                ,
                     molecule_logo : {
                         atom_icon : {
                             icon : model.logoIcon
@@ -62,69 +101,61 @@ export function Template_Search_Model(model) {
                             
                         }
                     },
-                    molecule_textAndButton : {
-                        atom_text1 : {
-                            text : model.user
-                        },
-                        atom_button : {
-                            text : model.button.text,
-                            onClick : model.button.onClick
-                        } 
-                    }, 
                     atom_heading4 : {
                         text : model.user
                     },
-                    atom_button : {
+                    atom_buttonPositive : {
                         text : model.button.text,
                         onClick : model.button.onClick
-                    },
-                    organism_usermodal : {
-                        primary : model.primary
-                    },
-
-                },
-                content : {
-                organism_userProfileContent : {
-                    molecule_nameInput : {
-                        atom_text1 : {
-                             text: model.nameInputText
-                        },
-                       atom_input : {
-                        type : model.nameInputType,
-                        placeholder: model.placeholderName
-                       },
-                    },
-                    molecule_emailInput : {
-                        atom_text1 : {
-                             text: model.emailInputText
-                        },
-                       atom_input : {
-                        type : model.emailInputType,
-                        placeholder: model.placeholderEmail
-                       },
-                    },
-                    molecule_textAndDropdown : {
-                        atom_text1 : {
-                             text: model.dropdownInputText
-                        },
-                       atom_dropdown : {
-                        dropdown: model.dropdown
-                       },
-                    },
-                    atom_buttonPositive : {
-                        text: model.buttonPositive.text,
-                        onClick : model.buttonPositive.onClick
-                    },
-                    atom_image : {
-                        src : model.image,
-                        alt : model.alt
                     }
-                    
-                }
+                },
+                atom_input : {
+                    type: model.inputType,
+                    placeholder: model.inputPlaceholder
+                },
+                atom_button : {
+                    text: model.searchButtonText,
+                    onClick: model.searchButtonClick
+                },
+                atom_heading4 : {
+                    text : model.startHeading
+                   },
+                    searchResult : [{
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    }, 
+                    {
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    },
+                    {
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    },
+                    {
+                        atom_heading4 : {
+                            text : model.headerResult,
+                        },
+                       atom_text1 : {
+                            text : model.headerText
+                       },
+                    },
+                ],
+              
             }
-            
         }
-    }
 
     SEND_VIEWSTATE_TO_STATE(template_model)
 }
