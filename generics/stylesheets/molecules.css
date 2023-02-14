@@ -198,3 +198,17 @@
     margin: auto;
     gap: 9px;
 }
+
+.mol_checkbox-list-heading > .molecule-input-text{
+    display: flex;
+    gap: 10px;
+}
+
+.mol_checkbox-list-heading{
+    display: flex;
+    flex-direction: column; 
+}
+
+.molecule_list > ul{
+    padding: 0;
+}

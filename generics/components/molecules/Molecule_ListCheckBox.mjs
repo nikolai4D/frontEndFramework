@@ -14,9 +14,9 @@ export function Molecule_ListCheckBox(model = {}) {
         return `
                 <div class="molecule_list">
                     ${slot('heading')}
-                    <ul class="molecule_list__list">
+                    <ul class="mol_checkbox-list-heading">
                         ${model.items.map(item => `
-                            <div>
+                            <div class="molecule-input-text">
                                 <input class="atom_input" type="${item.type}" placeholder="${item.placeholder}">
                                 <h4>${item.text}</h4>
                             </div>
