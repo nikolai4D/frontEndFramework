@@ -19,7 +19,7 @@ export function Organism_ProjectInfo(model) {
                     ${slot("checkbox1")}
                     ${slot("checkbox2")}
                 </div>
-                <div class="org_proj_info-btn">
+                <div class="modal-projectInfo-btn">
                 ${slot("button")}
                 <div>
             </div>

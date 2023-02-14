@@ -82,3 +82,9 @@
   height: 161px;
   margin: 0 41px 0 72px;
 }
+
+.modal-projectInfo-btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
