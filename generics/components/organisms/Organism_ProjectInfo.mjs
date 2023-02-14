@@ -15,7 +15,7 @@ export function Organism_ProjectInfo(model) {
             <div class="organism_project_info">
                 ${slot("molecule1")}
                 ${slot("molecule2")}
-                <div class="org-proj_info-checkboxes">
+                <div class="molecule-proj_info-checkboxes">
                     ${slot("checkbox1")}
                     ${slot("checkbox2")}
                 </div>

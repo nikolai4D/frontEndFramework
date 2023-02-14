@@ -182,12 +182,19 @@
     gap: 10px;
 }
 
-.molecule_project-state:nth-child(1n) {
+.molecule_project-state > p:nth-child(1n) {
     border: 1px solid black;
-    padding: 10px;
+    padding: 15px;
 }
 
-.molecule_project-state:nth-last-child(3) {
+.molecule_project-state > p:nth-last-child(3) {
     background-color: #CCCCCC;
     border: none !important;
+}
+
+.molecule-proj_info-checkboxes {
+    display: flex;
+    width: 287px;
+    margin: auto;
+    gap: 9px;
 }
