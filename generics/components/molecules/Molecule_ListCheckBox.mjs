@@ -12,7 +12,7 @@ export function Molecule_ListCheckBox(model = {}) {
 
     this.getHtml = function(){
         return `
-                <div class="molecule_list">
+                <div class="molecule_list-wrapper">
                     ${slot('heading')}
                     <ul class="mol_checkbox-list-heading">
                         ${model.items.map(item => `

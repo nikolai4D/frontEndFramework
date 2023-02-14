@@ -209,6 +209,15 @@
     flex-direction: column; 
 }
 
-.molecule_list > ul{
+.molecule_list-wrapper > ul{
     padding: 0;
+}
+
+.molecule_list-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.molecule_list-wrapper > h4 { 
+    align-self: center;
 }
