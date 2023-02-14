@@ -13,7 +13,9 @@ export function Molecule_headingAboutImage(model) {
             <div class="molecule_heading-abt-img">
                 ${slot("heading")}
                 ${slot("about")}
-                ${slot("picture")}
+                <div>
+                    ${slot("picture")}
+                </div>
             </div>
         `
     }
