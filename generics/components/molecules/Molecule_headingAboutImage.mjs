@@ -15,7 +15,7 @@ export function Molecule_headingAboutImage(model) {
                 ${slot("heading")}
                 ${slot("about")}
                 </div>
-                <div>
+                <div class="modal-projInfo-image">
                     ${slot("picture")}
                 </div>
             </div>

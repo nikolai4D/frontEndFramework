@@ -223,6 +223,11 @@
     align-self: center;
 }
 
-.mol_heading-abt {
-    
+.molecule_heading-abt-img {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mol_heading-abt > p {
+    padding: 0 !important;
 }

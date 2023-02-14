@@ -256,8 +256,8 @@ export function Template_Projects_Model ( model )
             text : model.projModalAbout
           },
           atom_image : {
-            src: "",
-            alt: "project picture"
+            src: model.projImageSrc,
+            alt: model.projImageAlt
           }
         },
         molecule_projectState : {
