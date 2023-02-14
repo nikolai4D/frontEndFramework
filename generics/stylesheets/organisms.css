@@ -33,18 +33,19 @@
 
 #organism_buttonFilledPicture_btnParent > button {
     width: 107px;
+    margin-left: 2.5em;
 }
 
 .organism_buttonFilledcards {
     /* display: grid; */
     grid-area: 2 / 1 / 2 / 1;
     overflow-y: scroll;
-    height: 412px;
+    height: 430px;
     display: flex;
-    gap: 50px;
+    gap: 46px;
     flex-wrap: wrap;
     /* flex-flow: wrap; */
-    width: 891px;
+    width: 933px;
     padding: 0 1em;
 }
 
