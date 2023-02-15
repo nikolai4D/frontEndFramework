@@ -25,6 +25,7 @@ export function Organism_ListAll (model){
                     ${slot('list1')}
                     ${slot('list2')}
                     ${slot('list3')}
+                    <div id="modal-processView">
                 </div>
                 
             </div>
@@ -50,5 +51,21 @@ export function Organism_ListAll (model){
 
         let listComponent3 = new Molecule_List(model.lists3)
         this.fillSlot('list3', listComponent3.getElement())
+
+        // this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
+        //     console.log('btn-project button pressed')     
+
+        //     const modalId = document.getElementById('modal-processView')
+            
+        //     modalId.innerHTML = `
+        //         <div>
+        //             ${slot("new-modal")}
+        //         </div>
+        //         `
+        //     this.modal = new Modal_SearchResultDetail(model.content)
+
+        //     this.fillSlot("new-modal", this.modal.getElement());
+        // });
+
     }
 }
