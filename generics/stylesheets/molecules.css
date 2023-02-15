@@ -182,11 +182,11 @@
     gap: 30px;
 }
 
-.molecule_proc-parentboxes h4:nth-child(1){
+.molecule_proc-parentboxes > *h4:nth-child(1){
     border: 1px solid black;
 }
 
-.molecule_proc-parentboxes i:nth-child(1) {
+.molecule_proc-parentboxes > *i {
     font-size: x-large;
 }
 
