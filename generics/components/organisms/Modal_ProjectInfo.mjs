@@ -45,6 +45,11 @@ export function Modal_ProjectInfo(model) {
                 this.getElement().remove()
             }
         })
+
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelector('#modal-background').remove()
+            console.log('cross button pressed')
+          });
     }
 
     this.show= function() {
