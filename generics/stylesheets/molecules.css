@@ -197,7 +197,6 @@
 
 .molecule_modal_in-output {
     display: flex;
-    justify-content: center;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -209,6 +208,15 @@
 .molecule_modal_in-output > div > ul {
     display: flex;
     flex-direction: column;
+    padding: 23px;
+}
+
+.molecule_modal_in-output > div:nth-last-child(3){
+    background-color: #CCCCCC;
+}
+
+.molecule_modal_in-output > *i {
+    font-size: x-large;
 }
 
 .molecule_process_bigBox {

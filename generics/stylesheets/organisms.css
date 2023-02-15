@@ -151,3 +151,7 @@ nav > ul {
 .organism_process-modal > *i {
     font-size: x-large;
 }
+
+.organism_process-modal div{
+    margin: 2em;
+}
