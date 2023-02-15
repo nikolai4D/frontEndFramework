@@ -4,6 +4,7 @@ import { Atom_Text1} from "../atoms/Atom_Text1.mjs";
 import { Atom_Icon } from "../atoms/Atom_Icon.mjs";
 import { Molecule_List } from "./Molecule_List.mjs";
 import { Atom_Heading4 } from "../atoms/Atom_Heading4.mjs";
+import { Molecule_HeaderAndText } from "../molecules/Molecule_HeaderAndText.mjs"
 
 export function Molecule_ModalInputProcOutput(model) {
     Component.call(this)
@@ -15,7 +16,6 @@ export function Molecule_ModalInputProcOutput(model) {
                 ${slot("box1")}
                 ${slot("icon1")}
                 ${slot("box2")}
-                ${slot("box2b")}
                 ${slot("icon2")}
                 ${slot("box3")}
             </div>
@@ -34,11 +34,14 @@ export function Molecule_ModalInputProcOutput(model) {
         let icon1 = new Atom_Icon(model.atom_icon1)
         this.fillSlot("icon1", icon1.getElement());
 
-        let box2 = new Atom_Heading4(model.atom_heading4)
+        let box2 = new Molecule_HeaderAndText(model.molecule_headerAndText)
         this.fillSlot("box2", box2.getElement());
 
-        let box2b = new Atom_Text1(model.atom_text1)
-        this.fillSlot("box2b", box2b.getElement());
+        // let box2 = new Atom_Heading4(model.atom_heading4)
+        // this.fillSlot("box2", box2.getElement());
+
+        // let box2b = new Atom_Text1(model.atom_text1)
+        // this.fillSlot("box2b", box2b.getElement());
 
         let icon2 = new Atom_Icon(model.atom_icon2)
         this.fillSlot("icon2", icon2.getElement());
