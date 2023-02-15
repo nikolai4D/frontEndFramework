@@ -26,7 +26,7 @@ export function Organism_ListAll (model){
                     ${slot('list1')}
                     ${slot('list2')}
                     ${slot('list3')}
-                    <div id="modal-processView">
+                    <div id="modal-processView"></div>
                 </div>
                 
             </div>
