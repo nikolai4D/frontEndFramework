@@ -147,3 +147,7 @@ nav > ul {
     border-bottom-left-radius: 15px;
     height: 643px;
 }
+
+.organism_process-modal > *i {
+    font-size: x-large;
+}

@@ -175,15 +175,15 @@
 
 .molecule_proc-parentboxes {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    width: 384px;
-    margin: auto;
-    gap: 30px;
+    gap: 22px;
 }
 
 .molecule_proc-parentboxes > h4:nth-child(1n){
     border: 1px solid black;
+    padding: 17px;
+    width: 86px;
 }
 
 .molecule_proc-parentboxes > i:nth-child(1n) {
@@ -202,13 +202,14 @@
     justify-content: space-evenly;
 }
 
-.molecule_modal_in-output:nth-child(1){
+.molecule_modal_in-output > div:nth-child(1n){
     border: 1px solid black;
 }
 
-.molecule_modal_in-output:nth-child(1){
-    border: 1px solid black;
-} 
+.molecule_modal_in-output > div > ul {
+    display: flex;
+    flex-direction: column;
+}
 
 .molecule_process_bigBox {
     display: flex;
@@ -219,7 +220,3 @@
     padding: 3em;
 }
 
-.molecule_modal_in-output > div > ul {
-    display: flex;
-    flex-direction: column;
-}
