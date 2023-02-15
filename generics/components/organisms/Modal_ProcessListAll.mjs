@@ -40,11 +40,11 @@ export function Modal_ProcessListAll(model) {
 
         this.content.getElement().style.backgroundColor = "white"
 
-        this.getElement().addEventListener("click", (e)=>{
-            if(e.target === this.getElement()){
-                this.getElement().remove()
-            }
-        })
+        // this.getElement().addEventListener("click", (e)=>{
+        //     if(e.target === this.getElement()){
+        //         this.getElement().remove()
+        //     }
+        // })
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelector('#modal-background').remove()

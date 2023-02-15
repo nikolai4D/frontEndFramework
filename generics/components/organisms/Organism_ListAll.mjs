@@ -68,5 +68,11 @@ export function Organism_ListAll (model){
             this.fillSlot("new-modal", this.modal.getElement());
         });
 
+        this.getElement().addEventListener("click", (e)=>{
+            if(e.target === this.getElement()){
+                this.getElement().remove()
+            }
+        })
+
     }
 }
