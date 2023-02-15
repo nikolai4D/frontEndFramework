@@ -14,15 +14,18 @@ export function Molecule_ModalInputProcOutput(model) {
             <div class="molecule_modal_in-output">
                 ${slot("box1")}
                 ${slot("icon1")}
-                <div class="molecule_process_bigBox">
-                    ${slot("box2")}
-                    ${slot("box2b")}
-                </div>
+                ${slot("box2")}
+                ${slot("box2b")}
                 ${slot("icon2")}
                 ${slot("box3")}
             </div>
         `
     }
+
+//     <div class="molecule_process_bigBox">
+//     ${slot("box2")}
+//     ${slot("box2b")}
+// </div>
 
     this.bindScript= function() {
         let box1 = new Molecule_List(model.lists1)

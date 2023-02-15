@@ -177,7 +177,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 22px;
+    gap: 10px;
 }
 
 .molecule_proc-parentboxes > h4:nth-child(1n){
@@ -198,7 +198,8 @@
 .molecule_modal_in-output {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 17px;
 }
 
 .molecule_modal_in-output > div:nth-child(1n){
