@@ -1,22 +1,70 @@
-import {Organism_TwoFieldsOneDropdownOnePicture} from "../generics/components/organisms/Organism_TwoFieldsOneDropdownOnePicture.mjs";
+import {Organism_ListDetailProcesses} from "../generics/components/organisms/Organism_ListDetailProcesses.mjs";
 
-let testmodel ={
-    atom_input__1: {
-        placeholder: 'First input',
+let testModel = {
+    topPanel: [
+        {
+            text: "process 1"
+        },
+        {
+            text: "process 2"
+        },
+        {
+            text: "process 3"
+        }
+    ],
+    leftPanel: {
+        atom_heading4: {
+            text: "Heading"
+        },
+        items: [
+            {
+                text: "item 1"
+            },
+            {
+                text: "item 2"
+            },
+            {
+                text: "item 3"
+            }
+        ]
     },
-    atom_input__2: {
-        placeholder: 'Second input',
+    centralPanel: {
+        heading: {
+            text: "Heading"
+        },
+        detail: {
+            text: "Detail  about the process."
+        }
     },
-    atom_dropdown: {
-        text: 'Dropdown',
+    rightPanel: {
+        atom_heading4: {
+            text: "Heading"
+        },
+        items: [
+            {
+                text: "item 1"
+            },
+            {
+                text: "item 2"
+            },
+            {
+                text: "item 3"
+            }
+        ]
     },
-    atom_picture: {
-        src: 'https://www.w3schools.com/images/lamp.jpg',
-        alt: 'flower picture',
-    }
-
+    bottomPanel: [
+        {
+            text: "process 1"
+        },
+        {
+            text: "process 2"
+        },
+        {
+            text: "process 3"
+        }
+    ],
 }
 
-let testedComponent = new Organism_TwoFieldsOneDropdownOnePicture(testmodel)
+let testedComponent = new Organism_ListDetailProcesses(testModel)
 
 document.body.appendChild(testedComponent.getElement())

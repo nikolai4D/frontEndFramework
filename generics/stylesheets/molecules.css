@@ -61,6 +61,10 @@
     justify-items: center;
 }
 
+/*
+Probably use somewhere else.
+I disable it as this css doesnt relate to a list (a vertical collection of items on one column), but to a three column something.
+Below I am rewriting css for what should be the list css.
 .molecule_list__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -77,14 +81,26 @@
 .molecule_list > ul {
     column-gap: 3rem;
 }
+*/
+
+.molecule_list__list {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: 0.5rem;
+}
+
+.molecule_list {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
 
 .molecule_text_and_btn {
     display: flex;
-    justify-content: center;
-    padding: 1em;
     justify-content: end;
     gap: 3em;
-    padding-right: 2em;
+    padding: 1em 2em 1em 1em;
 }
 
 .molecule_text_and_btn > p{
