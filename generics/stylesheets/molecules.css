@@ -175,13 +175,22 @@
 
 .molecule_proc-parentboxes {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
+    width: 384px;
+    margin: auto;
+    gap: 30px;
+}
+
+.molecule_proc-parentboxes:nth-child(2n) {
+    font-size: x-large;
 }
 
 .molecule_modal_in-output {
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .molecule_modal_in-output:nth-child(1){
@@ -201,7 +210,7 @@
     padding: 3em;
 }
 
-.molecule_modal_in-output div > ul {
+.molecule_modal_in-output > div > ul {
     display: flex;
     flex-direction: column;
 }
