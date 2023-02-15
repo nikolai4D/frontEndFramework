@@ -177,3 +177,20 @@
     display: flex;
     justify-content: center;
 }
+
+.molecule_modal_in-output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.molecule_process_bigBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.molecule_modal_in-output div > ul {
+    display: flex;
+    flex-direction: column;
+}

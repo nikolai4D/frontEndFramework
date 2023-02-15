@@ -11,10 +11,10 @@ export function Molecule_ModalInputProcOutput(model) {
     this.getHtml = function() {
 
         return `
-            <div class="molecule_text_and_dropdown">
+            <div class="molecule_modal_in-output">
                 ${slot("box1")}
                 ${slot("icon1")}
-                <div class="molecule_bigBox">
+                <div class="molecule_process_bigBox">
                     ${slot("box2")}
                     ${slot("box2b")}
                 </div>
