@@ -182,8 +182,8 @@
 
 .molecule_proc-parentboxes > h4:nth-child(1n){
     border: 1px solid black;
-    padding: 17px;
-    width: 86px;
+    padding: 21px;
+    width: 74px;
 }
 
 .molecule_proc-parentboxes > i:nth-child(1n) {
@@ -214,18 +214,21 @@
 
 .molecule_modal_in-output > div:nth-last-child(3){
     background-color: #CCCCCC;
+    border: none !important;
+    width: 416px;
+    height: 280px;
 }
 
-.molecule_modal_in-output > *i {
+.molecule_modal_in-output > i:nth-child(1n) {
     font-size: x-large;
 }
 
-.molecule_process_bigBox {
+/* .molecule_process_bigBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: none !important;
     background-color: #CCCCCC;
     padding: 3em;
-}
+} */
 
