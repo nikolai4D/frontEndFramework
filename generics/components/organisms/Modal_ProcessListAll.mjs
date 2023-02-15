@@ -40,17 +40,20 @@ export function Modal_ProcessListAll(model) {
 
         this.content.getElement().style.backgroundColor = "white"
 
-        // this.getElement().addEventListener("click", (e)=>{
-        //     if(e.target === this.getElement()){
-        //         this.getElement().remove()
-        //     }
-        // })
+        this.getElement().addEventListener("click", (e)=>{
+            if(e.target === this.getElement()){
+                this.getElement().remove()
+            }
+        })
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-            document.querySelector('#modal-background').remove()
+            document.querySelectorAll('.modal-container')[0].remove()
             console.log('cross button pressed')
-        });
+            
+            // const modalBg = document.getElementById('modal-background')
+            // modalBg.style.removeProperty('background-color')
 
+        });
     }
 
     this.show= function() {
