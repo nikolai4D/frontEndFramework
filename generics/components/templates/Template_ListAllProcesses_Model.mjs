@@ -126,7 +126,7 @@ export function Template_ListAllProcesses_Model(model) {
                         items : model.items
                     },
                     content : {
-                        organism_ProcessModal : {
+                        organism_processModal : {
                             molecule_modalProcParentBoxes: {
                                 atom_heading4a : {
                                     text : model.boxParent1
@@ -196,7 +196,7 @@ export function Template_ListAllProcesses_Model(model) {
                         }
                     }    
                 },
-                organism_ProcessModal : {
+                organism_processModal : {
                 molecule_modalProcParentBoxes: {
                     atom_heading4a : {
                         text : model.boxParent1

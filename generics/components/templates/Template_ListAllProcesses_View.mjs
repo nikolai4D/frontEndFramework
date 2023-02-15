@@ -22,7 +22,7 @@ export function Template_ListAllProcesses_View(view){
         let model = State.views[view].components;
         let organismNavbar = new Organism_Navbar(model.organism_navbar)
         let organism_listAll = new Organism_ListAll(model.organism_listAll)
-        let modalprocess = new Organism_ProcessModal(model.organism_ProcessModal)
+        let modalprocess = new Organism_ProcessModal(model.organism_processModal)
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
         this.fillSlot("organismListAll", organism_listAll.getElement())
