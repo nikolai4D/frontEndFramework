@@ -184,10 +184,21 @@
     align-items: center;
 }
 
+.molecule_modal_in-output:nth-child(1){
+    border: 1px solid black;
+}
+
+.molecule_modal_in-output:nth-child(1){
+    border: 1px solid black;
+} 
+
 .molecule_process_bigBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: none !important;
+    background-color: #CCCCCC;
+    padding: 3em;
 }
 
 .molecule_modal_in-output div > ul {
