@@ -141,3 +141,8 @@ nav > ul {
     height: 500px;
     width: 80%;
 }
+
+.organism_process-modal {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}

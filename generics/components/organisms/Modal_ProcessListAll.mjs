@@ -11,9 +11,9 @@ export function Modal_ProcessListAll(model) {
     this.getHtml = function() {
         return `
         <div id="modal-background" class="modal">
-            <div class="modal-container modal-search-res-det">
-                <div class="modal-title-section">
-                    <div class="modal-search-res-det-upper-section">
+            <div class="modal-container modal-process-inner-wrap">
+                <div class="modal-process-section">
+                    <div class="modal-process-upper-section">
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 
