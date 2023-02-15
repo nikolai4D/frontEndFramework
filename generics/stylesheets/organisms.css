@@ -172,4 +172,6 @@ nav > ul {
 
 .organism_project_info {
     padding-top: 2em;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
