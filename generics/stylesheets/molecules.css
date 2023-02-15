@@ -172,3 +172,8 @@
     display:grid;
     grid-template-columns: auto auto;
 }
+
+.molecule_proc-parentboxes {
+    display: flex;
+    justify-content: center;
+}

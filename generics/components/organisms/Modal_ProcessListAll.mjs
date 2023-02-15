@@ -48,11 +48,6 @@ export function Modal_ProcessListAll(model) {
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelector('#modal-background').remove()
-            console.log('cross button pressed')
-            
-            // const modalBg = document.getElementById('modal-background')
-            // modalBg.style.removeProperty('background-color')
-
         });
     }
 
