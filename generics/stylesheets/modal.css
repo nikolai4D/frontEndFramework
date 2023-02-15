@@ -106,10 +106,14 @@
   display: flex;
   justify-content: end;
   font-size: x-large;
+  margin-right: 0.5em;
+  padding-top: 0.5em;
 }
 
 .modal-projInfo-section-bg {
   background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .modal-projectInfo{
