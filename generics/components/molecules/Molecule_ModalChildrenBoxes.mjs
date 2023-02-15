@@ -30,13 +30,13 @@ export function Molecule_ModalChildrenBoxes(model) {
         let text1 = new Atom_Heading4(model.atom_heading4a)
         this.fillSlot("text1", text1.getElement());
 
-        let icon2 = new new Atom_Icon(model.atom_icon2)
+        let icon2 = new Atom_Icon(model.atom_icon2)
         this.fillSlot("icon2", icon2.getElement());
 
         let text2 = new Atom_Heading4(model.atom_heading4b)
         this.fillSlot("text2", text2.getElement());
 
-        let icon3 = new new Atom_Icon(model.atom_icon3)
+        let icon3 = new Atom_Icon(model.atom_icon3)
         this.fillSlot("icon3", icon3.getElement());
 
         let text3 = new Atom_Heading4(model.atom_heading4c)
