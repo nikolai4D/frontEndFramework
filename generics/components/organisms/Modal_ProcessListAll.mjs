@@ -46,14 +46,14 @@ export function Modal_ProcessListAll(model) {
             }
         })
 
-        // this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
-        //     document.querySelectorAll('.modal-container')[0].remove()
-        //     console.log('cross button pressed')
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelectorAll('.modal-container')[0].remove()
+            console.log('cross button pressed')
             
-        //     // const modalBg = document.getElementById('modal-background')
-        //     // modalBg.style.removeProperty('background-color')
+            // const modalBg = document.getElementById('modal-background')
+            // modalBg.style.removeProperty('background-color')
 
-        // });
+        });
     }
 
     this.show= function() {
