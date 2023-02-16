@@ -173,6 +173,8 @@
     grid-template-columns: auto auto;
 }
 
+.molecule-modal-proc-first-section
+
 .molecule_proc-parentboxes {
     display: flex;
     justify-content: center;
@@ -222,15 +224,6 @@
 .molecule_modal_in-output > i:nth-child(1n) {
     font-size: xx-large;
 }
-
-/* .molecule_process_bigBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: none !important;
-    background-color: #CCCCCC;
-    padding: 3em;
-} */
 
 .molecule_modal-proc-children {
     display: flex;
