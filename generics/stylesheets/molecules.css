@@ -197,6 +197,7 @@
 .molecule_modal_org_in-output > div:nth-child(1n){
     border: 1px solid black;
     padding: 2em;
+    width: 100px;
 }
 
 .molecule_modal_org_in-output > div > ul {
@@ -219,11 +220,13 @@
 .molecule_modal_org_lists {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 71px;
+    margin: auto;
+    width: 468px;
 }
 
 .molecule_modal_org_lists > div{
-    width: 140px;
+    width: 129px;
 }
 
 .molecule_modal_org_lists > div > ul {
