@@ -2,7 +2,6 @@ import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_SearchResultDetail } from "../organisms/Organism_SearchResultDetail.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
-import { Modal } from "../organisms/Modal.mjs"
 import { Modal_SearchResultDetail } from "../organisms/Modal_SearchResultDetail.mjs";
 import { Organism_AddToProject } from "../organisms/Organism_AddToProject.mjs"
 
@@ -39,16 +38,11 @@ export function Molecule_ModalSearchResultDetail(model) {
     this.fillSlot("content", this.content.getElement());
     this.fillSlot("atom_btnPositive", atom_btnPositive.getElement());
 
-    
     this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
       document.querySelectorAll('.modal-container')[0].remove()
-      console.log('cross button pressed')
     });
 
-
-
     this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
-      console.log('btn-project button pressed')
 
       const modalId = document.getElementById('modal-id')
 
@@ -62,8 +56,6 @@ export function Molecule_ModalSearchResultDetail(model) {
 
       this.fillSlot("new-modal", this.modal.getElement());
       });
-
-
   };
-  
+
 }

@@ -51,8 +51,6 @@ export function Organism_AddToProject(model) {
             const modalSecond = document.getElementById("modal-popUp")
 
             modalSecond.remove()
-
-            console.log('cross button pressed')
         });
     }
 }

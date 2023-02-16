@@ -43,7 +43,6 @@ export function Modal_SearchResultDetail(model) {
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelectorAll('.modal-container')[0].remove()
-            console.log('cross button pressed')
             
             const modalBg = document.getElementById('modal-background')
             modalBg.style.removeProperty('background-color')
@@ -51,10 +50,8 @@ export function Modal_SearchResultDetail(model) {
         });
 
         this.getElement().querySelector(".org_searh_res_det_btn").addEventListener("click", (e) => {
-            console.log('second modal btn-project pressed')
       
             const modalIdSecond = document.getElementById('modal-id-second')
-            console.log(modalIdSecond)
       
             modalIdSecond.innerHTML = `
                 ${slot("second-modal")}

@@ -60,7 +60,6 @@ export function Template_SearchResult_View(view){
 
 
         this.getElement().querySelector(".overflow-container").addEventListener("click", (e) => {
-            console.log('btn-project button pressed')
       
             const modalId = document.getElementById('modal-id')
       
