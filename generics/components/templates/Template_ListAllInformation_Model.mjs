@@ -109,7 +109,8 @@ export function Template_ListAllInformation_Model(model) {
                         },
                         items : model.items
                     }   
-                }
+                },
+                organism_listDetailInformation : model.informationDetailModal
             }
         }
 

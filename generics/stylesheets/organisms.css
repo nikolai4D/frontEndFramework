@@ -150,6 +150,9 @@ nav > ul {
     justify-content: center;
     justify-items: center;
     align-items: center;
+    padding: 2rem;
+    border: 1px solid var(--black-color);
+    border-radius: 1rem;
 }
 
 .organism_list-detail-information * {
@@ -190,23 +193,6 @@ nav > ul {
 
 .organism_list-detail-information__arrow-right {
     grid-area: 1 / 4;
-}
-
-.organism_list-detail-information__process_queue {
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr min-content 1fr;
-    grid-gap: 1rem;
-    align-items: center;
-
-}
-
-.organism_list-detail-information__process_queue > p {
-    border: 1px solid var(--black-color);
-}
-
-.organism_list-detail-information__top > *:nth-child(3) {
-    background-color: var(--grey-color);
-    border-color: var(--grey-color);
 }
 
 .organism_list-detail-information__list {

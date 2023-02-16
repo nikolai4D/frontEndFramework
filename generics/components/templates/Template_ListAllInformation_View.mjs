@@ -3,18 +3,25 @@ import { State } from "nd_frontend/core/actions/State.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Organism_ListAll } from "../organisms/Organism_ListAll.mjs";
+import { Organism_ListDetailInformation } from "nd_frontend/generics/components/organisms/Organism_ListDetailsInformation.mjs";
+import { Button } from "nd_frontend/generics/components/atoms/Button.mjs";
+import { Atom_ButtonPositive } from "nd_frontend/generics/components/atoms/Atom_ButtonPositive.mjs";
+import { Modal } from "nd_frontend/generics/components/organisms/Modal.mjs";
 
 export function Template_ListAllInformation_View(view){
-    
+
     Component.call(this)
 
     this.getHtml = function(){
         return `<div>
-        ${slot("organismNavbar")}
-        ${slot("organismListAll")}
+            ${slot("organismNavbar")}
+            ${slot("organismListAll")}
+            
+            ${slot("test-modal-button")}
+            
+            <div id="information-modal"</div>
+        
         </div>
-
-        <div id="process-modal"></div>
 `
     }
 
@@ -27,7 +34,17 @@ export function Template_ListAllInformation_View(view){
         this.fillSlot("organismListAll", organism_listAll.getElement())
 
 
-        let modal = this.element.querySelector("#process-modal");
+        let informationDetailModal = new Organism_ListDetailInformation(model.organism_listDetailInformation);
+
+        let modalButton = new Atom_ButtonPositive({
+            text: "Open Modal",
+            onClick: () => {
+                let modal = new Modal(informationDetailModal)
+                modal.show()
+            }
+        })
+
+        this.fillSlot("test-modal-button", modalButton.getElement())
 
     }
 }
