@@ -21,6 +21,13 @@ export function Molecule_List (model){
     this.bindScript = function(){
         let heading = new Atom_Heading4(model.atom_heading4)
         this.fillSlot('heading', heading.getElement())
+
+        for (let itemIndex in model.items){
+            if (model.items[itemIndex].onClick){
+                let item = this.element.querySelectorAll('li')[itemIndex]
+                item.addEventListener('click', model.items[itemIndex].onClick)
+            }
+        }
     }
 
 }
