@@ -209,7 +209,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 17px;
+    gap: 10px;
+}
+
+.molecule_modal_in-output > .molecule_header-and-text {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: min-content min-content !important;
+}
+
+.molecule_modal_in-output > .molecule_header-and-text > p {
+    padding: 0;
 }
 
 .molecule_modal_in-output > div:nth-child(1n){
@@ -223,15 +233,11 @@
     padding: 17px;
 }
 
-.molecule_modal_in-output > .molecule_header-and-text > p {
-    padding: 0;
-}
-
 .molecule_modal_in-output > div:nth-last-child(3){
     background-color: #CCCCCC;
     border: none !important;
     width: 416px;
-    /* height: 280px; */
+    height: 266px;
     align-content: none !important;
 }
 
