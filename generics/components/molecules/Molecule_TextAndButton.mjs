@@ -23,7 +23,7 @@ export function Molecule_TextAndButton(model) {
 
     this.bindScript= function() {
         this.modal = new Modal(
-            this.content = new Organism_UserProfileContent(model.organism_userProfileContent))
+            this.content = new Organism_UserProfileContent(model.organism_userProfileContent.userModal))
         let user = new Atom_Text1(model.atom_text1)
         let button = new Atom_ButtonNeutral(model.atom_button)
         this.fillSlot("user", user.getElement());
