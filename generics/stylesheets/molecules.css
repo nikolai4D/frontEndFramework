@@ -216,33 +216,17 @@
     font-size: xx-large;
 }
 
-
-
-
-.molecule_modal-proc-children {
+.molecule_modal_org_lists {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
-.molecule_modal-proc-children > h4:nth-child(1n){
-    border: 1px solid black;
-    padding: 21px;
-    width: 74px;
-}
-
-.molecule_modal-proc-children > i:nth-child(1n) {
-    font-size: xx-large;
-}
-
-.molecule_modal-proc-third-section {
+.molecule_modal_org_lists > div > ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 0;
+    padding: 17px;
 }
 
-.molecule_modal-proc-third-section > i { 
-    font-size: xx-large;
-}
+
+
