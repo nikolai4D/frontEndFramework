@@ -141,3 +141,9 @@ nav > ul {
     height: 500px;
     width: 80%;
 }
+
+.organism_organisation-modal {
+    padding: 5em;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

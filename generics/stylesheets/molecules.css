@@ -222,10 +222,14 @@
     gap: 10px;
 }
 
+.molecule_modal_org_lists > div{
+    width: 140px;
+}
+
 .molecule_modal_org_lists > div > ul {
     display: flex;
     flex-direction: column;
-    padding: 17px;
+    padding: 26px;
 }
 
 

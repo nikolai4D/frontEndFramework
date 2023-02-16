@@ -88,4 +88,10 @@
   justify-content: end;
   font-size: x-large;
   background-color: white;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.modal-organisation-inner-wrap {
+  width: unset;
 }
