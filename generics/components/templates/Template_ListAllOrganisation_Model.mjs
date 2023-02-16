@@ -139,6 +139,9 @@ export function Template_ListAllOrganisation_Model(model) {
                                 items : model.items3
                             }
                         },
+                        atom_icon : {
+                            icon : model.icon8
+                        },
                         molecule_modalOrg_lists : {
                             lists1 : {
                                 atom_heading4 : {
