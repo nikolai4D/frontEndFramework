@@ -145,12 +145,5 @@ nav > ul {
 .organism_process-modal {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-}
-
-.organism_process-modal > *i {
-    font-size: x-large;
-}
-
-.organism_process-modal div{
-    padding: 1em;
+    padding: 2em 4em 4em;
 }

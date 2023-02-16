@@ -173,7 +173,15 @@
     grid-template-columns: auto auto;
 }
 
-.molecule-modal-proc-first-section
+.molecule-modal-proc-first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.molecule-modal-proc-first-section > i{
+    font-size: xx-large;
+}
 
 .molecule_proc-parentboxes {
     display: flex;
