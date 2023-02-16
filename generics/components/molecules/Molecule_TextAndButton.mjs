@@ -28,18 +28,6 @@ export function Molecule_TextAndButton(model) {
         let button = new Atom_ButtonNeutral(model.atom_button)
         this.fillSlot("user", user.getElement());
         this.fillSlot("button", button.getElement());
-
-       /*  this.getElement().querySelector("user-text").addEventListener("click", (e) => {
-            console.log("btn-project button pressed")
-            const modalId = document.getElementById("user-text")
-            modalId.innerHTML = `
-                ${slot("new-modal")}
-            `
-            this.modal = new Modal(
-              this.content = new Organism_UserProfileContent(model.organism_userProfileContent)
-            )
-            this.fillSlot("new-modal", this.modal.getElement());
-            }); */
     }
 
 }

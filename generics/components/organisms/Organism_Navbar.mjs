@@ -57,7 +57,6 @@ export function Organism_Navbar(model){
         this.fillSlot("btn", button.getElement());
 
         this.getElement().querySelector(".user-text").addEventListener("click", (e) => {
-            console.log("btn-project button pressed")
             const modalId = document.getElementById("user-modal")
             modalId.innerHTML = `
                 ${slot("new-modal")}

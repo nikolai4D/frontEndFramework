@@ -52,10 +52,8 @@ export function Organism_UserProfileContent(model) {
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelectorAll(".organism_user-modal")[0].remove()
-            console.log("cross button pressed")
             let modalBg = document.getElementById("modal-user")
             modalBg.style.removeProperty("background-color")
-            console.log(modalBg)
         });
     }
 }

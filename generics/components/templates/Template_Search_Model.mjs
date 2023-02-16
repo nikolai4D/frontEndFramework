@@ -4,9 +4,6 @@ export function Template_Search_Model(model) {
     const template_model = {
             view: model.view,
             components: {
-              /*  atom_heading4 : {
-                text : model.startHeading
-               }, */
                organism_navbar : {
               
                     organism_userProfileContent : {
