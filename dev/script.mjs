@@ -1,5 +1,4 @@
 import {Organism_ListDetailInformation} from "../generics/components/organisms/Organism_ListDetailsInformation.mjs";
-import {Template_ListAllInformation_View} from "../generics/components/templates/Template_ListAllInformation_View.mjs";
 
 let testModel = {
     leftPanel: {
@@ -8,7 +7,10 @@ let testModel = {
         },
         items: [
             {
-                text: "item 1"
+                text: "item 1",
+                onClick: () => {
+                    console.log("clicked")
+                }
             },
             {
                 text: "item 2"
