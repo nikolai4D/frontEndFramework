@@ -18,9 +18,7 @@ export function Template_ListAllInformation_View(view){
             ${slot("organismListAll")}
             
             ${slot("test-modal-button")}
-            
-            <div id="information-modal"</div>
-        
+                    
         </div>
 `
     }
