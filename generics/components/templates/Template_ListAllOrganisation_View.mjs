@@ -25,8 +25,7 @@ export function Template_ListAllOrganisation_View(view){
         this.fillSlot("organismNavbar", organismNavbar.getElement())
         this.fillSlot("organismListAll", organism_listAll.getElement())
 
-        this.getElement().querySelector("#organism_all_lists").addEventListener("click", (e) => {
-            console.log('btn-project button pressed')     
+        this.getElement().querySelector("#organism_all_lists").addEventListener("click", (e) => {    
 
             const modalId = document.getElementById('modal-organisationView')
             
