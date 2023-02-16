@@ -20,15 +20,8 @@
     margin-top: 5em;
 }
 
-/* .organism_buttonFilledPicture_wrapper::before {
-    content: '';
-    grid-area: 1 / 1 / 2 / 5;
-    display: grid;
-  } */
-
 #organism_buttonFilledPicture_btnParent {
     grid-area: 1 / 4 / 1 / 4;
-    /* display: grid; */
 }
 
 #organism_buttonFilledPicture_btnParent > button {
@@ -37,14 +30,12 @@
 }
 
 .organism_buttonFilledcards {
-    /* display: grid; */
     grid-area: 2 / 1 / 2 / 1;
     overflow-y: scroll;
     height: 430px;
     display: flex;
     gap: 46px;
     flex-wrap: wrap;
-    /* flex-flow: wrap; */
     width: 933px;
     padding: 0 1em;
 }
@@ -110,7 +101,6 @@ nav > ul {
     justify-content: space-between;
     justify-items: center;
     align-items: center;
-    /* padding-left: 1rem; */
 }
 
 .organism_list-all-search__top > h2{
@@ -162,7 +152,6 @@ nav > ul {
     margin-left: 10px;
     margin-bottom: 40px;
 }
-
 
 .overflow-container {
     overflow-y: scroll;

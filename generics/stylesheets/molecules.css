@@ -40,7 +40,6 @@
     width: 8rem;
     height: 8rem;
     background-color: #CCCCCC;
-    /* height: 15rem; */
 }
 
 .molecule_paginator {
@@ -226,7 +225,6 @@
 
 .molecule_heading-abt-img {
     display: flex;
-    /* justify-content: space-evenly; */
     margin: 0 2em 2em;
     gap: 100px;
 }

@@ -16,7 +16,7 @@ export function Template_Projects_View ( view )
         <div class="grid-template-projects">
             ${slot("organismNavbar")}
             ${slot( "organismButtonFilledPictures")}
-            <div id="modal-projectInfo">
+            <div id="modal-projectInfo"></div>
         </div>`;
     };
 

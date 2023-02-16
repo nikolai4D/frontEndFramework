@@ -3,11 +3,13 @@ import {slot} from "../../../core/helpers.mjs";
 import { Atom_Heading4} from "../atoms/Atom_Heading4.mjs";
 
 export function Molecule_ListCheckBox(model = {}) {
+    
     const {type="text", placeholder="..."} = model
     this.props = {
         type,
         placeholder
     }
+
     Component.call(this)
 
     this.getHtml = function(){
@@ -26,13 +28,8 @@ export function Molecule_ListCheckBox(model = {}) {
         `
     }
 
-//     ${model.items1.map(item => `
-//     <p>${item.text}</p>
-// `).join('')}
-
     this.bindScript = function(){
         let heading = new Atom_Heading4(model.atom_heading4)
         this.fillSlot('heading', heading.getElement())
     }
-
 }
