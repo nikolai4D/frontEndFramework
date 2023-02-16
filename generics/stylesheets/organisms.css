@@ -143,7 +143,15 @@ nav > ul {
 }
 
 .organism_organisation-modal {
-    padding: 5em;
+    padding: 2em;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1045px;
+}
+
+.organism_organisation-modal > i {
+    font-size: xx-large;
 }

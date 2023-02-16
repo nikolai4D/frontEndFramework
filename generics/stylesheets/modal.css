@@ -90,6 +90,7 @@
   background-color: white;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  padding-right: 0.2em;
 }
 
 .modal-organisation-inner-wrap {
