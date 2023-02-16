@@ -213,9 +213,7 @@
 }
 
 .molecule_modal_in-output > .molecule_header-and-text {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: min-content min-content !important;
+    align-content: unset !important;
 }
 
 .molecule_modal_in-output > .molecule_header-and-text > p {
@@ -238,7 +236,6 @@
     border: none !important;
     width: 416px;
     height: 266px;
-    align-content: none !important;
 }
 
 .molecule_modal_in-output > i:nth-child(1n) {
