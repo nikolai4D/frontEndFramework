@@ -13,8 +13,8 @@ export function Modal_OrganisationListAll(model) {
         return `
         <div id="modal-background" class="modal">
             <div class="modal-container modal-process-inner-wrap">
-                <div class="modal-process-section">
-                    <div class="modal-process-upper-section">
+                <div class="modal-org-section">
+                    <div class="modal-organisation-upper-section">
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 

@@ -82,3 +82,10 @@
   height: 161px;
   margin: 0 41px 0 72px;
 }
+
+.modal-organisation-upper-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  background-color: white;
+}
