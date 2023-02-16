@@ -148,6 +148,8 @@ nav > ul {
     align-items: center;
     gap: 10px;
     padding-top: 20px;
+    justify-content: right;
+    padding-right: 1em;
 }
 
 .organism_lower-section {
