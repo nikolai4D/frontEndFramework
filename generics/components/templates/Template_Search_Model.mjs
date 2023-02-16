@@ -42,7 +42,6 @@ export function Template_Search_Model(model) {
                         alt :model.userModal.alt
                     }
                   },
-                ,
                     molecule_logo : {
                         atom_icon : {
                             icon : model.logoIcon
