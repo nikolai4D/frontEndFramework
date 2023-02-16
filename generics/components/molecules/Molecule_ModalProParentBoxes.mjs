@@ -9,7 +9,7 @@ export function Molecule_ModalProParentBoxes(model) {
     this.getHtml = function() {
 
         return `
-            <div>
+            <div class="molecule-modal-proc-first-section">
                 <div class="molecule_proc-parentboxes">
                     ${slot("box1")}
                     ${slot("icon1")}

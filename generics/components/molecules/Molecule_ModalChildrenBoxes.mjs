@@ -10,7 +10,7 @@ export function Molecule_ModalChildrenBoxes(model) {
     this.getHtml = function() {
 
         return `
-            <div class="molecule_text_and_dropdown">
+            <div class="molecule_modal-proc-third section">
                 ${slot("icon1")}
                 <div class="molecule_modal-proc-children"> 
                     ${slot("text1")}

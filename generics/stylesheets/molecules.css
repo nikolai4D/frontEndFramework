@@ -220,7 +220,7 @@
 }
 
 .molecule_modal_in-output > i:nth-child(1n) {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 /* .molecule_process_bigBox {
@@ -246,5 +246,16 @@
 }
 
 .molecule_modal-proc-children > i:nth-child(1n) {
-    font-size: x-large;
+    font-size: xx-large;
+}
+
+.molecule_modal-proc-third section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+}
+
+.molecule_modal-proc-third section > i { 
+    font-size: xx-large;
 }
