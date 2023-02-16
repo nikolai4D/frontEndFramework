@@ -232,3 +232,19 @@
     padding: 3em;
 } */
 
+.molecule_modal-proc-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.molecule_modal-proc-children > h4:nth-child(1n){
+    border: 1px solid black;
+    padding: 21px;
+    width: 74px;
+}
+
+.molecule_modal-proc-children > i:nth-child(1n) {
+    font-size: x-large;
+}
