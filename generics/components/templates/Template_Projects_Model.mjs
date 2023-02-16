@@ -105,13 +105,6 @@ export function Template_Projects_Model ( model )
               onClick : model.button.onClick
             }, 
     },
-    /* atom_heading4 : {
-      text : model.user
-  },
-  atom_button : {
-      text : model.button.text,
-      onClick : model.button.onClick
-  }, */
       Organism_ButtonFilledPictures: {
         btn: {
           text: model.btnText,
