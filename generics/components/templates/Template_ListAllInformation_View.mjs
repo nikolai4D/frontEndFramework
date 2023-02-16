@@ -1,6 +1,5 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { State } from "nd_frontend/core/actions/State.mjs";
-import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs"
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Organism_ListAll } from "../organisms/Organism_ListAll.mjs";
@@ -13,7 +12,10 @@ export function Template_ListAllInformation_View(view){
         return `<div>
         ${slot("organismNavbar")}
         ${slot("organismListAll")}
-        </div>`
+        </div>
+
+        <div id="process-modal"></div>
+`
     }
 
     this.bindScript = function() {
@@ -23,5 +25,9 @@ export function Template_ListAllInformation_View(view){
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
         this.fillSlot("organismListAll", organism_listAll.getElement())
+
+
+        let modal = this.element.querySelector("#process-modal");
+
     }
 }

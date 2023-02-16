@@ -1,10 +1,8 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import {Atom_Heading4} from "../atoms/Atom_Heading4.mjs";
 import {Atom_Input} from "../atoms/Atom_Input.mjs";
 import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
 import {Molecule_List} from "../molecules/Molecule_List.mjs";
-import {Atom_Heading1} from "../atoms/Atom_Heading1.mjs";
 import {Atom_Heading2} from "../atoms/Atom_Heading2.mjs";
 
 export function Organism_ListAllSearch (model){
