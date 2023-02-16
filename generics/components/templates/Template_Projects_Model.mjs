@@ -10,37 +10,37 @@ export function Template_Projects_Model ( model )
         organism_userProfileContent : {
           molecule_nameInput : {
               atom_text1 : {
-                   text: model.nameInputText
+                   text:model.userModal.nameInputText
               },
              atom_input : {
-              type : model.nameInputType,
-              placeholder: model.placeholderName
+              type :model.userModal.nameInputType,
+              placeholder:model.userModal.placeholderName
              },
           },
           molecule_emailInput : {
               atom_text1 : {
-                   text: model.emailInputText
+                   text:model.userModal.emailInputText
               },
              atom_input : {
-              type : model.emailInputType,
-              placeholder: model.placeholderEmail
+              type :model.userModal.emailInputType,
+              placeholder:model.userModal.placeholderEmail
              },
           },
           molecule_textAndDropdown : {
               atom_text1 : {
-                   text: model.dropdownInputText
+                   text:model.userModal.dropdownInputText
               },
              atom_dropdown : {
-              dropdown: model.dropdown
+              dropdown:model.userModal.dropdown
              },
           },
           atom_buttonPositive : {
-              text: model.buttonPositive.text,
-              onClick : model.buttonPositive.onClick
+              text:model.userModal.buttonPositive.text,
+              onClick :model.userModal.buttonPositive.onClick
           },
           atom_image : {
-              src : model.image,
-              alt : model.alt
+              src :model.userModal.image,
+              alt :model.userModal.alt
           }
         },
         molecule_logo : {

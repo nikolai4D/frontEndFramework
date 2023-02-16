@@ -6,43 +6,42 @@ export function Template_Search_Model(model) {
             components: {
                organism_navbar : {
               
-                    organism_userProfileContent : {
-                        molecule_nameInput : {
-                            atom_text1 : {
-                                 text: model.nameInputText
-                            },
-                           atom_input : {
-                            type : model.nameInputType,
-                            placeholder: model.placeholderName
-                           },
+                organism_userProfileContent : {
+                    molecule_nameInput : {
+                        atom_text1 : {
+                             text:model.userModal.nameInputText
                         },
-                        molecule_emailInput : {
-                            atom_text1 : {
-                                 text: model.emailInputText
-                            },
-                           atom_input : {
-                            type : model.emailInputType,
-                            placeholder: model.placeholderEmail
-                           },
+                       atom_input : {
+                        type :model.userModal.nameInputType,
+                        placeholder:model.userModal.placeholderName
+                       },
+                    },
+                    molecule_emailInput : {
+                        atom_text1 : {
+                             text:model.userModal.emailInputText
                         },
-                        molecule_textAndDropdown : {
-                            atom_text1 : {
-                                 text: model.dropdownInputText
-                            },
-                           atom_dropdown : {
-                            dropdown: model.dropdown
-                           },
+                       atom_input : {
+                        type :model.userModal.emailInputType,
+                        placeholder:model.userModal.placeholderEmail
+                       },
+                    },
+                    molecule_textAndDropdown : {
+                        atom_text1 : {
+                             text:model.userModal.dropdownInputText
                         },
-                        atom_buttonPositive : {
-                            text: model.buttonPositive.text,
-                            onClick : model.buttonPositive.onClick
-                        },
-                        atom_image : {
-                            src : model.image,
-                            alt : model.alt
-                        }
-                        
+                       atom_dropdown : {
+                        dropdown:model.userModal.dropdown
+                       },
+                    },
+                    atom_buttonPositive : {
+                        text:model.userModal.buttonPositive.text,
+                        onClick :model.userModal.buttonPositive.onClick
+                    },
+                    atom_image : {
+                        src :model.userModal.image,
+                        alt :model.userModal.alt
                     }
+                  },
                 ,
                     molecule_logo : {
                         atom_icon : {
