@@ -197,7 +197,7 @@
 }
 
 .molecule_proc-parentboxes > i:nth-child(1n) {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .molecule_proc-parentboxes > h4:nth-last-child(3){
@@ -220,7 +220,7 @@
 .molecule_modal_in-output > div > ul {
     display: flex;
     flex-direction: column;
-    padding: 23px;
+    padding: 17px;
 }
 
 .molecule_modal_in-output > .molecule_header-and-text > p {
