@@ -32,7 +32,6 @@ export function Template_Projects_View ( view )
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
 
         this.getElement().querySelector("#org-cards-container").addEventListener("click", (e) => {
-            console.log('btn-project button pressed')
             
             const modalProjInfo = document.getElementById('modal-projectInfo')
             
