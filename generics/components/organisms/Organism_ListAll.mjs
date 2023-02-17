@@ -49,6 +49,5 @@ export function Organism_ListAll (model){
             let listComponent = new Molecule_List(model.lists[list])
             this.fillSlot('list_'+ list, listComponent.getElement())
         }
-
     }
 }

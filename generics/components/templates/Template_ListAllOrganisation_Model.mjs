@@ -90,24 +90,26 @@ export function Template_ListAllOrganisation_Model(model) {
                         text : model.buttonNeutral.text,
                         onClick : model.buttonNeutral.onClick
                     },
-                    lists1 : {
-                        atom_heading4 : {
-                            text : model.listHeading1
+                    lists : [
+                        {
+                            atom_heading4 : {
+                                text : model.listHeading1
+                            },
+                            items : model.items
                         },
-                        items : model.items
-                    },
-                    lists2 : {
-                        atom_heading4 : {
-                            text : model.listHeading2
+                        {
+                            atom_heading4 : {
+                                text : model.listHeading2
+                            },
+                            items : model.items
                         },
-                        items : model.items
-                    },
-                    lists3 : {
-                        atom_heading4 : {
-                            text : model.listHeading3
-                        },
-                        items : model.items
-                    }   
+                        {
+                            atom_heading4 : {
+                                text : model.listHeading3
+                            },
+                            items : model.items
+                        }  
+                    ],
                 }
             }
         }
