@@ -30,7 +30,7 @@ export function Template_Projects_View ( view )
         let organismButtonFilledPictures = new Organism_ButtonFilledPictures( model.Organism_ButtonFilledPictures );
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
 
-        this.getElement().querySelector("atom_button-positive").addEventListener("click", (e) => {
+        this.getElement().querySelector(".atom_button-positive").addEventListener("click", (e) => {
             console.log('btn-project button pressed')     
 
             const modalId = document.getElementById('modal-addProject')
