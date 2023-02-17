@@ -244,8 +244,84 @@ export function Template_Projects_Model ( model )
               text: model.text,
             }
           },
-        ]
-      }
+        ],
+        // content : {
+        //   organism_btn_positive_add_proj : {
+        //     molecule_text_input1: {
+        //       atom_text1 : {
+        //         text : model.modalHeading1
+        //       },
+        //       atom_input : {
+        //         type : model.inputType1,
+        //         placeholder : model.modalInput1 
+        //       }
+        //     },
+        //     molecule_text_input2 : {
+        //       atom_text1 : {
+        //         text : model.modalHeading2
+        //       },
+        //       atom_input : {
+        //         type : model.inputType2,
+        //         placeholder : model.modalInput2 
+        //       }
+        //     },
+        //     molecule_text_dropdown : {
+        //       atom_text1 : {
+        //         text : model.modalHeading3
+        //       },
+        //       atom_dropdown : {
+        //         text : model.text
+        //       }
+        //     },
+        //     atom_image : {
+        //       src : model.modalImage.src,
+        //       alt : model.modalImage.alt
+        //     },
+        //     atom_button_positive : {
+        //       text : model.buttonPositive.text,
+        //       onClick : model.buttonPositive.onClick
+        //     }
+        //   }
+        // }  
+      },
+      content : {
+        organism_btn_positive_add_proj : {
+          molecule_text_input1: {
+            atom_text1 : {
+              text : model.modalHeading1
+            },
+            atom_input : {
+              type : model.inputType1,
+              placeholder : model.modalInput1 
+            }
+          },
+          molecule_text_input2 : {
+            atom_text1 : {
+              text : model.modalHeading2
+            },
+            atom_input : {
+              type : model.inputType2,
+              placeholder : model.modalInput2 
+            }
+          },
+          molecule_text_dropdown : {
+            atom_text1 : {
+              text : model.modalHeading3
+            },
+            atom_dropdown : {
+              text : model.text
+            }
+          },
+          atom_image : {
+            src : model.modalImage.src,
+            alt : model.modalImage.alt
+          },
+          atom_button_positive : {
+            text : model.buttonPositive.text,
+            onClick : model.buttonPositive.onClick
+          }
+        }
+      }   
     }
   };
 

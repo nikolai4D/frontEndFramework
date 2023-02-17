@@ -3,6 +3,7 @@ import { State } from "nd_frontend/core/actions/State.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_ButtonFilledPictures } from "../organisms/Organism_ButtonFilledPictures.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
+import { Modal_AddProjectProjectsView } from "../organisms/Modal_AddProjectProjectsView.mjs"
 
 export function Template_Projects_View ( view )
 {
@@ -13,8 +14,9 @@ export function Template_Projects_View ( view )
     {
         return `
         <div class="grid-template-projects">
-        ${slot("organismNavbar")}
+            ${slot("organismNavbar")}
             ${ slot( "organismButtonFilledPictures" ) }
+            <div id="modal-addProject"></div>
         </div>`;
     };
 
@@ -26,7 +28,21 @@ export function Template_Projects_View ( view )
         this.fillSlot("organismNavbar", organismNavbar.getElement())
 
         let organismButtonFilledPictures = new Organism_ButtonFilledPictures( model.Organism_ButtonFilledPictures );
-
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
+
+        this.getElement().querySelector("atom_button-positive").addEventListener("click", (e) => {
+            console.log('btn-project button pressed')     
+
+            const modalId = document.getElementById('modal-addProject')
+            
+            modalId.innerHTML = `
+                <div>
+                    ${slot("new-modal")}
+                </div>
+                `
+            this.modal = new Modal_AddProjectProjectsView(model.content)
+
+            this.fillSlot("new-modal", this.modal.getElement());
+        });
     };
 }
