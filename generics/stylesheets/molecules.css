@@ -185,6 +185,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     width: 234px;
+    justify-self: end;
 }
 
 .molecule_text_input_dropdown > .molecule_text_and_dropdown  {
