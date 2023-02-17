@@ -1,10 +1,9 @@
 import { Component } from "nd_frontend/core/Component.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Molecule_TextAndInput } from "../molecules/Molecule_TextAndInput.mjs";
-import { Molecule_textAndDropDown } from "../molecules/Molecule_TextAndDropdown.mjs";
+import { Molecule_TextAndDropdown } from "../molecules/Molecule_TextAndDropdown.mjs";
 import { Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs"
 import { Atom_Image} from "../atoms/Atom_Image.mjs";
-import { State } from "nd_frontend/core/actions/State.mjs";
 
 export function Organism_UserProfileContent(model) {
     Component.call(this)
@@ -41,7 +40,7 @@ export function Organism_UserProfileContent(model) {
         let emailInput = new Molecule_TextAndInput(model.molecule_emailInput)
         this.fillSlot("emailAndInput", emailInput.getElement())
 
-        let textDropdown = new Molecule_textAndDropDown(model.molecule_textAndDropdown)
+        let textDropdown = new Molecule_TextAndDropdown(model.molecule_textAndDropdown)
         this.fillSlot("roleAndDropdown", textDropdown.getElement())
 
         let button =  new Atom_ButtonPositive(model.atom_buttonPositive)
@@ -52,7 +51,7 @@ export function Organism_UserProfileContent(model) {
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelectorAll(".organism_user-modal")[0].remove()
-            let modalBg = document.getElementById("modal-user")
+            let modalBg = document.getElementById("modal-popUp")
             modalBg.style.removeProperty("background-color")
         });
     }
