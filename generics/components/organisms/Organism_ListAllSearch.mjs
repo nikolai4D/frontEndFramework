@@ -2,8 +2,8 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import {Atom_Input} from "../atoms/Atom_Input.mjs";
 import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
-import {Molecule_List} from "../molecules/Molecule_List.mjs";
 import {Atom_Heading2} from "../atoms/Atom_Heading2.mjs";
+import {Molecule_ListFluid} from "../molecules/Molecule_ListFluid.mjs";
 
 export function Organism_ListAllSearch (model){
     Component.call(this)
@@ -49,7 +49,7 @@ export function Organism_ListAllSearch (model){
 
         for (let listIndex in model.lists){
             let list = model.lists[listIndex]
-            let listComponent = new Molecule_List(list)
+            let listComponent = new Molecule_ListFluid(list)
             this.fillSlot('list' + listIndex, listComponent.getElement())
         }
     }

@@ -2,8 +2,8 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import {Atom_Input} from "../atoms/Atom_Input.mjs";
 import {Atom_ButtonPositive} from "../atoms/Atom_ButtonPositive.mjs";
-import {Molecule_List} from "../molecules/Molecule_List.mjs";
 import {Atom_Heading2} from "../atoms/Atom_Heading2.mjs";
+import {Molecule_ListFluid} from "../molecules/Molecule_ListFluid.mjs";
 
 export function Organism_ListAll (model){
 
@@ -46,7 +46,7 @@ export function Organism_ListAll (model){
 
 
         for (let list in model.lists){
-            let listComponent = new Molecule_List(model.lists[list])
+            let listComponent = new Molecule_ListFluid(model.lists[list])
             this.fillSlot('list_'+ list, listComponent.getElement())
         }
     }

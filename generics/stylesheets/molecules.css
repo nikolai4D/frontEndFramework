@@ -189,3 +189,14 @@ Below I am rewriting css for what should be the list css.
     display:grid;
     grid-template-columns: auto auto;
 }
+
+.molecule_list__list-fluid {
+    display: flex;
+    /* grid-template-columns: unset; */
+    grid-auto-flow: column;
+    grid-gap: 0.5rem;
+    padding: 1rem;
+    flex-direction: column;
+    max-height: 10vh;
+    flex-wrap: wrap;
+}
