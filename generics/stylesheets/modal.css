@@ -131,3 +131,8 @@
   font-size: x-large;
   margin-right: 0.1em;
 }
+
+.modal-btn_proj_image {
+  height: 141px;
+  width: 141px;
+}
