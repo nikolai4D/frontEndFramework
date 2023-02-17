@@ -14,7 +14,8 @@ export function Template_Projects_View ( view )
         return `
         <div class="grid-template-projects">
         ${slot("organismNavbar")}
-            ${ slot( "organismButtonFilledPictures" ) }
+            ${slot("organismButtonFilledPictures")}
+            
         </div>`;
     };
 
@@ -28,5 +29,6 @@ export function Template_Projects_View ( view )
         let organismButtonFilledPictures = new Organism_ButtonFilledPictures( model.Organism_ButtonFilledPictures );
 
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
+
     };
 }

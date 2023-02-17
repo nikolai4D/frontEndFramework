@@ -7,7 +7,7 @@ export function Atom_Text1(model) {
     this.getHtml = function() {
 
         return `
-                <p class="atom_text1">${model.text}</p>
+                <p id="user-text" "class="atom_text1">${model.text}</p>
                 `
     }
 

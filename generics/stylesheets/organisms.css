@@ -235,3 +235,33 @@ nav > ul {
 .mod-addToProj-cross {
     justify-content: end !important;
 }
+
+.organism_user-navbar {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    justify-content: right;
+    padding-right: 1em;
+}
+
+.organism_lower-section {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.organism_x-button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.organism_user-navbar h4 {
+    cursor: pointer;
+}
+
+.organism_user-modal{
+    border-radius: 12px;
+}
