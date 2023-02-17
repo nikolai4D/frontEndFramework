@@ -132,7 +132,8 @@
   margin-right: 0.1em;
 }
 
-.modal-btn_proj_image {
+.modal-btn_proj_image > img {
   height: 141px;
   width: 141px;
+  align-self: end;
 }
