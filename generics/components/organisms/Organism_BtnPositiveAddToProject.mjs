@@ -18,7 +18,9 @@ export function Organism_BtnPositiveAddToProject(model) {
                         ${slot("textInput2")}
                         ${slot("textDropDown")}
                     </div>
+                    <div class="modal-btn_proj_image">
                         ${slot("picture")}
+                    </div>
                 </div>
                         ${slot("btnPositive")}
             </div>
