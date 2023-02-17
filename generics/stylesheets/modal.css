@@ -118,7 +118,10 @@
 }
 
 .modal-btn_project-inner-wrap {
-  width: none !important;
+  width: none;
   background-color: white;
+  box-shadow: 5px 15px 5px rgb(0 0 0 / 4%);
+  border: 1px solid #c6c7c8;
+  border-radius: 12px;
 
 }
