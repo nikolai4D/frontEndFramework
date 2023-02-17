@@ -180,11 +180,10 @@
     height: 35px;
 }
 
-.molecule_text_input_dropdown > div {
+.molecule_text_input_dropdown {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-row-gap: 10px; 
     width: 234px;
 }
 
@@ -194,6 +193,7 @@
     justify-content: space-between;
     border: 1px solid red;
     width: unset;
+    margin-top: 1em;
 }
 
 .molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown {
@@ -207,4 +207,8 @@
 
 .molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > button > i {
     padding-left: 65px;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > .dropdown-content {
+    width: 172px;
 }

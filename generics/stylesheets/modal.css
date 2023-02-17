@@ -123,5 +123,11 @@
   box-shadow: 5px 15px 5px rgb(0 0 0 / 4%);
   border: 1px solid #c6c7c8;
   border-radius: 12px;
+}
 
+.modal-btn_proj-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  margin-right: 0.1em;
 }
