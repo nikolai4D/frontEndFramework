@@ -174,5 +174,37 @@
 }
 
 .molecule_text_input_dropdown > div {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    height: 35px;
+}
+
+.molecule_text_input_dropdown > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 10px; 
+    width: 234px;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  {
     display: flex;
+    width: inherit;
+    justify-content: space-between;
+    border: 1px solid red;
+    width: unset;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown {
+    align-self: baseline;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > button {
+    width: 173px;
+    height: 35px;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > button > i {
+    padding-left: 65px;
 }
