@@ -8,6 +8,7 @@ import { Organism_ProjectInfo } from "../organisms/Organism_ProjectInfo.mjs";
 
 export function Template_Projects_View ( view )
 {
+
     Component.call( this );
 
     this.getHtml = function ()
@@ -32,9 +33,9 @@ export function Template_Projects_View ( view )
         this.fillSlot( "organismButtonFilledPictures", organismButtonFilledPictures.getElement() );
 
         this.getElement().querySelector("#org-cards-container").addEventListener("click", (e) => {
-            
+
             const modalProjInfo = document.getElementById('modal-projectInfo')
-            
+
             modalProjInfo.innerHTML = `
                 ${slot("new-modal")}
             `
