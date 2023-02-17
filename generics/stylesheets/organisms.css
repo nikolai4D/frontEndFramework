@@ -235,3 +235,21 @@ nav > ul {
 .mod-addToProj-cross {
     justify-content: end !important;
 }
+
+.organism_btn_projects_modal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 389px;
+    width: 568px;
+    /* align-items: self-end; */
+}
+
+.organism_btn_projects_modal > button {
+    width: fit-content;
+    height: fit-content;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 2em;
+    justify-self: center;
+}

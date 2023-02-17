@@ -172,3 +172,7 @@
     display:grid;
     grid-template-columns: auto auto;
 }
+
+.molecule_text_input_dropdown > div {
+    display: flex;
+}

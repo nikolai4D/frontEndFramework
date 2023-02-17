@@ -13,14 +13,14 @@ export function Organism_BtnPositiveAddToProject(model) {
         return `
             <div class="organism_btn_projects_modal">
                 <div class="modal_btn_projects_first_section">
-                <div class="molecule_text_input_dropdown">
-                    ${slot("textInput1")}
-                    ${slot("textInput2")}
-                    ${slot("textDropDown")}
+                    <div class="molecule_text_input_dropdown">
+                        ${slot("textInput1")}
+                        ${slot("textInput2")}
+                        ${slot("textDropDown")}
+                    </div>
+                        ${slot("picture")}
                 </div>
-                    ${slot("picture")}
-                </div>
-                    ${slot("btnPositive")}
+                        ${slot("btnPositive")}
             </div>
         ` 
     }

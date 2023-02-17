@@ -110,3 +110,9 @@
   border-radius: 12px;
   height: 628px;
 }
+
+.modal_btn_projects_first_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
