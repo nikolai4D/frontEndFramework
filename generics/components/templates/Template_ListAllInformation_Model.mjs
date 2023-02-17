@@ -1,4 +1,8 @@
 import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_state.mjs";
+import {
+    Organism_ListDetailInformation
+} from "nd_frontend/generics/components/organisms/Organism_ListDetailsInformation.mjs";
+import {Modal} from "nd_frontend/generics/components/organisms/Modal.mjs";
 
 export function Template_ListAllInformation_Model(model) { 
     const template_model = {
@@ -59,7 +63,7 @@ export function Template_ListAllInformation_Model(model) {
                         atom_link : {
                             text : model.link5.text,
                             onClick: model.link5.onClick
-                            
+
                         }
                     },
                     molecule_textAndButton : {
@@ -69,7 +73,7 @@ export function Template_ListAllInformation_Model(model) {
                         atom_button : {
                             text : model.button.text,
                             onClick : model.button.onClick
-                        } 
+                        }
                     }, 
                     atom_heading4 : {
                         text : model.user
@@ -91,28 +95,36 @@ export function Template_ListAllInformation_Model(model) {
                         text : model.buttonNeutral.text,
                         onClick : model.buttonNeutral.onClick
                     },
-                    lists1 : {
-                        atom_heading4 : {
-                            text : model.listHeading1
+                    lists : [
+                        {
+                            atom_heading4 : {
+                                text : model.listHeading1
+                            },
+                            items : model.itemsA
                         },
-                        items : model.items
-                    },
-                    lists2 : {
-                        atom_heading4 : {
-                            text : model.listHeading2
+                        {
+                            atom_heading4 : {
+                                text : model.listHeading2
+                            },
+                            items : model.itemsB
                         },
-                        items : model.items
-                    },
-                    lists3 : {
-                        atom_heading4 : {
-                            text : model.listHeading3
-                        },
-                        items : model.items
-                    }   
+                        {
+                            atom_heading4 : {
+                                text : model.listHeading3
+                            },
+                            items : model.itemsC
+                        }
+                    ]
                 },
-                organism_listDetailInformation : model.informationDetailModal
+                informationDetailModal: model.informationDetailModal,
             }
         }
 
     SEND_VIEWSTATE_TO_STATE(template_model)
+}
+
+function popInformationModal(infoDetailModel){
+    let infoDetail = new Organism_ListDetailInformation(infoDetailModel)
+    let modal = new Modal(infoDetail)
+    modal.show()
 }

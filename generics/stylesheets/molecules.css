@@ -87,6 +87,7 @@ Below I am rewriting css for what should be the list css.
     display: grid;
     grid-template-columns: max-content;
     grid-gap: 0.5rem;
+    padding: 1rem
 }
 
 .molecule_list {

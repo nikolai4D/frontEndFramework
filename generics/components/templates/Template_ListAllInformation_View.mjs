@@ -15,12 +15,9 @@ export function Template_ListAllInformation_View(view){
     this.getHtml = function(){
         return `<div>
             ${slot("organismNavbar")}
-            ${slot("organismListAll")}
-            
-            ${slot("test-modal-button")}
-                    
+            ${slot("organismListAll")}                    
         </div>
-`
+        `
     }
 
     this.bindScript = function() {
@@ -32,17 +29,11 @@ export function Template_ListAllInformation_View(view){
         this.fillSlot("organismListAll", organism_listAll.getElement())
 
 
-        let informationDetailModal = new Organism_ListDetailInformation(model.organism_listDetailInformation);
 
-        let modalButton = new Atom_ButtonPositive({
-            text: "Open Modal",
-            onClick: () => {
-                let modal = new Modal(informationDetailModal)
-                modal.show()
-            }
+        organism_listAll.getElement().addEventListener("click", function(e){
+            let informationDetailModal = new Organism_ListDetailInformation(model.informationDetailModal);
+            let modal = new Modal(informationDetailModal);
+            modal.show();
         })
-
-        this.fillSlot("test-modal-button", modalButton.getElement())
-
     }
 }

@@ -11,6 +11,10 @@ export function Organism_ListAll (model){
 
     this.getHtml = function(){
 
+        let lists = model.lists.map((list,i) => {
+            return `${slot("list_"+i)}`
+        })
+
         return `
             <div class="organism_list-all-search">
                 <div class="organism_list-all-search__top">
@@ -22,9 +26,7 @@ export function Organism_ListAll (model){
                     
                 </div>
                 <div class="organism_list-all-search__lists">
-                    ${slot('list1')}
-                    ${slot('list2')}
-                    ${slot('list3')}
+                    ${lists.join('')}
                 </div>
                 
             </div>
@@ -42,13 +44,11 @@ export function Organism_ListAll (model){
         let searchButton = new Atom_ButtonPositive(model.atom_button_positive)
         this.fillSlot('button', searchButton.getElement())
 
-        let listComponent1 = new Molecule_List(model.lists1)
-        this.fillSlot('list1', listComponent1.getElement())
 
-        let listComponent2 = new Molecule_List(model.lists2)
-        this.fillSlot('list2', listComponent2.getElement())
+        for (let list in model.lists){
+            let listComponent = new Molecule_List(model.lists[list])
+            this.fillSlot('list_'+ list, listComponent.getElement())
+        }
 
-        let listComponent3 = new Molecule_List(model.lists3)
-        this.fillSlot('list3', listComponent3.getElement())
     }
 }
