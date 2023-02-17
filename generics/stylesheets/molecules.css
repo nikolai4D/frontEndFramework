@@ -172,3 +172,12 @@
     display:grid;
     grid-template-columns: auto auto;
 }
+
+.molecule_text_and_dropdown {
+    display: flex;
+    padding: 1em;
+    padding-right: 1em;
+    justify-content: end;
+    gap: 3em;
+    padding-right: 2em;
+}

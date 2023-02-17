@@ -2,8 +2,8 @@ import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Molecule_IconAndLink } from "../molecules/Molecule_IconAndLink.mjs";
 import { Molecule_Logo } from "../molecules/Molecule_Logo.mjs";
-import { Atom_ButtonPositive } from "nd_frontend/generics/components/atoms/Atom_ButtonPositive.mjs";
-import { Atom_Heading4 } from "nd_frontend/generics/components/atoms/Atom_Heading4.mjs";
+import { Atom_Text1 } from "nd_frontend/generics/components/atoms/Atom_Text1.mjs";
+import { Atom_ButtonNeutral } from "nd_frontend/generics/components/atoms/Atom_ButtonNeutral.mjs";
 import { Modal } from "../organisms/Modal.mjs"
 import { Organism_UserProfileContent } from "nd_frontend/generics/components/organisms/Organism_UserProfileContent.mjs";
 
@@ -38,8 +38,8 @@ export function Organism_Navbar(model){
     this.bindScript = function(){
 
         let logo = new Molecule_Logo(model.molecule_logo)
-        let heading = new Atom_Heading4(model.atom_heading4)
-        let button = new Atom_ButtonPositive(model.atom_buttonPositive)
+        let heading = new Atom_Text1(model.atom_heading4)
+        let button = new Atom_ButtonNeutral(model.atom_buttonPositive)
 
         let link1 = new Molecule_IconAndLink(model.molecule_iconAndLink1)
         let link2 = new Molecule_IconAndLink(model.molecule_iconAndLink2)
