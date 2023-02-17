@@ -18,14 +18,17 @@ export function Organism_BtnPositiveAddToProject(model) {
                         ${slot("textInput2")}
                         ${slot("textDropDown")}
                     </div>
-                    <div class="modal-btn_proj_image">
                         ${slot("picture")}
-                    </div>
+                    
                 </div>
                         ${slot("btnPositive")}
             </div>
         ` 
     }
+
+    // <div class="modal-btn_proj_image">
+    //                     ${slot("picture")}
+    //                 </div>
 
     this.bindScript= function() {
         let textInput1 = new Molecule_TextAndInput(model.molecule_text_input1)
