@@ -191,7 +191,6 @@
     display: flex;
     width: inherit;
     justify-content: space-between;
-    border: 1px solid red;
     width: unset;
     margin-top: 1em;
 }
@@ -202,7 +201,7 @@
 
 .molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > button {
     width: 173px;
-    height: 35px;
+    height: 38px;
 }
 
 .molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > button > i {
