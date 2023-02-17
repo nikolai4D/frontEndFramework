@@ -6,7 +6,14 @@
   width: 497px;
   box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.04);
   border: 1px solid #c6c7c8;
-  border-radius: 5px;
+  border-radius: 12px;
+}
+
+.model-container-second {
+  width: 497px;
+  box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #c6c7c8;
+  border-radius: 12px;
 }
 
 .upper-section {
@@ -81,4 +88,25 @@
   width: 161px;
   height: 161px;
   margin: 0 41px 0 72px;
+}
+
+.modal-search-res-det-upper-section {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  justify-content: end
+}
+
+.modal-search-res-det {
+  width: 520px;
+  background-color: white;
+}
+
+.modal-add-to-project {
+  width: 328px;
+}
+
+.modal-org-add-to-proj {
+  border-radius: 12px;
+  height: 628px;
 }
