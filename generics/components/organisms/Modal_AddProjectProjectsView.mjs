@@ -12,7 +12,7 @@ export function Modal_AddProjectProjectsView(model) {
     this.getHtml = function() {
         return `
         <div id="modal-background" class="modal">
-            <div class="modal-container modal-process-inner-wrap">
+            <div class="modal-container modal-btn_project-inner-wrap">
                 <div class="modal-process-section">
                     <div class="modal-process-upper-section">
                         <i class="bi bi-x"></i>

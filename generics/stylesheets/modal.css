@@ -116,3 +116,9 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
 }
+
+.modal-btn_project-inner-wrap {
+  width: none !important;
+  background-color: white;
+
+}
