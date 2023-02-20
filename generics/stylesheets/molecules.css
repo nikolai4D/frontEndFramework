@@ -37,8 +37,9 @@
     padding: 30px;
     /* gap: 20px; */
     border: solid 1px black;
-    width: 9rem;
-    height: 15rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: #CCCCCC;
 }
 
 .molecule_paginator {
@@ -171,6 +172,70 @@
 .molecule_checkbox {
     display:grid;
     grid-template-columns: auto auto;
+}
+
+.molecule_project-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 2.5em;
+}
+
+.molecule_project-state > p:nth-child(1n) {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.molecule_project-state > p:nth-last-child(3) {
+    background-color: #CCCCCC;
+    border: none !important;
+}
+
+.molecule-proj_info-checkboxes {
+    display: flex;
+    width: 270px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.mol_checkbox-list-heading > .molecule-input-text{
+    display: flex;
+    gap: 10px;
+}
+
+.mol_checkbox-list-heading{
+    display: flex;
+    flex-direction: column;
+}
+
+.molecule_list-wrapper > ul{
+    padding: 0;
+}
+
+.molecule_list-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.molecule_list-wrapper > h4 {
+    align-self: center;
+}
+
+.molecule_heading-abt-img {
+    display: flex;
+    margin: 0 2em 2em;
+    gap: 100px;
+}
+
+.mol_heading-abt > p {
+    padding: 0 !important;
+}
+
+.mol_heading-abt {
+    margin-left: 4em;
+    margin-top: 1em;
 }
 
 .molecule_text_and_dropdown {

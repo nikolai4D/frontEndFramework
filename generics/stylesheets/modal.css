@@ -90,6 +90,44 @@
   margin: 0 41px 0 72px;
 }
 
+.modal-projectInfo-btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.modal-projectInfo-btn > button {
+  width: 68px;
+}
+
+.modal-projInfo-image {
+  height: 141px;
+  width: 141px;
+}
+
+.modal-projInfo-image > img {
+  height: 100%;
+}
+
+.modal-projInfo-upper-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  margin-right: 0.5em;
+  padding-top: 0.5em;
+}
+
+.modal-projInfo-section-bg {
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-projectInfo{
+  width: 568px !important;
+  border-radius: 15px;
+}
+
 .modal-search-res-det-upper-section {
   display: flex;
   align-items: center;
