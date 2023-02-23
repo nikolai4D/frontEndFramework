@@ -25,7 +25,7 @@ export function Template_ListAllProcesses_View(view){
         this.fillSlot("organismNavbar", organismNavbar.getElement())
         this.fillSlot("organismListAll", organism_listAll.getElement())
 
-        this.getElement().querySelector("#organism-proc-lists").addEventListener("click", (e) => {    
+        this.getElement().querySelector("#organism_all_lists").addEventListener("click", (e) => {    
 
             const modalId = document.getElementById('modal-processView')
             

@@ -8,8 +8,6 @@
     grid-template-rows: auto 1fr;
 }
 
-.organism_login-or-signup {}
-
 .organism_buttonFilledPicture_wrapper {
     display: grid;
     grid-template-columns: repeat(4, 206px);
@@ -312,4 +310,19 @@ nav > ul {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 2em 4em 4em;
+}
+
+
+.organism_organisation-modal {
+    padding: 2em;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1045px;
+}
+
+.organism_organisation-modal > i {
+    font-size: xx-large;
 }

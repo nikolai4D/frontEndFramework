@@ -21,7 +21,7 @@ export function Organism_ListAll (model){
                     </div>
                     
                 </div>
-                <div id="organism-proc-lists" class="organism_list-all-search__lists">
+                <div id="organism_all_lists" class="organism_list-all-search__lists">
                     ${slot('list1')}
                     ${slot('list2')}
                     ${slot('list3')}

@@ -343,3 +343,64 @@
 .molecule_modal-proc-third-section > i { 
     font-size: xx-large;
 }
+
+
+.molecule_modal_org_in-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.molecule_modal_org_in-output > .molecule_header-and-text {
+    align-content: unset !important;
+}
+
+.molecule_modal_org_in-output > .molecule_header-and-text > p {
+    padding: 0;
+}
+
+.molecule_modal_org_in-output > div:nth-child(1n){
+    border: 1px solid black;
+    padding: 2em;
+    width: 100px;
+}
+
+.molecule_modal_org_in-output > div > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+}
+
+.molecule_modal_org_in-output > div:nth-last-child(3){
+    background-color: #CCCCCC;
+    border: none !important;
+    width: 411px;
+    height: 283px;
+}
+
+.molecule_modal_org_in-output > i:nth-child(1n) {
+    font-size: xx-large;
+}
+
+.molecule_modal_org_lists {
+    display: flex;
+    justify-content: center;
+    gap: 71px;
+    margin: auto;
+    width: 468px;
+    margin-top: 1em;
+}
+
+.molecule_modal_org_lists > div{
+    width: 129px;
+}
+
+.molecule_modal_org_lists > div > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+}
+
+
+
