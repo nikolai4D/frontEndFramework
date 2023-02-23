@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Molecule_TextAndInput } from "../molecules/Molecule_TextAndInput.mjs";
-import { Molecule_TextAndDropDown } from "../molecules/Molecule_TextAndDropDown.mjs";
+import { Molecule_TextAndDropdown } from "../molecules/Molecule_TextAndDropdown.mjs";
 import { Atom_Image } from "../atoms/Atom_Image.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 
@@ -34,7 +34,7 @@ export function Organism_BtnPositiveAddToProject(model) {
         let textInput2 = new Molecule_TextAndInput(model.molecule_text_input2)
         this.fillSlot("textInput2", textInput2.getElement());
 
-        let textDropDown = new Molecule_TextAndDropDown(model.molecule_text_dropdown)
+        let textDropDown = new Molecule_TextAndDropdown(model.molecule_text_dropdown)
         this.fillSlot("textDropDown", textDropDown.getElement());
 
         let picture = new Atom_Image(model.atom_image)
