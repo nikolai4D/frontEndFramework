@@ -1,22 +1,31 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
+import { Organism_ProjectInfo } from "./Organism_ProjectInfo.mjs";
 
-export function Modal(content) {
+export function Modal_ProjectInfo(model) {
     Component.call(this)
 
-    this.content = content
-    this.content.modal = this;
+    this.content = model.content
+    this.modal = null;
 
     this.getHtml = function() {
         return `
-        <div id="modal-popUp" id="modal-user" class="modal">
+        <div id="modal-background" class="modal">
+            <div class="modal-container modal-projectInfo">
+                <div class="modal-title-section modal-projInfo-section-bg">
+                    <div class="modal-projInfo-upper-section">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div> 
                 ${slot("content")}
+            </div>
         </div>
         `
     }
 
     this.bindScript= function() {
-        this.fillSlot("content", this.content.getElement())
+        this.content = new Organism_ProjectInfo(model.organism_projectInfo)
+        this.fillSlot("content", this.content.getElement());
 
         const mStyle = this.getElement().style
         mStyle.position = "absolute"
@@ -36,6 +45,10 @@ export function Modal(content) {
                 this.getElement().remove()
             }
         })
+
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelector('#modal-background').remove()
+          });
     }
 
     this.show= function() {
