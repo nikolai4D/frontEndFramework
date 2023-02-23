@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
 import { Molecule_TextAndInput } from "../molecules/Molecule_TextAndInput.mjs";
-import { Molecule_textAndDropDown } from "../molecules/Molecule_textAndDropDown.mjs";
+import { Molecule_textAndDropDown } from "../molecules/Molecule_TextAndDropDown.mjs";
 import { Atom_Image } from "../atoms/Atom_Image.mjs";
 import { Atom_ButtonPositive } from "../atoms/Atom_ButtonPositive.mjs";
 
