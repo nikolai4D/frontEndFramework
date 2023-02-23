@@ -275,7 +275,7 @@ nav > ul {
 .organism_lower-section {
     display: flex;
     justify-content: center;
-    padding: 25px;
+    padding-bottom: 5em;
 }
 
 .organism_x-button {
@@ -290,6 +290,10 @@ nav > ul {
 
 .organism_user-modal{
     border-radius: 12px;
+}
+
+.organism_user-modal > .modal-title-section {
+    font-size: x-large;
 }
 
 .organism_user-modal > .upper-section > .input-fields > .molecule_text_and_btn > input {
