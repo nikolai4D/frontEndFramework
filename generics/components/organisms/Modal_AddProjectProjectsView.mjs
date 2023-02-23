@@ -1,6 +1,6 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
-import { Organism_BtnPositiveAddToProject } from "./Organism_btnPositiveAddToProject.mjs";
+import { Organism_BtnPositiveAddToProject } from "./Organism_BtnPositiveAddToProject.mjs";
 
 
 export function Modal_AddProjectProjectsView(model) {
