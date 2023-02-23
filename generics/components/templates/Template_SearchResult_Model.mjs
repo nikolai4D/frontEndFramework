@@ -6,6 +6,42 @@ export function Template_SearchResult_Model(model) {
             components: {
                
                organism_navbar : {
+                organism_userProfileContent : {
+                    molecule_nameInput : {
+                        atom_text1 : {
+                             text:model.userModal.nameInputText
+                        },
+                       atom_input : {
+                        type :model.userModal.nameInputType,
+                        placeholder:model.userModal.placeholderName
+                       },
+                    },
+                    molecule_emailInput : {
+                        atom_text1 : {
+                             text:model.userModal.emailInputText
+                        },
+                       atom_input : {
+                        type :model.userModal.emailInputType,
+                        placeholder:model.userModal.placeholderEmail
+                       },
+                    },
+                    molecule_textAndDropdown : {
+                        atom_text1 : {
+                             text:model.userModal.dropdownInputText
+                        },
+                       atom_dropdown : {
+                        dropdown:model.userModal.dropdown
+                       },
+                    },
+                    atom_buttonPositive : {
+                        text:model.userModal.buttonPositive.text,
+                        onClick :model.userModal.buttonPositive.onClick
+                    },
+                    atom_image : {
+                        src :model.userModal.image,
+                        alt :model.userModal.alt
+                    }
+                  },
                     molecule_logo : {
                         atom_icon : {
                             icon : model.logoIcon
@@ -72,7 +108,7 @@ export function Template_SearchResult_Model(model) {
                     atom_heading4 : {
                         text : model.user
                     },
-                    atom_button : {
+                    atom_buttonPositive : {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
@@ -117,11 +153,105 @@ export function Template_SearchResult_Model(model) {
                         text : model.organisationText
                     },
                 },
-            molecule_paginator : {
-                onPageNumberClick : model.paginator.onPageNumberClick, 
-                numberOfPages : model.paginator.numberOfPages,
-                currentPage : model.paginator.currentPage,
-                pageNumberToDisplay : model.paginator.pageNumberToDisplay
+                molecule_paginator : {
+                    onPageNumberClick : model.paginator.onPageNumberClick, 
+                    numberOfPages : model.paginator.numberOfPages,
+                    currentPage : model.paginator.currentPage,
+                    pageNumberToDisplay : model.paginator.pageNumberToDisplay
+                },
+                content : {
+                    organism_searchResultDetail : {
+                        molecule_headerAndText : {
+                            atom_heading4 : {
+                                text : model.heading
+                            },
+                            atom_text1 : {
+                                text: model.infoText 
+                            }
+                        },
+                        atom_image : {
+                            src : model.src,
+                            alt : model.alt
+                        },
+                        molecule_list1 : {
+                            atom_heading4 : {
+                                text : model.listInfo
+                            },
+                            items: [
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                            ]
+                        },
+                        molecule_list2 : {
+                            atom_heading4 : {
+                                text : model.listProcess
+                            },
+                            items: [
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                            ]
+                        },
+                        molecule_list3 : {
+                            atom_heading4 : {
+                                text : model.listOrg
+                            },
+                            items: [
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                                {text: "List item"},
+                            ]
+                        }
+                    },
+                    atom_buttonPositive : {
+                        text: model.buttonPositive.text
+                    },
+                    organism_addToProject : {
+                        molecule_textAndDropDown1 : {
+                            atom_text1 : {
+                                text : model.projHeader
+                            },
+                            atom_dropdown : {
+                                text : model.dropdown
+                            }
+                        },
+                        molecule_textAndDropDown2 : {
+                            atom_text1 : {
+                                text : model.infoHeader
+                            },
+                            atom_dropdown : {
+                                text : model.dropdown
+                            }
+                        },
+                        molecule_textAndDropDown3 : {
+                            atom_text1 : {
+                                text : model.proHeader
+                            },
+                            atom_dropdown : {
+                                text : model.dropdown
+                            }
+                        },
+                        molecule_textAndDropDown4 : {
+                            atom_text1 : {
+                                text : model.orgHeader
+                            },
+                            atom_dropdown : {
+                                text : model.dropdown
+                            }
+                        },
+                        atom_buttonPositive2 : {
+                            text : model.buttonPositive2.text,
+                            onClick : model.buttonPositive2.onClick
+                        }
+                    }
+
             }
                 
             }

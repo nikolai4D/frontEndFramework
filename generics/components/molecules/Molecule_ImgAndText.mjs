@@ -11,7 +11,7 @@ export function Molecule_ImageAndText ( model )
     {
 
         return `
-            <div class="molecule_image-and-text">
+            <div id="mol-img-text" class="molecule_image-and-text">
                     ${ slot( "img" ) }
                     ${ slot( "text1" ) }
             </div>
