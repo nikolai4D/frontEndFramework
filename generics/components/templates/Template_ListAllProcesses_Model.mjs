@@ -115,19 +115,6 @@ export function Template_ListAllProcesses_Model(model) {
                         text : model.user
                     }, 
                 },
-                atom_heading4 : {
-                    text : model.heading
-                },
-                molecule_inputAndButton : {
-                    atom_input : {
-                        type: model.inputType, 
-                        placeholder : model.inputPlaceholder
-                    },
-                    atom_buttonNeutral : {
-                        text : model.buttonNeutral.text,
-                        onClick : model.buttonNeutral.onClick
-                    }
-                },
                 organism_listAll : {
                     atom_heading4 : {
                         text : model.heading
@@ -157,8 +144,80 @@ export function Template_ListAllProcesses_Model(model) {
                             text : model.listHeading3
                         },
                         items : model.items
-                    }   
-                }
+                    },
+                },
+                content : {
+                    organism_processModal : {
+                        molecule_modalProcParentBoxes: {
+                            atom_heading4a : {
+                                text : model.boxParent1
+                            },
+                            atom_icon1 : {
+                                icon : model.icon6
+                            },
+                            atom_heading4b : {
+                                text : model.boxParent2
+                            },
+                            atom_icon2 : {
+                                icon : model.icon7
+                            },
+                            atom_heading4c : {
+                                text : model.boxParent3
+                            },
+                            atom_icon3 : {
+                                icon : model.icon8
+                            }
+                        },
+                        molecule_modalInputProcOutput : {
+                            lists1 : {
+                                atom_heading4 : {
+                                    text : model.listHeading4
+                                },
+                                items : model.items2
+                            },
+                            atom_icon1 : {
+                                icon : model.icon9
+                            },
+                            molecule_headerAndText : {
+                                atom_heading4 : {
+                                    text : model.centerText
+                                },
+                                atom_text1 : {
+                                    text : model.centerAbout
+                                },
+                            },
+                            atom_icon2 : {
+                                icon : model.icon10
+                            },
+                            lists2 : {
+                                atom_heading4 : {
+                                    text : model.listHeading5
+                                },
+                                items : model.items3
+                            }
+                        },
+                        molecule_modalChildrenBoxes : {
+                            atom_icon1 : {
+                                icon : model.icon11
+                            },
+                            atom_heading4a : {
+                                text : model.boxChild1
+                            },
+                            atom_icon2 : {
+                                icon : model.icon12
+                            },
+                            atom_heading4b : {
+                                text : model.boxChild2
+                            },
+                            atom_icon3 : {
+                                icon : model.icon13
+                            },
+                            atom_heading4c : {
+                                text : model.boxChild3
+                            },
+                        }
+                    }
+                }   
             }
         }
 

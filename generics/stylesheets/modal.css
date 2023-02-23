@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 4em 5em 4em 4em;
 }
 
 .modal-title {
@@ -88,6 +88,25 @@
   width: 161px;
   height: 161px;
   margin: 0 41px 0 72px;
+}
+
+.modal-process-section {
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-process-upper-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  padding-top: 0.2em;
+  padding-right: 0.2em;
+}
+
+.modal-process-inner-wrap {
+  border: none !important;
+  width: 1045px !important;
 }
 
 .modal-projectInfo-btn {

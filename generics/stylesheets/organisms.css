@@ -266,7 +266,7 @@ nav > ul {
     display: flex;
     height: 40px;
     align-items: center;
-    gap: 10px;
+    gap: 40px;
     padding-top: 20px;
     justify-content: right;
     padding-right: 1em;
@@ -275,7 +275,7 @@ nav > ul {
 .organism_lower-section {
     display: flex;
     justify-content: center;
-    padding: 25px;
+    padding-bottom: 5em;
 }
 
 .organism_x-button {
@@ -290,4 +290,26 @@ nav > ul {
 
 .organism_user-modal{
     border-radius: 12px;
+}
+
+.organism_user-modal > .modal-title-section {
+    font-size: x-large;
+}
+
+.organism_user-modal > .upper-section > .input-fields > .molecule_text_and_btn > input {
+    width: 186px;
+}
+
+.organism_user-modal > .upper-section > .input-fields div:not(.molecule_text_and_dropdown) {
+    justify-content: space-between !important;
+}
+
+.organism_user-modal > .upper-section > .input-fields > .molecule_text_and_dropdown > .dropdown > .dropdown-content{
+    min-width: 218px !important;
+}
+
+.organism_process-modal {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 2em 4em 4em;
 }

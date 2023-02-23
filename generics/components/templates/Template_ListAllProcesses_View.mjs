@@ -3,6 +3,7 @@ import { State } from "nd_frontend/core/actions/State.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs";
 import { Organism_ListAll } from "../organisms/Organism_ListAll.mjs";
+import { Modal_ProcessListAll } from "../organisms/Modal_ProcessListAll.mjs";
 
 export function Template_ListAllProcesses_View(view){
     
@@ -12,6 +13,7 @@ export function Template_ListAllProcesses_View(view){
         return `<div>
             ${slot("organismNavbar")}
             ${slot("organismListAll")}
+            <div id="modal-processView"></div>
         </div>`
     }
 
@@ -22,5 +24,19 @@ export function Template_ListAllProcesses_View(view){
 
         this.fillSlot("organismNavbar", organismNavbar.getElement())
         this.fillSlot("organismListAll", organism_listAll.getElement())
+
+        this.getElement().querySelector("#organism-proc-lists").addEventListener("click", (e) => {    
+
+            const modalId = document.getElementById('modal-processView')
+            
+            modalId.innerHTML = `
+                <div>
+                    ${slot("new-modal")}
+                </div>
+                `
+            this.modal = new Modal_ProcessListAll(model.content)
+
+            this.fillSlot("new-modal", this.modal.getElement());
+        });
     }
 }
