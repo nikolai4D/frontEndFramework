@@ -292,6 +292,10 @@ nav > ul {
     border-radius: 12px;
 }
 
+.organism_user-modal > .upper-section > .input-fields > .molecule_text_and_btn > input {
+    width: 186px;
+}
+
 .organism_process-modal {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
