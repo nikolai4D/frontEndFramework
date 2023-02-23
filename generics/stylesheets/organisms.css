@@ -296,8 +296,12 @@ nav > ul {
     font-size: x-large;
 }
 
-.organism_user-modal > .upper-section > .input-fields .molecule_text_and_btn > input {
+.organism_user-modal > .upper-section > .input-fields > .molecule_text_and_btn > input {
     width: 186px;
+}
+
+.organism_user-modal > .upper-section > .input-fields div:not(.molecule_text_and_dropdown) {
+    justify-content: space-between !important;
 }
 
 .organism_process-modal {
