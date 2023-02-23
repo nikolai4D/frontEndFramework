@@ -8,6 +8,42 @@ export function Template_ListAllOrganisation_Model(model) {
                 text : model.startHeading
                },
                organism_navbar : {
+                organism_userProfileContent : {
+                    molecule_nameInput : {
+                        atom_text1 : {
+                             text:model.userModal.nameInputText
+                        },
+                       atom_input : {
+                        type :model.userModal.nameInputType,
+                        placeholder:model.userModal.placeholderName
+                       },
+                    },
+                    molecule_emailInput : {
+                        atom_text1 : {
+                             text:model.userModal.emailInputText
+                        },
+                       atom_input : {
+                        type :model.userModal.emailInputType,
+                        placeholder:model.userModal.placeholderEmail
+                       },
+                    },
+                    molecule_textAndDropdown : {
+                        atom_text1 : {
+                             text:model.userModal.dropdownInputText
+                        },
+                       atom_dropdown : {
+                        dropdown:model.userModal.dropdown
+                       },
+                    },
+                    atom_buttonPositive : {
+                        text:model.userModal.buttonPositive.text,
+                        onClick :model.userModal.buttonPositive.onClick
+                    },
+                    atom_image : {
+                        src :model.userModal.image,
+                        alt :model.userModal.alt
+                    }
+                  },
                     molecule_logo : {
                         atom_icon : {
                             icon : model.logoIcon
@@ -74,7 +110,7 @@ export function Template_ListAllOrganisation_Model(model) {
                     atom_heading4 : {
                         text : model.user
                     },
-                    atom_button : {
+                    atom_buttonPositive : {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
@@ -108,7 +144,62 @@ export function Template_ListAllOrganisation_Model(model) {
                         },
                         items : model.items
                     }   
-                }
+                },
+                content : {
+                    organism_organisation_modal : {
+                        molecule_modalOrg_InputOutput : {
+                            lists1 : {
+                                atom_heading4 : {
+                                    text : model.listHeading4
+                                },
+                                items : model.items2
+                            },
+                            atom_icon1 : {
+                                icon : model.icon6
+                            },
+                            molecule_headerAndText : {
+                                atom_heading4 : {
+                                    text : model.centerText
+                                },
+                                atom_text1 : {
+                                    text : model.centerAbout
+                                },
+                            },
+                            atom_icon2 : {
+                                icon : model.icon7
+                            },
+                            lists2 : {
+                                atom_heading4 : {
+                                    text : model.listHeading5
+                                },
+                                items : model.items3
+                            }
+                        },
+                        atom_icon : {
+                            icon : model.icon8
+                        },
+                        molecule_modalOrg_lists : {
+                            lists1 : {
+                                atom_heading4 : {
+                                    text : model.listHeading6
+                                },
+                                items : model.items4
+                            },
+                            lists2 : {
+                                atom_heading4 : {
+                                    text : model.listHeading7
+                                },
+                                items : model.items4
+                            },
+                            lists3 : {
+                                atom_heading4 : {
+                                    text : model.listHeading8
+                                },
+                                items : model.items4
+                            }
+                        }
+                    }
+                }   
             }
         }
 

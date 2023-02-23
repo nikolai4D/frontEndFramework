@@ -1,9 +1,9 @@
-import {Component} from "../../../core/Component.mjs";
-import {slot} from "../../../core/helpers.mjs";
-import { Atom_Text1} from "../atoms/Atom_Text1.mjs";
-import { Atom_Dropdown } from "../atoms/Atom_Dropdown.mjs"
+import {Component} from "nd_frontend/core/Component.mjs";
+import {slot} from "nd_frontend/core/helpers.mjs";
+import { Atom_Text1} from "nd_frontend/generics/components/atoms/Atom_Text1.mjs";
+import { Atom_Dropdown } from "nd_frontend/generics/components/atoms/Atom_Dropdown.mjs"
 
-export function Molecule_textAndDropDown(model) {
+export function Molecule_TextAndDropdown(model) {
     Component.call(this)
 
     this.getHtml = function() {

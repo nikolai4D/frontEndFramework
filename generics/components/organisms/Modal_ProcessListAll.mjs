@@ -1,22 +1,31 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
+import { Organism_ProcessModal } from "./Organism_ProcessModal.mjs";
 
-export function Modal(content) {
+export function Modal_ProcessListAll(model) {
     Component.call(this)
 
-    this.content = content
-    this.content.modal = this;
+    this.content = model.content;
+    this.modal = null;
 
     this.getHtml = function() {
         return `
-        <div id="modal-popUp" id="modal-user" class="modal">
+        <div id="modal-background" class="modal">
+            <div class="modal-container modal-process-inner-wrap">
+                <div class="modal-process-section">
+                    <div class="modal-process-upper-section">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div> 
                 ${slot("content")}
+            </div>
         </div>
         `
     }
 
     this.bindScript= function() {
-        this.fillSlot("content", this.content.getElement())
+        this.content = new Organism_ProcessModal(model.organism_processModal)
+        this.fillSlot("content", this.content.getElement());
 
         const mStyle = this.getElement().style
         mStyle.position = "absolute"
@@ -36,6 +45,10 @@ export function Modal(content) {
                 this.getElement().remove()
             }
         })
+
+        this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
+            document.querySelector('#modal-background').remove()
+        });
     }
 
     this.show= function() {
