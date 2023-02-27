@@ -12,6 +12,42 @@ export function Template_ListAllInformation_Model(model) {
                 text : model.startHeading
                },
                organism_navbar : {
+                organism_userProfileContent : {
+                    molecule_nameInput : {
+                        atom_text1 : {
+                             text:model.userModal.nameInputText
+                        },
+                       atom_input : {
+                        type :model.userModal.nameInputType,
+                        placeholder:model.userModal.placeholderName
+                       },
+                    },
+                    molecule_emailInput : {
+                        atom_text1 : {
+                             text:model.userModal.emailInputText
+                        },
+                       atom_input : {
+                        type :model.userModal.emailInputType,
+                        placeholder:model.userModal.placeholderEmail
+                       },
+                    },
+                    molecule_textAndDropdown : {
+                        atom_text1 : {
+                             text:model.userModal.dropdownInputText
+                        },
+                       atom_dropdown : {
+                        dropdown:model.userModal.dropdown
+                       },
+                    },
+                    atom_buttonPositive : {
+                        text:model.userModal.buttonPositive.text,
+                        onClick :model.userModal.buttonPositive.onClick
+                    },
+                    atom_image : {
+                        src :model.userModal.image,
+                        alt :model.userModal.alt
+                    }
+                  },
                     molecule_logo : {
                         atom_icon : {
                             icon : model.logoIcon
@@ -78,7 +114,7 @@ export function Template_ListAllInformation_Model(model) {
                     atom_heading4 : {
                         text : model.user
                     },
-                    atom_button : {
+                    atom_buttonPositive : {
                         text : model.button.text,
                         onClick : model.button.onClick
                     }
