@@ -271,55 +271,55 @@ export function Template_Projects_Model ( model )
             text: model.text,
           }
         }
-        ]
-      },
-      content : {
-        organism_projectInfo : {
-          molecule_headingAboutImage : {
-            atom_heading4 : {
-              text : model.projModalHeading
+        ],
+        content : {
+          organism_projectInfo : {
+            molecule_headingAboutImage : {
+              atom_heading4 : {
+                text : model.projModalHeading
+              },
+              atom_text1 : {
+                text : model.projModalAbout
+              },
+              atom_image : {
+                src: model.projImageSrc,
+                alt: model.projImageAlt
+              }
             },
-            atom_text1 : {
-              text : model.projModalAbout
+            molecule_projectState : {
+              atom_text1 : {
+                text : model.previousBox
+              },
+              atom_icon1 : {
+                icon : model.icon6
+              }, atom_text2 : {
+                text : model.currentBox
+              },
+              atom_icon2 : {
+                icon : model.icon7
+              },
+              atom_text3 : {
+                text : model.nextBox
+              }
             },
-            atom_image : {
-              src: model.projImageSrc,
-              alt: model.projImageAlt
+            molecule_listCheckbox1 :{
+              atom_heading4 : {
+                text : model.subHeading1
+              },
+              items: model.items1
+            },
+            molecule_listCheckbox2 :{
+              atom_heading4 : {
+                text : model.subHeading2
+              },
+              items : model.items2
+            },
+            atom_buttonPositive : {
+              text : model.buttonPositive.text,
+              onClick : model.buttonPositive.onClick
             }
-          },
-          molecule_projectState : {
-            atom_text1 : {
-              text : model.previousBox
-            },
-            atom_icon1 : {
-              icon : model.icon6
-            }, atom_text2 : {
-              text : model.currentBox
-            },
-            atom_icon2 : {
-              icon : model.icon7
-            },
-            atom_text3 : {
-              text : model.nextBox
-            }
-          },
-          molecule_listCheckbox1 :{
-            atom_heading4 : {
-              text : model.subHeading1
-            },
-            items: model.items1
-          },
-          molecule_listCheckbox2 :{
-            atom_heading4 : {
-              text : model.subHeading2
-            },
-            items : model.items2
-          },
-          atom_buttonPositive : {
-            text : model.buttonPositive.text,
-            onClick : model.buttonPositive.onClick
           }
-        }
+        },
       },
       content : {
         organism_btn_positive_add_proj : {
