@@ -56,7 +56,7 @@ export function Template_Projects_View ( view )
                 ${slot("new-modal")}
             </div>
             `
-            this.modal = new Modal_AddProjectProjectsView(model.content)
+            this.modal = new Modal_AddProjectProjectsView(model.content2)
 
             this.fillSlot("new-modal", this.modal.getElement());
 
