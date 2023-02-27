@@ -4,8 +4,6 @@ import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_ButtonFilledPictures } from "../organisms/Organism_ButtonFilledPictures.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
 import { Modal_ProjectInfo } from "../organisms/Modal_ProjectInfo.mjs";
-import { Organism_ProjectInfo } from "../organisms/Organism_ProjectInfo.mjs";
-import { Modal_AddProjectProjectsView } from "../organisms/Modal_AddProjectProjectsView.mjs"
 import { Modal_AddProjectProjectsView } from "../organisms/Modal_AddProjectProjectsView.mjs"
 
 export function Template_Projects_View ( view )
