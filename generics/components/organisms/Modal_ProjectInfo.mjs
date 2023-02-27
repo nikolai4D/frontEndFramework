@@ -1,20 +1,19 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
-import { Organism_BtnPositiveAddToProject } from "./Organism_btnPositiveAddToProject.mjs";
+import { Organism_ProjectInfo } from "./Organism_ProjectInfo.mjs";
 
-
-export function Modal_AddProjectProjectsView(model) {
+export function Modal_ProjectInfo(model) {
     Component.call(this)
 
-    this.content = model.content;
+    this.content = model.content
     this.modal = null;
 
     this.getHtml = function() {
         return `
         <div id="modal-background" class="modal">
-            <div class="modal-btn_project-inner-wrap">
-                <div class="modal-btn_proj-section">
-                    <div class="modal-process-upper-section">
+            <div class="modal-container modal-projectInfo">
+                <div class="modal-title-section modal-projInfo-section-bg">
+                    <div class="modal-projInfo-upper-section">
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 
@@ -25,7 +24,7 @@ export function Modal_AddProjectProjectsView(model) {
     }
 
     this.bindScript= function() {
-        this.content = new Organism_BtnPositiveAddToProject(model.organism_btn_positive_add_proj)
+        this.content = new Organism_ProjectInfo(model.organism_projectInfo)
         this.fillSlot("content", this.content.getElement());
 
         const mStyle = this.getElement().style
@@ -49,7 +48,7 @@ export function Modal_AddProjectProjectsView(model) {
 
         this.getElement().querySelector(".bi-x").addEventListener("click", (e) => {
             document.querySelector('#modal-background').remove()
-        });
+          });
     }
 
     this.show= function() {

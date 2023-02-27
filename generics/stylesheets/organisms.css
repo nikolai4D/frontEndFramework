@@ -8,25 +8,42 @@
     grid-template-rows: auto 1fr;
 }
 
-.organism_login-or-signup {}
-
 .organism_buttonFilledPicture_wrapper {
     display: grid;
     grid-template-columns: repeat(4, 206px);
     grid-auto-rows: minmax(20px, auto);
     gap: 50px;
     justify-content: center;
+    padding: 2em;
+    margin-top: 5em;
 }
 
-.organism_buttonFilledPicture_wrapper::before {
-    content: '';
-    grid-area: 1 / 1 / 2 / 5;
-    display: grid;
-  }
-
 #organism_buttonFilledPicture_btnParent {
-    grid-area: 1 / 4 / 2 / 4;
-    display: grid;
+    grid-area: 1 / 4 / 1 / 4;
+}
+
+#organism_buttonFilledPicture_btnParent > button {
+    width: 107px;
+    margin-left: 2.5em;
+}
+
+.organism_buttonFilledcards {
+    grid-area: 2 / 1 / 2 / 1;
+    overflow-y: scroll;
+    height: 430px;
+    display: flex;
+    gap: 46px;
+    flex-wrap: wrap;
+    width: 933px;
+    padding: 0 1em;
+}
+
+.organism_buttonFilledcards::-webkit-scrollbar-track {
+    background: none;
+}
+
+.organism_buttonFilledPicture_wrapper > div {
+    cursor: pointer;
 }
 
 .organism_start-info > *:nth-child(2) {
@@ -82,6 +99,7 @@ nav > ul {
     justify-content: space-between;
     justify-items: center;
     align-items: center;
+    /* padding-left: 1rem; */
 }
 
 .organism_list-all-search__top > h2{
@@ -200,6 +218,12 @@ nav > ul {
     width: 80%;
 }
 
+.organism_project_info {
+    padding-top: 2em;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
 .overflow-container > div {
     cursor: pointer;
 }
@@ -234,6 +258,73 @@ nav > ul {
 
 .mod-addToProj-cross {
     justify-content: end !important;
+}
+
+.organism_user-navbar {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+    justify-content: right;
+    padding-right: 1em;
+}
+
+.organism_lower-section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5em;
+}
+
+.organism_x-button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.organism_user-navbar h4 {
+    cursor: pointer;
+}
+
+.organism_user-modal{
+    border-radius: 12px;
+}
+
+.organism_user-modal > .modal-title-section {
+    font-size: x-large;
+}
+
+.organism_user-modal > .upper-section > .input-fields > .molecule_text_and_btn > input {
+    width: 186px;
+}
+
+.organism_user-modal > .upper-section > .input-fields div:not(.molecule_text_and_dropdown) {
+    justify-content: space-between !important;
+}
+
+.organism_user-modal > .upper-section > .input-fields > .molecule_text_and_dropdown > .dropdown > .dropdown-content{
+    min-width: 218px !important;
+}
+
+.organism_process-modal {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 2em 4em 4em;
+}
+
+
+.organism_organisation-modal {
+    padding: 2em;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1045px;
+}
+
+.organism_organisation-modal > i {
+    font-size: xx-large;
 }
 
 .organism_btn_projects_modal {

@@ -9,7 +9,7 @@ export function Modal(content) {
 
     this.getHtml = function() {
         return `
-        <div id="modal-popUp" class="modal">
+        <div id="modal-popUp" id="modal-user" class="modal">
                 ${slot("content")}
         </div>
         `

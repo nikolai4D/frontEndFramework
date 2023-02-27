@@ -1,9 +1,9 @@
 import {slot} from "../../../core/helpers.mjs";
 import {Component} from "../../../core/Component.mjs";
-import { Organism_BtnPositiveAddToProject } from "./Organism_btnPositiveAddToProject.mjs";
+import { Organism_OrganisationModal } from "./Organism_OrganisationModal.mjs";
 
 
-export function Modal_AddProjectProjectsView(model) {
+export function Modal_OrganisationListAll(model) {
     Component.call(this)
 
     this.content = model.content;
@@ -12,9 +12,9 @@ export function Modal_AddProjectProjectsView(model) {
     this.getHtml = function() {
         return `
         <div id="modal-background" class="modal">
-            <div class="modal-btn_project-inner-wrap">
-                <div class="modal-btn_proj-section">
-                    <div class="modal-process-upper-section">
+            <div class="modal-container modal-organisation-inner-wrap">
+                <div class="modal-org-section">
+                    <div class="modal-organisation-upper-section">
                         <i class="bi bi-x"></i>
                     </div>
                 </div> 
@@ -25,7 +25,7 @@ export function Modal_AddProjectProjectsView(model) {
     }
 
     this.bindScript= function() {
-        this.content = new Organism_BtnPositiveAddToProject(model.organism_btn_positive_add_proj)
+        this.content = new Organism_OrganisationModal(model.organism_organisation_modal)
         this.fillSlot("content", this.content.getElement());
 
         const mStyle = this.getElement().style

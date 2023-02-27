@@ -4,8 +4,6 @@ import { Atom_ButtonNeutral } from "../atoms/Atom_ButtonNeutral.mjs"
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
 import { slot } from "nd_frontend/core/helpers.mjs";
 import { Organism_Navbar } from "../organisms/Organism_Navbar.mjs"
-import { Molecule_HeadingIconAndText } from "../molecules/Molecule_HeadingIconAndText.mjs";
-import { Molecule_Paginator } from "../molecules/Molecule_Paginator.mjs"
 
 
 export function Template_Search_View(view){

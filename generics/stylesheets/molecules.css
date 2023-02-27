@@ -37,8 +37,9 @@
     padding: 30px;
     /* gap: 20px; */
     border: solid 1px black;
-    width: 9rem;
-    height: 15rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: #CCCCCC;
 }
 
 .molecule_paginator {
@@ -172,6 +173,238 @@
     display:grid;
     grid-template-columns: auto auto;
 }
+
+.molecule_project-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 2.5em;
+}
+
+.molecule_project-state > p:nth-child(1n) {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.molecule_project-state > p:nth-last-child(3) {
+    background-color: #CCCCCC;
+    border: none !important;
+}
+
+.molecule-proj_info-checkboxes {
+    display: flex;
+    width: 270px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.mol_checkbox-list-heading > .molecule-input-text{
+    display: flex;
+    gap: 10px;
+}
+
+.mol_checkbox-list-heading{
+    display: flex;
+    flex-direction: column;
+}
+
+.molecule_list-wrapper > ul{
+    padding: 0;
+}
+
+.molecule_list-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.molecule_list-wrapper > h4 {
+    align-self: center;
+}
+
+.molecule_heading-abt-img {
+    display: flex;
+    margin: 0 2em 2em;
+    gap: 100px;
+}
+
+.mol_heading-abt > p {
+    padding: 0 !important;
+}
+
+.mol_heading-abt {
+    margin-left: 4em;
+    margin-top: 1em;
+}
+
+.molecule_text_and_dropdown {
+    display: flex;
+    padding: 1em;
+    padding-right: 1em;
+    justify-content: space-between;
+    gap: 3em;
+    padding-right: 2em;
+}
+
+.molecule-modal-proc-first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.molecule-modal-proc-first-section > i{
+    font-size: xx-large;
+}
+
+.molecule_proc-parentboxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.molecule_proc-parentboxes > h4:nth-child(1n){
+    border: 1px solid black;
+    padding: 21px;
+    width: 74px;
+}
+
+.molecule_proc-parentboxes > i:nth-child(1n) {
+    font-size: xx-large;
+}
+
+.molecule_proc-parentboxes > h4:nth-last-child(3){
+    background-color: #CCCCCC;
+    border: none !important;
+}
+
+.molecule_modal_in-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.molecule_modal_in-output > .molecule_header-and-text {
+    align-content: unset !important;
+}
+
+.molecule_modal_in-output > .molecule_header-and-text > p {
+    padding: 0;
+}
+
+.molecule_modal_in-output > div:nth-child(1n){
+    border: 1px solid black;
+    padding: 2em;
+}
+
+.molecule_modal_in-output > div > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+}
+
+.molecule_modal_in-output > div:nth-last-child(3){
+    background-color: #CCCCCC;
+    border: none !important;
+    width: 400px;
+    height: 266px;
+}
+
+.molecule_modal_in-output > i:nth-child(1n) {
+    font-size: xx-large;
+}
+
+.molecule_modal-proc-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.molecule_modal-proc-children > h4:nth-child(1n){
+    border: 1px solid black;
+    padding: 21px;
+    width: 74px;
+}
+
+.molecule_modal-proc-children > i:nth-child(1n) {
+    font-size: xx-large;
+}
+
+.molecule_modal-proc-third-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+}
+
+.molecule_modal-proc-third-section > i { 
+    font-size: xx-large;
+}
+
+
+.molecule_modal_org_in-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.molecule_modal_org_in-output > .molecule_header-and-text {
+    align-content: unset !important;
+}
+
+.molecule_modal_org_in-output > .molecule_header-and-text > p {
+    padding: 0;
+}
+
+.molecule_modal_org_in-output > div:nth-child(1n){
+    border: 1px solid black;
+    padding: 2em;
+    width: 100px;
+}
+
+.molecule_modal_org_in-output > div > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+}
+
+.molecule_modal_org_in-output > div:nth-last-child(3){
+    background-color: #CCCCCC;
+    border: none !important;
+    width: 411px;
+    height: 283px;
+}
+
+.molecule_modal_org_in-output > i:nth-child(1n) {
+    font-size: xx-large;
+}
+
+.molecule_modal_org_lists {
+    display: flex;
+    justify-content: center;
+    gap: 71px;
+    margin: auto;
+    width: 468px;
+    margin-top: 1em;
+}
+
+.molecule_modal_org_lists > div{
+    width: 129px;
+}
+
+.molecule_modal_org_lists > div > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+}
+
+
+
+
 
 .molecule_text_input_dropdown > div {
     display: grid;
