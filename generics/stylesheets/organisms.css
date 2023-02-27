@@ -334,7 +334,7 @@ nav > ul {
     width: 568px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding-top: 2em;
+    padding: 2em 2em 0;
 }
 
 .organism_btn_projects_modal > button {

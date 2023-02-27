@@ -4,7 +4,6 @@
 }
 
 .molecule_header-and-text {
-    /* padding: 3em; */
     margin: 0.5rem;
     display: grid;
     grid-template-columns: auto auto;
@@ -421,7 +420,6 @@
     width: inherit;
     justify-content: space-between;
     width: unset;
-    margin-top: 1em;
 }
 
 .molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown {
