@@ -47,7 +47,6 @@ export function Template_Projects_View ( view )
         })
 
         this.getElement().querySelector(".atom_button-positive").addEventListener("click", (e) => {
-            console.log('btn-project button pressed')
 
             const modalId = document.getElementById('modal-addProject')
 
