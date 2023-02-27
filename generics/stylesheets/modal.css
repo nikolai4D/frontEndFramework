@@ -6,14 +6,21 @@
   width: 497px;
   box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.04);
   border: 1px solid #c6c7c8;
-  border-radius: 5px;
+  border-radius: 12px;
+}
+
+.model-container-second {
+  width: 497px;
+  box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #c6c7c8;
+  border-radius: 12px;
 }
 
 .upper-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 4em 5em 4em 4em;
 }
 
 .modal-title {
@@ -81,4 +88,97 @@
   width: 161px;
   height: 161px;
   margin: 0 41px 0 72px;
+}
+
+.modal-process-section {
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-process-upper-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  padding-top: 0.2em;
+  padding-right: 0.2em;
+}
+
+.modal-process-inner-wrap {
+  border: none !important;
+  width: 1045px !important;
+}
+
+.modal-organisation-upper-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  background-color: white;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding-right: 0.2em;
+}
+
+.modal-organisation-inner-wrap {
+  width: unset;
+  border: none !important;
+}
+
+.modal-projectInfo-btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.modal-projectInfo-btn > button {
+  width: 68px;
+}
+
+.modal-projInfo-image {
+  height: 141px;
+  width: 141px;
+}
+
+.modal-projInfo-image > img {
+  height: 100%;
+}
+
+.modal-projInfo-upper-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  margin-right: 0.5em;
+  padding-top: 0.5em;
+}
+
+.modal-projInfo-section-bg {
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-projectInfo{
+  width: 568px !important;
+  border-radius: 15px;
+}
+
+.modal-search-res-det-upper-section {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  justify-content: end
+}
+
+.modal-search-res-det {
+  width: 520px;
+  background-color: white;
+}
+
+.modal-add-to-project {
+  width: 328px;
+}
+
+.modal-org-add-to-proj {
+  border-radius: 12px;
+  height: 628px;
 }
