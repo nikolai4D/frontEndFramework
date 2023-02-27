@@ -81,7 +81,6 @@
 
 .molecule_text_and_btn {
     display: flex;
-    justify-content: center;
     padding: 1em;
     justify-content: end;
     gap: 3em;
@@ -250,7 +249,7 @@
 .molecule-modal-proc-first-section {
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
 }
 
 .molecule-modal-proc-first-section > i{
@@ -340,7 +339,7 @@
     padding-top: 0;
 }
 
-.molecule_modal-proc-third-section > i { 
+.molecule_modal-proc-third-section > i {
     font-size: xx-large;
 }
 
@@ -401,10 +400,6 @@
     flex-direction: column;
     padding: 26px;
 }
-
-
-
-
 
 .molecule_text_input_dropdown > div {
     display: grid;

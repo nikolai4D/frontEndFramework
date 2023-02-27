@@ -3,8 +3,8 @@ import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_
 export function Template_Projects_Model ( model )
 {
   const template_model = {
-    view: model.view,
-    components: {
+      view: model.view,
+      components: {
 
       organism_navbar : {
         organism_userProfileContent : {

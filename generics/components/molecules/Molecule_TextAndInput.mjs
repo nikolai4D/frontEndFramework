@@ -1,7 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import { Atom_Text1} from "../atoms/Atom_Text1.mjs";
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
+import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
 
 export function Molecule_TextAndInput(model) {
     Component.call(this)
