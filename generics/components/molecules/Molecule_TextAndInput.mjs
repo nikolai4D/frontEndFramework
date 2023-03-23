@@ -1,8 +1,7 @@
 import {Component} from "../../../core/Component.mjs";
 import {slot} from "../../../core/helpers.mjs";
-import { Atom_Text1} from "../atoms/Atom_Text1.mjs";
 import { Atom_Input } from "../atoms/Atom_Input.mjs";
-import { State } from "nd_frontend/core/actions/State.mjs";
+import { Atom_Text1 } from "../atoms/Atom_Text1.mjs";
 
 export function Molecule_TextAndInput(model) {
     Component.call(this)
@@ -23,6 +22,4 @@ export function Molecule_TextAndInput(model) {
         this.fillSlot("user", user.getElement());
         this.fillSlot("input", input.getElement());
     }
-
-
 }

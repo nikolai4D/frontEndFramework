@@ -4,7 +4,6 @@
 }
 
 .molecule_header-and-text {
-    /* padding: 3em; */
     margin: 0.5rem;
     display: grid;
     grid-template-columns: auto auto;
@@ -100,6 +99,10 @@ Below I am rewriting css for what should be the list css.
 
 .molecule_text_and_btn {
     display: flex;
+<<<<<<< HEAD
+=======
+    padding: 1em;
+>>>>>>> da81a36b9953bf6bc258b7ede646ea6e5e63aa2a
     justify-content: end;
     gap: 3em;
     padding: 1em 2em 1em 1em;
@@ -267,7 +270,7 @@ Below I am rewriting css for what should be the list css.
 .molecule-modal-proc-first-section {
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
 }
 
 .molecule-modal-proc-first-section > i{
@@ -357,7 +360,7 @@ Below I am rewriting css for what should be the list css.
     padding-top: 0;
 }
 
-.molecule_modal-proc-third-section > i { 
+.molecule_modal-proc-third-section > i {
     font-size: xx-large;
 }
 
@@ -419,5 +422,41 @@ Below I am rewriting css for what should be the list css.
     padding: 26px;
 }
 
+.molecule_text_input_dropdown > div {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    height: 35px;
+}
 
+.molecule_text_input_dropdown {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 234px;
+    justify-self: end;
+}
 
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    width: unset;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown {
+    align-self: baseline;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > button {
+    width: 173px;
+    height: 38px;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > button > i {
+    padding-left: 65px;
+}
+
+.molecule_text_input_dropdown > .molecule_text_and_dropdown  > .dropdown > .dropdown-content {
+    width: 172px;
+}

@@ -175,3 +175,36 @@
   border-radius: 12px;
   height: 628px;
 }
+
+.modal_btn_projects_first_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 40px; 
+}
+
+.modal-btn_project-inner-wrap {
+  width: none;
+  background-color: white;
+  box-shadow: 5px 15px 5px rgb(0 0 0 / 4%);
+  border: 1px solid #c6c7c8;
+  border-radius: 12px;
+}
+
+.modal-btn_proj-section {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  margin-right: 0.1em;
+}
+
+.modal-btn_proj_image {
+  justify-self: center;
+  align-self: center;
+}
+
+.modal-btn_proj_image > img {
+  height: 154px;
+  width: 154px;
+  /* align-self: end; */
+}
