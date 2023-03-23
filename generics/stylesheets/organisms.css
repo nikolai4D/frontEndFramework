@@ -99,7 +99,6 @@ nav > ul {
     justify-content: space-between;
     justify-items: center;
     align-items: center;
-    /* padding-left: 1rem; */
 }
 
 .organism_list-all-search__top > h2{
@@ -325,4 +324,24 @@ nav > ul {
 
 .organism_organisation-modal > i {
     font-size: xx-large;
+}
+
+.organism_btn_projects_modal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 389px;
+    width: 568px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 2em 2em 0;
+}
+
+.organism_btn_projects_modal > button {
+    width: fit-content;
+    height: fit-content;
+    padding-left: 2em;
+    padding-right: 2em;
+    justify-self: center;
+    align-self: center;
 }

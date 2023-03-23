@@ -3,8 +3,8 @@ import { SEND_VIEWSTATE_TO_STATE } from "../../../core/actions/action_send_view_
 export function Template_Projects_Model ( model )
 {
   const template_model = {
-    view: model.view,
-    components: {
+      view: model.view,
+      components: {
 
       organism_navbar : {
         organism_userProfileContent : {
@@ -104,13 +104,13 @@ export function Template_Projects_Model ( model )
               text: model.button.text,
               onClick : model.button.onClick
             }, 
-    },
-      Organism_ButtonFilledPictures: {
-      btn: {
-        text: model.btnText,
-        onClick: model.onClick,
       },
-      cards: [
+      Organism_ButtonFilledPictures: {
+        btn: {
+          text: model.btnText,
+          onClick: model.onClick,
+        }, 
+        cards: [
         {
           atom_img: {
             imgSrc: model.cards[ 0 ].imgSrc,
@@ -271,57 +271,94 @@ export function Template_Projects_Model ( model )
             text: model.text,
           }
         }
-      ]
-    },
+        ]
+      },
       content : {
-      organism_projectInfo : {
-        molecule_headingAboutImage : {
-          atom_heading4 : {
-            text : model.projModalHeading
+        organism_projectInfo : {
+          molecule_headingAboutImage : {
+            atom_heading4 : {
+              text : model.projModalHeading
+            },
+            atom_text1 : {
+              text : model.projModalAbout
+            },
+            atom_image : {
+              src: model.projImageSrc,
+              alt: model.projImageAlt
+            }
           },
-          atom_text1 : {
-            text : model.projModalAbout
+          molecule_projectState : {
+            atom_text1 : {
+              text : model.previousBox
+            },
+            atom_icon1 : {
+              icon : model.icon6
+            }, atom_text2 : {
+              text : model.currentBox
+            },
+            atom_icon2 : {
+              icon : model.icon7
+            },
+            atom_text3 : {
+              text : model.nextBox
+            }
+          },
+          molecule_listCheckbox1 :{
+            atom_heading4 : {
+              text : model.subHeading1
+            },
+            items: model.items1
+          },
+          molecule_listCheckbox2 :{
+            atom_heading4 : {
+              text : model.subHeading2
+            },
+            items : model.items2
+          },
+          atom_buttonPositive : {
+            text : model.buttonPositive.text,
+            onClick : model.buttonPositive.onClick
+          }
+        }
+      },
+      content2 : {
+        organism_btn_positive_add_proj : {
+          molecule_text_input1: {
+            atom_text1 : {
+              text : model.modalHeading1
+            },
+            atom_input : {
+              type : model.inputType1,
+              placeholder : model.modalInput1 
+            }
+          },
+          molecule_text_input2 : {
+            atom_text1 : {
+              text : model.modalHeading2
+            },
+            atom_input : {
+              type : model.inputType2,
+              placeholder : model.modalInput2 
+            }
+          },
+          molecule_text_dropdown : {
+            atom_text1 : {
+              text : model.modalHeading3
+            },
+            atom_dropdown : {
+              text : model.text
+            }
           },
           atom_image : {
-            src: model.projImageSrc,
-            alt: model.projImageAlt
+            src : model.modalImage.src,
+            alt : model.modalImage.alt
+          },
+          atom_button_positive : {
+            text : model.buttonPositive.text,
+            onClick : model.buttonPositive.onClick
           }
-        },
-        molecule_projectState : {
-          atom_text1 : {
-            text : model.previousBox
-          },
-          atom_icon1 : {
-            icon : model.icon6
-          }, atom_text2 : {
-            text : model.currentBox
-          },
-          atom_icon2 : {
-            icon : model.icon7
-          },
-          atom_text3 : {
-            text : model.nextBox
-          }
-        },
-        molecule_listCheckbox1 :{
-          atom_heading4 : {
-            text : model.subHeading1
-          },
-          items: model.items1
-        },
-        molecule_listCheckbox2 :{
-          atom_heading4 : {
-            text : model.subHeading2
-          },
-          items : model.items2
-        },
-        atom_buttonPositive : {
-          text : model.buttonPositive.text,
-          onClick : model.buttonPositive.onClick
         }
-      }
-    }
-    
+      },
     }
   };
 
